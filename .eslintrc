@@ -1,3 +1,6 @@
 {
-  "extends": ["next", "next/core-web-vitals"]
+  "extends": ["eslint-config-wesbos/typescript.js"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
 }
