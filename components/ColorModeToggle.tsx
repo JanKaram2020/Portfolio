@@ -1,0 +1,56 @@
+import { Button, Box, useColorMode } from '@chakra-ui/react';
+import { RiMoonClearFill } from 'react-icons/ri';
+import { IoMdSunny } from 'react-icons/io';
+import { AnimatePresence, motion } from 'framer-motion';
+
+const MotionBox = motion(Box);
+function Example() {
+  const { colorMode, toggleColorMode } = useColorMode();
+  return (
+    <>
+      <Button
+        display="grid"
+        gridTemplateRows="1fr"
+        gridTemplateColumns="1fr"
+        alignContent="center"
+        justifyItems="center"
+        onClick={toggleColorMode}
+        variant="link"
+        w="10px"
+        _active={{
+          transform: 'scale(0.8)',
+        }}
+      >
+        <AnimatePresence>
+          {colorMode === 'dark' && (
+            <MotionBox
+              gridArea="1 / 1 / 2 / 2"
+              color="yellow.500"
+              initial={{ rotate: 90, y: 30, opacity: 0 }}
+              animate={{ rotate: 0, y: 0, opacity: 1 }}
+              exit={{ rotate: 90, y: 30, opacity: 0 }}
+              transition={{ duration: 1 }}
+            >
+              <IoMdSunny size={30} />
+            </MotionBox>
+          )}
+        </AnimatePresence>
+        <AnimatePresence>
+          {colorMode === 'light' && (
+            <MotionBox
+              gridArea="1 / 1 / 2 / 2"
+              color="black"
+              initial={{ rotate: 90, y: 30, opacity: 0 }}
+              animate={{ rotate: 0, y: 0, opacity: 1 }}
+              exit={{ rotate: 90, y: 30, opacity: 0 }}
+              transition={{ duration: 1 }}
+            >
+              <RiMoonClearFill size={30} />
+            </MotionBox>
+          )}
+        </AnimatePresence>
+      </Button>
+    </>
+  );
+}
+export default Example;

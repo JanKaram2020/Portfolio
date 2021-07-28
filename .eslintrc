@@ -1,5 +1,32 @@
 {
-  "extends": ["eslint-config-wesbos/typescript.js"],
+  "extends": [
+    "plugin:@typescript-eslint/recommended", // Uses rules from `@typescript-eslint/eslint-plugin`,
+    "prettier", // Use `eslint-config-prettier` to override conflicting rules from `@typescript-eslint/eslint-plugin`
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    // Layer in all the JS Rules
+    "wesbos"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  // Then we add our own custom typescript rules
+  "rules": {
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": false
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-redeclare": "off",
+    "@typescript-eslint/no-redeclare": [
+      "warn",
+      {
+        "ignoreDeclarationMerge": true
+      }
+    ]
+  },
   "parserOptions": {
     "project": "./tsconfig.json"
   }
