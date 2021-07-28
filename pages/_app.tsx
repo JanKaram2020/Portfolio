@@ -1,8 +1,9 @@
 import type { AppProps } from 'next/app';
 import { ChakraProvider } from '@chakra-ui/react';
+import React from 'react';
 import Layout from '../components/Layout';
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
   return (
     <ChakraProvider>
       <Layout>

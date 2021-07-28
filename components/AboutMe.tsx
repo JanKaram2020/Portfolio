@@ -1,18 +1,9 @@
 import React from 'react';
-import {
-  Box,
-  Grid,
-  Text,
-  Link as StyledLink,
-  useColorMode,
-} from '@chakra-ui/react';
+import { Grid, Text, Link as StyledLink } from '@chakra-ui/react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import FadeInWhenVisible from './FadeInWhenVisible';
 
-const AnimatedBox = motion(Box);
 export default function AboutMe(): React.ReactElement {
-  const { colorMode } = useColorMode();
   return (
     <Grid
       p="10px"

@@ -5,7 +5,11 @@ import { Box, useColorMode } from '@chakra-ui/react';
 
 const AnimatedBox = motion(Box);
 
-function FadeInWhenVisible({ children }: { children: React.ReactNode }) {
+export default function FadeInWhenVisible({
+  children,
+}: {
+  children: React.ReactNode;
+}): React.ReactElement {
   const { colorMode } = useColorMode();
   const controls = useAnimation();
   // eslint-disable-next-line @typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-assignment
@@ -13,7 +17,8 @@ function FadeInWhenVisible({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     if (inView) {
-      controls.start('visible');
+      // eslint-disable-next-line no-void
+      void controls.start('visible');
     }
   }, [controls, inView]);
 
@@ -44,4 +49,3 @@ function FadeInWhenVisible({ children }: { children: React.ReactNode }) {
     </AnimatedBox>
   );
 }
-export default FadeInWhenVisible;

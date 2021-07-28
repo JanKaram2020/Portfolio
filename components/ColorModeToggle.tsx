@@ -2,9 +2,10 @@ import { Button, Box, useColorMode } from '@chakra-ui/react';
 import { RiMoonClearFill } from 'react-icons/ri';
 import { IoMdSunny } from 'react-icons/io';
 import { AnimatePresence, motion } from 'framer-motion';
+import React from 'react';
 
 const MotionBox = motion(Box);
-function Example() {
+function Example(): React.ReactElement {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>

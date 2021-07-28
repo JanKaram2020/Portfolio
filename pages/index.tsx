@@ -5,7 +5,7 @@ import AnimatedLogo from '../components/AnimatedLogo';
 import AboutMe from '../components/AboutMe';
 
 const AnimatedText = motion(Text);
-export default function IndexPage() {
+export default function IndexPage(): React.ReactElement {
   return (
     <>
       <Flex

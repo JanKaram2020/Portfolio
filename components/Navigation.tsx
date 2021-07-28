@@ -1,17 +1,11 @@
-import {
-  Flex,
-  Link as StyledLink,
-  Box,
-  useColorMode,
-  filter,
-  Button,
-} from '@chakra-ui/react';
+import { Flex, Link as StyledLink, Box, useColorMode } from '@chakra-ui/react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
+import React from 'react';
 import Example from './ColorModeToggle';
 
-const Navigation = () => {
+const Navigation = (): React.ReactElement => {
   const { colorMode } = useColorMode();
   return (
     <Flex
