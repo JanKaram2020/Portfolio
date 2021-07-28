@@ -59,7 +59,7 @@ const Navigation = (): React.ReactElement => {
           </StyledLink>
         </Link>
       </Flex>
-      <Flex as="ul" gridGap="10px">
+      <Flex gridGap="10px">
         <Example />
         <StyledLink
           href="https://www.linkedin.com/in/jankaram2020/"

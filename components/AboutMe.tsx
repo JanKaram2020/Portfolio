@@ -11,6 +11,7 @@ export default function AboutMe(): React.ReactElement {
       gridTemplateColumns={['1fr', '1fr', 'repeat(3, 1fr)']}
       alignContent="center"
       justifyItems="center"
+      my="6vw"
     >
       <Text
         maxWidth="60ch"

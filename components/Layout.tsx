@@ -1,4 +1,5 @@
 import React from 'react';
+import { Box } from '@chakra-ui/react';
 import Navigation from './Navigation';
 
 function Layout({
@@ -9,7 +10,9 @@ function Layout({
   return (
     <>
       <Navigation />
-      {children}
+      <Box as="main" mx="20px" mb="20px">
+        {children}
+      </Box>
     </>
   );
 }
