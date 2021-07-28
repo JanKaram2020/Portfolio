@@ -7,7 +7,10 @@ import {
   useColorMode,
 } from '@chakra-ui/react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import FadeInWhenVisible from './FadeInWhenVisible';
 
+const AnimatedBox = motion(Box);
 export default function AboutMe(): React.ReactElement {
   const { colorMode } = useColorMode();
   return (
@@ -49,26 +52,14 @@ export default function AboutMe(): React.ReactElement {
         </StyledLink>
         &nbsp; (if you're a recruiter please don't visit it :D )
       </Text>
-      <Box
-        as="figure"
-        display={['none', 'none', 'block']}
-        gridArea="1 / 2 / 2 / 3"
-        height="340px"
-        width="340px"
-        sx={{
-          '.image': {
-            borderRadius: '50%',
-            filter: colorMode === 'dark' ? 'brightness(80%)' : '',
-          },
-        }}
-      >
+      <FadeInWhenVisible>
         <Image
           src="/jancropped.jpg"
           height="340px"
           width="340px"
           className="image"
         />
-      </Box>
+      </FadeInWhenVisible>{' '}
       <Text
         maxWidth="60ch"
         ml="2"
