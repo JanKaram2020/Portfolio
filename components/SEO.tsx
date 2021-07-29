@@ -11,7 +11,7 @@ const defaults = {
   image: '/site.png',
 };
 function SEO({
-  description = defaults.title,
+  description = defaults.description,
   keywords = defaults.keywords,
   title = defaults.title,
   image = defaults.image,
