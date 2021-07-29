@@ -13,11 +13,13 @@ import AnimatedLogo from '../components/AnimatedLogo';
 import AboutMe from '../components/AboutMe';
 import ListItem from '../components/ListItemColor';
 import Project from '../components/Project';
+import SEO from '../components/SEO';
 
 const AnimatedText = motion(Text);
 export default function IndexPage(): React.ReactElement {
   return (
     <>
+      <SEO />
       <Flex
         alignItems="center"
         justifyContent="center"
@@ -140,21 +142,25 @@ export default function IndexPage(): React.ReactElement {
           image="/lilyanneMockup.png"
           text="A responsive PWA multi language blog built with Gatsby Js, Theme UI and Sanity CMS"
           page="lilyanneblog"
+          alt="Lilyanne Hany's blog screenshot"
         />
         <Project
           image="/eargasmMockup.png"
           text="A responsive music website built with React Js, Bootstrap and JSON file as a database"
           page="eargasm"
+          alt="Eargasm website screenshot"
         />
         <Project
           image="/wouldYouRatherMockup.png"
           text="Would you rather game bulit with Reactjs , Redux and Redux-toolkit"
           page="wouldyourather"
+          alt="Would you rather website screenshot"
         />{' '}
         <Project
           image="/todo.png"
           text="A personal todo list in developement using Next js ,React js, Supabase for database and auth , ChakraUi and Framer motion"
           inProgress
+          alt="Todo website screenshot"
         />
       </SimpleGrid>
     </>

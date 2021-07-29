@@ -54,6 +54,7 @@ export default function FadeInWhenVisible(): React.ReactElement {
           height="340px"
           width="340px"
           className="image"
+          alt="Jan Karam smiling"
         />
       </Box>
     </AnimatedBox>

@@ -25,8 +25,10 @@ const Project = ({
   text,
   page = '/',
   inProgress,
+  alt,
 }: {
   image: string;
+  alt: string;
   text: string;
   page?: string;
   inProgress?: boolean;
@@ -78,6 +80,7 @@ const Project = ({
           width="900px"
           objectFit="cover"
           className="image"
+          alt={alt}
         />
       </AnimatedBox>
       <Text color="gray.500">{text}</Text>

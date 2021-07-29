@@ -47,16 +47,15 @@ const Navigation = (): React.ReactElement => {
               as="figure"
               sx={{ filter: colorMode === 'dark' ? 'invert(100%)' : '' }}
               _hover={{
-                filter: `${
-                  colorMode === 'dark' ? 'invert(100%)' : ''
-                } hue-rotate(0.8turn)`,
+                filter: `${colorMode === 'dark' ? 'invert(100%)' : ''} `,
               }}
               _active={{
                 transform: 'scale(0.8)',
               }}
             >
+              <VisuallyHidden> website's home page</VisuallyHidden>
               <Image
-                alt="Next.js logo"
+                alt="Jan Karam logo"
                 src="/janfinal.svg"
                 width={100}
                 height={50}
@@ -78,7 +77,7 @@ const Navigation = (): React.ReactElement => {
             transform: 'scale(0.8)',
           }}
         >
-          <VisuallyHidden> My Linkedin profile</VisuallyHidden>
+          <VisuallyHidden> Jan Karam's Linkedin profile</VisuallyHidden>
           <AiFillLinkedin size={40} />
         </StyledLink>
         <StyledLink
@@ -92,7 +91,7 @@ const Navigation = (): React.ReactElement => {
             transform: 'scale(0.8)',
           }}
         >
-          <VisuallyHidden> My github profile</VisuallyHidden>
+          <VisuallyHidden> Jan Karam's Github profile</VisuallyHidden>
           <AiFillGithub size={40} />
         </StyledLink>
       </Flex>
