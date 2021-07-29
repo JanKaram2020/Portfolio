@@ -28,8 +28,9 @@ export default function AboutMe(): React.ReactElement {
         found&nbsp;
         <StyledLink
           href="https://www.ahlamontada.com/"
-          target="_blank"
-          color="red.400"
+          isExternal
+          rel="noopener"
+          color="red.500"
         >
           ahlamontada.com
         </StyledLink>
@@ -37,8 +38,9 @@ export default function AboutMe(): React.ReactElement {
         <br /> Years later I searched about the website and found it at&nbsp;
         <StyledLink
           href="https://jan12.rigala.net/"
-          target="_blank"
-          color="red.400"
+          isExternal
+          rel="noopener"
+          color="red.500"
         >
           https://jan12.rigala.net/
         </StyledLink>
@@ -51,7 +53,7 @@ export default function AboutMe(): React.ReactElement {
           width="340px"
           className="image"
         />
-      </FadeInWhenVisible>{' '}
+      </FadeInWhenVisible>
       <Text
         maxWidth="60ch"
         ml="2"

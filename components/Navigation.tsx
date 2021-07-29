@@ -1,4 +1,10 @@
-import { Flex, Link as StyledLink, Box, useColorMode } from '@chakra-ui/react';
+import {
+  Flex,
+  Link as StyledLink,
+  Box,
+  useColorMode,
+  VisuallyHidden,
+} from '@chakra-ui/react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
@@ -63,7 +69,8 @@ const Navigation = (): React.ReactElement => {
         <Example />
         <StyledLink
           href="https://www.linkedin.com/in/jankaram2020/"
-          target="_blank"
+          isExternal
+          rel="noopener"
           _hover={{
             color: 'red.400',
           }}
@@ -71,11 +78,13 @@ const Navigation = (): React.ReactElement => {
             transform: 'scale(0.8)',
           }}
         >
+          <VisuallyHidden> My Linkedin profile</VisuallyHidden>
           <AiFillLinkedin size={40} />
         </StyledLink>
         <StyledLink
           href="https://github.com/JanKaram2020"
-          target="_blank"
+          isExternal
+          rel="noopener"
           _hover={{
             color: 'red.400',
           }}
@@ -83,6 +92,7 @@ const Navigation = (): React.ReactElement => {
             transform: 'scale(0.8)',
           }}
         >
+          <VisuallyHidden> My github profile</VisuallyHidden>
           <AiFillGithub size={40} />
         </StyledLink>
       </Flex>

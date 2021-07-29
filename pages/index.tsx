@@ -6,12 +6,13 @@ import {
   VisuallyHidden,
   UnorderedList,
   Grid,
+  SimpleGrid,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import AnimatedLogo from '../components/AnimatedLogo';
 import AboutMe from '../components/AboutMe';
 import ListItem from '../components/ListItemColor';
-import Projects from '../components/Projects';
+import Project from '../components/Project';
 
 const AnimatedText = motion(Text);
 export default function IndexPage(): React.ReactElement {
@@ -125,7 +126,18 @@ export default function IndexPage(): React.ReactElement {
         in a project.
         <br /> Take a look at some of the projects I made.
       </Text>
-      <Projects />
+      <SimpleGrid columns={[1, 1, 2]} spacing={10} pt="2rem">
+        <Project
+          image="/lilyanneMockup.png"
+          text="a blog for my dear friend lilyanne"
+          page="/lilyanneproject"
+        />
+        <Project
+          image="/eargasmMockup.png"
+          text="A music website"
+          page="eargasm"
+        />
+      </SimpleGrid>
     </>
   );
 }

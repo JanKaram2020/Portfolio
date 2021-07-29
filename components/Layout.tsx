@@ -10,7 +10,7 @@ function Layout({
   return (
     <>
       <Navigation />
-      <Box as="main" mx="20px" mb="20px">
+      <Box as="main" mx="20px" mb="50px">
         {children}
       </Box>
     </>

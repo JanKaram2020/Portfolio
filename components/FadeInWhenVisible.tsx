@@ -38,7 +38,9 @@ export default function FadeInWhenVisible({
       gridArea="1 / 2 / 2 / 3"
       height="340px"
       width="340px"
+      // #4444dd
       sx={{
+        filter: 'drop-shadow(0px 0px 12px #F56565)',
         '.image': {
           borderRadius: '50%',
           filter: colorMode === 'dark' ? 'brightness(80%)' : '',
