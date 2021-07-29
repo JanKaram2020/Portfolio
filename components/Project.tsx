@@ -3,7 +3,6 @@ import {
   Flex,
   Text,
   Link as StyledLink,
-  Heading,
   useColorMode,
 } from '@chakra-ui/react';
 import Image from 'next/image';

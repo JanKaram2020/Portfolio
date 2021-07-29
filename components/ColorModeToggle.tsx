@@ -46,7 +46,7 @@ function Example(): React.ReactElement {
               color="black"
               initial={{ rotate: 90, y: 30, opacity: 0 }}
               animate={{ rotate: 0, y: 0, opacity: 1 }}
-              exit={{ rotate: 90, y: 30, opacity: 0 }}
+              exit={{ rotate: 90, y: 30, opacity: 0, color: 'white' }} // Arshy's touch
               transition={{ duration: 1 }}
             >
               <RiMoonClearFill size={30} />

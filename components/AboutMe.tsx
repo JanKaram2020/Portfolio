@@ -1,6 +1,5 @@
 import React from 'react';
 import { Grid, Text, Link as StyledLink } from '@chakra-ui/react';
-import Image from 'next/image';
 import FadeInWhenVisible from './FadeInWhenVisible';
 
 export default function AboutMe(): React.ReactElement {
