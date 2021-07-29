@@ -46,14 +46,7 @@ export default function AboutMe(): React.ReactElement {
         </StyledLink>
         &nbsp; (if you're a recruiter please don't visit it :D )
       </Text>
-      <FadeInWhenVisible>
-        <Image
-          src="/jancropped.jpg"
-          height="340px"
-          width="340px"
-          className="image"
-        />
-      </FadeInWhenVisible>
+      <FadeInWhenVisible />
       <Text
         maxWidth="60ch"
         ml="2"

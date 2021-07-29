@@ -7,9 +7,12 @@ import React from 'react';
 const MotionBox = motion(Box);
 function Example(): React.ReactElement {
   const { colorMode, toggleColorMode } = useColorMode();
+  const isDark = colorMode === `dark`;
   return (
     <>
       <Button
+        aria-label={isDark ? `Activate Light mode` : `Activate Dark mode`}
+        title={isDark ? `Activate Light mode` : `Activate Dark mode`}
         display="grid"
         gridTemplateRows="1fr"
         gridTemplateColumns="1fr"

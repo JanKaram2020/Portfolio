@@ -126,16 +126,35 @@ export default function IndexPage(): React.ReactElement {
         in a project.
         <br /> Take a look at some of the projects I made.
       </Text>
-      <SimpleGrid columns={[1, 1, 2]} spacing={10} pt="2rem">
+      <SimpleGrid
+        columns={[1, 1, 2]}
+        spacing={10}
+        p="2rem"
+        overflowWrap="normal"
+        minChildWidth="350px"
+        columnGap="200px"
+        justifyContent="center"
+        alignContent="center"
+      >
         <Project
           image="/lilyanneMockup.png"
-          text="a blog for my dear friend lilyanne"
-          page="/lilyanneproject"
+          text="A responsive PWA multi language blog built with Gatsby Js, Theme UI and Sanity CMS"
+          page="lilyanneblog"
         />
         <Project
           image="/eargasmMockup.png"
-          text="A music website"
+          text="A responsive music website built with React Js, Bootstrap and JSON file as a database"
           page="eargasm"
+        />
+        <Project
+          image="/wouldYouRatherMockup.png"
+          text="Would you rather game bulit with Reactjs , Redux and Redux-toolkit"
+          page="wouldyourather"
+        />{' '}
+        <Project
+          image="/todo.png"
+          text="A personal todo list in developement using Next js ,React js, Supabase for database and auth , ChakraUi and Framer motion"
+          inProgress
         />
       </SimpleGrid>
     </>
