@@ -32,15 +32,13 @@ export default function FadeInWhenVisible(): React.ReactElement {
         visible: { opacity: 1, scale: [0, 2, 1] },
         hidden: { opacity: 0, scale: 0 },
       }}
-      display={['none', 'none', 'block']}
-      postion="relative"
-      gridArea="1 / 2 / 2 / 3"
-      minHeight="340px"
-      minWidth="340px"
+      display={['none', 'none', 'none', 'block']}
+      // gridArea="1 / 2 / 2 / 3"
+      // maxHeight="340px"
+      // maxWidth="340px"
     >
       <Box
         as="figure"
-        zIndex="2"
         sx={{
           filter: 'drop-shadow(0px 0px 12px #F56565)',
           '.image': {

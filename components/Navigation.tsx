@@ -4,10 +4,12 @@ import {
   Box,
   useColorMode,
   VisuallyHidden,
+  VStack,
 } from '@chakra-ui/react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
+import { HiDocumentText } from 'react-icons/hi';
 import React from 'react';
 import Example from './ColorModeToggle';
 
@@ -15,13 +17,24 @@ const Navigation = (): React.ReactElement => {
   const { colorMode } = useColorMode();
   return (
     <Flex
+      as="header"
       justifyContent="space-between"
       alignItems="center"
       px="10px"
       gridGap="10px"
       borderBottomWidth="0.2rem"
+      sx={{
+        '@media print': {
+          display: 'none',
+        },
+      }}
     >
-      <Flex position="relative">
+      <Flex
+        position="relative"
+        alignItems="center"
+        justifyContent="center"
+        gridGap="10px"
+      >
         <Link href="/">
           <StyledLink
             _after={{
@@ -67,6 +80,7 @@ const Navigation = (): React.ReactElement => {
       <Flex gridGap="10px">
         <Example />
         <StyledLink
+          title="linkedin profile"
           href="https://www.linkedin.com/in/jankaram2020/"
           isExternal
           rel="noopener"
@@ -81,6 +95,7 @@ const Navigation = (): React.ReactElement => {
           <AiFillLinkedin size={40} />
         </StyledLink>
         <StyledLink
+          title="github profile"
           href="https://github.com/JanKaram2020"
           isExternal
           rel="noopener"
@@ -94,6 +109,20 @@ const Navigation = (): React.ReactElement => {
           <VisuallyHidden> Jan Karam's Github profile</VisuallyHidden>
           <AiFillGithub size={40} />
         </StyledLink>
+        <Link href="/resume">
+          <StyledLink
+            title="resume"
+            _hover={{
+              color: 'red.400',
+            }}
+            _active={{
+              transform: 'scale(0.8)',
+            }}
+          >
+            <VisuallyHidden> Jan Karam's Resume</VisuallyHidden>
+            <HiDocumentText size={40} />
+          </StyledLink>
+        </Link>
       </Flex>
     </Flex>
   );

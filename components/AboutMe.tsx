@@ -1,13 +1,13 @@
 import React from 'react';
-import { Grid, Text, Link as StyledLink } from '@chakra-ui/react';
+import { Grid, SimpleGrid, Text, Link as StyledLink } from '@chakra-ui/react';
 import FadeInWhenVisible from './FadeInWhenVisible';
 
 export default function AboutMe(): React.ReactElement {
   return (
-    <Grid
-      p="10px"
-      gridTemplateRows="1fr"
-      gridTemplateColumns={['1fr', '1fr', 'repeat(3, 1fr)']}
+    <SimpleGrid
+      spacing={5}
+      columns={[1, 1, 3]}
+      minChildWidth="320px"
       alignContent="center"
       justifyItems="center"
       my="6vw"
@@ -17,8 +17,7 @@ export default function AboutMe(): React.ReactElement {
         ml="2"
         mr="4"
         fontSize="xl"
-        gridArea={['1 / 1 / 2 / 2', '1 / 1 / 2 / 2', '1 / 1 / 2 / 2']}
-        position="relative"
+        // gridArea={['1 / 1 / 2 / 2', '1 / 1 / 2 / 2', '1 / 1 / 2 / 2']}
       >
         I'm a passionate introvert who loves building web apps and sites. <br />
         My first experience with web development was when I was 12, but it
@@ -29,7 +28,7 @@ export default function AboutMe(): React.ReactElement {
           href="https://www.ahlamontada.com/"
           isExternal
           rel="noopener"
-          color="red.500"
+          color="red.400"
         >
           ahlamontada.com
         </StyledLink>
@@ -39,7 +38,7 @@ export default function AboutMe(): React.ReactElement {
           href="https://jan12.rigala.net/"
           isExternal
           rel="noopener"
-          color="red.500"
+          color="red.400"
         >
           https://jan12.rigala.net/
         </StyledLink>
@@ -51,8 +50,7 @@ export default function AboutMe(): React.ReactElement {
         ml="2"
         mr="4"
         fontSize="xl"
-        gridArea={['', '', '1 / 3 / 2 / 4']}
-        position="relative"
+        // gridArea={['', '', '1 / 3 / 2 / 4']}
       >
         then I took a web development course at my college in my second year and
         fell in love with it over again. since then, I’ve been honing my skills
@@ -63,6 +61,6 @@ export default function AboutMe(): React.ReactElement {
         I’m seeking a full-time role where I can help a company achieve its
         goals.
       </Text>
-    </Grid>
+    </SimpleGrid>
   );
 }

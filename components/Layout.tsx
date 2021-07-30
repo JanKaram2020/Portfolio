@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import Navigation from './Navigation';
 
 function Layout({
@@ -10,7 +10,16 @@ function Layout({
   return (
     <>
       <Navigation />
-      <Box as="main" mx="20px" mb="50px">
+      <Box
+        as="main"
+        mx="20px"
+        mb="50px"
+        sx={{
+          '@media print': {
+            m: 0,
+          },
+        }}
+      >
         {children}
       </Box>
     </>
