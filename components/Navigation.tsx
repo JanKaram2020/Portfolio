@@ -4,7 +4,6 @@ import {
   Box,
   useColorMode,
   VisuallyHidden,
-  VStack,
 } from '@chakra-ui/react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -17,6 +16,7 @@ const Navigation = (): React.ReactElement => {
   const { colorMode } = useColorMode();
   return (
     <Flex
+      id="header"
       as="header"
       justifyContent="space-between"
       alignItems="center"

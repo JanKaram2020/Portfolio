@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   Heading,
-  Flex,
   SimpleGrid,
   Link,
   Text,
@@ -11,7 +10,7 @@ import {
 } from '@chakra-ui/react';
 
 const TwoColumnGrid = ({ children }: { children: React.ReactNode }) => (
-  <SimpleGrid columns={2} w="100%">
+  <SimpleGrid columns={{ sm: 1, lg: 2 }} w="100%">
     {children}
   </SimpleGrid>
 );
@@ -19,16 +18,32 @@ const TwoColumnGrid = ({ children }: { children: React.ReactNode }) => (
 export default function ResumePage() {
   return (
     <>
-      <Center mt="5vh">
-        <Link
-          href="/Resume.pdf"
-          download="JanKaramResume"
-          textAlign="center"
-          fontSize="2xl"
-          fontWeight="bold"
-        >
-          Download Resume
-        </Link>
+      <Center
+        mt="5vh"
+        sx={{
+          '@media print': {
+            m: 0,
+          },
+        }}
+      >
+        <Text>
+          <Link
+            href="/Resume.pdf"
+            download="JanKaramResume"
+            textAlign="center"
+            fontSize="2xl"
+            fontWeight="bold"
+            display="block"
+            sx={{
+              '@media print': {
+                display: 'none',
+              },
+            }}
+          >
+            Download Resume
+          </Link>
+          or print this page and all extras will be removed from print
+        </Text>
       </Center>
       <Center>
         <VStack
@@ -41,6 +56,7 @@ export default function ResumePage() {
           p="20px"
           sx={{
             '@media print': {
+              m: 0,
               minWidth: '100%',
             },
           }}
@@ -130,7 +146,11 @@ export default function ResumePage() {
                 <Heading as="h3" fontSize="lg">
                   A responsive PWA multi language blog
                 </Heading>
-                <Link external href="https://lilyannehany.netlify.app/">
+                <Link
+                  href="https://lilyannehany.netlify.app/"
+                  isExternal
+                  rel="noopener"
+                >
                   https://lilyannehany.netlify.app/
                 </Link>
               </Text>
@@ -161,7 +181,11 @@ export default function ResumePage() {
                 <Heading as="h3" fontSize="lg">
                   Would you rather game
                 </Heading>
-                <Link external href="https://jan-would-you-rather.surge.sh">
+                <Link
+                  isExternal
+                  rel="noopener"
+                  href="https://jan-would-you-rather.surge.sh"
+                >
                   https://jan-would-you-rather.surge.sh
                 </Link>
               </Text>
@@ -192,7 +216,11 @@ export default function ResumePage() {
                 <Heading as="h3" fontSize="lg">
                   Music website
                 </Heading>
-                <Link external href="https://eargasm.surge.sh/">
+                <Link
+                  isExternal
+                  rel="noopener"
+                  href="https://eargasm.surge.sh/"
+                >
                   https://eargasm.surge.sh/
                 </Link>
               </Text>

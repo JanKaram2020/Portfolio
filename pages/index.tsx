@@ -46,6 +46,7 @@ export default function IndexPage(): React.ReactElement {
       </Flex>
       <AboutMe />
       <Heading
+        id="skills"
         as="h2"
         position="relative"
         mt="10vh"
@@ -100,6 +101,7 @@ export default function IndexPage(): React.ReactElement {
         </UnorderedList>
       </Grid>
       <Heading
+        id="projects"
         as="h2"
         position="relative"
         mt="10vh"

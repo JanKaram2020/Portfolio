@@ -4,7 +4,7 @@ import { chakra, useColorModeValue } from '@chakra-ui/react';
 
 const ChakraSvg = chakra('svg');
 function Icon(): React.ReactElement {
-  const color = useColorModeValue('gray.800', 'white');
+  const color = useColorModeValue('gray.800', 'gray.200');
   return (
     <ChakraSvg
       xmlns="http://www.w3.org/2000/svg"

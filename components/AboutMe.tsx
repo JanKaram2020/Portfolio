@@ -1,10 +1,11 @@
 import React from 'react';
-import { Grid, SimpleGrid, Text, Link as StyledLink } from '@chakra-ui/react';
+import { SimpleGrid, Text, Link as StyledLink } from '@chakra-ui/react';
 import FadeInWhenVisible from './FadeInWhenVisible';
 
 export default function AboutMe(): React.ReactElement {
   return (
     <SimpleGrid
+      id="aboutMe"
       spacing={5}
       columns={[1, 1, 3]}
       minChildWidth="320px"
