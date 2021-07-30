@@ -22,22 +22,24 @@ export default function Footer() {
       }}
     >
       <HStack spacing={10} p="10px">
-        <StyledLink href="#header">
-          <Box
-            as="figure"
-            sx={{ filter: colorMode === 'dark' ? 'invert(100%)' : '' }}
-            _hover={{
-              filter: `${colorMode === 'dark' ? 'invert(100%)' : ''} `,
-            }}
-          >
-            <Image
-              alt="Jan Karam logo"
-              src="/janfinal.svg"
-              width={100}
-              height={25}
-            />
-          </Box>
-        </StyledLink>
+        <Link href="/">
+          <StyledLink>
+            <Box
+              as="figure"
+              sx={{ filter: colorMode === 'dark' ? 'invert(100%)' : '' }}
+              _hover={{
+                filter: `${colorMode === 'dark' ? 'invert(100%)' : ''} `,
+              }}
+            >
+              <Image
+                alt="Jan Karam logo"
+                src="/janfinal.svg"
+                width={100}
+                height={25}
+              />
+            </Box>
+          </StyledLink>
+        </Link>
         <StyledLink href="#aboutMe">About</StyledLink>
         <StyledLink href="#skills">Skills</StyledLink>
         <StyledLink href="#projects">Projects</StyledLink>
