@@ -19,6 +19,17 @@ const TwoColumnGrid = ({ children }: { children: React.ReactNode }) => (
 export default function ResumePage() {
   return (
     <>
+      <Center mt="5vh">
+        <Link
+          href="/Resume.pdf"
+          download="JanKaramResume"
+          textAlign="center"
+          fontSize="2xl"
+          fontWeight="bold"
+        >
+          Download Resume
+        </Link>
+      </Center>
       <Center>
         <VStack
           spacing={5}
@@ -243,7 +254,7 @@ export default function ResumePage() {
                 University of Michigan via Coursera
               </Text>
             </Text>
-          </TwoColumnGrid>{' '}
+          </TwoColumnGrid>
           <TwoColumnGrid>
             <Heading as="h2" fontSize="xl">
               Skills
