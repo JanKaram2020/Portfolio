@@ -20,8 +20,9 @@ export default function Footer() {
           display: 'none',
         },
       }}
+      flexWrap="wrap"
     >
-      <HStack spacing={10} p="10px">
+      <HStack spacing={10} p="10px" flexWrap="wrap">
         <Link href="/">
           <StyledLink
             _hover={{
