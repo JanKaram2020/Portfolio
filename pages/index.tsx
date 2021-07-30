@@ -7,6 +7,7 @@ import {
   UnorderedList,
   Grid,
   SimpleGrid,
+  Link,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import AnimatedLogo from '../components/AnimatedLogo';
@@ -163,6 +164,40 @@ export default function IndexPage(): React.ReactElement {
           alt="Todo website screenshot"
         />
       </SimpleGrid>
+      <Flex flexDirection="column" mt="12vh" gridGap="5vh" mx="1vw">
+        <Heading
+          as="h2"
+          position="relative"
+          mt="10vh"
+          _after={{
+            content: '""',
+            position: 'absolute',
+            bottom: 0,
+            display: 'block',
+            width: ['80%', null, '40%'],
+            height: '2px',
+            transform: 'scaleX(0)',
+            background: 'red.400',
+            transition: 'transform 250ms ease-in-out',
+          }}
+          sx={{
+            '&:hover': {
+              '&:after': {
+                transform: 'scaleX(1)',
+              },
+            },
+          }}
+        >
+          Let's Build Something Together
+        </Heading>
+        <Text fontSize="1.2rem" pt="1rem">
+          Feel free to reach out if you're looking for a developer, have a
+          question, or just want to connect
+        </Text>
+        <Link href="mailto: jankaram2020@gmail.com" external>
+          jankaram2020@gmail.com
+        </Link>
+      </Flex>
     </>
   );
 }
