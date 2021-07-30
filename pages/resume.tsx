@@ -7,10 +7,19 @@ import {
   VStack,
   Divider,
   Center,
+  Box,
 } from '@chakra-ui/react';
 
 const TwoColumnGrid = ({ children }: { children: React.ReactNode }) => (
-  <SimpleGrid columns={{ sm: 1, lg: 2 }} w="100%">
+  <SimpleGrid
+    columns={{ sm: 1, lg: 2 }}
+    sx={{
+      '@media print': {
+        gridTemplateColumns: '1fr 1fr',
+      },
+    }}
+    w="100%"
+  >
     {children}
   </SimpleGrid>
 );
@@ -26,7 +35,13 @@ export default function ResumePage() {
           },
         }}
       >
-        <Text>
+        <Text
+          sx={{
+            '@media print': {
+              display: 'none',
+            },
+          }}
+        >
           <Link
             href="/Resume.pdf"
             download="JanKaramResume"
@@ -34,11 +49,6 @@ export default function ResumePage() {
             fontSize="2xl"
             fontWeight="bold"
             display="block"
-            sx={{
-              '@media print': {
-                display: 'none',
-              },
-            }}
           >
             Download Resume
           </Link>
@@ -62,13 +72,10 @@ export default function ResumePage() {
           }}
         >
           <TwoColumnGrid>
-            <Heading as="h2" fontSize="xl">
-              Contact
-            </Heading>
-            <Text>
+            <Box>
               <Heading
-                as="h2"
-                fontSize="xl"
+                as="h1"
+                fontSize="2xl"
                 display="none"
                 sx={{
                   '@media print': {
@@ -78,6 +85,11 @@ export default function ResumePage() {
               >
                 Jan Karam Aziz Ghaly
               </Heading>
+              <Heading as="h2" fontSize="xl">
+                Contact
+              </Heading>
+            </Box>
+            <Text>
               <Link href="mailto: jankaram2020@gmail.com" external>
                 jankaram2020@gmail.com
               </Link>
@@ -96,7 +108,7 @@ export default function ResumePage() {
             </Text>
           </TwoColumnGrid>
           <TwoColumnGrid>
-            <Heading as="h2" fontSize="xl">
+            <Heading as="h2" fontSize="xl" id="aboutMe">
               Professional Summary
             </Heading>
             <Text>
@@ -138,7 +150,7 @@ export default function ResumePage() {
             </Text>
           </TwoColumnGrid>
           <TwoColumnGrid>
-            <Heading as="h2" fontSize="xl">
+            <Heading as="h2" fontSize="xl" id="projects">
               Projects
             </Heading>
             <Text>
@@ -284,7 +296,7 @@ export default function ResumePage() {
             </Text>
           </TwoColumnGrid>
           <TwoColumnGrid>
-            <Heading as="h2" fontSize="xl">
+            <Heading as="h2" fontSize="xl" id="skills">
               Skills
             </Heading>
             <Text as="ol" ml="1rem">

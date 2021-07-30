@@ -23,7 +23,14 @@ export default function Footer() {
     >
       <HStack spacing={10} p="10px">
         <Link href="/">
-          <StyledLink>
+          <StyledLink
+            _hover={{
+              color: 'red.400',
+            }}
+            _active={{
+              transform: 'scale(0.8)',
+            }}
+          >
             <Box
               as="figure"
               sx={{ filter: colorMode === 'dark' ? 'invert(100%)' : '' }}
@@ -40,13 +47,61 @@ export default function Footer() {
             </Box>
           </StyledLink>
         </Link>
-        <StyledLink href="#aboutMe">About</StyledLink>
-        <StyledLink href="#skills">Skills</StyledLink>
-        <StyledLink href="#projects">Projects</StyledLink>
-        <Link href="/resume">
-          <StyledLink>Resume</StyledLink>
+        <Link href="#aboutMe">
+          <StyledLink
+            _hover={{
+              color: 'red.400',
+            }}
+            _active={{
+              transform: 'scale(0.8)',
+            }}
+          >
+            About
+          </StyledLink>
+        </Link>
+        <Link href="#skills">
+          <StyledLink
+            _hover={{
+              color: 'red.400',
+            }}
+            _active={{
+              transform: 'scale(0.8)',
+            }}
+          >
+            Skills
+          </StyledLink>
+        </Link>
+        <Link href="#projects">
+          <StyledLink
+            _hover={{
+              color: 'red.400',
+            }}
+            _active={{
+              transform: 'scale(0.8)',
+            }}
+          >
+            Projects
+          </StyledLink>
+        </Link>
+        <Link href="/resume#header">
+          <StyledLink
+            _hover={{
+              color: 'red.400',
+            }}
+            _active={{
+              transform: 'scale(0.8)',
+            }}
+          >
+            Resume
+          </StyledLink>
         </Link>
         <StyledLink
+          _hover={{
+            color: 'red.400',
+          }}
+          _active={{
+            transform: 'scale(0.8)',
+          }}
           href="https://www.linkedin.com/in/jankaram2020/"
           isExternal
           rel="noopener"
@@ -54,13 +109,29 @@ export default function Footer() {
           Linkedin
         </StyledLink>
         <StyledLink
+          _hover={{
+            color: 'red.400',
+          }}
+          _active={{
+            transform: 'scale(0.8)',
+          }}
           href="https://github.com/JanKaram2020"
           isExternal
           rel="noopener"
         >
           Github
         </StyledLink>
-        <StyledLink href="#header">Back to top</StyledLink>
+        <StyledLink
+          _hover={{
+            color: 'red.400',
+          }}
+          _active={{
+            transform: 'scale(0.8)',
+          }}
+          href="#header"
+        >
+          Back to top
+        </StyledLink>
       </HStack>
     </Center>
   );
