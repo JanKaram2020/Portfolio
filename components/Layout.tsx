@@ -15,6 +15,7 @@ function Layout({
         as="main"
         mx="20px"
         mb="50px"
+        minHeight="75vh"
         sx={{
           '@media print': {
             m: 0,

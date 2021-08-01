@@ -4,6 +4,7 @@ import {
   Text,
   Link as StyledLink,
   useColorMode,
+  Heading,
 } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -20,19 +21,22 @@ const SlashMotion = {
     ease: 'easeInOut',
   },
 };
-const Project = ({
-  image,
-  text,
-  page = '/',
-  inProgress,
-  alt,
-}: {
+interface ProjectInterface {
+  name: string;
   image: string;
   alt: string;
   text: string;
   page?: string;
   inProgress?: boolean;
-}) => {
+}
+const Project = ({
+  name,
+  image,
+  text,
+  page = '/',
+  inProgress,
+  alt,
+}: ProjectInterface) => {
   const { colorMode } = useColorMode();
   const controls = useAnimation();
   // eslint-disable-next-line @typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-assignment
@@ -83,6 +87,10 @@ const Project = ({
           alt={alt}
         />
       </AnimatedBox>
+      <Heading as="h2" fontSize="2xl">
+        {' '}
+        {name}
+      </Heading>
       <Text color="gray.500">{text}</Text>
       {inProgress ? (
         <Text fontSize="xl"> In development...</Text>

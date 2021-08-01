@@ -144,26 +144,30 @@ export default function IndexPage(): React.ReactElement {
         <Project
           image="/lilyanneMockup.png"
           text="A responsive PWA multi language blog built with Gatsby Js, Theme UI and Sanity CMS"
-          page="lilyanneblog"
+          page="writingbylilyanne"
           alt="Lilyanne Hany's blog screenshot"
+          name="Writing by Lilyanne"
         />
         <Project
           image="/eargasmMockup.png"
           text="A responsive music website built with React Js, Bootstrap and JSON file as a database"
           page="eargasm"
           alt="Eargasm website screenshot"
+          name="Eargasm"
         />
         <Project
           image="/wouldYouRatherMockup.png"
           text="Would you rather game bulit with Reactjs , Redux and Redux-toolkit"
           page="wouldyourather"
           alt="Would you rather website screenshot"
-        />{' '}
+          name="Would you rather"
+        />
         <Project
           image="/todo.png"
           text="A personal todo list in developement using Next js ,React js, Supabase for database and auth , ChakraUi and Framer motion"
           inProgress
           alt="Todo website screenshot"
+          name="Todos"
         />
       </SimpleGrid>
       <Flex flexDirection="column" mt="12vh" gridGap="5vh" mx="1vw">
