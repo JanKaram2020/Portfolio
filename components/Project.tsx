@@ -69,6 +69,7 @@ const Project = ({
       mt="1rem"
     >
       <AnimatedBox
+        layoutId={name}
         as="figure"
         variants={SlashMotion}
         sx={{

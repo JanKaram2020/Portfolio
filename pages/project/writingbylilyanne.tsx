@@ -11,8 +11,10 @@ import {
 } from '@chakra-ui/react';
 import Image from 'next/image';
 import React from 'react';
+import { motion } from 'framer-motion';
 import ListItemColor from '../../components/ListItemColor';
 
+const MotionCenter = motion(Center);
 export default function LilyanneBlog() {
   return (
     <>
@@ -96,14 +98,15 @@ export default function LilyanneBlog() {
             </UnorderedList>
           </VStack>
         </SimpleGrid>
-        <Center w="100%">
+        <MotionCenter w="100%" layoutId="Writing by Lilyanne">
           <Image
             src="/lilyanneMockup.png"
             width={900}
             height={380}
             objectFit="cover"
+            alt="screenshots of writing by lilyanne on different devices"
           />
-        </Center>
+        </MotionCenter>
         <SimpleGrid columns={[1, 1, 2]}>
           <Box>
             <Heading as="h2" fontSize="2xl" mb="30px" color="red.300">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box } from '@chakra-ui/react';
+import { AnimateSharedLayout } from 'framer-motion';
 import Navigation from './Navigation';
 import Footer from './Footer';
 
@@ -22,7 +23,7 @@ function Layout({
           },
         }}
       >
-        {children}
+        <AnimateSharedLayout>{children}</AnimateSharedLayout>
       </Box>
       <Footer />
     </>

@@ -149,18 +149,18 @@ export default function IndexPage(): React.ReactElement {
           name="Writing by Lilyanne"
         />
         <Project
-          image="/eargasmMockup.png"
-          text="A responsive music website built with React Js, Bootstrap and JSON file as a database"
-          page="eargasm"
-          alt="Eargasm website screenshot"
-          name="Eargasm"
-        />
-        <Project
           image="/wouldYouRatherMockup.png"
           text="Would you rather game bulit with Reactjs , Redux and Redux-toolkit"
           page="wouldyourather"
           alt="Would you rather website screenshot"
           name="Would you rather"
+        />
+        <Project
+          image="/eargasmMockup.png"
+          text="A responsive music website built with React Js, Bootstrap and JSON file as a database"
+          page="eargasm"
+          alt="Eargasm website screenshot"
+          name="Eargasm"
         />
         <Project
           image="/todo.png"
@@ -200,7 +200,7 @@ export default function IndexPage(): React.ReactElement {
           Feel free to reach out if you're looking for a developer, have a
           question, or just want to connect
         </Text>
-        <Link href="mailto: jankaram2020@gmail.com" external>
+        <Link href="mailto: jankaram2020@gmail.com" isExternal>
           jankaram2020@gmail.com
         </Link>
       </Flex>
