@@ -87,7 +87,7 @@ export default function LilyanneBlog() {
             <UnorderedList sx={{ listStyle: 'none' }}>
               <ListItemColor>
                 <Link
-                  href="https://github.com/JanKaram2020/Lilyanne-blog-gatsby"
+                  href="https://lilyannehany.netlify.app/"
                   isExternal
                   rel="noopener"
                   textDecoration="underline"
