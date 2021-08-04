@@ -61,9 +61,10 @@ const Navigation = (): React.ReactElement => {
               sx={{ filter: colorMode === 'dark' ? 'invert(100%)' : '' }}
               _hover={{
                 filter: `${colorMode === 'dark' ? 'invert(100%)' : ''} `,
+                transform: 'rotate(-10deg)',
               }}
               _active={{
-                transform: 'scale(0.8)',
+                transform: 'rotate(-15deg) scale(0.8)',
               }}
             >
               <VisuallyHidden> website's home page</VisuallyHidden>
@@ -86,9 +87,10 @@ const Navigation = (): React.ReactElement => {
           rel="noopener"
           _hover={{
             color: 'red.400',
+            transform: 'rotate(5deg)',
           }}
           _active={{
-            transform: 'scale(0.8)',
+            transform: 'rotate(10deg) scale(0.8)',
           }}
         >
           <VisuallyHidden> Jan Karam's Linkedin profile</VisuallyHidden>
@@ -101,9 +103,10 @@ const Navigation = (): React.ReactElement => {
           rel="noopener"
           _hover={{
             color: 'red.400',
+            transform: 'rotate(10deg)',
           }}
           _active={{
-            transform: 'scale(0.8)',
+            transform: 'rotate(15deg) scale(0.8)',
           }}
         >
           <VisuallyHidden> Jan Karam's Github profile</VisuallyHidden>
@@ -114,9 +117,10 @@ const Navigation = (): React.ReactElement => {
             title="resume"
             _hover={{
               color: 'red.400',
+              transform: 'rotate(15deg)',
             }}
             _active={{
-              transform: 'scale(0.8)',
+              transform: 'rotate(20deg) scale(0.8)',
             }}
           >
             <VisuallyHidden> Jan Karam's Resume</VisuallyHidden>

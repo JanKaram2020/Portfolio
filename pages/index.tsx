@@ -15,6 +15,7 @@ import AboutMe from '../components/AboutMe';
 import ListItem from '../components/ListItemColor';
 import Project from '../components/Project';
 import SEO from '../components/SEO';
+import MouseTracker from '../components/MouseTracker';
 
 const AnimatedText = motion(Text);
 export default function IndexPage(): React.ReactElement {

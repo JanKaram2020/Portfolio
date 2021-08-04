@@ -27,15 +27,20 @@ export default function FadeInWhenVisible(): React.ReactElement {
       ref={ref}
       animate={controls}
       initial={{ opacity: 0, scale: 0 }}
-      transition={{ delay: 0.3, duration: 0.3 }}
+      transition={{ duration: 0.1 }}
       variants={{
         visible: { opacity: 1, scale: [0, 2, 1] },
         hidden: { opacity: 0, scale: 0 },
+        hover: { opacity: 1, scale: 1.2 },
+        normal: { opacity: 1, scale: 1 },
+      }}
+      onHoverStart={async () => {
+        await controls.start('hover');
+      }}
+      onHoverEnd={async () => {
+        await controls.start('normal');
       }}
       display={['none', 'none', 'none', 'block']}
-      // gridArea="1 / 2 / 2 / 3"
-      // maxHeight="340px"
-      // maxWidth="340px"
     >
       <Box
         as="figure"
