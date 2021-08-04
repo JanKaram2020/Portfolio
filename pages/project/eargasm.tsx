@@ -42,6 +42,7 @@ export default function Eargasm() {
             <UnorderedList sx={{ listStyle: 'none' }}>
               <ListItemColor>React</ListItemColor>
               <ListItemColor>Bootstrap</ListItemColor>
+              <ListItemColor>Fuse.js</ListItemColor>
               <ListItemColor>JSON file as a database</ListItemColor>
             </UnorderedList>
           </VStack>
@@ -97,6 +98,9 @@ export default function Eargasm() {
             <Text fontSize="lg">
               i choose React because I wanted to get more familiar with and make
               a project on my own instead of following tutorials.
+              <br /> Fuse.js was the search option of choice because I didn't
+              want to build a full backend for this simple app with it's small
+              database.
               <br />
               Boostrap was the styling framework because I wanted to get my more
               familiar with React without focusing too much on styling.
@@ -117,14 +121,6 @@ export default function Eargasm() {
                 width={190}
                 height={72.5}
                 alt="react js logo"
-              />
-            </Link>
-            <Link href="https://redux.js.org/" isExternal rel="noopener">
-              <Image
-                src="/logos/redux.png"
-                width={190}
-                height={72.5}
-                alt="Redux js logo"
               />
             </Link>
             <Link
@@ -154,14 +150,10 @@ export default function Eargasm() {
           <Text fontSize="lg" maxWidth="60ch">
             <UnorderedList sx={{ listStyle: 'none' }}>
               <ListItemColor>
-                Never write vanilla Redux again :D , seriously after writing a
-                few reduces and actions , I felt that it was complex, hard to
-                manage and code was hard to keep track of. then I found
-                Redux-toolkit package and I was amazed by the amount of
-                boilerplate i removed from the code base and it was amazing.
+                Gained more experience with React and it's ecosystem.
               </ListItemColor>{' '}
               <ListItemColor>
-                Gained more experience with React and it's ecosystem.
+                used fuse js and learned how to make a mini fuzzy search engine.
               </ListItemColor>
             </UnorderedList>
           </Text>
