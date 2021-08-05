@@ -15,7 +15,6 @@ import AboutMe from '../components/AboutMe';
 import ListItem from '../components/ListItemColor';
 import Project from '../components/Project';
 import SEO from '../components/SEO';
-import MouseTracker from '../components/MouseTracker';
 
 const AnimatedText = motion(Text);
 export default function IndexPage(): React.ReactElement {
@@ -151,7 +150,7 @@ export default function IndexPage(): React.ReactElement {
         />
         <Project
           image="/wouldYouRatherMockup.png"
-          text="Would you rather game bulit with Reactjs , Redux and Redux-toolkit"
+          text="Would you rather game built with Reactjs , Redux and Redux-toolkit"
           page="wouldyourather"
           alt="Would you rather website screenshot"
           name="Would you rather"
@@ -165,7 +164,7 @@ export default function IndexPage(): React.ReactElement {
         />
         <Project
           image="/todo.png"
-          text="A personal todo list in developement using Next js ,React js, Supabase for database and auth , ChakraUi and Framer motion"
+          text="A personal todo list in development using Next js ,React js, Supabase for database and auth , ChakraUi and Framer motion"
           inProgress
           alt="Todo website screenshot"
           name="Todos"
