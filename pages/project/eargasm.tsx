@@ -13,12 +13,18 @@ import Image from 'next/image';
 import React from 'react';
 import { motion } from 'framer-motion';
 import ListItemColor from '../../components/ListItemColor';
+import SEO from '../../components/SEO';
 
 const MotionCenter = motion(Center);
 
 export default function Eargasm() {
   return (
     <>
+      <SEO
+        description="Eargasm is a music website built with React by Jan Karam"
+        title="Eargasm | Jan Karam"
+        image="/eargasmMockup.png"
+      />
       <VStack mt="30px" gridGap="30px" alignItems="start" spacing={10}>
         <Heading as="h1" color="red.400" fontSize="3xl">
           Eargasm

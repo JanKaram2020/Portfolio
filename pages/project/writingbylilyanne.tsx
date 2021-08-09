@@ -20,8 +20,7 @@ export default function LilyanneBlog() {
   return (
     <>
       <SEO
-        description="Writing by Lilyanne is a JAMstack powered blog made by Jan Karam and built for my Lilyanne.I built this project from scratch with Gatsby,
-          React ,GraphQL, Theme-UI, Framer motion , react-intl and Sanity CMS."
+        description="Writing by Lilyanne is a JAMstack powered blog made by Jan Karam and built for my Lilyanne.I built this project from scratch with Gatsby, React ,GraphQL, Theme-UI, Framer motion , react-intl and Sanity CMS."
         title="Writing by Lilyanne | Jan Karam"
         image="/lilyanneMockup.png"
       />

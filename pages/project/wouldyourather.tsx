@@ -13,12 +13,18 @@ import Image from 'next/image';
 import React from 'react';
 import { motion } from 'framer-motion';
 import ListItemColor from '../../components/ListItemColor';
+import SEO from '../../components/SEO';
 
 const MotionCenter = motion(Center);
 
 export default function WouldYouRather() {
   return (
     <>
+      <SEO
+        description="Would you rather is a React and Redux powered web app built to mimic would you rather game made by Jan Karam.this project is built with React ,Redux, Redux-toolkit , React-strap and Bootstrap for styling."
+        title="Would You Rather | Jan Karam"
+        image="/wouldYouRatherMockup.png"
+      />
       <VStack mt="30px" gridGap="30px" alignItems="start" spacing={10}>
         <Heading as="h1" color="red.400" fontSize="3xl">
           Would You Rather
