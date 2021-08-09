@@ -13,11 +13,18 @@ import Image from 'next/image';
 import React from 'react';
 import { motion } from 'framer-motion';
 import ListItemColor from '../../components/ListItemColor';
+import SEO from '../../components/SEO';
 
 const MotionCenter = motion(Center);
 export default function LilyanneBlog() {
   return (
     <>
+      <SEO
+        description="Writing by Lilyanne is a JAMstack powered blog made by Jan Karam and built for my Lilyanne.I built this project from scratch with Gatsby,
+          React ,GraphQL, Theme-UI, Framer motion , react-intl and Sanity CMS."
+        title="Writing by Lilyanne | Jan Karam"
+        image="/lilyanneMockup.png"
+      />
       <VStack mt="30px" gridGap="30px" alignItems="start" spacing={10}>
         <Heading as="h1" color="red.400" fontSize="3xl">
           Writing by Lilyanne
