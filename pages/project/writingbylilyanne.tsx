@@ -49,6 +49,7 @@ export default function LilyanneBlog() {
               <ListItemColor>Framer motion</ListItemColor>
               <ListItemColor>react-intl</ListItemColor>
               <ListItemColor>Sanity CMS</ListItemColor>
+              <ListItemColor>Google analytics</ListItemColor>
             </UnorderedList>
           </VStack>
           <VStack>
@@ -125,6 +126,9 @@ export default function LilyanneBlog() {
               support dark mode without losing my sanity, it's amazing and
               supports multiple color modes by default. and framer motion
               because of it's amazing performance and ease of use.
+              <br />
+              Google analytics because I wanted to track engagement and to know
+              which article attracts more people.
             </Text>
           </Box>
           <Flex
@@ -184,8 +188,9 @@ export default function LilyanneBlog() {
             I could spend all day describing the lessons that I learned while
             working on this project, but the most important ones involved my new
             found understanding of Gatsby,GraphQl, Git management, and API
-            integration with Sanity Io. As my first large project using React, I
-            learned a lot of lessons regarding code structure and organization.
+            integration with Sanity Io and how to use google analytics. As my
+            first large project using React, I learned a lot of lessons
+            regarding code structure and organization.
           </Text>
         </VStack>
       </VStack>
