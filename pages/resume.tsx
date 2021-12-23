@@ -44,7 +44,7 @@ export default function ResumePage() {
         >
           <Link
             href="/Resume.pdf"
-            download="JanKaramResume"
+            download="JanKaram-Resume.pdf"
             textAlign="center"
             fontSize="2xl"
             fontWeight="bold"
