@@ -54,7 +54,7 @@ export default function ResumePage() {
             Download Resume
           </Link>
           or print this page and all extras will be removed from print <br />
-          (remember to disable headers and footers)
+          (remember to disable headers and footers & to be in light mode)
         </Text>
       </Center>
       <Center>
