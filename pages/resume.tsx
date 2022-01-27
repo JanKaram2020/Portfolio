@@ -102,7 +102,15 @@ export default function ResumePage() {
             >
               Contact
             </Heading>
-            <SimpleGrid columns={2} gap="5px">
+            <SimpleGrid
+              columns={[1, 2]}
+              sx={{
+                '@media print': {
+                  gridTemplateColumns: '1fr 1fr',
+                },
+              }}
+              gap="5px"
+            >
               <Center>
                 <MdEmail />
                 <Link href="mailto: jankaram2020@gmail.com" external>
