@@ -120,7 +120,7 @@ export default function ResumePage() {
               <Center>
                 <MdPhone />
                 <Link href="tel: +201277440641" external>
-                  (+2) 012 77 44 0641{' '}
+                  (+2) 012 77 44 0641
                 </Link>
               </Center>
               <Center>
@@ -179,7 +179,7 @@ export default function ResumePage() {
                   Frontend Developer
                 </Heading>
                 Freelance, Self Employed
-                <Text fontSize="sm">Aug 2019 - Present (2 years +)</Text>
+                <Text fontSize="sm">Aug 2019 - Jul 2021</Text>
                 <Divider />
               </Text>
               <Text>
