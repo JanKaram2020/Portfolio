@@ -271,7 +271,7 @@ export default function ResumePage() {
               Skills
             </Heading>
             <Text as="ol" ml="1rem" fontSize="14px">
-              Nextjs & Gatsby js • Typescript & Javascript • Redux& Redux
+              Nextjs & Reactjs • Typescript & Javascript • Redux& Redux
               toolkit • HTML & CSS • Git& GitHub • CSS-in-Js& sass • NodeJs -
               Express - Adonisjs • Prototyping with Framer • Graphic design &
               Photo editing • Googling !
