@@ -113,25 +113,28 @@ export default function ResumePage() {
             >
               <Center>
                 <MdEmail />
-                <Link href="mailto: jankaram2020@gmail.com" external>
+                <Link href="mailto: jankaram2020@gmail.com" external="true">
                   jankaram2020@gmail.com
                 </Link>
               </Center>
               <Center>
                 <MdPhone />
-                <Link href="tel: +201277440641" external>
+                <Link href="tel: +201277440641" external="true">
                   (+2) 012 77 44 0641
                 </Link>
               </Center>
               <Center>
                 <AiFillLinkedin />
-                <Link href="https://www.linkedin.com/in/jankaram2020/" external>
+                <Link
+                  href="https://www.linkedin.com/in/jankaram2020/"
+                  external="true"
+                >
                   LinkedIn
                 </Link>
               </Center>
               <Center>
                 <AiFillGithub />
-                <Link href="https://github.com/JanKaram2020" external>
+                <Link href="https://github.com/JanKaram2020" external="true">
                   Github
                 </Link>
               </Center>
@@ -151,8 +154,8 @@ export default function ResumePage() {
             <Heading as="h2" fontSize="xl" textAlign="center">
               Experience
             </Heading>
-            <Text>
-              <Text>
+            <Text as="div">
+              <Text as="div">
                 <Heading as="h3" fontSize="lg">
                   Full stack web developer
                 </Heading>
@@ -172,17 +175,17 @@ export default function ResumePage() {
                     Node, Express, and Sequelize.
                   </li>
                 </Text>
-                <Divider />
+                {/* <Divider /> */}
               </Text>
-              <Text>
+              <Text as="div">
                 <Heading as="h3" fontSize="lg">
                   Frontend Developer
                 </Heading>
                 Freelance, Self Employed
                 <Text fontSize="sm">Aug 2019 - Jul 2021</Text>
-                <Divider />
+                {/* <Divider /> */}
               </Text>
-              <Text>
+              <Text as="div">
                 <Heading as="h3" fontSize="lg">
                   Internship Trainee
                 </Heading>
@@ -199,8 +202,8 @@ export default function ResumePage() {
             <Heading as="h2" fontSize="xl" id="projects" textAlign="center">
               Projects
             </Heading>
-            <Text>
-              <Text>
+            <Text as="div">
+              <Text as="div">
                 <Heading as="h3" fontSize="lg">
                   A responsive PWA multi language blog
                 </Heading>
@@ -218,8 +221,8 @@ export default function ResumePage() {
                 for light & dark mode and styling, and Sanity CMS for content
                 management.
               </Text>
-              <Divider />
-              <Text>
+              {/* <Divider /> */}
+              <Text as="div">
                 <Heading as="h3" fontSize="lg">
                   Would you rather game
                 </Heading>
@@ -236,22 +239,22 @@ export default function ResumePage() {
                 mimic would you rather game? built this project with React,
                 Redux, Redux-toolkit, React-strap, and Bootstrap for styling.
               </Text>
-              <Divider />
+              {/* <Divider /> */}
             </Text>
           </TwoColumnGrid>
           <TwoColumnGrid>
             <Heading as="h2" fontSize="xl" textAlign="center">
               Education
             </Heading>
-            <Text>
-              <Text>
+            <Text as="div">
+              <Text as="div">
                 <Heading as="h3" fontSize="lg">
                   BS, Computer Science and Statistics.
                 </Heading>
                 <Text fontSize="14px">Alexandria University. (2022)</Text>
-                <Divider />
+                {/* <Divider /> */}
               </Text>
-              <Text>
+              <Text as="div">
                 <Heading as="h3" fontSize="lg">
                   Web development specialization
                 </Heading>
