@@ -1,8 +1,8 @@
 import { ColorModeScript } from '@chakra-ui/react';
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
 import React from 'react';
-import theme from '../theme';
-import { GA_TRACKING_ID } from '../lib/gtag';
+import theme from 'theme';
+import { GA_TRACKING_ID } from 'lib/gtag';
 
 export default class Document extends NextDocument {
   render() {

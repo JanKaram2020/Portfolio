@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react';
 import { MdEmail, MdPhone } from 'react-icons/md';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
-import SEO from '../components/SEO';
+import SEO from 'components/SEO';
 
 const TwoColumnGrid = ({ children }: { children: React.ReactNode }) => (
   <SimpleGrid

@@ -12,8 +12,8 @@ import {
 import Image from 'next/image';
 import React from 'react';
 import { motion } from 'framer-motion';
-import ListItemColor from '../../components/ListItemColor';
-import SEO from '../../components/SEO';
+import ListItemColor from 'components/ListItemColor';
+import SEO from 'components/SEO';
 
 const MotionCenter = motion(Center);
 

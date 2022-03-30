@@ -10,11 +10,11 @@ import {
   Link,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import AnimatedLogo from '../components/AnimatedLogo';
-import AboutMe from '../components/AboutMe';
-import ListItem from '../components/ListItemColor';
-import Project from '../components/Project';
-import SEO from '../components/SEO';
+import AnimatedLogo from 'components/AnimatedLogo';
+import AboutMe from 'components/AboutMe';
+import ListItem from 'components/ListItemColor';
+import Project from 'components/Project';
+import SEO from 'components/SEO';
 
 const AnimatedText = motion(Text);
 export default function IndexPage(): React.ReactElement {
