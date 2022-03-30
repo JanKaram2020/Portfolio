@@ -7,6 +7,7 @@ import {
   VStack,
   Divider,
   Center,
+  Button,
 } from '@chakra-ui/react';
 import { MdEmail, MdPhone } from 'react-icons/md';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
@@ -35,29 +36,22 @@ export default function ResumePage() {
         sx={{
           '@media print': {
             m: 0,
+            display: 'none',
           },
         }}
       >
-        <Text
-          sx={{
-            '@media print': {
-              display: 'none',
-            },
-          }}
+        <Button
+          // href="/Resume.pdf"
+          // download="Jan-Karam-Resume.pdf"
+          textAlign="center"
+          fontSize="2xl"
+          fontWeight="bold"
+          colorScheme="blue"
+          variant="link"
+          onClick={() => window.print()}
         >
-          <Link
-            href="/Resume.pdf"
-            download="Jan-Karam-Resume.pdf"
-            textAlign="center"
-            fontSize="2xl"
-            fontWeight="bold"
-            display="block"
-          >
-            Download Resume
-          </Link>
-          or print this page and all extras will be removed from print <br />
-          (remember to disable headers and footers & to be in light mode)
-        </Text>
+          Download Resume
+        </Button>
       </Center>
       <Center>
         <VStack
@@ -74,6 +68,8 @@ export default function ResumePage() {
               p: 0,
               minWidth: '100%',
               border: 'none',
+              backgroundColor: 'white',
+              color: 'black',
             },
           }}
         >
