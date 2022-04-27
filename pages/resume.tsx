@@ -111,13 +111,13 @@ export default function ResumePage() {
             >
               <Center>
                 <MdEmail />
-                <Link href="mailto: jankaram2020@gmail.com" external="true">
+                <Link href="mailto: jankaram2020@gmail.com" external="true" target="_blank">
                   jankaram2020@gmail.com
                 </Link>
               </Center>
               <Center>
                 <MdPhone />
-                <Link href="tel: +201277440641" external="true">
+                <Link href="tel: +201277440641" external="true" target="_blank">
                   (+2) 012 77 44 0641
                 </Link>
               </Center>
@@ -126,13 +126,14 @@ export default function ResumePage() {
                 <Link
                   href="https://www.linkedin.com/in/jankaram2020/"
                   external="true"
+                  target="_blank"
                 >
                   LinkedIn
                 </Link>
               </Center>
               <Center>
                 <AiFillGithub />
-                <Link href="https://github.com/JanKaram2020" external="true">
+                <Link href="https://github.com/JanKaram2020" external="true" target="_blank">
                   Github
                 </Link>
               </Center>
