@@ -149,6 +149,14 @@ export default function IndexPage(): React.ReactElement {
           name="Writing by Lilyanne"
         />
         <Project
+          image="/test-table.PNG"
+          text="A website to get your test table by course codes or names
+          built with Nextjs, Nextjs's api routes, puppeteer and Mantine"
+          page="testtable"
+          alt="test table screenshot"
+          name="Test table"
+        />
+        <Project
           image="/wouldYouRatherMockup.png"
           text="Would you rather game built with Reactjs , Redux and Redux-toolkit"
           page="wouldyourather"
@@ -161,13 +169,6 @@ export default function IndexPage(): React.ReactElement {
           page="eargasm"
           alt="Eargasm website screenshot"
           name="Eargasm"
-        />
-        <Project
-          image="/todo.png"
-          text="A personal todo list in development using Next js ,React js, Supabase for database and auth , ChakraUi and Framer motion"
-          inProgress
-          alt="Todo website screenshot"
-          name="Todos"
         />
       </SimpleGrid>
       <Flex flexDirection="column" mt="12vh" gridGap="5vh" mx="1vw">

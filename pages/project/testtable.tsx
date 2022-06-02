@@ -17,22 +17,23 @@ import SEO from 'components/SEO';
 
 const MotionCenter = motion(Center);
 
-export default function Eargasm() {
+export default function TestTable() {
   return (
     <>
       <SEO
-        description="Eargasm is a music website built with React by Jan Karam"
-        title="Eargasm | Jan Karam"
-        image="/eargasmMockup.png"
+        description="Test table is a table generator website built with Nextjs and pupeteer by Jan Karam"
+        title="Test table | Jan Karam"
+        image="/test-table.PNG"
       />
       <VStack mt="30px" gridGap="30px" alignItems="start" spacing={10}>
         <Heading as="h1" color="red.400" fontSize="3xl">
-          Eargasm
+          Test table generator
         </Heading>
         <Text fontSize="lg">
-          Eargasm is a music website built with React.
-          <br />I built this project with React and React-strap and Bootstrap
-          for styling.
+          Test table generator is a table getter website that scrapes the
+          faculty of science's test table page and displays the results.
+          <br />I built this project using Nextjs, Puppeteer and Mantine
+          component library.
         </Text>
         <SimpleGrid
           columns={[1, 2, 3]}
@@ -46,10 +47,10 @@ export default function Eargasm() {
               Stack
             </Heading>
             <UnorderedList sx={{ listStyle: 'none' }}>
+              <ListItemColor>Next js</ListItemColor>
               <ListItemColor>React</ListItemColor>
-              <ListItemColor>Bootstrap</ListItemColor>
-              <ListItemColor>Fuse.js</ListItemColor>
-              <ListItemColor>JSON file as a database</ListItemColor>
+              <ListItemColor>Puppeteer</ListItemColor>
+              <ListItemColor>Mantine component library</ListItemColor>
             </UnorderedList>
           </VStack>
           <VStack>
@@ -59,7 +60,7 @@ export default function Eargasm() {
             <UnorderedList sx={{ listStyle: 'none' }}>
               <ListItemColor>
                 <Link
-                  href="https://github.com/JanKaram2020/eargasm.git"
+                  href="https://github.com/JanKaram2020/test-table"
                   textDecoration="underline"
                   isExternal
                   rel="noopener"
@@ -76,7 +77,7 @@ export default function Eargasm() {
             <UnorderedList sx={{ listStyle: 'none' }}>
               <ListItemColor>
                 <Link
-                  href="https://eargasm.surge.sh/"
+                  href="https://test-table-jankaram2020.vercel.app/"
                   isExternal
                   rel="noopener"
                   textDecoration="underline"
@@ -89,11 +90,11 @@ export default function Eargasm() {
         </SimpleGrid>
         <MotionCenter w="100%" layoutId="Would you rather">
           <Image
-            src="/eargasmMockup.png"
+            src="/test-table.PNG"
             width={900}
             height={380}
             objectFit="cover"
-            alt="screenshots of eargasm on different devices"
+            alt="screenshot of test table site"
           />
         </MotionCenter>
         <SimpleGrid columns={[1, 1, 2]}>
@@ -102,14 +103,15 @@ export default function Eargasm() {
               Why this stack?
             </Heading>
             <Text fontSize="lg">
-              i choose React because I wanted to get more familiar with and make
-              a project on my own instead of following tutorials.
-              <br /> Fuse.js was the search option of choice because I didn't
-              want to build a full backend for this simple app with it's small
-              database.
+              I choose Next-js and React because of the awesome DX and api
+              routes.
               <br />
-              Boostrap was the styling framework because I wanted to get my more
-              familiar with React without focusing too much on styling.
+              Puppeteer because in my opinion it's the best library to web
+              scrape using javascript and is used here to scrape the test table
+              page and get the user's courses by codes or names.
+              <br />
+              Mantine dev was the component library of choice because of it's
+              amazing , beautiful and accessible components.
             </Text>
           </Box>
           <Flex
@@ -121,24 +123,31 @@ export default function Eargasm() {
             borderRadius="15px"
             display={['none', 'flex']}
           >
-            <Link href="https://reactjs.org/" isExternal rel="noopener">
+            <Link href="https://nextjs.org/" isExternal rel="noopener">
               <Image
-                src="/logos/react.png"
+                src="/logos/next.png"
                 width={190}
                 height={72.5}
-                alt="react js logo"
+                alt="Next js logo"
+                objectFit="cover"
               />
             </Link>
-            <Link
-              href="https://getbootstrap.com/docs/5.0/getting-started/introduction/"
-              isExternal
-              rel="noopener"
-            >
+            <Link href="https://pptr.dev/" isExternal rel="noopener">
               <Image
-                src="/logos/bootstrap.png"
-                width={190}
-                height={72.5}
-                alt="bootstrap logo"
+                src="/logos/puppeteer.png"
+                width={60}
+                height={90}
+                alt="puppeteer logo"
+                objectFit="cover"
+              />
+            </Link>
+            <Link href="https://mantine.dev/" isExternal rel="noopener">
+              <Image
+                src="/logos/mantine.png"
+                width={240}
+                height={62}
+                alt="mantine logo"
+                objectFit="cover"
               />
             </Link>
           </Flex>
@@ -156,11 +165,12 @@ export default function Eargasm() {
           <Text fontSize="lg" maxWidth="60ch">
             <UnorderedList sx={{ listStyle: 'none' }}>
               <ListItemColor>
-                Gained more experience with React and it's ecosystem.
-              </ListItemColor>{' '}
-              <ListItemColor>
-                used fuse js and learned how to make a mini fuzzy search engine.
+                Solved a problem for me and other students and future students
               </ListItemColor>
+              <ListItemColor>
+                Gained more experience with Puppeteer and Nextjs's api routes.
+              </ListItemColor>{' '}
+              <ListItemColor>used mantine dev component library.</ListItemColor>
             </UnorderedList>
           </Text>
         </VStack>

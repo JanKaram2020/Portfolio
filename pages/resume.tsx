@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   Heading,
   SimpleGrid,
@@ -38,16 +38,16 @@ const formatTime = (seconds: number) => {
   const minutes = Math.floor((seconds % hour) / minute);
   const second = Math.floor((seconds % minute) / 1000);
   return `${months} months, ${days} days, ${hours} hours, ${minutes} minutes, ${second} seconds`;
-}
+};
 
 export default function ResumePage() {
   const timeOfHire = new Date('2022-02-14T09:00:00');
-  const initialDiff = timeOfHire.getTime() - new Date().getTime();
+  const initialDiff = new Date().getTime() - timeOfHire.getTime();
   const [ctime, setCTime] = useState<number>(initialDiff);
   const updateTime = () => {
     const newTime = new Date().getTime() - timeOfHire.getTime();
     setCTime(newTime);
-  }
+  };
   setInterval(updateTime, 1000);
   return (
     <>
@@ -132,7 +132,11 @@ export default function ResumePage() {
             >
               <Center>
                 <MdEmail />
-                <Link href="mailto: jankaram2020@gmail.com" external="true" target="_blank">
+                <Link
+                  href="mailto: jankaram2020@gmail.com"
+                  external="true"
+                  target="_blank"
+                >
                   jankaram2020@gmail.com
                 </Link>
               </Center>
@@ -154,7 +158,11 @@ export default function ResumePage() {
               </Center>
               <Center>
                 <AiFillGithub />
-                <Link href="https://github.com/JanKaram2020" external="true" target="_blank">
+                <Link
+                  href="https://github.com/JanKaram2020"
+                  external="true"
+                  target="_blank"
+                >
                   Github
                 </Link>
               </Center>
@@ -175,34 +183,55 @@ export default function ResumePage() {
               Experience
             </Heading>
             <Text as="div">
-            <Text as="div">
+              <Text as="div">
                 <Heading as="h3" fontSize="lg">
                   Frontend (Reactjs) & React Native developer
                 </Heading>
-                Tech Hive, Alexandria Egypt {" "}
-                <Text fontSize="sm" sx={{
-                  '@media print':{
-                    display:"inline"
-                  }
-                }}>(Feb 2022 - present) <Text as={"span"} sx={{
-                  '@media print':{
-                    display:"none"
-                  }
-                }}>{formatTime(ctime)}</Text></Text>
+                Tech Hive, Alexandria Egypt{' '}
+                <Text
+                  fontSize="sm"
+                  sx={{
+                    '@media print': {
+                      display: 'inline',
+                    },
+                  }}
+                >
+                  (Feb 2022 - present){' '}
+                  <Text
+                    as="span"
+                    sx={{
+                      '@media print': {
+                        display: 'none',
+                      },
+                    }}
+                  >
+                    {formatTime(ctime)}
+                  </Text>
+                </Text>
                 <Text as="ol" ml="1rem" fontSize="14px">
                   <li>
-                    Implemented Tax calculator module in ZZabat web app (a fintech application) where each year has a diffrent calculations 
-                    than the previous year and each profit segment has a different calculations.
-                    </li>
-                   <li>
-                     Implemented uploading data to server via excel sheet by parsing data in excel using sheet js 
-                     and transforming it to match Graphql schema and sending to it the server.
+                    Implemented Tax calculator module in Zabbat web app (a
+                    fintech application) where each year has a different
+                    calculations than the previous year and each profit segment
+                    has a different calculations.
                   </li>
                   <li>
-                    Designed and Implemented the notification page module Zzabbat using Corejs/React.
+                    Implemented uploading data to server via excel sheet by
+                    parsing data in excel using sheet js and transforming it to
+                    match Graphql schema and sending to it the server.
                   </li>
-                  <li>Researched integrating Vimeo's videos in SAL125 app and Implemented it using Chakra ui and React-player</li>
-                  <li>Worked on Sotech app (queue management system for clinics) where I implemented the notification module</li>
+                  <li>
+                    Designed and Implemented the notification page module in
+                    Zabbat using Corejs/React.
+                  </li>
+                  <li>
+                    Researched integrating Vimeo's videos in SAL125 app and
+                    Implemented it using Chakra ui and React-player
+                  </li>
+                  <li>
+                    Worked on Sotech app (queue management system for clinics)
+                    where I implemented the notification module
+                  </li>
                 </Text>
                 {/* <Divider /> */}
               </Text>
@@ -210,12 +239,17 @@ export default function ResumePage() {
                 <Heading as="h3" fontSize="lg">
                   Full stack web developer
                 </Heading>
-                Cool code marketing agency, Remote{" "}
-                <Text fontSize="sm"  sx={{
-                  '@media print':{
-                    display:"inline"
-                  }
-                }}>(Aug 2021 - Nov 2021)</Text>
+                Cool code marketing agency, Remote{' '}
+                <Text
+                  fontSize="sm"
+                  sx={{
+                    '@media print': {
+                      display: 'inline',
+                    },
+                  }}
+                >
+                  (Aug 2021 - Nov 2021)
+                </Text>
                 <Text as="ol" ml="1rem" fontSize="14px">
                   <li>
                     Implemented an app interface for a customer-facing Medical
@@ -231,26 +265,37 @@ export default function ResumePage() {
                 <Heading as="h3" fontSize="lg">
                   Frontend Developer
                 </Heading>
-                Freelance, Self Employed{" "}
-                <Text fontSize="sm"  sx={{
-                  '@media print':{
-                    display:"inline"
-                  }
-                }}>(Aug 2019 - Jul 2021)</Text>
+                Freelance, Self Employed{' '}
+                <Text
+                  fontSize="sm"
+                  sx={{
+                    '@media print': {
+                      display: 'inline',
+                    },
+                  }}
+                >
+                  (Aug 2019 - Jul 2021)
+                </Text>
               </Text>
               <Text as="div">
                 <Heading as="h3" fontSize="lg">
                   Internship Trainee
                 </Heading>
                 Information Technology Institute (ITI){' '}
-                <Text fontSize="14px"  sx={{
-                  '@media print':{
-                    display:"inline"
-                  }
-                }}>(Jul 2019 - Aug 2019){" "}</Text><Text fontSize="14px">
-                attended open source development (120 hours) including:
+                <Text
+                  fontSize="14px"
+                  sx={{
+                    '@media print': {
+                      display: 'inline',
+                    },
+                  }}
+                >
+                  (Jul 2019 - Aug 2019){' '}
+                </Text>
+                <Text fontSize="14px">
+                  attended open source development (120 hours) including:
                   HTML-CSS-Javascript-MySQL-Php-Laravel
-              </Text>
+                </Text>
               </Text>
             </Text>
           </TwoColumnGrid>
@@ -260,18 +305,23 @@ export default function ResumePage() {
             </Heading>
             <Text as="div">
               <Text as="div">
-                <Heading as="h3" fontSize="lg" sx={{
-                  '@media print':{
-                    display:"inline"
-                  }
-                }}>
-                  A responsive PWA multi language blog{" "}
+                <Heading
+                  as="h3"
+                  fontSize="lg"
+                  sx={{
+                    '@media print': {
+                      display: 'inline',
+                    },
+                  }}
+                >
+                  A responsive PWA multi language blog{' '}
                 </Heading>
-                <Link sx={{
-                  '@media print':{
-                    display:"inline",
-                  }
-                }}
+                <Link
+                  sx={{
+                    '@media print': {
+                      display: 'inline',
+                    },
+                  }}
                   href="https://lilyannehany.netlify.app/"
                   isExternal
                   rel="noopener"
@@ -287,18 +337,23 @@ export default function ResumePage() {
               </Text>
               {/* <Divider /> */}
               <Text as="div">
-                <Heading as="h3" fontSize="lg" sx={{
-                  '@media print':{
-                    display:"inline"
-                  }
-                }}>
-                  Would you rather game {" "}
+                <Heading
+                  as="h3"
+                  fontSize="lg"
+                  sx={{
+                    '@media print': {
+                      display: 'inline',
+                    },
+                  }}
+                >
+                  Would you rather game{' '}
                 </Heading>
-                <Link sx={{
-                  '@media print':{
-                    display:"inline"
-                  }
-                }}
+                <Link
+                  sx={{
+                    '@media print': {
+                      display: 'inline',
+                    },
+                  }}
                   isExternal
                   rel="noopener"
                   href="https://jan-would-you-rather.surge.sh"
@@ -320,33 +375,49 @@ export default function ResumePage() {
             </Heading>
             <Text as="div">
               <Text as="div">
-                <Heading as="h3" fontSize="lg" sx={{
-                  '@media print':{
-                    display:"inline"
-                  }
-                }}>
-                  BS, Computer Science and Statistics {" "}
+                <Heading
+                  as="h3"
+                  fontSize="lg"
+                  sx={{
+                    '@media print': {
+                      display: 'inline',
+                    },
+                  }}
+                >
+                  BS, Computer Science and Statistics{' '}
                 </Heading>
-                <Text fontSize="14px" sx={{
-                  '@media print':{
-                    display:"inline"
-                  }
-                }}>Alexandria University. (2022)</Text>
+                <Text
+                  fontSize="14px"
+                  sx={{
+                    '@media print': {
+                      display: 'inline',
+                    },
+                  }}
+                >
+                  Alexandria University. (2022)
+                </Text>
                 {/* <Divider /> */}
               </Text>
               <Text as="div">
-                <Heading as="h3" fontSize="lg" sx={{
-                  '@media print':{
-                    display:"inline"
-                  }
-                }}>
-                  Web development specialization {" "}
+                <Heading
+                  as="h3"
+                  fontSize="lg"
+                  sx={{
+                    '@media print': {
+                      display: 'inline',
+                    },
+                  }}
+                >
+                  Web development specialization{' '}
                 </Heading>
-                <Text fontSize="14px" sx={{
-                  '@media print':{
-                    display:"inline"
-                  }
-                }}>
+                <Text
+                  fontSize="14px"
+                  sx={{
+                    '@media print': {
+                      display: 'inline',
+                    },
+                  }}
+                >
                   University of Michigan via Coursera (2019)
                 </Text>
               </Text>
@@ -357,10 +428,10 @@ export default function ResumePage() {
               Skills
             </Heading>
             <Text as="ol" ml="1rem" fontSize="14px">
-              Reactjs • Nextjs & Gatsbyjs • Typescript & Javascript • Redux&
-              Redux toolkit • HTML & CSS • Git& GitHub • CSS-in-Js& SASS •
-              NodeJs - Express - Adonisjs • Prototyping with Framer • Graphic
-              design & Photo editing • Googling !
+              Reactjs • Nextjs & Gatsbyjs • Typescript & Javascript • Graphql &
+              REST api • Redux & Redux toolkit • HTML & CSS • Git& GitHub •
+              CSS-in-Js & SASS • NodeJs - Express • Prototyping with Framer •
+              Graphic design & Photo editing • Googling !
             </Text>
           </TwoColumnGrid>
         </VStack>
