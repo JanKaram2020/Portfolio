@@ -154,6 +154,29 @@ export default function ResumePage() {
               Experience
             </Heading>
             <Text as="div">
+            <Text as="div">
+                <Heading as="h3" fontSize="lg">
+                  Frontend (Reactjs) & React Native developer
+                </Heading>
+                Tech Hive, Alexandria Egypt.
+                <Text fontSize="sm">Feb 2022 - present</Text>
+                <Text as="ol" ml="1rem" fontSize="14px">
+                  <li>
+                    Implemented Tax calculator module in ZZabat web app (a fintech application) where each year has a diffrent calculations 
+                    than the previous year and each profit segment has a diffrent calculations.
+                    </li>
+                   <li>
+                     Implemented uploading data to server via excel sheet by parsing data in excel using sheet js 
+                     and transforming it to match Graphql schema and sending to it the server.
+                  </li>
+                  <li>
+                    Designed and Implemented the notification page module Zzabbat usign Corejs.
+                  </li>
+                  <li>Researched intergrating vimeo's videos in SAL125 app and Implemented it using Chakra ui and React-player</li>
+                  <li>Worked on Sotech app (queue management system for clinics) where I implemented the notification module</li>
+                </Text>
+                {/* <Divider /> */}
+              </Text>
               <Text as="div">
                 <Heading as="h3" fontSize="lg">
                   Full stack web developer
