@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   Heading,
   SimpleGrid,
@@ -26,8 +26,29 @@ const TwoColumnGrid = ({ children }: { children: React.ReactNode }) => (
     {children}
   </SimpleGrid>
 );
+// divide seconds into months and days and hours and seconds
+const formatTime = (seconds: number) => {
+  const month = 1000 * 60 * 60 * 24 * 30;
+  const day = 1000 * 60 * 60 * 24;
+  const hour = 1000 * 60 * 60;
+  const minute = 1000 * 60;
+  const months = Math.floor(seconds / month);
+  const days = Math.floor((seconds % month) / day);
+  const hours = Math.floor((seconds % day) / hour);
+  const minutes = Math.floor((seconds % hour) / minute);
+  const second = Math.floor((seconds % minute) / 1000);
+  return `${months} months, ${days} days, ${hours} hours, ${minutes} minutes, ${second} seconds`;
+}
 
 export default function ResumePage() {
+  const timeOfHire = new Date('2022-02-14T09:00:00');
+  const initialDiff = timeOfHire.getTime() - new Date().getTime();
+  const [ctime, setCTime] = useState<number>(initialDiff);
+  const updateTime = () => {
+    const newTime = new Date().getTime() - timeOfHire.getTime();
+    setCTime(newTime);
+  }
+  setInterval(updateTime, 1000);
   return (
     <>
       <SEO title="Resume | Jan Karam" />
@@ -104,7 +125,7 @@ export default function ResumePage() {
               columns={[1, 2]}
               sx={{
                 '@media print': {
-                  gridTemplateColumns: '1fr 1fr',
+                  gridTemplateColumns: '1fr 1fr 1fr 1fr',
                 },
               }}
               gap="5px"
@@ -158,21 +179,29 @@ export default function ResumePage() {
                 <Heading as="h3" fontSize="lg">
                   Frontend (Reactjs) & React Native developer
                 </Heading>
-                Tech Hive, Alexandria Egypt.
-                <Text fontSize="sm">Feb 2022 - present</Text>
+                Tech Hive, Alexandria Egypt {" "}
+                <Text fontSize="sm" sx={{
+                  '@media print':{
+                    display:"inline"
+                  }
+                }}>(Feb 2022 - present) <Text as={"span"} sx={{
+                  '@media print':{
+                    display:"none"
+                  }
+                }}>{formatTime(ctime)}</Text></Text>
                 <Text as="ol" ml="1rem" fontSize="14px">
                   <li>
                     Implemented Tax calculator module in ZZabat web app (a fintech application) where each year has a diffrent calculations 
-                    than the previous year and each profit segment has a diffrent calculations.
+                    than the previous year and each profit segment has a different calculations.
                     </li>
                    <li>
                      Implemented uploading data to server via excel sheet by parsing data in excel using sheet js 
                      and transforming it to match Graphql schema and sending to it the server.
                   </li>
                   <li>
-                    Designed and Implemented the notification page module Zzabbat usign Corejs.
+                    Designed and Implemented the notification page module Zzabbat using Corejs/React.
                   </li>
-                  <li>Researched intergrating vimeo's videos in SAL125 app and Implemented it using Chakra ui and React-player</li>
+                  <li>Researched integrating Vimeo's videos in SAL125 app and Implemented it using Chakra ui and React-player</li>
                   <li>Worked on Sotech app (queue management system for clinics) where I implemented the notification module</li>
                 </Text>
                 {/* <Divider /> */}
@@ -181,42 +210,47 @@ export default function ResumePage() {
                 <Heading as="h3" fontSize="lg">
                   Full stack web developer
                 </Heading>
-                Cool code marketing agency, Remote
-                <Text fontSize="sm">Aug 2021 - Nov 2021</Text>
+                Cool code marketing agency, Remote{" "}
+                <Text fontSize="sm"  sx={{
+                  '@media print':{
+                    display:"inline"
+                  }
+                }}>(Aug 2021 - Nov 2021)</Text>
                 <Text as="ol" ml="1rem" fontSize="14px">
                   <li>
                     Implemented an app interface for a customer-facing Medical
                     application using react, typescript, and Material Ui
                   </li>
                   <li>
-                    developed more than 20+ components reusable components used
-                    throughout the app.
-                  </li>
-                  <li>
                     Implemented API endpoints and relations between models using
                     Node, Express, and Sequelize.
                   </li>
                 </Text>
-                {/* <Divider /> */}
               </Text>
               <Text as="div">
                 <Heading as="h3" fontSize="lg">
                   Frontend Developer
                 </Heading>
-                Freelance, Self Employed
-                <Text fontSize="sm">Aug 2019 - Jul 2021</Text>
-                {/* <Divider /> */}
+                Freelance, Self Employed{" "}
+                <Text fontSize="sm"  sx={{
+                  '@media print':{
+                    display:"inline"
+                  }
+                }}>(Aug 2019 - Jul 2021)</Text>
               </Text>
               <Text as="div">
                 <Heading as="h3" fontSize="lg">
                   Internship Trainee
                 </Heading>
-                Information Technology Institute (ITI)
-                <Text fontSize="14px">Jul 2019 - Aug 2019 (2 months)</Text>
-                attended open source development (120 hours) including:-
-                <Text as="ol" ml="1rem" fontSize="14px">
-                  HTML - CSS - Javascript - MySQL - Php - Laravel
-                </Text>
+                Information Technology Institute (ITI){' '}
+                <Text fontSize="14px"  sx={{
+                  '@media print':{
+                    display:"inline"
+                  }
+                }}>(Jul 2019 - Aug 2019){" "}</Text><Text fontSize="14px">
+                attended open source development (120 hours) including:
+                  HTML-CSS-Javascript-MySQL-Php-Laravel
+              </Text>
               </Text>
             </Text>
           </TwoColumnGrid>
@@ -226,10 +260,18 @@ export default function ResumePage() {
             </Heading>
             <Text as="div">
               <Text as="div">
-                <Heading as="h3" fontSize="lg">
-                  A responsive PWA multi language blog
+                <Heading as="h3" fontSize="lg" sx={{
+                  '@media print':{
+                    display:"inline"
+                  }
+                }}>
+                  A responsive PWA multi language blog{" "}
                 </Heading>
-                <Link
+                <Link sx={{
+                  '@media print':{
+                    display:"inline",
+                  }
+                }}
                   href="https://lilyannehany.netlify.app/"
                   isExternal
                   rel="noopener"
@@ -245,10 +287,18 @@ export default function ResumePage() {
               </Text>
               {/* <Divider /> */}
               <Text as="div">
-                <Heading as="h3" fontSize="lg">
-                  Would you rather game
+                <Heading as="h3" fontSize="lg" sx={{
+                  '@media print':{
+                    display:"inline"
+                  }
+                }}>
+                  Would you rather game {" "}
                 </Heading>
-                <Link
+                <Link sx={{
+                  '@media print':{
+                    display:"inline"
+                  }
+                }}
                   isExternal
                   rel="noopener"
                   href="https://jan-would-you-rather.surge.sh"
@@ -270,17 +320,33 @@ export default function ResumePage() {
             </Heading>
             <Text as="div">
               <Text as="div">
-                <Heading as="h3" fontSize="lg">
-                  BS, Computer Science and Statistics.
+                <Heading as="h3" fontSize="lg" sx={{
+                  '@media print':{
+                    display:"inline"
+                  }
+                }}>
+                  BS, Computer Science and Statistics {" "}
                 </Heading>
-                <Text fontSize="14px">Alexandria University. (2022)</Text>
+                <Text fontSize="14px" sx={{
+                  '@media print':{
+                    display:"inline"
+                  }
+                }}>Alexandria University. (2022)</Text>
                 {/* <Divider /> */}
               </Text>
               <Text as="div">
-                <Heading as="h3" fontSize="lg">
-                  Web development specialization
+                <Heading as="h3" fontSize="lg" sx={{
+                  '@media print':{
+                    display:"inline"
+                  }
+                }}>
+                  Web development specialization {" "}
                 </Heading>
-                <Text fontSize="14px">
+                <Text fontSize="14px" sx={{
+                  '@media print':{
+                    display:"inline"
+                  }
+                }}>
                   University of Michigan via Coursera (2019)
                 </Text>
               </Text>
