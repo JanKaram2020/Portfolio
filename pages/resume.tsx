@@ -228,10 +228,6 @@ export default function ResumePage() {
                     Researched integrating Vimeo's videos in SAL125 app and
                     Implemented it using Chakra ui and React-player
                   </li>
-                  <li>
-                    Worked on Sotech app (queue management system for clinics)
-                    where I implemented the notification module
-                  </li>
                 </Text>
                 {/* <Divider /> */}
               </Text>
