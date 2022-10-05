@@ -225,8 +225,7 @@ export default function ResumePage() {
                     Zabbat using Corejs/React.
                   </li>
                   <li>
-                    Researched integrating Vimeo's videos in SAL125 app and
-                    Implemented it using Chakra ui and React-player
+                    Devloped Easypass application (A compound security system) with React Native, React Native Paper, Redux, RTK and RTK query.
                   </li>
                 </Text>
                 {/* <Divider /> */}
