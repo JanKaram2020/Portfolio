@@ -225,7 +225,9 @@ export default function ResumePage() {
                     Zabbat using Corejs/React.
                   </li>
                   <li>
-                    Devloped Easypass application (A compound security system) with React Native, React Native Paper, Redux, RTK and RTK query.
+                    Devloped Easypass application (A compound security system)
+                    with React Native, React Native Paper, Redux, RTK and RTK
+                    query.
                   </li>
                 </Text>
                 {/* <Divider /> */}
