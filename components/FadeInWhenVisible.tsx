@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
 import { Box, useColorMode } from '@chakra-ui/react';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 const AnimatedBox = motion(Box);
 
@@ -54,8 +54,8 @@ export default function FadeInWhenVisible(): React.ReactElement {
       >
         <Image
           src="/jancropped.jpg"
-          height="340px"
-          width="340px"
+          height="340"
+          width="340"
           className="image"
           alt="Jan Karam smiling"
         />

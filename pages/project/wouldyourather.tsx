@@ -9,7 +9,7 @@ import {
   UnorderedList,
   VStack,
 } from '@chakra-ui/react';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import React from 'react';
 import { motion } from 'framer-motion';
 import ListItemColor from 'components/ListItemColor';

@@ -7,7 +7,7 @@ import {
 } from '@chakra-ui/react';
 import Link from 'next/link';
 import React from 'react';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 export default function Footer() {
   const { colorMode } = useColorMode();
@@ -23,7 +23,7 @@ export default function Footer() {
       flexWrap="wrap"
     >
       <HStack spacing={10} p="10px" flexWrap="wrap">
-        <Link href="/">
+        <Link href="/" legacyBehavior>
           <StyledLink
             _hover={{
               color: 'red.400',
@@ -48,7 +48,7 @@ export default function Footer() {
             </Box>
           </StyledLink>
         </Link>
-        <Link href="#aboutMe">
+        <Link href="#aboutMe" legacyBehavior>
           <StyledLink
             _hover={{
               color: 'red.400',
@@ -60,7 +60,7 @@ export default function Footer() {
             About
           </StyledLink>
         </Link>
-        <Link href="#skills">
+        <Link href="#skills" legacyBehavior>
           <StyledLink
             _hover={{
               color: 'red.400',
@@ -72,7 +72,7 @@ export default function Footer() {
             Skills
           </StyledLink>
         </Link>
-        <Link href="#projects">
+        <Link href="#projects" legacyBehavior>
           <StyledLink
             _hover={{
               color: 'red.400',
@@ -84,7 +84,7 @@ export default function Footer() {
             Projects
           </StyledLink>
         </Link>
-        <Link href="/resume#header">
+        <Link href="/resume#header" legacyBehavior>
           <StyledLink
             _hover={{
               color: 'red.400',

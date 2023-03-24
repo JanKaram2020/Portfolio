@@ -6,7 +6,7 @@ import {
   VisuallyHidden,
 } from '@chakra-ui/react';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 import { HiDocumentText } from 'react-icons/hi';
 import React from 'react';
@@ -35,7 +35,7 @@ const Navigation = (): React.ReactElement => {
         justifyContent="center"
         gridGap="10px"
       >
-        <Link href="/">
+        <Link href="/" legacyBehavior>
           <StyledLink
             _after={{
               content: '""',
@@ -112,7 +112,7 @@ const Navigation = (): React.ReactElement => {
           <VisuallyHidden> Jan Karam's Github profile</VisuallyHidden>
           <AiFillGithub size={40} />
         </StyledLink>
-        <Link href="/resume">
+        <Link href="/resume" legacyBehavior>
           <StyledLink
             title="resume"
             _hover={{

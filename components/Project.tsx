@@ -6,7 +6,7 @@ import {
   useColorMode,
   Heading,
 } from '@chakra-ui/react';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { motion, useAnimation } from 'framer-motion';
 import React, { useEffect } from 'react';
@@ -81,8 +81,8 @@ const Project = ({
       >
         <Image
           src={image}
-          height="380px"
-          width="900px"
+          height="380"
+          width="900"
           objectFit="cover"
           className="image"
           alt={alt}
@@ -96,7 +96,7 @@ const Project = ({
       {inProgress ? (
         <Text fontSize="xl"> In development...</Text>
       ) : (
-        <Link href={`project/${page}`}>
+        <Link href={`project/${page}`} legacyBehavior>
           <AnimatedLink
             variants={SlashMotion}
             fontSize="xl"

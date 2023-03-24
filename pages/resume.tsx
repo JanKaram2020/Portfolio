@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Heading,
   SimpleGrid,
@@ -39,16 +39,20 @@ const formatTime = (seconds: number) => {
   const second = Math.floor((seconds % minute) / 1000);
   return `${months} months, ${days} days, ${hours} hours, ${minutes} minutes, ${second} seconds`;
 };
+const timeOfHire = new Date('2023-01-16T09:00:00');
 
 export default function ResumePage() {
-  const timeOfHire = new Date('2022-02-14T09:00:00');
   const initialDiff = new Date().getTime() - timeOfHire.getTime();
   const [ctime, setCTime] = useState<number>(initialDiff);
-  const updateTime = () => {
-    const newTime = new Date().getTime() - timeOfHire.getTime();
-    setCTime(newTime);
-  };
-  setInterval(updateTime, 1000);
+
+  useEffect(() => {
+    const updateTime = () => {
+      const newTime = new Date().getTime() - timeOfHire.getTime();
+      setCTime(newTime);
+    };
+    const id = setInterval(updateTime, 1000);
+    return () => clearInterval(id);
+  }, []);
   return (
     <>
       <SEO title="Resume | Jan Karam" />
@@ -185,9 +189,9 @@ export default function ResumePage() {
             <Text as="div">
               <Text as="div">
                 <Heading as="h3" fontSize="lg">
-                  Frontend (Reactjs) & React Native developer
+                  Frontend (Nextjs) & React Native developer
                 </Heading>
-                Tech Hive, Alexandria Egypt{' '}
+                Shory, (Cairo, Egypt) Hybrid{' '}
                 <Text
                   fontSize="sm"
                   sx={{
@@ -196,7 +200,8 @@ export default function ResumePage() {
                     },
                   }}
                 >
-                  (Feb 2022 - present){' '}
+                  {' '}
+                  (Jan 2023 - present){' '}
                   <Text
                     as="span"
                     sx={{
@@ -207,6 +212,30 @@ export default function ResumePage() {
                   >
                     {formatTime(ctime)}
                   </Text>
+                </Text>
+                <Text as="ol" ml="1rem" fontSize="14px">
+                  <li>
+                    Worked on Shory Motors app where I refactored code for
+                    better performance and readability
+                  </li>
+                  <li> Added features using React, Redux, RTK and RTK query</li>
+                </Text>
+                {/* <Divider /> */}
+              </Text>
+              <Text as="div">
+                <Heading as="h3" fontSize="lg">
+                  Frontend (Reactjs) & React Native developer
+                </Heading>
+                Tech Hive, (Alexandria,Egypt) Remote{' '}
+                <Text
+                  fontSize="sm"
+                  sx={{
+                    '@media print': {
+                      display: 'inline',
+                    },
+                  }}
+                >
+                  (Feb 2022 - Jan 2023){' '}
                 </Text>
                 <Text as="ol" ml="1rem" fontSize="14px">
                   <li>
@@ -233,8 +262,16 @@ export default function ResumePage() {
                 {/* <Divider /> */}
               </Text>
               <Text as="div">
-                <Heading as="h3" fontSize="lg">
-                  Full stack web developer
+                <Heading
+                  as="h3"
+                  fontSize="lg"
+                  sx={{
+                    '@media print': {
+                      display: 'inline',
+                    },
+                  }}
+                >
+                  Full stack web developer{' '}
                 </Heading>
                 Cool code marketing agency, Remote{' '}
                 <Text
@@ -259,11 +296,20 @@ export default function ResumePage() {
                 </Text>
               </Text>
               <Text as="div">
-                <Heading as="h3" fontSize="lg">
-                  Frontend Developer
+                <Heading
+                  as="h3"
+                  fontSize="lg"
+                  sx={{
+                    '@media print': {
+                      display: 'inline',
+                    },
+                  }}
+                >
+                  Frontend Developer{' '}
                 </Heading>
                 Freelance, Self Employed{' '}
                 <Text
+                  display="inline"
                   fontSize="sm"
                   sx={{
                     '@media print': {
@@ -275,8 +321,16 @@ export default function ResumePage() {
                 </Text>
               </Text>
               <Text as="div">
-                <Heading as="h3" fontSize="lg">
-                  Internship Trainee
+                <Heading
+                  as="h3"
+                  fontSize="lg"
+                  sx={{
+                    '@media print': {
+                      display: 'inline',
+                    },
+                  }}
+                >
+                  Internship Trainee{' '}
                 </Heading>
                 Information Technology Institute (ITI){' '}
                 <Text
