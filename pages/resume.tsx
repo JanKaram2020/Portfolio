@@ -178,7 +178,7 @@ export default function ResumePage() {
             </Heading>
             <Text fontSize="14px">
               Meticulous full stack web developer trained in React js, Node js,
-              and Express with over 2 years of experience and passion for
+              and Express with over 3 years of experience and passion for
               creating web applications.
             </Text>
           </TwoColumnGrid>
