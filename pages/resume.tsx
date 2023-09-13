@@ -9,8 +9,6 @@ import {
   Center,
   Button,
 } from '@chakra-ui/react';
-import { MdEmail, MdPhone } from 'react-icons/md';
-import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import SEO from 'components/SEO';
 
 const TwoColumnGrid = ({ children }: { children: React.ReactNode }) => (
@@ -44,8 +42,10 @@ const timeOfHire = new Date('2023-01-16T09:00:00');
 export default function ResumePage() {
   const initialDiff = new Date().getTime() - timeOfHire.getTime();
   const [ctime, setCTime] = useState<number>(initialDiff);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
     const updateTime = () => {
       const newTime = new Date().getTime() - timeOfHire.getTime();
       setCTime(newTime);
@@ -135,7 +135,6 @@ export default function ResumePage() {
               gap="5px"
             >
               <Center>
-                <MdEmail />
                 <Link
                   href="mailto: jankaram2020@gmail.com"
                   isExternal
@@ -148,17 +147,15 @@ export default function ResumePage() {
                 display="none"
                 sx={{
                   '@media print': {
-                    display: 'block',
+                    display: 'flex',
                   },
                 }}
               >
-                <MdPhone />
                 <Link href="tel: +201277440641" isExternal target="_blank">
                   (+2) 012 77 44 0641
                 </Link>
               </Center>
               <Center>
-                <AiFillLinkedin />
                 <Link
                   href="https://www.linkedin.com/in/jankaram2020/"
                   isExternal
@@ -168,7 +165,6 @@ export default function ResumePage() {
                 </Link>
               </Center>
               <Center>
-                <AiFillGithub />
                 <Link
                   href="https://github.com/JanKaram2020"
                   isExternal
@@ -207,18 +203,19 @@ export default function ResumePage() {
                     },
                   }}
                 >
-                  {' '}
-                  (Jan 2023 - present){' '}
-                  <Text
-                    as="span"
-                    sx={{
-                      '@media print': {
-                        display: 'none',
-                      },
-                    }}
-                  >
-                    {formatTime(ctime)}
-                  </Text>
+                  (Jan 2023 - present)
+                  {isClient ? (
+                    <Text
+                      as="span"
+                      sx={{
+                        '@media print': {
+                          display: 'none',
+                        },
+                      }}
+                    >
+                      {formatTime(ctime)}
+                    </Text>
+                  ) : null}
                 </Text>
                 <Text as="ol" ml="1rem" fontSize="14px">
                   <li>
