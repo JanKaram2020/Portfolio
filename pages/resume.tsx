@@ -148,7 +148,7 @@ export default function ResumePage() {
                 display="none"
                 sx={{
                   '@media print': {
-                    display: 'none',
+                    display: 'block',
                   },
                 }}
               >
