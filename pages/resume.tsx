@@ -126,7 +126,7 @@ export default function ResumePage() {
               Contact
             </Heading>
             <SimpleGrid
-              columns={[1, 2]}
+              columns={[1, 3]}
               sx={{
                 '@media print': {
                   gridTemplateColumns: '1fr 1fr 1fr 1fr',
@@ -138,15 +138,22 @@ export default function ResumePage() {
                 <MdEmail />
                 <Link
                   href="mailto: jankaram2020@gmail.com"
-                  external="true"
+                  isExternal
                   target="_blank"
                 >
                   jankaram2020@gmail.com
                 </Link>
               </Center>
-              <Center>
+              <Center
+                display="none"
+                sx={{
+                  '@media print': {
+                    display: 'none',
+                  },
+                }}
+              >
                 <MdPhone />
-                <Link href="tel: +201277440641" external="true" target="_blank">
+                <Link href="tel: +201277440641" isExternal target="_blank">
                   (+2) 012 77 44 0641
                 </Link>
               </Center>
@@ -154,7 +161,7 @@ export default function ResumePage() {
                 <AiFillLinkedin />
                 <Link
                   href="https://www.linkedin.com/in/jankaram2020/"
-                  external="true"
+                  isExternal
                   target="_blank"
                 >
                   LinkedIn
@@ -164,7 +171,7 @@ export default function ResumePage() {
                 <AiFillGithub />
                 <Link
                   href="https://github.com/JanKaram2020"
-                  external="true"
+                  isExternal
                   target="_blank"
                 >
                   Github
