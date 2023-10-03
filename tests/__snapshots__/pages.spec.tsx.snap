@@ -164,7 +164,7 @@ exports[`pages > should Eargasm match snapshot 1`] = `
         />
       </span>
       <img
-        alt="screenshots of eargasm on different devices"
+        alt="screenshots of Eargasm on different devices"
         data-nimg="intrinsic"
         decoding="async"
         onError={[Function]}
@@ -195,7 +195,7 @@ exports[`pages > should Eargasm match snapshot 1`] = `
       />
       <noscript>
         <img
-          alt="screenshots of eargasm on different devices"
+          alt="screenshots of Eargasm on different devices"
           data-nimg="intrinsic"
           decoding="async"
           loading="lazy"
@@ -253,7 +253,7 @@ exports[`pages > should Eargasm match snapshot 1`] = `
     >
       <a
         className="chakra-link css-0"
-        href="https://reactjs.org/"
+        href="https://react.dev/"
         rel="noopener"
         target="_blank"
       >
@@ -311,7 +311,7 @@ exports[`pages > should Eargasm match snapshot 1`] = `
             />
           </span>
           <img
-            alt="react js logo"
+            alt="react logo"
             data-nimg="intrinsic"
             decoding="async"
             onError={[Function]}
@@ -330,7 +330,7 @@ exports[`pages > should Eargasm match snapshot 1`] = `
                 "maxWidth": "100%",
                 "minHeight": "100%",
                 "minWidth": "100%",
-                "objectFit": undefined,
+                "objectFit": "contain",
                 "objectPosition": undefined,
                 "padding": 0,
                 "position": "absolute",
@@ -342,7 +342,7 @@ exports[`pages > should Eargasm match snapshot 1`] = `
           />
           <noscript>
             <img
-              alt="react js logo"
+              alt="react logo"
               data-nimg="intrinsic"
               decoding="async"
               loading="lazy"
@@ -361,7 +361,7 @@ exports[`pages > should Eargasm match snapshot 1`] = `
                   "maxWidth": "100%",
                   "minHeight": "100%",
                   "minWidth": "100%",
-                  "objectFit": undefined,
+                  "objectFit": "contain",
                   "objectPosition": undefined,
                   "padding": 0,
                   "position": "absolute",
@@ -453,7 +453,7 @@ exports[`pages > should Eargasm match snapshot 1`] = `
                 "maxWidth": "100%",
                 "minHeight": "100%",
                 "minWidth": "100%",
-                "objectFit": undefined,
+                "objectFit": "contain",
                 "objectPosition": undefined,
                 "padding": 0,
                 "position": "absolute",
@@ -484,7 +484,7 @@ exports[`pages > should Eargasm match snapshot 1`] = `
                   "maxWidth": "100%",
                   "minHeight": "100%",
                   "minWidth": "100%",
-                  "objectFit": undefined,
+                  "objectFit": "contain",
                   "objectPosition": undefined,
                   "padding": 0,
                   "position": "absolute",
@@ -694,7 +694,7 @@ exports[`pages > should TestTable match snapshot 1`] = `
         />
       </span>
       <img
-        alt="screenshot of test table site"
+        alt="screenshots of Test table generator on different devices"
         data-nimg="intrinsic"
         decoding="async"
         onError={[Function]}
@@ -725,7 +725,7 @@ exports[`pages > should TestTable match snapshot 1`] = `
       />
       <noscript>
         <img
-          alt="screenshot of test table site"
+          alt="screenshots of Test table generator on different devices"
           data-nimg="intrinsic"
           decoding="async"
           loading="lazy"
@@ -775,7 +775,7 @@ exports[`pages > should TestTable match snapshot 1`] = `
         <br />
         Puppeteer because in my opinion it's the best library to web scrape using javascript and is used here to scrape the test table page and get the user's courses by codes or names.
         <br />
-        Mantine dev was the component library of choice because of it's amazing , beautiful and accessible components.
+        Mantine dev was the component library of choice because of it's amazing, beautiful and accessible components.
       </p>
     </div>
     <div
@@ -841,7 +841,7 @@ exports[`pages > should TestTable match snapshot 1`] = `
             />
           </span>
           <img
-            alt="Next js logo"
+            alt="next logo"
             data-nimg="intrinsic"
             decoding="async"
             onError={[Function]}
@@ -860,7 +860,7 @@ exports[`pages > should TestTable match snapshot 1`] = `
                 "maxWidth": "100%",
                 "minHeight": "100%",
                 "minWidth": "100%",
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": undefined,
                 "padding": 0,
                 "position": "absolute",
@@ -872,7 +872,7 @@ exports[`pages > should TestTable match snapshot 1`] = `
           />
           <noscript>
             <img
-              alt="Next js logo"
+              alt="next logo"
               data-nimg="intrinsic"
               decoding="async"
               loading="lazy"
@@ -891,7 +891,7 @@ exports[`pages > should TestTable match snapshot 1`] = `
                   "maxWidth": "100%",
                   "minHeight": "100%",
                   "minWidth": "100%",
-                  "objectFit": "cover",
+                  "objectFit": "contain",
                   "objectPosition": undefined,
                   "padding": 0,
                   "position": "absolute",
@@ -947,7 +947,7 @@ exports[`pages > should TestTable match snapshot 1`] = `
             <img
               alt=""
               aria-hidden={true}
-              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2760%27%20height=%2790%27/%3e"
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
               style={
                 {
                   "background": "none",
@@ -983,7 +983,7 @@ exports[`pages > should TestTable match snapshot 1`] = `
                 "maxWidth": "100%",
                 "minHeight": "100%",
                 "minWidth": "100%",
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": undefined,
                 "padding": 0,
                 "position": "absolute",
@@ -999,8 +999,8 @@ exports[`pages > should TestTable match snapshot 1`] = `
               data-nimg="intrinsic"
               decoding="async"
               loading="lazy"
-              src="/_next/image?url=%2Flogos%2Fpuppeteer.png&w=128&q=75"
-              srcSet="/_next/image?url=%2Flogos%2Fpuppeteer.png&w=64&q=75 1x, /_next/image?url=%2Flogos%2Fpuppeteer.png&w=128&q=75 2x"
+              src="/_next/image?url=%2Flogos%2Fpuppeteer.png&w=384&q=75"
+              srcSet="/_next/image?url=%2Flogos%2Fpuppeteer.png&w=256&q=75 1x, /_next/image?url=%2Flogos%2Fpuppeteer.png&w=384&q=75 2x"
               style={
                 {
                   "border": "none",
@@ -1014,7 +1014,7 @@ exports[`pages > should TestTable match snapshot 1`] = `
                   "maxWidth": "100%",
                   "minHeight": "100%",
                   "minWidth": "100%",
-                  "objectFit": "cover",
+                  "objectFit": "contain",
                   "objectPosition": undefined,
                   "padding": 0,
                   "position": "absolute",
@@ -1070,7 +1070,7 @@ exports[`pages > should TestTable match snapshot 1`] = `
             <img
               alt=""
               aria-hidden={true}
-              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27240%27%20height=%2762%27/%3e"
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
               style={
                 {
                   "background": "none",
@@ -1106,7 +1106,7 @@ exports[`pages > should TestTable match snapshot 1`] = `
                 "maxWidth": "100%",
                 "minHeight": "100%",
                 "minWidth": "100%",
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": undefined,
                 "padding": 0,
                 "position": "absolute",
@@ -1122,8 +1122,8 @@ exports[`pages > should TestTable match snapshot 1`] = `
               data-nimg="intrinsic"
               decoding="async"
               loading="lazy"
-              src="/_next/image?url=%2Flogos%2Fmantine.png&w=640&q=75"
-              srcSet="/_next/image?url=%2Flogos%2Fmantine.png&w=256&q=75 1x, /_next/image?url=%2Flogos%2Fmantine.png&w=640&q=75 2x"
+              src="/_next/image?url=%2Flogos%2Fmantine.png&w=384&q=75"
+              srcSet="/_next/image?url=%2Flogos%2Fmantine.png&w=256&q=75 1x, /_next/image?url=%2Flogos%2Fmantine.png&w=384&q=75 2x"
               style={
                 {
                   "border": "none",
@@ -1137,7 +1137,7 @@ exports[`pages > should TestTable match snapshot 1`] = `
                   "maxWidth": "100%",
                   "minHeight": "100%",
                   "minWidth": "100%",
-                  "objectFit": "cover",
+                  "objectFit": "contain",
                   "objectPosition": undefined,
                   "padding": 0,
                   "position": "absolute",
@@ -1352,7 +1352,7 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
         />
       </span>
       <img
-        alt="screenshots of would you rather on different devices"
+        alt="screenshots of Would You Rather on different devices"
         data-nimg="intrinsic"
         decoding="async"
         onError={[Function]}
@@ -1383,7 +1383,7 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
       />
       <noscript>
         <img
-          alt="screenshots of would you rather on different devices"
+          alt="screenshots of Would You Rather on different devices"
           data-nimg="intrinsic"
           decoding="async"
           loading="lazy"
@@ -1441,7 +1441,7 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
     >
       <a
         className="chakra-link css-0"
-        href="https://reactjs.org/"
+        href="https://react.dev/"
         rel="noopener"
         target="_blank"
       >
@@ -1499,7 +1499,7 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
             />
           </span>
           <img
-            alt="react js logo"
+            alt="react logo"
             data-nimg="intrinsic"
             decoding="async"
             onError={[Function]}
@@ -1518,7 +1518,7 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
                 "maxWidth": "100%",
                 "minHeight": "100%",
                 "minWidth": "100%",
-                "objectFit": undefined,
+                "objectFit": "contain",
                 "objectPosition": undefined,
                 "padding": 0,
                 "position": "absolute",
@@ -1530,7 +1530,7 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
           />
           <noscript>
             <img
-              alt="react js logo"
+              alt="react logo"
               data-nimg="intrinsic"
               decoding="async"
               loading="lazy"
@@ -1549,7 +1549,7 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
                   "maxWidth": "100%",
                   "minHeight": "100%",
                   "minWidth": "100%",
-                  "objectFit": undefined,
+                  "objectFit": "contain",
                   "objectPosition": undefined,
                   "padding": 0,
                   "position": "absolute",
@@ -1622,7 +1622,7 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
             />
           </span>
           <img
-            alt="Redux js logo"
+            alt="redux logo"
             data-nimg="intrinsic"
             decoding="async"
             onError={[Function]}
@@ -1641,7 +1641,7 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
                 "maxWidth": "100%",
                 "minHeight": "100%",
                 "minWidth": "100%",
-                "objectFit": undefined,
+                "objectFit": "contain",
                 "objectPosition": undefined,
                 "padding": 0,
                 "position": "absolute",
@@ -1653,7 +1653,7 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
           />
           <noscript>
             <img
-              alt="Redux js logo"
+              alt="redux logo"
               data-nimg="intrinsic"
               decoding="async"
               loading="lazy"
@@ -1672,7 +1672,7 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
                   "maxWidth": "100%",
                   "minHeight": "100%",
                   "minWidth": "100%",
-                  "objectFit": undefined,
+                  "objectFit": "contain",
                   "objectPosition": undefined,
                   "padding": 0,
                   "position": "absolute",
@@ -1764,7 +1764,7 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
                 "maxWidth": "100%",
                 "minHeight": "100%",
                 "minWidth": "100%",
-                "objectFit": undefined,
+                "objectFit": "contain",
                 "objectPosition": undefined,
                 "padding": 0,
                 "position": "absolute",
@@ -1795,7 +1795,7 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
                   "maxWidth": "100%",
                   "minHeight": "100%",
                   "minWidth": "100%",
-                  "objectFit": undefined,
+                  "objectFit": "contain",
                   "objectPosition": undefined,
                   "padding": 0,
                   "position": "absolute",
@@ -1931,7 +1931,7 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
         <li
           className="css-cahixa"
         >
-          Frontend:  
+          Frontend: 
           <a
             className="chakra-link css-1081t4c"
             href="https://github.com/JanKaram2020/Lilyanne-blog-gatsby"
@@ -1944,8 +1944,7 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
         <li
           className="css-cahixa"
         >
-          CMS:  
-           
+          CMS: 
           <a
             className="chakra-link css-1081t4c"
             href="https://github.com/JanKaram2020/Lilyanne-blog-cms"
@@ -2042,7 +2041,7 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
         />
       </span>
       <img
-        alt="screenshots of writing by lilyanne on different devices"
+        alt="screenshots of Writing by Lilyanne on different devices"
         data-nimg="intrinsic"
         decoding="async"
         onError={[Function]}
@@ -2073,7 +2072,7 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
       />
       <noscript>
         <img
-          alt="screenshots of writing by lilyanne on different devices"
+          alt="screenshots of Writing by Lilyanne on different devices"
           data-nimg="intrinsic"
           decoding="async"
           loading="lazy"
@@ -2191,7 +2190,7 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
             />
           </span>
           <img
-            alt="sanity io logo"
+            alt="sanity logo"
             data-nimg="intrinsic"
             decoding="async"
             onError={[Function]}
@@ -2210,7 +2209,7 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
                 "maxWidth": "100%",
                 "minHeight": "100%",
                 "minWidth": "100%",
-                "objectFit": undefined,
+                "objectFit": "contain",
                 "objectPosition": undefined,
                 "padding": 0,
                 "position": "absolute",
@@ -2222,7 +2221,7 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
           />
           <noscript>
             <img
-              alt="sanity io logo"
+              alt="sanity logo"
               data-nimg="intrinsic"
               decoding="async"
               loading="lazy"
@@ -2241,7 +2240,7 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
                   "maxWidth": "100%",
                   "minHeight": "100%",
                   "minWidth": "100%",
-                  "objectFit": undefined,
+                  "objectFit": "contain",
                   "objectPosition": undefined,
                   "padding": 0,
                   "position": "absolute",
@@ -2333,7 +2332,7 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
                 "maxWidth": "100%",
                 "minHeight": "100%",
                 "minWidth": "100%",
-                "objectFit": undefined,
+                "objectFit": "contain",
                 "objectPosition": undefined,
                 "padding": 0,
                 "position": "absolute",
@@ -2364,7 +2363,7 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
                   "maxWidth": "100%",
                   "minHeight": "100%",
                   "minWidth": "100%",
-                  "objectFit": undefined,
+                  "objectFit": "contain",
                   "objectPosition": undefined,
                   "padding": 0,
                   "position": "absolute",
@@ -2437,7 +2436,7 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
             />
           </span>
           <img
-            alt="theme ui logo"
+            alt="themeui logo"
             data-nimg="intrinsic"
             decoding="async"
             onError={[Function]}
@@ -2456,7 +2455,7 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
                 "maxWidth": "100%",
                 "minHeight": "100%",
                 "minWidth": "100%",
-                "objectFit": undefined,
+                "objectFit": "contain",
                 "objectPosition": undefined,
                 "padding": 0,
                 "position": "absolute",
@@ -2468,7 +2467,7 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
           />
           <noscript>
             <img
-              alt="theme ui logo"
+              alt="themeui logo"
               data-nimg="intrinsic"
               decoding="async"
               loading="lazy"
@@ -2487,7 +2486,7 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
                   "maxWidth": "100%",
                   "minHeight": "100%",
                   "minWidth": "100%",
-                  "objectFit": undefined,
+                  "objectFit": "contain",
                   "objectPosition": undefined,
                   "padding": 0,
                   "position": "absolute",
@@ -2579,7 +2578,7 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
                 "maxWidth": "100%",
                 "minHeight": "100%",
                 "minWidth": "100%",
-                "objectFit": undefined,
+                "objectFit": "contain",
                 "objectPosition": undefined,
                 "padding": 0,
                 "position": "absolute",
@@ -2610,7 +2609,7 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
                   "maxWidth": "100%",
                   "minHeight": "100%",
                   "minWidth": "100%",
-                  "objectFit": undefined,
+                  "objectFit": "contain",
                   "objectPosition": undefined,
                   "padding": 0,
                   "position": "absolute",
