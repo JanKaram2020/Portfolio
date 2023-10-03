@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Center } from '@chakra-ui/react';
 import Image from 'next/legacy/image';
 import React from 'react';
-import { IImage } from './types';
+import type { IImage } from './types';
 
 const MotionCenter = motion(Center);
 
