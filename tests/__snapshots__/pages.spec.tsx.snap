@@ -1,0 +1,2643 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`pages > should Eargasm match snapshot 1`] = `
+<div
+  className="chakra-stack css-hula3z"
+>
+  <h1
+    className="chakra-heading css-1lnsct4"
+  >
+    Eargasm
+  </h1>
+  <p
+    className="chakra-text css-1ezsviu"
+  >
+    Eargasm is a music website built with React.
+    <br />
+    I built this project with React and React-strap and Bootstrap for styling.
+  </p>
+  <div
+    className="css-12b704b"
+  >
+    <div
+      className="chakra-stack css-owjkmg"
+    >
+      <h2
+        className="chakra-heading css-1eihn08"
+      >
+        Stack
+      </h2>
+      <ul
+        className="css-1ohgahs"
+        role="list"
+      >
+        <li
+          className="css-cahixa"
+        >
+          React
+        </li>
+        <li
+          className="css-cahixa"
+        >
+          Bootstrap
+        </li>
+        <li
+          className="css-cahixa"
+        >
+          Fuse.js
+        </li>
+        <li
+          className="css-cahixa"
+        >
+          JSON file as a database
+        </li>
+      </ul>
+    </div>
+    <div
+      className="chakra-stack css-owjkmg"
+    >
+      <h2
+        className="chakra-heading css-1eihn08"
+      >
+        Code
+      </h2>
+      <ul
+        className="css-1ohgahs"
+        role="list"
+      >
+        <li
+          className="css-cahixa"
+        >
+          <a
+            className="chakra-link css-1081t4c"
+            href="https://github.com/JanKaram2020/eargasm.git"
+            rel="noopener"
+            target="_blank"
+          >
+            Repository
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="chakra-stack css-owjkmg"
+    >
+      <h2
+        className="chakra-heading css-1eihn08"
+      >
+        Live
+      </h2>
+      <ul
+        className="css-1ohgahs"
+        role="list"
+      >
+        <li
+          className="css-cahixa"
+        >
+          <a
+            className="chakra-link css-1081t4c"
+            href="https://eargasm.surge.sh/"
+            rel="noopener"
+            target="_blank"
+          >
+            View site
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="css-1lads1q"
+    style={{}}
+  >
+    <span
+      style={
+        {
+          "background": "none",
+          "border": 0,
+          "boxSizing": "border-box",
+          "display": "inline-block",
+          "height": "initial",
+          "margin": 0,
+          "maxWidth": "100%",
+          "opacity": 1,
+          "overflow": "hidden",
+          "padding": 0,
+          "position": "relative",
+          "width": "initial",
+        }
+      }
+    >
+      <span
+        style={
+          {
+            "background": "none",
+            "border": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "height": "initial",
+            "margin": 0,
+            "maxWidth": "100%",
+            "opacity": 1,
+            "padding": 0,
+            "width": "initial",
+          }
+        }
+      >
+        <img
+          alt=""
+          aria-hidden={true}
+          src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27900%27%20height=%27380%27/%3e"
+          style={
+            {
+              "background": "none",
+              "border": 0,
+              "display": "block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "padding": 0,
+              "width": "initial",
+            }
+          }
+        />
+      </span>
+      <img
+        alt="screenshots of eargasm on different devices"
+        data-nimg="intrinsic"
+        decoding="async"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        style={
+          {
+            "border": "none",
+            "bottom": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "height": 0,
+            "left": 0,
+            "margin": "auto",
+            "maxHeight": "100%",
+            "maxWidth": "100%",
+            "minHeight": "100%",
+            "minWidth": "100%",
+            "objectFit": "cover",
+            "objectPosition": undefined,
+            "padding": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": 0,
+          }
+        }
+      />
+      <noscript>
+        <img
+          alt="screenshots of eargasm on different devices"
+          data-nimg="intrinsic"
+          decoding="async"
+          loading="lazy"
+          src="/_next/image?url=%2FeargasmMockup.png&w=1920&q=75"
+          srcSet="/_next/image?url=%2FeargasmMockup.png&w=1080&q=75 1x, /_next/image?url=%2FeargasmMockup.png&w=1920&q=75 2x"
+          style={
+            {
+              "border": "none",
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "display": "block",
+              "height": 0,
+              "left": 0,
+              "margin": "auto",
+              "maxHeight": "100%",
+              "maxWidth": "100%",
+              "minHeight": "100%",
+              "minWidth": "100%",
+              "objectFit": "cover",
+              "objectPosition": undefined,
+              "padding": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": 0,
+            }
+          }
+        />
+      </noscript>
+    </span>
+  </div>
+  <div
+    className="css-kl37xa"
+  >
+    <div
+      className="css-0"
+    >
+      <h2
+        className="chakra-heading css-17dqea7"
+      >
+        Why this stack?
+      </h2>
+      <p
+        className="chakra-text css-1ezsviu"
+      >
+        i choose React because I wanted to get more familiar with and make a project on my own instead of following tutorials.
+        <br />
+         Fuse.js was the search option of choice because I didn't want to build a full backend for this simple app with it's small database.
+        <br />
+        Boostrap was the styling framework because I wanted to get my more familiar with React without focusing too much on styling.
+      </p>
+    </div>
+    <div
+      className="css-vwgfpk"
+    >
+      <a
+        className="chakra-link css-0"
+        href="https://reactjs.org/"
+        rel="noopener"
+        target="_blank"
+      >
+        <span
+          style={
+            {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
+              style={
+                {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            alt="react js logo"
+            data-nimg="intrinsic"
+            decoding="async"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="react js logo"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              src="/_next/image?url=%2Flogos%2Freact.png&w=384&q=75"
+              srcSet="/_next/image?url=%2Flogos%2Freact.png&w=256&q=75 1x, /_next/image?url=%2Flogos%2Freact.png&w=384&q=75 2x"
+              style={
+                {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </a>
+      <a
+        className="chakra-link css-0"
+        href="https://getbootstrap.com/docs/5.0/getting-started/introduction/"
+        rel="noopener"
+        target="_blank"
+      >
+        <span
+          style={
+            {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
+              style={
+                {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            alt="bootstrap logo"
+            data-nimg="intrinsic"
+            decoding="async"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="bootstrap logo"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              src="/_next/image?url=%2Flogos%2Fbootstrap.png&w=384&q=75"
+              srcSet="/_next/image?url=%2Flogos%2Fbootstrap.png&w=256&q=75 1x, /_next/image?url=%2Flogos%2Fbootstrap.png&w=384&q=75 2x"
+              style={
+                {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </a>
+    </div>
+  </div>
+  <div
+    className="chakra-stack css-1qqukx9"
+  >
+    <h2
+      className="chakra-heading css-hpox18"
+    >
+      Lessons learned
+    </h2>
+    <p
+      className="chakra-text css-bvex1k"
+    >
+      <ul
+        className="css-1ohgahs"
+        role="list"
+      >
+        <li
+          className="css-cahixa"
+        >
+          Gained more experience with React and it's ecosystem.
+        </li>
+        <li
+          className="css-cahixa"
+        >
+          used fuse js and learned how to make a mini fuzzy search engine.
+        </li>
+      </ul>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`pages > should TestTable match snapshot 1`] = `
+<div
+  className="chakra-stack css-hula3z"
+>
+  <h1
+    className="chakra-heading css-1lnsct4"
+  >
+    Test table generator
+  </h1>
+  <p
+    className="chakra-text css-1ezsviu"
+  >
+    Test table generator is a table getter website that scrapes the faculty of science's test table page and displays the results.
+    <br />
+    I built this project using Nextjs, Puppeteer and Mantine component library.
+  </p>
+  <div
+    className="css-12b704b"
+  >
+    <div
+      className="chakra-stack css-owjkmg"
+    >
+      <h2
+        className="chakra-heading css-1eihn08"
+      >
+        Stack
+      </h2>
+      <ul
+        className="css-1ohgahs"
+        role="list"
+      >
+        <li
+          className="css-cahixa"
+        >
+          Next js
+        </li>
+        <li
+          className="css-cahixa"
+        >
+          React
+        </li>
+        <li
+          className="css-cahixa"
+        >
+          Puppeteer
+        </li>
+        <li
+          className="css-cahixa"
+        >
+          Mantine component library
+        </li>
+      </ul>
+    </div>
+    <div
+      className="chakra-stack css-owjkmg"
+    >
+      <h2
+        className="chakra-heading css-1eihn08"
+      >
+        Code
+      </h2>
+      <ul
+        className="css-1ohgahs"
+        role="list"
+      >
+        <li
+          className="css-cahixa"
+        >
+          <a
+            className="chakra-link css-1081t4c"
+            href="https://github.com/JanKaram2020/test-table"
+            rel="noopener"
+            target="_blank"
+          >
+            Repository
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="chakra-stack css-owjkmg"
+    >
+      <h2
+        className="chakra-heading css-1eihn08"
+      >
+        Live
+      </h2>
+      <ul
+        className="css-1ohgahs"
+        role="list"
+      >
+        <li
+          className="css-cahixa"
+        >
+          <a
+            className="chakra-link css-1081t4c"
+            href="https://test-table-jankaram2020.vercel.app/"
+            rel="noopener"
+            target="_blank"
+          >
+            View site
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="css-1lads1q"
+    style={{}}
+  >
+    <span
+      style={
+        {
+          "background": "none",
+          "border": 0,
+          "boxSizing": "border-box",
+          "display": "inline-block",
+          "height": "initial",
+          "margin": 0,
+          "maxWidth": "100%",
+          "opacity": 1,
+          "overflow": "hidden",
+          "padding": 0,
+          "position": "relative",
+          "width": "initial",
+        }
+      }
+    >
+      <span
+        style={
+          {
+            "background": "none",
+            "border": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "height": "initial",
+            "margin": 0,
+            "maxWidth": "100%",
+            "opacity": 1,
+            "padding": 0,
+            "width": "initial",
+          }
+        }
+      >
+        <img
+          alt=""
+          aria-hidden={true}
+          src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27900%27%20height=%27380%27/%3e"
+          style={
+            {
+              "background": "none",
+              "border": 0,
+              "display": "block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "padding": 0,
+              "width": "initial",
+            }
+          }
+        />
+      </span>
+      <img
+        alt="screenshot of test table site"
+        data-nimg="intrinsic"
+        decoding="async"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        style={
+          {
+            "border": "none",
+            "bottom": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "height": 0,
+            "left": 0,
+            "margin": "auto",
+            "maxHeight": "100%",
+            "maxWidth": "100%",
+            "minHeight": "100%",
+            "minWidth": "100%",
+            "objectFit": "cover",
+            "objectPosition": undefined,
+            "padding": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": 0,
+          }
+        }
+      />
+      <noscript>
+        <img
+          alt="screenshot of test table site"
+          data-nimg="intrinsic"
+          decoding="async"
+          loading="lazy"
+          src="/_next/image?url=%2Ftest-table.PNG&w=1920&q=75"
+          srcSet="/_next/image?url=%2Ftest-table.PNG&w=1080&q=75 1x, /_next/image?url=%2Ftest-table.PNG&w=1920&q=75 2x"
+          style={
+            {
+              "border": "none",
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "display": "block",
+              "height": 0,
+              "left": 0,
+              "margin": "auto",
+              "maxHeight": "100%",
+              "maxWidth": "100%",
+              "minHeight": "100%",
+              "minWidth": "100%",
+              "objectFit": "cover",
+              "objectPosition": undefined,
+              "padding": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": 0,
+            }
+          }
+        />
+      </noscript>
+    </span>
+  </div>
+  <div
+    className="css-kl37xa"
+  >
+    <div
+      className="css-0"
+    >
+      <h2
+        className="chakra-heading css-17dqea7"
+      >
+        Why this stack?
+      </h2>
+      <p
+        className="chakra-text css-1ezsviu"
+      >
+        I choose Next-js and React because of the awesome DX and api routes.
+        <br />
+        Puppeteer because in my opinion it's the best library to web scrape using javascript and is used here to scrape the test table page and get the user's courses by codes or names.
+        <br />
+        Mantine dev was the component library of choice because of it's amazing , beautiful and accessible components.
+      </p>
+    </div>
+    <div
+      className="css-vwgfpk"
+    >
+      <a
+        className="chakra-link css-0"
+        href="https://nextjs.org/"
+        rel="noopener"
+        target="_blank"
+      >
+        <span
+          style={
+            {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
+              style={
+                {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            alt="Next js logo"
+            data-nimg="intrinsic"
+            decoding="async"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": "cover",
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="Next js logo"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              src="/_next/image?url=%2Flogos%2Fnext.png&w=384&q=75"
+              srcSet="/_next/image?url=%2Flogos%2Fnext.png&w=256&q=75 1x, /_next/image?url=%2Flogos%2Fnext.png&w=384&q=75 2x"
+              style={
+                {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": "cover",
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </a>
+      <a
+        className="chakra-link css-0"
+        href="https://pptr.dev/"
+        rel="noopener"
+        target="_blank"
+      >
+        <span
+          style={
+            {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2760%27%20height=%2790%27/%3e"
+              style={
+                {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            alt="puppeteer logo"
+            data-nimg="intrinsic"
+            decoding="async"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": "cover",
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="puppeteer logo"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              src="/_next/image?url=%2Flogos%2Fpuppeteer.png&w=128&q=75"
+              srcSet="/_next/image?url=%2Flogos%2Fpuppeteer.png&w=64&q=75 1x, /_next/image?url=%2Flogos%2Fpuppeteer.png&w=128&q=75 2x"
+              style={
+                {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": "cover",
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </a>
+      <a
+        className="chakra-link css-0"
+        href="https://mantine.dev/"
+        rel="noopener"
+        target="_blank"
+      >
+        <span
+          style={
+            {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27240%27%20height=%2762%27/%3e"
+              style={
+                {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            alt="mantine logo"
+            data-nimg="intrinsic"
+            decoding="async"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": "cover",
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="mantine logo"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              src="/_next/image?url=%2Flogos%2Fmantine.png&w=640&q=75"
+              srcSet="/_next/image?url=%2Flogos%2Fmantine.png&w=256&q=75 1x, /_next/image?url=%2Flogos%2Fmantine.png&w=640&q=75 2x"
+              style={
+                {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": "cover",
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </a>
+    </div>
+  </div>
+  <div
+    className="chakra-stack css-1qqukx9"
+  >
+    <h2
+      className="chakra-heading css-hpox18"
+    >
+      Lessons learned
+    </h2>
+    <p
+      className="chakra-text css-bvex1k"
+    >
+      <ul
+        className="css-1ohgahs"
+        role="list"
+      >
+        <li
+          className="css-cahixa"
+        >
+          Solved a problem for me and other students and future students
+        </li>
+        <li
+          className="css-cahixa"
+        >
+          Gained more experience with Puppeteer and Nextjs's api routes.
+        </li>
+        <li
+          className="css-cahixa"
+        >
+          used mantine dev component library.
+        </li>
+      </ul>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`pages > should WouldYouRather match snapshot 1`] = `
+<div
+  className="chakra-stack css-hula3z"
+>
+  <h1
+    className="chakra-heading css-1lnsct4"
+  >
+    Would You Rather
+  </h1>
+  <p
+    className="chakra-text css-1ezsviu"
+  >
+    Would you rather is a React and Redux powered web app built to mimic would you rather game. 
+    <br />
+    I built this project from with React ,Redux, Redux-toolkit , React-strap and Bootstrap for styling.
+  </p>
+  <div
+    className="css-12b704b"
+  >
+    <div
+      className="chakra-stack css-owjkmg"
+    >
+      <h2
+        className="chakra-heading css-1eihn08"
+      >
+        Stack
+      </h2>
+      <ul
+        className="css-1ohgahs"
+        role="list"
+      >
+        <li
+          className="css-cahixa"
+        >
+          React
+        </li>
+        <li
+          className="css-cahixa"
+        >
+          Redux
+        </li>
+        <li
+          className="css-cahixa"
+        >
+          Bootstrap
+        </li>
+        <li
+          className="css-cahixa"
+        >
+          JSON file as a fake database
+        </li>
+      </ul>
+    </div>
+    <div
+      className="chakra-stack css-owjkmg"
+    >
+      <h2
+        className="chakra-heading css-1eihn08"
+      >
+        Code
+      </h2>
+      <ul
+        className="css-1ohgahs"
+        role="list"
+      >
+        <li
+          className="css-cahixa"
+        >
+          <a
+            className="chakra-link css-1081t4c"
+            href="https://github.com/JanKaram2020/would-you-rather-game"
+            rel="noopener"
+            target="_blank"
+          >
+            Repository
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="chakra-stack css-owjkmg"
+    >
+      <h2
+        className="chakra-heading css-1eihn08"
+      >
+        Live
+      </h2>
+      <ul
+        className="css-1ohgahs"
+        role="list"
+      >
+        <li
+          className="css-cahixa"
+        >
+          <a
+            className="chakra-link css-1081t4c"
+            href="https://jan-would-you-rather.surge.sh/"
+            rel="noopener"
+            target="_blank"
+          >
+            View site
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="css-1lads1q"
+    style={{}}
+  >
+    <span
+      style={
+        {
+          "background": "none",
+          "border": 0,
+          "boxSizing": "border-box",
+          "display": "inline-block",
+          "height": "initial",
+          "margin": 0,
+          "maxWidth": "100%",
+          "opacity": 1,
+          "overflow": "hidden",
+          "padding": 0,
+          "position": "relative",
+          "width": "initial",
+        }
+      }
+    >
+      <span
+        style={
+          {
+            "background": "none",
+            "border": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "height": "initial",
+            "margin": 0,
+            "maxWidth": "100%",
+            "opacity": 1,
+            "padding": 0,
+            "width": "initial",
+          }
+        }
+      >
+        <img
+          alt=""
+          aria-hidden={true}
+          src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27900%27%20height=%27380%27/%3e"
+          style={
+            {
+              "background": "none",
+              "border": 0,
+              "display": "block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "padding": 0,
+              "width": "initial",
+            }
+          }
+        />
+      </span>
+      <img
+        alt="screenshots of would you rather on different devices"
+        data-nimg="intrinsic"
+        decoding="async"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        style={
+          {
+            "border": "none",
+            "bottom": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "height": 0,
+            "left": 0,
+            "margin": "auto",
+            "maxHeight": "100%",
+            "maxWidth": "100%",
+            "minHeight": "100%",
+            "minWidth": "100%",
+            "objectFit": "cover",
+            "objectPosition": undefined,
+            "padding": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": 0,
+          }
+        }
+      />
+      <noscript>
+        <img
+          alt="screenshots of would you rather on different devices"
+          data-nimg="intrinsic"
+          decoding="async"
+          loading="lazy"
+          src="/_next/image?url=%2FwouldYouRatherMockup.png&w=1920&q=75"
+          srcSet="/_next/image?url=%2FwouldYouRatherMockup.png&w=1080&q=75 1x, /_next/image?url=%2FwouldYouRatherMockup.png&w=1920&q=75 2x"
+          style={
+            {
+              "border": "none",
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "display": "block",
+              "height": 0,
+              "left": 0,
+              "margin": "auto",
+              "maxHeight": "100%",
+              "maxWidth": "100%",
+              "minHeight": "100%",
+              "minWidth": "100%",
+              "objectFit": "cover",
+              "objectPosition": undefined,
+              "padding": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": 0,
+            }
+          }
+        />
+      </noscript>
+    </span>
+  </div>
+  <div
+    className="css-kl37xa"
+  >
+    <div
+      className="css-0"
+    >
+      <h2
+        className="chakra-heading css-17dqea7"
+      >
+        Why this stack?
+      </h2>
+      <p
+        className="chakra-text css-1ezsviu"
+      >
+        React was the ui framework for me because my familiarity with it and it's amazing react-redux package that binds both well.
+        <br />
+         I chose Redux because I wanted a managed global store and predictable state
+        <br />
+        Boostrap was the styling framework because I wanted to get my hands dirty with Redux without focusing too much on styling.
+      </p>
+    </div>
+    <div
+      className="css-vwgfpk"
+    >
+      <a
+        className="chakra-link css-0"
+        href="https://reactjs.org/"
+        rel="noopener"
+        target="_blank"
+      >
+        <span
+          style={
+            {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
+              style={
+                {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            alt="react js logo"
+            data-nimg="intrinsic"
+            decoding="async"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="react js logo"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              src="/_next/image?url=%2Flogos%2Freact.png&w=384&q=75"
+              srcSet="/_next/image?url=%2Flogos%2Freact.png&w=256&q=75 1x, /_next/image?url=%2Flogos%2Freact.png&w=384&q=75 2x"
+              style={
+                {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </a>
+      <a
+        className="chakra-link css-0"
+        href="https://redux.js.org/"
+        rel="noopener"
+        target="_blank"
+      >
+        <span
+          style={
+            {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
+              style={
+                {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            alt="Redux js logo"
+            data-nimg="intrinsic"
+            decoding="async"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="Redux js logo"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              src="/_next/image?url=%2Flogos%2Fredux.png&w=384&q=75"
+              srcSet="/_next/image?url=%2Flogos%2Fredux.png&w=256&q=75 1x, /_next/image?url=%2Flogos%2Fredux.png&w=384&q=75 2x"
+              style={
+                {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </a>
+      <a
+        className="chakra-link css-0"
+        href="https://getbootstrap.com/docs/5.0/getting-started/introduction/"
+        rel="noopener"
+        target="_blank"
+      >
+        <span
+          style={
+            {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
+              style={
+                {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            alt="bootstrap logo"
+            data-nimg="intrinsic"
+            decoding="async"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="bootstrap logo"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              src="/_next/image?url=%2Flogos%2Fbootstrap.png&w=384&q=75"
+              srcSet="/_next/image?url=%2Flogos%2Fbootstrap.png&w=256&q=75 1x, /_next/image?url=%2Flogos%2Fbootstrap.png&w=384&q=75 2x"
+              style={
+                {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </a>
+    </div>
+  </div>
+  <div
+    className="chakra-stack css-1qqukx9"
+  >
+    <h2
+      className="chakra-heading css-hpox18"
+    >
+      Lessons learned
+    </h2>
+    <p
+      className="chakra-text css-bvex1k"
+    >
+      <ul
+        className="css-1ohgahs"
+        role="list"
+      >
+        <li
+          className="css-cahixa"
+        >
+          Never write vanilla Redux again :D , seriously after writing a few reduces and actions , I felt that it was complex, hard to manage and code was hard to keep track of. then I found Redux-toolkit package and I was amazed by the amount of boilerplate i removed from the code base and it was amazing.
+        </li>
+        <li
+          className="css-cahixa"
+        >
+          Gained more experience with React and it's ecosystem.
+        </li>
+      </ul>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`pages > should WritingByLilyanne match snapshot 1`] = `
+<div
+  className="chakra-stack css-hula3z"
+>
+  <h1
+    className="chakra-heading css-1lnsct4"
+  >
+    Writing by Lilyanne
+  </h1>
+  <p
+    className="chakra-text css-1ezsviu"
+  >
+    Writing by Lilyanne is a JAMstack powered blog built for my dear friend Lilyanne. 
+    <br />
+    I built this project from scratch with Gatsby, React ,GraphQL, Theme-UI, Framer motion , react-intl and Sanity CMS.
+    <br />
+    The blog is available in Arabic , English and French and can be viewed in light and dark mode.
+  </p>
+  <div
+    className="css-12b704b"
+  >
+    <div
+      className="chakra-stack css-owjkmg"
+    >
+      <h2
+        className="chakra-heading css-1eihn08"
+      >
+        Stack
+      </h2>
+      <ul
+        className="css-1ohgahs"
+        role="list"
+      >
+        <li
+          className="css-cahixa"
+        >
+          Gatsby
+        </li>
+        <li
+          className="css-cahixa"
+        >
+          React
+        </li>
+        <li
+          className="css-cahixa"
+        >
+          GraphQL
+        </li>
+        <li
+          className="css-cahixa"
+        >
+          Theme-UI
+        </li>
+        <li
+          className="css-cahixa"
+        >
+          Framer motion
+        </li>
+        <li
+          className="css-cahixa"
+        >
+          react-intl
+        </li>
+        <li
+          className="css-cahixa"
+        >
+          Sanity CMS
+        </li>
+        <li
+          className="css-cahixa"
+        >
+          Google analytics
+        </li>
+      </ul>
+    </div>
+    <div
+      className="chakra-stack css-owjkmg"
+    >
+      <h2
+        className="chakra-heading css-1eihn08"
+      >
+        Code
+      </h2>
+      <ul
+        className="css-1ohgahs"
+        role="list"
+      >
+        <li
+          className="css-cahixa"
+        >
+          Frontend:  
+          <a
+            className="chakra-link css-1081t4c"
+            href="https://github.com/JanKaram2020/Lilyanne-blog-gatsby"
+            rel="noopener"
+            target="_blank"
+          >
+            Repository
+          </a>
+        </li>
+        <li
+          className="css-cahixa"
+        >
+          CMS:  
+           
+          <a
+            className="chakra-link css-1081t4c"
+            href="https://github.com/JanKaram2020/Lilyanne-blog-cms"
+            rel="noopener"
+            target="_blank"
+          >
+            Repository
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="chakra-stack css-owjkmg"
+    >
+      <h2
+        className="chakra-heading css-1eihn08"
+      >
+        Live
+      </h2>
+      <ul
+        className="css-1ohgahs"
+        role="list"
+      >
+        <li
+          className="css-cahixa"
+        >
+          <a
+            className="chakra-link css-1081t4c"
+            href="https://lilyannehany.netlify.app/"
+            rel="noopener"
+            target="_blank"
+          >
+            View site
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="css-1lads1q"
+    style={{}}
+  >
+    <span
+      style={
+        {
+          "background": "none",
+          "border": 0,
+          "boxSizing": "border-box",
+          "display": "inline-block",
+          "height": "initial",
+          "margin": 0,
+          "maxWidth": "100%",
+          "opacity": 1,
+          "overflow": "hidden",
+          "padding": 0,
+          "position": "relative",
+          "width": "initial",
+        }
+      }
+    >
+      <span
+        style={
+          {
+            "background": "none",
+            "border": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "height": "initial",
+            "margin": 0,
+            "maxWidth": "100%",
+            "opacity": 1,
+            "padding": 0,
+            "width": "initial",
+          }
+        }
+      >
+        <img
+          alt=""
+          aria-hidden={true}
+          src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27900%27%20height=%27380%27/%3e"
+          style={
+            {
+              "background": "none",
+              "border": 0,
+              "display": "block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "padding": 0,
+              "width": "initial",
+            }
+          }
+        />
+      </span>
+      <img
+        alt="screenshots of writing by lilyanne on different devices"
+        data-nimg="intrinsic"
+        decoding="async"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        style={
+          {
+            "border": "none",
+            "bottom": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "height": 0,
+            "left": 0,
+            "margin": "auto",
+            "maxHeight": "100%",
+            "maxWidth": "100%",
+            "minHeight": "100%",
+            "minWidth": "100%",
+            "objectFit": "cover",
+            "objectPosition": undefined,
+            "padding": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": 0,
+          }
+        }
+      />
+      <noscript>
+        <img
+          alt="screenshots of writing by lilyanne on different devices"
+          data-nimg="intrinsic"
+          decoding="async"
+          loading="lazy"
+          src="/_next/image?url=%2FlilyanneMockup.png&w=1920&q=75"
+          srcSet="/_next/image?url=%2FlilyanneMockup.png&w=1080&q=75 1x, /_next/image?url=%2FlilyanneMockup.png&w=1920&q=75 2x"
+          style={
+            {
+              "border": "none",
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "display": "block",
+              "height": 0,
+              "left": 0,
+              "margin": "auto",
+              "maxHeight": "100%",
+              "maxWidth": "100%",
+              "minHeight": "100%",
+              "minWidth": "100%",
+              "objectFit": "cover",
+              "objectPosition": undefined,
+              "padding": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": 0,
+            }
+          }
+        />
+      </noscript>
+    </span>
+  </div>
+  <div
+    className="css-kl37xa"
+  >
+    <div
+      className="css-0"
+    >
+      <h2
+        className="chakra-heading css-17dqea7"
+      >
+        Why this stack?
+      </h2>
+      <p
+        className="chakra-text css-1ezsviu"
+      >
+        I wanted the website to be multi-lang and I tried a lot of content management systems but the only one who supported internalization the way I wanted was Sanity CMS. also it's ease of use and customization made it the clear winner for me.
+        <br />
+         After choosing the CMS choosing Gatsby was easy, because of it's plugin system , how it's easy to make a site multi-lang using it and it's amazing integration with Sanity CMS.
+        <br />
+        Theme-UI was the styling choice because I wanted the blog to support dark mode without losing my sanity, it's amazing and supports multiple color modes by default. and framer motion because of it's amazing performance and ease of use.
+        <br />
+        Google analytics because I wanted to track engagement and to know which article attracts more people.
+      </p>
+    </div>
+    <div
+      className="css-vwgfpk"
+    >
+      <a
+        className="chakra-link css-0"
+        href="https://www.sanity.io/"
+        rel="noopener"
+        target="_blank"
+      >
+        <span
+          style={
+            {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
+              style={
+                {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            alt="sanity io logo"
+            data-nimg="intrinsic"
+            decoding="async"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="sanity io logo"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              src="/_next/image?url=%2Flogos%2Fsanity.png&w=384&q=75"
+              srcSet="/_next/image?url=%2Flogos%2Fsanity.png&w=256&q=75 1x, /_next/image?url=%2Flogos%2Fsanity.png&w=384&q=75 2x"
+              style={
+                {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </a>
+      <a
+        className="chakra-link css-0"
+        href="https://www.gatsbyjs.com/"
+        rel="noopener"
+        target="_blank"
+      >
+        <span
+          style={
+            {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
+              style={
+                {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            alt="gatsby logo"
+            data-nimg="intrinsic"
+            decoding="async"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="gatsby logo"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              src="/_next/image?url=%2Flogos%2Fgatsby.png&w=384&q=75"
+              srcSet="/_next/image?url=%2Flogos%2Fgatsby.png&w=256&q=75 1x, /_next/image?url=%2Flogos%2Fgatsby.png&w=384&q=75 2x"
+              style={
+                {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </a>
+      <a
+        className="chakra-link css-0"
+        href="https://theme-ui.com/"
+        rel="noopener"
+        target="_blank"
+      >
+        <span
+          style={
+            {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
+              style={
+                {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            alt="theme ui logo"
+            data-nimg="intrinsic"
+            decoding="async"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="theme ui logo"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              src="/_next/image?url=%2Flogos%2Fthemeui.png&w=384&q=75"
+              srcSet="/_next/image?url=%2Flogos%2Fthemeui.png&w=256&q=75 1x, /_next/image?url=%2Flogos%2Fthemeui.png&w=384&q=75 2x"
+              style={
+                {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </a>
+      <a
+        className="chakra-link css-0"
+        href="https://www.framer.com/docs/"
+        rel="noopener"
+        target="_blank"
+      >
+        <span
+          style={
+            {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
+              style={
+                {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            alt="framer logo"
+            data-nimg="intrinsic"
+            decoding="async"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="framer logo"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              src="/_next/image?url=%2Flogos%2Fframer.png&w=384&q=75"
+              srcSet="/_next/image?url=%2Flogos%2Fframer.png&w=256&q=75 1x, /_next/image?url=%2Flogos%2Fframer.png&w=384&q=75 2x"
+              style={
+                {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </a>
+    </div>
+  </div>
+  <div
+    className="chakra-stack css-1qqukx9"
+  >
+    <h2
+      className="chakra-heading css-hpox18"
+    >
+      Lessons learned
+    </h2>
+    <p
+      className="chakra-text css-bvex1k"
+    >
+      I could spend all day describing the lessons that I learned while working on this project, but the most important ones involved my new found understanding of Gatsby,GraphQl, Git management, and API integration with Sanity Io and how to use google analytics. As my first large project using React, I learned a lot of lessons regarding code structure and organization.
+    </p>
+  </div>
+</div>
+`;
