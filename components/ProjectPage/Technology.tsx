@@ -23,6 +23,7 @@ const Technology = ({ tech }: { tech: StackLogo }) => (
       width={190}
       height={72.5}
       alt={`${tech} logo`}
+      objectFit="contain"
     />
   </Link>
 );

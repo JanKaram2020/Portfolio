@@ -67,13 +67,7 @@ export default function LilyanneBlog() {
         }
         stackInfo={['sanity', 'gatsby', 'themeui', 'framer']}
         lessons={[
-          `I could spend all day describing the lessons that I learned while
-            working on this project, but the most important ones involved my new
-            found understanding of Gatsby,GraphQl, Git management, and API
-            integration with Sanity Io and how to use google analytics. As my
-            first large project using React, I learned a lot of lessons
-            regarding code structure and organization.
-         `,
+          `I could spend all day describing the lessons that I learned while working on this project, but the most important ones involved my new found understanding of Gatsby,GraphQl, Git management, and API integration with Sanity Io and how to use google analytics. As my first large project using React, I learned a lot of lessons regarding code structure and organization.`,
         ]}
         projectImage="/lilyanneMockup.png"
       />

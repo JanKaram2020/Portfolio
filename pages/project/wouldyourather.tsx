@@ -39,13 +39,9 @@ export default function WouldYouRather() {
             dirty with Redux without focusing too much on styling.
           </>
         }
-        stackInfo={['redux', 'bootstrap']}
+        stackInfo={['react', 'redux', 'bootstrap']}
         lessons={[
-          `Never write vanilla Redux again :D , seriously after writing a
-        few reduces and actions , I felt that it was complex, hard to
-        manage and code was hard to keep track of. then I found
-        Redux-toolkit package and I was amazed by the amount of
-        boilerplate i removed from the code base and it was amazing.`,
+          `Never write vanilla Redux again :D , seriously after writing a few reduces and actions , I felt that it was complex, hard to manage and code was hard to keep track of. then I found Redux-toolkit package and I was amazed by the amount of boilerplate i removed from the code base and it was amazing.`,
           "Gained more experience with React and it's ecosystem.",
         ]}
         projectImage="/wouldYouRatherMockup.png"

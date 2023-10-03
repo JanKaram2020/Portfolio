@@ -119,11 +119,15 @@ export default function ProjectPage({
             Lessons learned
           </Heading>
           <Text fontSize="lg" maxWidth="60ch">
-            <UnorderedList sx={{ listStyle: 'none' }}>
-              {lessons.map((l) => (
-                <ListItemColor key={l}>{l}</ListItemColor>
-              ))}
-            </UnorderedList>
+            {lessons.length === 1 ? (
+              lessons[0]
+            ) : (
+              <UnorderedList sx={{ listStyle: 'none' }}>
+                {lessons.map((l) => (
+                  <ListItemColor key={l}>{l}</ListItemColor>
+                ))}
+              </UnorderedList>
+            )}
           </Text>
         </VStack>
       </VStack>
