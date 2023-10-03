@@ -26,7 +26,7 @@ function Example(): React.ReactElement {
         }}
       >
         <AnimatePresence>
-          {colorMode === 'dark' && (
+          {colorMode === 'dark' ? (
             <MotionBox
               gridArea="1 / 1 / 2 / 2"
               color="yellow.500"
@@ -37,10 +37,7 @@ function Example(): React.ReactElement {
             >
               <IoMdSunny size={30} />
             </MotionBox>
-          )}
-        </AnimatePresence>
-        <AnimatePresence>
-          {colorMode === 'light' && (
+          ) : (
             <MotionBox
               gridArea="1 / 1 / 2 / 2"
               color="black"
