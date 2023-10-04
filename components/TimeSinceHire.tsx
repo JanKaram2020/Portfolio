@@ -15,12 +15,9 @@ const formatTime = (seconds: number) => {
 };
 const timeOfHire = new Date('2023-01-16T09:00:00');
 const TimeSinceHire = () => {
-  const initialDiff = new Date().getTime() - timeOfHire.getTime();
-  const [ctime, setCTime] = useState<number>(initialDiff);
-  const [isClient, setIsClient] = useState(false);
+  const [ctime, setCTime] = useState<number | undefined>(undefined);
 
   useEffect(() => {
-    setIsClient(true);
     const updateTime = () => {
       const newTime = new Date().getTime() - timeOfHire.getTime();
       setCTime(newTime);
@@ -29,7 +26,7 @@ const TimeSinceHire = () => {
     return () => clearInterval(id);
   }, []);
 
-  if (isClient)
+  if (ctime)
     return (
       <Text
         as="span"
