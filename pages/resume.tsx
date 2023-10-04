@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import {
   Heading,
   SimpleGrid,
@@ -9,10 +10,8 @@ import {
   Button,
 } from '@chakra-ui/react';
 import SEO from 'components/SEO';
-import type { ReactNode } from 'react';
-import TimeSinceHire from 'components/TimeSinceHire';
 
-const FullWidthColumn = ({ children }: { children: ReactNode }) => (
+const TwoColumnGrid = ({ children }: { children: React.ReactNode }) => (
   <SimpleGrid
     columns={{ sm: 1 }}
     sx={{
@@ -25,8 +24,35 @@ const FullWidthColumn = ({ children }: { children: ReactNode }) => (
     {children}
   </SimpleGrid>
 );
+// divide seconds into months and days and hours and seconds
+const formatTime = (seconds: number) => {
+  const month = 1000 * 60 * 60 * 24 * 30;
+  const day = 1000 * 60 * 60 * 24;
+  const hour = 1000 * 60 * 60;
+  const minute = 1000 * 60;
+  const months = Math.floor(seconds / month);
+  const days = Math.floor((seconds % month) / day);
+  const hours = Math.floor((seconds % day) / hour);
+  const minutes = Math.floor((seconds % hour) / minute);
+  const second = Math.floor((seconds % minute) / 1000);
+  return `${months} months, ${days} days, ${hours} hours, ${minutes} minutes, ${second} seconds`;
+};
+const timeOfHire = new Date('2023-01-16T09:00:00');
 
 export default function ResumePage() {
+  const initialDiff = new Date().getTime() - timeOfHire.getTime();
+  const [ctime, setCTime] = useState<number>(initialDiff);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+    const updateTime = () => {
+      const newTime = new Date().getTime() - timeOfHire.getTime();
+      setCTime(newTime);
+    };
+    const id = setInterval(updateTime, 1000);
+    return () => clearInterval(id);
+  }, []);
   return (
     <>
       <SEO title="Resume | Jan Karam" />
@@ -149,7 +175,7 @@ export default function ResumePage() {
               </Center>
             </SimpleGrid>
           </SimpleGrid>
-          <FullWidthColumn>
+          <TwoColumnGrid>
             <Heading as="h2" fontSize="xl" id="aboutMe" textAlign="center">
               Professional Summary
             </Heading>
@@ -158,8 +184,8 @@ export default function ResumePage() {
               and Express with over 3 years of experience and passion for
               creating web applications.
             </Text>
-          </FullWidthColumn>
-          <FullWidthColumn>
+          </TwoColumnGrid>
+          <TwoColumnGrid>
             <Heading as="h2" fontSize="xl" textAlign="center">
               Experience
             </Heading>
@@ -178,7 +204,18 @@ export default function ResumePage() {
                   }}
                 >
                   (Jan 2023 - present)
-                  <TimeSinceHire />
+                  {isClient ? (
+                    <Text
+                      as="span"
+                      sx={{
+                        '@media print': {
+                          display: 'none',
+                        },
+                      }}
+                    >
+                      {formatTime(ctime)}
+                    </Text>
+                  ) : null}
                 </Text>
                 <Text as="ol" ml="1rem" fontSize="14px">
                   <li>
@@ -316,8 +353,8 @@ export default function ResumePage() {
                 </Text>
               </Text>
             </Text>
-          </FullWidthColumn>
-          <FullWidthColumn>
+          </TwoColumnGrid>
+          <TwoColumnGrid>
             <Heading as="h2" fontSize="xl" id="projects" textAlign="center">
               Projects
             </Heading>
@@ -386,8 +423,8 @@ export default function ResumePage() {
               </Text>
               {/* <Divider /> */}
             </Text>
-          </FullWidthColumn>
-          <FullWidthColumn>
+          </TwoColumnGrid>
+          <TwoColumnGrid>
             <Heading as="h2" fontSize="xl" textAlign="center">
               Education
             </Heading>
@@ -440,8 +477,8 @@ export default function ResumePage() {
                 </Text>
               </Text>
             </Text>
-          </FullWidthColumn>
-          <FullWidthColumn>
+          </TwoColumnGrid>
+          <TwoColumnGrid>
             <Heading as="h2" fontSize="xl" id="skills" textAlign="center">
               Skills
             </Heading>
@@ -451,7 +488,7 @@ export default function ResumePage() {
               CSS-in-Js & SASS • NodeJs - Express • Prototyping with Framer •
               Graphic design & Photo editing • Googling !
             </Text>
-          </FullWidthColumn>
+          </TwoColumnGrid>
         </VStack>
       </Center>
     </>
