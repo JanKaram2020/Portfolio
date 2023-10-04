@@ -4,6 +4,8 @@ import Eargasm from '../pages/project/eargasm';
 import TestTable from '../pages/project/testtable';
 import WouldYouRather from '../pages/project/wouldyourather';
 import WritingByLilyanne from '../pages/project/writingbylilyanne';
+import IndexPage from '../pages';
+import ResumePage from '../pages/resume';
 
 describe('pages', () => {
   it('should Eargasm match snapshot', () => {
@@ -20,6 +22,14 @@ describe('pages', () => {
   });
   it('should WritingByLilyanne match snapshot', () => {
     const tree = renderer.create(<WritingByLilyanne />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  it('should IndexPage match snapshot', () => {
+    const tree = renderer.create(<IndexPage />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  it('should ResumePage match snapshot', () => {
+    const tree = renderer.create(<ResumePage />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

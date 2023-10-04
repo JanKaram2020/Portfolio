@@ -530,6 +530,1358 @@ exports[`pages > should Eargasm match snapshot 1`] = `
 </div>
 `;
 
+exports[`pages > should IndexPage match snapshot 1`] = `
+[
+  <div
+    className="css-g8du1e"
+  >
+    <h1
+      className="chakra-text css-1c512yn"
+      style={
+        {
+          "opacity": 0,
+          "transform": "translateY(100px) translateZ(0)",
+        }
+      }
+    >
+      Hello, I'm
+    </h1>
+    <svg
+      className="css-dgqqy4"
+      strokeMiterlimit="10"
+      strokeWidth="5"
+      viewBox="0 0 790.7 241.5"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M.9 2.5c69.9 27.8 151.8 13.3 225 0-48 8.8 51 204.7-59.6 225.6C127 235.5-3.1 198.4 27 145.8c41.4-72.3 178.5 15.2 228.8-5.3 64.9-26.4-16.8-63.3-21-9.3-4.1 52.7 40.7 13.1 45-5.1-13.7 57.6 46.6-2.1 39.3-19.4-2.6 16.2-7.3 45.2 1 50.2 1.2.7 2.8.2 3.5-1 .1-.1.1-.2.2-.3 6.2-15.7 23.1-45.9 36.9-56.6 1-.8 2.5-.6 3.3.4.2.3.4.7.5 1.1 19.5 145.3 81.5-13.7 83.4-98 0 0 2 197-31 231 0 0 33-152 131-199 0 0-106 84-95 139 0 19 90-40.6 90-58 0-20-60.6-20-45 29.1 1.7 5.6 5.9 10.2 11.3 12.4 13.6 5.8 38.9 8.6 33.7-52.5 0 0 7.1 55 18.1 56s24.9-54 18.9-60-16 19-13 23 42-4 46-14-13 49-4 50 71-44 71-44-19-32-42 0c0 0-21.4 34.1 21.2 42.3 9 1.7 17.8-4.2 19.5-13.2.1-.7.2-1.5.3-2.2l2.1-38.8s2 55 8 56 27-53 27-53 6 38 2 53 17-66 25-57 9 56 4 57 20-59 25-57 17 56 12 57"
+        style={{}}
+      />
+    </svg>
+    <span
+      className="css-f8n5zr"
+    >
+      <h1
+        className="chakra-heading css-0"
+      >
+        Jan Karam
+      </h1>
+    </span>
+  </div>,
+  <div
+    className="css-zzcbsn"
+    id="aboutMe"
+  >
+    <p
+      className="chakra-text css-th6iea"
+    >
+      I'm a passionate introvert who loves building web apps and sites. 
+      <br />
+      My first experience with web development was when I was 12, but it didn’t last long: 
+      <br />
+      I was always fascinated by websites and wanted to make my own so I searched the internet on how to make websites and found 
+      <a
+        className="chakra-link css-1hujroh"
+        href="https://www.ahlamontada.com/"
+        rel="noopener"
+        target="_blank"
+      >
+        ahlamontada.com
+      </a>
+       then I made my first website after this I forgot about it.
+      <br />
+       Years later I searched about the website and found it at 
+      <a
+        className="chakra-link css-1hujroh"
+        href="https://jan12.rigala.net/"
+        rel="noopener"
+        target="_blank"
+      >
+        https://jan12.rigala.net/
+      </a>
+        (if you're a recruiter please don't visit it :D )
+    </p>
+    <div
+      className="css-1ii9g27"
+      style={
+        {
+          "opacity": 0,
+          "transform": "scale(0) translateZ(0)",
+        }
+      }
+    >
+      <figure
+        className="css-srqxh6"
+      >
+        <span
+          style={
+            {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27340%27%20height=%27340%27/%3e"
+              style={
+                {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            alt="Jan Karam smiling"
+            className="image"
+            data-nimg="intrinsic"
+            decoding="async"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="Jan Karam smiling"
+              className="image"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              src="/_next/image?url=%2Fjancropped.jpg&w=750&q=75"
+              srcSet="/_next/image?url=%2Fjancropped.jpg&w=384&q=75 1x, /_next/image?url=%2Fjancropped.jpg&w=750&q=75 2x"
+              style={
+                {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </figure>
+    </div>
+    <p
+      className="chakra-text css-th6iea"
+    >
+      then I took a web development course at my college in my second year and fell in love with it over again. since then, I’ve been honing my skills and learning Javascript and front-end development. I recently took web development specialization from the University of Michigan and took the open-source track at ITI summer internship.
+      <br />
+      I’m seeking a full-time role where I can help a company achieve its goals.
+    </p>
+  </div>,
+  <h2
+    className="chakra-heading css-gaffzf"
+    id="skills"
+  >
+    My Skills
+  </h2>,
+  <div
+    className="css-1qi0srd"
+  >
+    <ul
+      className="css-1ohgahs"
+      role="list"
+    >
+      <li
+        className="css-cahixa"
+      >
+        Typescript
+      </li>
+      <li
+        className="css-cahixa"
+      >
+        Javascript
+      </li>
+      <li
+        className="css-cahixa"
+      >
+        React.js
+      </li>
+      <li
+        className="css-cahixa"
+      >
+        Next js & Gatsby js
+      </li>
+      <li
+        className="css-cahixa"
+      >
+        HTML & CSS
+      </li>
+    </ul>
+    <ul
+      className="css-1ohgahs"
+      role="list"
+    >
+      <li
+        className="css-cahixa"
+      >
+        Git & Github
+      </li>
+      <li
+        className="css-cahixa"
+      >
+        SCSS
+      </li>
+      <li
+        className="css-cahixa"
+      >
+        Bootstrap
+      </li>
+      <li
+        className="css-cahixa"
+      >
+        Styled-Components
+      </li>
+      <li
+        className="css-cahixa"
+      >
+        Chakra-Ui
+      </li>
+    </ul>
+    <ul
+      className="css-1ohgahs"
+      role="list"
+    >
+      <li
+        className="css-cahixa"
+      >
+        Ui design
+      </li>
+      <li
+        className="css-cahixa"
+      >
+        Photoshop
+      </li>
+      <li
+        className="css-cahixa"
+      >
+        Prototyping
+      </li>
+      <li
+        className="css-cahixa"
+      >
+        Graphic design
+      </li>
+      <li
+        className="css-cahixa"
+      >
+        Googling :D
+      </li>
+    </ul>
+  </div>,
+  <h2
+    className="chakra-heading css-qxy0u2"
+    id="projects"
+  >
+    What I've been working on
+  </h2>,
+  <p
+    className="chakra-text css-1xjw982"
+  >
+    I like to stay busy and constantly learn new technologies and use them in a project.
+    <br />
+     Take a look at some of the projects I made.
+  </p>,
+  <div
+    className="css-t6quvl"
+  >
+    <div
+      className="css-3tn754"
+      style={
+        {
+          "opacity": 0,
+          "transform": "translateX(-200px) translateZ(0)",
+        }
+      }
+    >
+      <figure
+        className="css-cn7ha"
+        style={{}}
+      >
+        <span
+          style={
+            {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27900%27%20height=%27380%27/%3e"
+              style={
+                {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            alt="Lilyanne Hany's blog screenshot"
+            className="image"
+            data-nimg="intrinsic"
+            decoding="async"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": "cover",
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="Lilyanne Hany's blog screenshot"
+              className="image"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              src="/_next/image?url=%2FlilyanneMockup.png&w=1920&q=75"
+              srcSet="/_next/image?url=%2FlilyanneMockup.png&w=1080&q=75 1x, /_next/image?url=%2FlilyanneMockup.png&w=1920&q=75 2x"
+              style={
+                {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": "cover",
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </figure>
+      <h2
+        className="chakra-heading css-1n49pl7"
+      >
+         
+        Writing by Lilyanne
+      </h2>
+      <p
+        className="chakra-text css-ax9bdp"
+      >
+        A responsive PWA multi language blog built with Gatsby Js, Theme UI and Sanity CMS
+      </p>
+      <a
+        className="chakra-link css-1iyhnvn"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+        postion="relative"
+        style={{}}
+      >
+        View Project
+      </a>
+    </div>
+    <div
+      className="css-3tn754"
+      style={
+        {
+          "opacity": 0,
+          "transform": "translateX(-200px) translateZ(0)",
+        }
+      }
+    >
+      <figure
+        className="css-cn7ha"
+        style={{}}
+      >
+        <span
+          style={
+            {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27900%27%20height=%27380%27/%3e"
+              style={
+                {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            alt="test table screenshot"
+            className="image"
+            data-nimg="intrinsic"
+            decoding="async"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": "cover",
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="test table screenshot"
+              className="image"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              src="/_next/image?url=%2Ftest-table.PNG&w=1920&q=75"
+              srcSet="/_next/image?url=%2Ftest-table.PNG&w=1080&q=75 1x, /_next/image?url=%2Ftest-table.PNG&w=1920&q=75 2x"
+              style={
+                {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": "cover",
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </figure>
+      <h2
+        className="chakra-heading css-1n49pl7"
+      >
+         
+        Test table
+      </h2>
+      <p
+        className="chakra-text css-ax9bdp"
+      >
+        A website to get your test table by course codes or names
+          built with Nextjs, Nextjs's api routes, puppeteer and Mantine
+      </p>
+      <a
+        className="chakra-link css-1iyhnvn"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+        postion="relative"
+        style={{}}
+      >
+        View Project
+      </a>
+    </div>
+    <div
+      className="css-3tn754"
+      style={
+        {
+          "opacity": 0,
+          "transform": "translateX(-200px) translateZ(0)",
+        }
+      }
+    >
+      <figure
+        className="css-cn7ha"
+        style={{}}
+      >
+        <span
+          style={
+            {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27900%27%20height=%27380%27/%3e"
+              style={
+                {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            alt="Would you rather website screenshot"
+            className="image"
+            data-nimg="intrinsic"
+            decoding="async"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": "cover",
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="Would you rather website screenshot"
+              className="image"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              src="/_next/image?url=%2FwouldYouRatherMockup.png&w=1920&q=75"
+              srcSet="/_next/image?url=%2FwouldYouRatherMockup.png&w=1080&q=75 1x, /_next/image?url=%2FwouldYouRatherMockup.png&w=1920&q=75 2x"
+              style={
+                {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": "cover",
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </figure>
+      <h2
+        className="chakra-heading css-1n49pl7"
+      >
+         
+        Would you rather
+      </h2>
+      <p
+        className="chakra-text css-ax9bdp"
+      >
+        Would you rather game built with Reactjs , Redux and Redux-toolkit
+      </p>
+      <a
+        className="chakra-link css-1iyhnvn"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+        postion="relative"
+        style={{}}
+      >
+        View Project
+      </a>
+    </div>
+    <div
+      className="css-3tn754"
+      style={
+        {
+          "opacity": 0,
+          "transform": "translateX(-200px) translateZ(0)",
+        }
+      }
+    >
+      <figure
+        className="css-cn7ha"
+        style={{}}
+      >
+        <span
+          style={
+            {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27900%27%20height=%27380%27/%3e"
+              style={
+                {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            alt="Eargasm website screenshot"
+            className="image"
+            data-nimg="intrinsic"
+            decoding="async"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": "cover",
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="Eargasm website screenshot"
+              className="image"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              src="/_next/image?url=%2FeargasmMockup.png&w=1920&q=75"
+              srcSet="/_next/image?url=%2FeargasmMockup.png&w=1080&q=75 1x, /_next/image?url=%2FeargasmMockup.png&w=1920&q=75 2x"
+              style={
+                {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": "cover",
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </figure>
+      <h2
+        className="chakra-heading css-1n49pl7"
+      >
+         
+        Eargasm
+      </h2>
+      <p
+        className="chakra-text css-ax9bdp"
+      >
+        A responsive music website built with React Js, Bootstrap and JSON file as a database
+      </p>
+      <a
+        className="chakra-link css-1iyhnvn"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+        postion="relative"
+        style={{}}
+      >
+        View Project
+      </a>
+    </div>
+  </div>,
+  <div
+    className="css-q3g7fy"
+  >
+    <h2
+      className="chakra-heading css-cu0kqv"
+    >
+      Let's Build Something Together
+    </h2>
+    <p
+      className="chakra-text css-1g78lej"
+    >
+      Feel free to reach out if you're looking for a developer, have a question, or just want to connect
+    </p>
+    <a
+      className="chakra-link css-0"
+      href="mailto: jankaram2020@gmail.com"
+      rel="noopener"
+      target="_blank"
+    >
+      jankaram2020@gmail.com
+    </a>
+  </div>,
+]
+`;
+
+exports[`pages > should ResumePage match snapshot 1`] = `
+[
+  <div
+    className="css-s4pi8o"
+  >
+    <button
+      className="chakra-button css-1tisx4m"
+      onClick={[Function]}
+      type="button"
+    >
+      Download Resume
+    </button>
+  </div>,
+  <div
+    className="css-gmuwbf"
+  >
+    <div
+      className="chakra-stack css-17pts3u"
+    >
+      <div
+        className="css-1sju5ng"
+      >
+        <h1
+          className="chakra-heading css-x8hn1q"
+        >
+          Jan Karam Aziz Ghaly
+        </h1>
+        <h2
+          className="chakra-heading css-774qm8"
+        >
+          Contact
+        </h2>
+        <div
+          className="css-w44bej"
+        >
+          <div
+            className="css-gmuwbf"
+          >
+            <a
+              className="chakra-link css-0"
+              href="mailto: jankaram2020@gmail.com"
+              rel="noopener"
+              target="_blank"
+            >
+              jankaram2020@gmail.com
+            </a>
+          </div>
+          <div
+            className="css-u3wwtx"
+          >
+            <a
+              className="chakra-link css-0"
+              href="tel: +201277440641"
+              rel="noopener"
+              target="_blank"
+            >
+              (+2) 012 77 44 0641
+            </a>
+          </div>
+          <div
+            className="css-gmuwbf"
+          >
+            <a
+              className="chakra-link css-0"
+              href="https://www.linkedin.com/in/jankaram2020/"
+              rel="noopener"
+              target="_blank"
+            >
+              LinkedIn
+            </a>
+          </div>
+          <div
+            className="css-gmuwbf"
+          >
+            <a
+              className="chakra-link css-0"
+              href="https://github.com/JanKaram2020"
+              rel="noopener"
+              target="_blank"
+            >
+              Github
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr
+        aria-orientation="horizontal"
+        className="chakra-divider css-iarav0"
+      />
+      <div
+        className="css-1at3mro"
+      >
+        <h2
+          className="chakra-heading css-1eu14j0"
+          id="aboutMe"
+        >
+          Professional Summary
+        </h2>
+        <p
+          className="chakra-text css-1kuy7z7"
+        >
+          Meticulous full stack web developer trained in React js, Node js, and Express with over 3 years of experience and passion for creating web applications.
+        </p>
+      </div>
+      <hr
+        aria-orientation="horizontal"
+        className="chakra-divider css-iarav0"
+      />
+      <div
+        className="css-1at3mro"
+      >
+        <h2
+          className="chakra-heading css-1eu14j0"
+        >
+          Experience
+        </h2>
+        <div
+          className="chakra-text css-0"
+        >
+          <div
+            className="chakra-text css-0"
+          >
+            <h3
+              className="chakra-heading css-1ezsviu"
+            >
+              Frontend (Nextjs) & React Native developer
+            </h3>
+            Shory, (Cairo, Egypt) Hybrid
+             
+            <p
+              className="chakra-text css-1w4rjd4"
+            >
+              (Jan 2023 - present)
+            </p>
+            <ol
+              className="chakra-text css-1mbc7ya"
+            >
+              <li>
+                Worked on Shory Motors app where I refactored code for better performance and readability
+              </li>
+              <li>
+                 Added features using React, Redux, RTK and RTK query
+              </li>
+            </ol>
+          </div>
+          <div
+            className="chakra-text css-0"
+          >
+            <h3
+              className="chakra-heading css-1ezsviu"
+            >
+              Frontend (Reactjs) & React Native developer
+            </h3>
+            Tech Hive, (Alexandria,Egypt) Remote
+             
+            <p
+              className="chakra-text css-1w4rjd4"
+            >
+              (Feb 2022 - Jan 2023)
+               
+            </p>
+            <ol
+              className="chakra-text css-1mbc7ya"
+            >
+              <li>
+                Implemented Tax calculator module in Zabbat web app (a fintech application) where each year has a different calculations than the previous year and each profit segment has a different calculations.
+              </li>
+              <li>
+                Implemented uploading data to server via excel sheet by parsing data in excel using sheet js and transforming it to match Graphql schema and sending to it the server.
+              </li>
+              <li>
+                Designed and Implemented the notification page module in Zabbat using Corejs/React.
+              </li>
+              <li>
+                Devloped Easypass application (A compound security system) with React Native, React Native Paper, Redux, RTK and RTK query.
+              </li>
+            </ol>
+          </div>
+          <div
+            className="chakra-text css-0"
+          >
+            <h3
+              className="chakra-heading css-1vefw2e"
+            >
+              Full stack web developer
+               
+            </h3>
+            Cool code marketing agency, Remote
+             
+            <p
+              className="chakra-text css-1w4rjd4"
+            >
+              (Aug 2021 - Nov 2021)
+            </p>
+            <ol
+              className="chakra-text css-1mbc7ya"
+            >
+              <li>
+                Implemented an app interface for a customer-facing Medical application using react, typescript, and Material Ui
+              </li>
+              <li>
+                Implemented API endpoints and relations between models using Node, Express, and Sequelize.
+              </li>
+            </ol>
+          </div>
+          <div
+            className="chakra-text css-0"
+          >
+            <h3
+              className="chakra-heading css-1vefw2e"
+            >
+              Frontend Developer
+               
+            </h3>
+            Freelance, Self Employed
+             
+            <p
+              className="chakra-text css-1ue903u"
+            >
+              (Aug 2019 - Jul 2021)
+            </p>
+          </div>
+          <div
+            className="chakra-text css-0"
+          >
+            <h3
+              className="chakra-heading css-1vefw2e"
+            >
+              Internship Trainee
+               
+            </h3>
+            Information Technology Institute (ITI)
+             
+            <p
+              className="chakra-text css-1lfq1l3"
+            >
+              (Jul 2019 - Aug 2019)
+               
+            </p>
+            <p
+              className="chakra-text css-1kuy7z7"
+            >
+              attended open source development (120 hours) including: HTML-CSS-Javascript-MySQL-Php-Laravel
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr
+        aria-orientation="horizontal"
+        className="chakra-divider css-iarav0"
+      />
+      <div
+        className="css-1at3mro"
+      >
+        <h2
+          className="chakra-heading css-1eu14j0"
+          id="projects"
+        >
+          Projects
+        </h2>
+        <div
+          className="chakra-text css-0"
+        >
+          <div
+            className="chakra-text css-0"
+          >
+            <h3
+              className="chakra-heading css-1vefw2e"
+            >
+              A responsive PWA multi language blog
+               
+            </h3>
+            <a
+              className="chakra-link css-1jv6842"
+              href="https://lilyannehany.netlify.app/"
+              rel="noopener"
+              target="_blank"
+            >
+              https://lilyannehany.netlify.app/
+            </a>
+          </div>
+          <p
+            className="chakra-text css-1kuy7z7"
+          >
+            Made it using React for UI development, Gatsby for SSG and Graphql for data fetching, i18next for internalization, Theme Ui for light & dark mode and styling, and Sanity CMS for content management.
+          </p>
+          <div
+            className="chakra-text css-0"
+          >
+            <h3
+              className="chakra-heading css-1vefw2e"
+            >
+              Would you rather game
+               
+            </h3>
+            <a
+              className="chakra-link css-1jv6842"
+              href="https://jan-would-you-rather.surge.sh"
+              rel="noopener"
+              target="_blank"
+            >
+              https://jan-would-you-rather.surge.sh
+            </a>
+          </div>
+          <p
+            className="chakra-text css-1kuy7z7"
+          >
+            Would you rather is a React and Redux powered web app built to mimic would you rather game? built this project with React, Redux, Redux-toolkit, React-strap, and Bootstrap for styling.
+          </p>
+        </div>
+      </div>
+      <hr
+        aria-orientation="horizontal"
+        className="chakra-divider css-iarav0"
+      />
+      <div
+        className="css-1at3mro"
+      >
+        <h2
+          className="chakra-heading css-1eu14j0"
+        >
+          Education
+        </h2>
+        <div
+          className="chakra-text css-0"
+        >
+          <div
+            className="chakra-text css-0"
+          >
+            <h3
+              className="chakra-heading css-1vefw2e"
+            >
+              BS, Computer Science and Statistics
+               
+            </h3>
+            <p
+              className="chakra-text css-1lfq1l3"
+            >
+              Alexandria University. (2022)
+            </p>
+          </div>
+          <div
+            className="chakra-text css-0"
+          >
+            <h3
+              className="chakra-heading css-1vefw2e"
+            >
+              Web development specialization
+               
+            </h3>
+            <p
+              className="chakra-text css-1lfq1l3"
+            >
+              University of Michigan via Coursera (2019)
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr
+        aria-orientation="horizontal"
+        className="chakra-divider css-iarav0"
+      />
+      <div
+        className="css-1at3mro"
+      >
+        <h2
+          className="chakra-heading css-1eu14j0"
+          id="skills"
+        >
+          Skills
+        </h2>
+        <ol
+          className="chakra-text css-1mbc7ya"
+        >
+          Reactjs • Nextjs & Gatsbyjs • Typescript & Javascript • Graphql & REST api • Redux & Redux toolkit • HTML & CSS • Git& GitHub • CSS-in-Js & SASS • NodeJs - Express • Prototyping with Framer • Graphic design & Photo editing • Googling !
+        </ol>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
 exports[`pages > should TestTable match snapshot 1`] = `
 <div
   className="chakra-stack css-hula3z"
