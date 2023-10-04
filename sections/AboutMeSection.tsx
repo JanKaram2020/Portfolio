@@ -1,8 +1,8 @@
 import React from 'react';
 import { SimpleGrid, Text, Link as StyledLink } from '@chakra-ui/react';
-import FadeInWhenVisible from './FadeInWhenVisible';
+import FadeInWhenVisible from 'components/FadeInWhenVisible';
 
-export default function AboutMe(): React.ReactElement {
+export default function AboutMeSection(): React.ReactElement {
   return (
     <SimpleGrid
       id="aboutMe"
