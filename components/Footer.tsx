@@ -1,139 +1,61 @@
-import {
-  Box,
-  HStack,
-  useColorMode,
-  Link as StyledLink,
-  Center,
-} from '@chakra-ui/react';
 import Link from 'next/link';
 import React from 'react';
 import Image from 'next/legacy/image';
 
+const StyledLink = ({
+  children,
+  ...props
+}: {
+  children: React.ReactNode;
+} & React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
+  <a className="hover:text-red-400 active:scale-75 cursor-pointer" {...props}>
+    {children}
+  </a>
+);
 export default function Footer() {
-  const { colorMode } = useColorMode();
   return (
-    <Center
-      borderTopWidth="0.2rem"
-      as="footer"
-      sx={{
-        '@media print': {
-          display: 'none',
-        },
-      }}
-      flexWrap="wrap"
-    >
-      <HStack spacing={10} p="10px" flexWrap="wrap">
+    <div className="flex items-center justify-center flex-wrap border-t-[0.2rem] print:hidden">
+      <div className="flex flex-wrap space-x-10 p-4">
         <Link href="/" legacyBehavior>
-          <StyledLink
-            _hover={{
-              color: 'red.400',
-            }}
-            _active={{
-              transform: 'scale(0.8)',
-            }}
-          >
-            <Box
-              as="figure"
-              sx={{ filter: colorMode === 'dark' ? 'invert(100%)' : '' }}
-              _hover={{
-                filter: `${colorMode === 'dark' ? 'invert(100%)' : ''} `,
-              }}
-            >
+          <StyledLink>
+            <figure className="dark:invert dark:hover:invert">
               <Image
                 alt="Jan Karam logo"
                 src="/janfinal.svg"
                 width={100}
                 height={25}
               />
-            </Box>
+            </figure>
           </StyledLink>
         </Link>
         <Link href="#aboutMe" legacyBehavior>
-          <StyledLink
-            _hover={{
-              color: 'red.400',
-            }}
-            _active={{
-              transform: 'scale(0.8)',
-            }}
-          >
-            About
-          </StyledLink>
+          <StyledLink>About</StyledLink>
         </Link>
         <Link href="#skills" legacyBehavior>
-          <StyledLink
-            _hover={{
-              color: 'red.400',
-            }}
-            _active={{
-              transform: 'scale(0.8)',
-            }}
-          >
-            Skills
-          </StyledLink>
+          <StyledLink>Skills</StyledLink>
         </Link>
         <Link href="#projects" legacyBehavior>
-          <StyledLink
-            _hover={{
-              color: 'red.400',
-            }}
-            _active={{
-              transform: 'scale(0.8)',
-            }}
-          >
-            Projects
-          </StyledLink>
+          <StyledLink>Projects</StyledLink>
         </Link>
         <Link href="/resume#header" legacyBehavior>
-          <StyledLink
-            _hover={{
-              color: 'red.400',
-            }}
-            _active={{
-              transform: 'scale(0.8)',
-            }}
-          >
-            Resume
-          </StyledLink>
+          <StyledLink>Resume</StyledLink>
         </Link>
         <StyledLink
-          _hover={{
-            color: 'red.400',
-          }}
-          _active={{
-            transform: 'scale(0.8)',
-          }}
           href="https://www.linkedin.com/in/jankaram2020/"
-          isExternal
+          target="_blank"
           rel="noopener"
         >
           Linkedin
         </StyledLink>
         <StyledLink
-          _hover={{
-            color: 'red.400',
-          }}
-          _active={{
-            transform: 'scale(0.8)',
-          }}
           href="https://github.com/JanKaram2020"
-          isExternal
+          target="_blank"
           rel="noopener"
         >
           Github
         </StyledLink>
-        <StyledLink
-          _hover={{
-            color: 'red.400',
-          }}
-          _active={{
-            transform: 'scale(0.8)',
-          }}
-          href="#header"
-        >
-          Back to top
-        </StyledLink>
-      </HStack>
-    </Center>
+        <StyledLink href="#header">Back to top</StyledLink>
+      </div>
+    </div>
   );
 }

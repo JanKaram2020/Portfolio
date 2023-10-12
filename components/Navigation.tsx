@@ -10,52 +10,18 @@ import Image from 'next/legacy/image';
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 import { HiDocumentText } from 'react-icons/hi';
 import React from 'react';
-import Example from './ColorModeToggle';
+import ColorModeToggle from './ColorModeToggle';
 
 const Navigation = (): React.ReactElement => {
   const { colorMode } = useColorMode();
   return (
-    <Flex
+    <header
       id="header"
-      as="header"
-      justifyContent="space-between"
-      alignItems="center"
-      px="10px"
-      gridGap="10px"
-      borderBottomWidth="0.2rem"
-      sx={{
-        '@media print': {
-          display: 'none',
-        },
-      }}
+      className="flex items-center justify-between gap-2.5 border-b-[0.2rem] print:hidden"
     >
-      <Flex
-        position="relative"
-        alignItems="center"
-        justifyContent="center"
-        gridGap="10px"
-      >
+      <div className="flex items-center justify-center relative gap-2.5">
         <Link href="/" legacyBehavior>
-          <StyledLink
-            _after={{
-              content: '""',
-              position: 'absolute',
-              top: '80%',
-              display: 'block',
-              width: '100%',
-              height: '2px',
-              transform: 'scaleX(0)',
-              background: 'red.400',
-              transition: 'transform 250ms ease-in-out',
-            }}
-            sx={{
-              '&:hover': {
-                '&:after': {
-                  transform: 'scaleX(1)',
-                },
-              },
-            }}
-          >
+          <a className="after:(content-empty absolute top-80% block w-full h-2px scale-x-0 bg-red-400) hover:after:scale-x-100 transition-transform duration-250 ease-in-out">
             <Box
               as="figure"
               sx={{ filter: colorMode === 'dark' ? 'invert(100%)' : '' }}
@@ -75,11 +41,11 @@ const Navigation = (): React.ReactElement => {
                 height={50}
               />
             </Box>
-          </StyledLink>
+          </a>
         </Link>
-      </Flex>
+      </div>
       <Flex gridGap="10px">
-        <Example />
+        <ColorModeToggle />
         <StyledLink
           title="linkedin profile"
           href="https://www.linkedin.com/in/jankaram2020/"
@@ -128,7 +94,7 @@ const Navigation = (): React.ReactElement => {
           </StyledLink>
         </Link>
       </Flex>
-    </Flex>
+    </header>
   );
 };
 export default Navigation;

@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import React from 'react';
 
 const MotionBox = motion(Box);
-function Example(): React.ReactElement {
+function ColorModeToggle(): React.ReactElement {
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === `dark`;
   return (
@@ -54,4 +54,4 @@ function Example(): React.ReactElement {
     </>
   );
 }
-export default Example;
+export default ColorModeToggle;
