@@ -21,17 +21,18 @@ const Navigation = (): React.ReactElement => {
     >
       <div className="flex items-center justify-center relative gap-2.5">
         <Link href="/" legacyBehavior>
-          <a className="after:(content-empty absolute top-80% block w-full h-2px scale-x-0 bg-red-400) hover:after:scale-x-100 transition-transform duration-250 ease-in-out">
-            <Box
-              as="figure"
-              sx={{ filter: colorMode === 'dark' ? 'invert(100%)' : '' }}
-              _hover={{
-                filter: `${colorMode === 'dark' ? 'invert(100%)' : ''} `,
-                transform: 'rotate(-10deg)',
-              }}
-              _active={{
-                transform: 'rotate(-15deg) scale(0.8)',
-              }}
+          <a className="transition-transform duration-250 ease-in-out after:content-empty after:absolute after:top-80% after:block after:w-full after:h-2px after:scale-x-0 after:bg-red-400 after:hover:scale-x-100">
+            <figure
+              className="dark:invert dark:hover:invert"
+              // as="figure"
+              // sx={{ filter: colorMode === 'dark' ? 'invert(100%)' : '' }}
+              // _hover={{
+              //   filter: `${colorMode === 'dark' ? 'invert(100%)' : ''} `,
+              //   transform: 'rotate(-10deg)',
+              // }}
+              // _active={{
+              //   transform: 'rotate(-15deg) scale(0.8)',
+              // }}
             >
               <VisuallyHidden> website's home page</VisuallyHidden>
               <Image
@@ -40,7 +41,7 @@ const Navigation = (): React.ReactElement => {
                 width={100}
                 height={50}
               />
-            </Box>
+            </figure>
           </a>
         </Link>
       </div>
