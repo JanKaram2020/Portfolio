@@ -182,7 +182,8 @@ export default function ResumePage() {
                 </Text>
                 <Text as="ol" ml="1rem" fontSize="14px">
                   <li>
-                    Worked on Shory Motors app where I refactored code for better performance and readability
+                    Worked on Shory Motors app where I refactored code for
+                    better performance and readability
                   </li>
                   <li> Added features using React, Redux, RTK and RTK query</li>
                 </Text>
