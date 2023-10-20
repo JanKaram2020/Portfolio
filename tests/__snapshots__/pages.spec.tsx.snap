@@ -547,7 +547,8 @@ exports[`pages > should IndexPage match snapshot 1`] = `
       Hello, I'm
     </h1>
     <svg
-      className="css-dgqqy4"
+      className="stroke-gray-800 dark:stroke-gray-200"
+      fill="none"
       strokeMiterlimit="10"
       strokeWidth="5"
       viewBox="0 0 790.7 241.5"
