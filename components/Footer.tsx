@@ -1,139 +1,66 @@
-import {
-  Box,
-  HStack,
-  useColorMode,
-  Link as StyledLink,
-  Center,
-} from '@chakra-ui/react';
 import Link from 'next/link';
 import React from 'react';
 import Image from 'next/legacy/image';
 
 export default function Footer() {
-  const { colorMode } = useColorMode();
   return (
-    <Center
-      borderTopWidth="0.2rem"
-      as="footer"
-      sx={{
-        '@media print': {
-          display: 'none',
-        },
-      }}
-      flexWrap="wrap"
-    >
-      <HStack spacing={10} p="10px" flexWrap="wrap">
+    <div className="flex items-center justify-center flex-wrap border-t-[0.2rem] print:hidden">
+      <div className="flex flex-wrap space-x-10 p-4">
         <Link href="/" legacyBehavior>
-          <StyledLink
-            _hover={{
-              color: 'red.400',
-            }}
-            _active={{
-              transform: 'scale(0.8)',
-            }}
-          >
-            <Box
-              as="figure"
-              sx={{ filter: colorMode === 'dark' ? 'invert(100%)' : '' }}
-              _hover={{
-                filter: `${colorMode === 'dark' ? 'invert(100%)' : ''} `,
-              }}
-            >
+          <a className="hover:text-red-400 active:scale-75 cursor-pointer">
+            <figure className="dark:invert dark:hover:invert">
               <Image
                 alt="Jan Karam logo"
                 src="/janfinal.svg"
                 width={100}
                 height={25}
               />
-            </Box>
-          </StyledLink>
+            </figure>
+          </a>
         </Link>
         <Link href="#aboutMe" legacyBehavior>
-          <StyledLink
-            _hover={{
-              color: 'red.400',
-            }}
-            _active={{
-              transform: 'scale(0.8)',
-            }}
-          >
+          <a className="hover:text-red-400 active:scale-75 cursor-pointer">
             About
-          </StyledLink>
+          </a>
         </Link>
         <Link href="#skills" legacyBehavior>
-          <StyledLink
-            _hover={{
-              color: 'red.400',
-            }}
-            _active={{
-              transform: 'scale(0.8)',
-            }}
-          >
+          <a className="hover:text-red-400 active:scale-75 cursor-pointer">
             Skills
-          </StyledLink>
+          </a>
         </Link>
         <Link href="#projects" legacyBehavior>
-          <StyledLink
-            _hover={{
-              color: 'red.400',
-            }}
-            _active={{
-              transform: 'scale(0.8)',
-            }}
-          >
+          <a className="hover:text-red-400 active:scale-75 cursor-pointer">
             Projects
-          </StyledLink>
+          </a>
         </Link>
         <Link href="/resume#header" legacyBehavior>
-          <StyledLink
-            _hover={{
-              color: 'red.400',
-            }}
-            _active={{
-              transform: 'scale(0.8)',
-            }}
-          >
+          <a className="hover:text-red-400 active:scale-75 cursor-pointer">
             Resume
-          </StyledLink>
+          </a>
         </Link>
-        <StyledLink
-          _hover={{
-            color: 'red.400',
-          }}
-          _active={{
-            transform: 'scale(0.8)',
-          }}
+        <a
+          className="hover:text-red-400 active:scale-75 cursor-pointer"
           href="https://www.linkedin.com/in/jankaram2020/"
-          isExternal
-          rel="noopener"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Linkedin
-        </StyledLink>
-        <StyledLink
-          _hover={{
-            color: 'red.400',
-          }}
-          _active={{
-            transform: 'scale(0.8)',
-          }}
+        </a>
+        <a
+          className="hover:text-red-400 active:scale-75 cursor-pointer"
           href="https://github.com/JanKaram2020"
-          isExternal
-          rel="noopener"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Github
-        </StyledLink>
-        <StyledLink
-          _hover={{
-            color: 'red.400',
-          }}
-          _active={{
-            transform: 'scale(0.8)',
-          }}
+        </a>
+        <a
+          className="hover:text-red-400 active:scale-75 cursor-pointer"
           href="#header"
         >
           Back to top
-        </StyledLink>
-      </HStack>
-    </Center>
+        </a>
+      </div>
+    </div>
   );
 }

@@ -5,6 +5,8 @@ import { useRouter } from 'next/router';
 import Layout from 'components/Layout';
 import * as gtag from 'lib/gtag';
 import 'theme/smoothscroll.css';
+import 'globals.css';
+import { useTwDarkMode } from '../lib/useTwDarkMode';
 
 function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
   const router = useRouter();
@@ -17,6 +19,7 @@ function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
       router.events.off('routeChangeComplete', handleRouteChange);
     };
   }, [router.events]);
+  useTwDarkMode();
   return (
     <ChakraProvider>
       <Layout>
