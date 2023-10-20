@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { presetUno, defineConfig, presetAttributify } from 'unocss';
+import { presetUno, defineConfig } from 'unocss';
 import transformerVariantGroup from '@unocss/transformer-variant-group';
 import transformerAttributifyJsx from '@unocss/transformer-attributify-jsx';
 
@@ -15,7 +15,6 @@ export default defineConfig({
     presetUno({
       dark: 'class',
     }),
-    presetAttributify(),
   ],
   transformers: [transformerVariantGroup(), transformerAttributifyJsx()],
 });

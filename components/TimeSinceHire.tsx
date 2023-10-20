@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Text } from '@chakra-ui/react';
 
 const formatTime = (seconds: number) => {
   const month = 1000 * 60 * 60 * 24 * 30;
@@ -26,19 +25,7 @@ const TimeSinceHire = () => {
     return () => clearInterval(id);
   }, []);
 
-  if (ctime)
-    return (
-      <Text
-        as="span"
-        sx={{
-          '@media print': {
-            display: 'none',
-          },
-        }}
-      >
-        {formatTime(ctime)}
-      </Text>
-    );
+  if (ctime) return <span className="print:hidden">{formatTime(ctime)}</span>;
   return null;
 };
 export default TimeSinceHire;
