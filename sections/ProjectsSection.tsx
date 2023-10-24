@@ -4,32 +4,12 @@ import Project from 'components/Project';
 
 const ProjectsSection = () => (
   <>
-    <Heading
+    <h2
       id="projects"
-      as="h2"
-      position="relative"
-      mt="10vh"
-      _after={{
-        content: '""',
-        position: 'absolute',
-        bottom: 0,
-        display: 'block',
-        width: ['25rem', '25rem', '30rem'],
-        height: '2px',
-        transform: 'scaleX(0)',
-        background: 'red.400',
-        transition: 'transform 250ms ease-in-out',
-      }}
-      sx={{
-        '&:hover': {
-          '&:after': {
-            transform: 'scaleX(1)',
-          },
-        },
-      }}
+      className="text-3xl font-bold relative mt-10vh after:(content-empty absolute bottom-0 block h-2px scale-x-0 bg-red-400 transform duration-250 ease-in-out w-95 max-w-80vw) hover:after:scale-x-100"
     >
       What I've been working on
-    </Heading>
+    </h2>
     <Text fontSize="1.5rem" pt="1rem">
       I like to stay busy and constantly learn new technologies and use them in
       a project.

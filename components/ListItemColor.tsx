@@ -1,15 +1,6 @@
-import { ListItem } from '@chakra-ui/react';
-import React from 'react';
+import { ReactNode } from 'react';
 
-const ListItemColor = ({ children }: { children: React.ReactNode }) => (
-  <ListItem
-    _before={{
-      content: '"•"',
-      color: 'red.400',
-      mr: '10px',
-    }}
-  >
-    {children}
-  </ListItem>
+const ListItemColor = ({ children }: { children: ReactNode }) => (
+  <li className="before:(content-['•'] text-red-400 mr-10px)">{children}</li>
 );
 export default ListItemColor;
