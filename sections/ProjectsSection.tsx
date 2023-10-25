@@ -1,4 +1,3 @@
-import { Heading, SimpleGrid, Text } from '@chakra-ui/react';
 import React from 'react';
 import Project from 'components/Project';
 
@@ -6,24 +5,24 @@ const ProjectsSection = () => (
   <>
     <h2
       id="projects"
-      className="text-3xl font-bold relative mt-10vh after:(content-empty absolute bottom-0 block h-2px scale-x-0 bg-red-400 transform duration-250 ease-in-out w-95 max-w-80vw) hover:after:scale-x-100"
+      className="text-4xl font-bold relative mt-10vh after:(content-empty absolute bottom-0 block h-2px scale-x-0 bg-red-400 transform duration-250 ease-in-out w-100 lg:w-120) hover:after:scale-x-100"
     >
       What I've been working on
     </h2>
-    <Text fontSize="1.5rem" pt="1rem">
+    <p className="text-2xl pt">
       I like to stay busy and constantly learn new technologies and use them in
       a project.
       <br /> Take a look at some of the projects I made.
-    </Text>
-    <SimpleGrid
-      columns={[1, 1, 2]}
-      spacing={10}
-      p="2rem"
-      overflowWrap="normal"
-      minChildWidth="350px"
-      columnGap="200px"
-      justifyContent="center"
-      alignContent="center"
+    </p>
+    <div
+      // columns={[1, 1, 2]}
+      // spacing={10}
+      // p="2rem"
+      // overflowWrap="normal"
+      // columnGap="200px"
+      // justifyContent="center"
+      // alignContent="center"
+      className="grid grid-cols-1 lg:grid-cols-2 space-y-10 p-8 gap-[200px] justify-center content-center"
     >
       <Project
         image="/lilyanneMockup.png"
@@ -54,7 +53,7 @@ const ProjectsSection = () => (
         alt="Eargasm website screenshot"
         name="Eargasm"
       />
-    </SimpleGrid>
+    </div>
   </>
 );
 

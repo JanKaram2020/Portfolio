@@ -5,11 +5,11 @@ const SkillsSection = () => (
   <>
     <h2
       id="skills"
-      className="text-3xl font-bold relative mt-10vh after:(content-empty absolute bottom-0 block h-2px scale-x-0 bg-red-400 transform duration-250 ease-in-out w-32 lg:w-34) hover:after:scale-x-100"
+      className="text-4xl font-bold relative mt-10vh after:(content-empty absolute bottom-0 block h-2px scale-x-0 bg-red-400 transform duration-250 ease-in-out w-32 lg:w-40) hover:after:scale-x-100"
     >
       My Skills
     </h2>
-    <div className="grid pt text-2xl grid-cols-1 lg:grid-cols-3 justify-evenly items-center">
+    <div className="grid pt text-2xl grid-cols-1 md:grid-cols-3 justify-evenly items-center">
       <ul className="list-none">
         <ListItem>Typescript</ListItem>
         <ListItem>Javascript</ListItem>

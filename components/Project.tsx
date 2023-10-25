@@ -1,6 +1,5 @@
 import {
   Box,
-  Flex,
   Text,
   Link as StyledLink,
   useColorMode,
@@ -14,7 +13,6 @@ import { useInView } from 'react-intersection-observer';
 
 const AnimatedLink = motion(StyledLink);
 const AnimatedBox = motion(Box);
-const AnimatedFlex = motion(Flex);
 const SlashMotion = {
   hover: { scale: 1.1 },
   transition: {
@@ -39,7 +37,6 @@ const Project = ({
 }: ProjectInterface) => {
   const { colorMode } = useColorMode();
   const controls = useAnimation();
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-assignment
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
@@ -51,22 +48,17 @@ const Project = ({
     }
   }, [controls, inView]);
   return (
-    <AnimatedFlex
+    <motion.div
+      className="flex flex-col items-center content-center gap-10px max-w-800px mt-4"
       ref={ref}
-      flexDirection="column"
-      alignItems="center"
-      justifyContent="center"
-      whileHover="hover"
-      gridGap="10px"
       initial="hidden"
       animate={controls}
+      whileHover="hover"
       transition={{ delay: 0.3, duration: 0.3 }}
       variants={{
         visible: { x: 0, opacity: 1 },
         hidden: { x: -200, opacity: 0 },
       }}
-      maxWidth="800px"
-      mt="1rem"
     >
       <AnimatedBox
         layoutId={image}
@@ -115,7 +107,7 @@ const Project = ({
           </AnimatedLink>
         </Link>
       )}
-    </AnimatedFlex>
+    </motion.div>
   );
 };
 export default Project;

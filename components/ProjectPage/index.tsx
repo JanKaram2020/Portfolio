@@ -5,15 +5,18 @@ import {
   Link,
   SimpleGrid,
   Text,
-  UnorderedList,
   VStack,
 } from '@chakra-ui/react';
 import ListItemColor from 'components/ListItemColor';
 import SEO from 'components/SEO';
+import { ReactNode } from 'react';
 import Technology from './Technology';
 import type { IProjectPage } from './types';
 import ProjectImage from './ProjectImage';
 
+const UnorderedList = ({ children }: { children: ReactNode }) => (
+  <ul className="list-none">{children}</ul>
+);
 export default function ProjectPage({
   Seo,
   title,
@@ -44,7 +47,7 @@ export default function ProjectPage({
             <Heading as="h2" fontSize="lg" color="red.300">
               Stack
             </Heading>
-            <UnorderedList sx={{ listStyle: 'none' }}>
+            <UnorderedList>
               {stack.map((t) => (
                 <ListItemColor key={t}>{t}</ListItemColor>
               ))}
@@ -54,7 +57,7 @@ export default function ProjectPage({
             <Heading as="h2" fontSize="lg" color="red.300">
               Code
             </Heading>
-            <UnorderedList sx={{ listStyle: 'none' }}>
+            <UnorderedList>
               {links.code.map((c) => (
                 <ListItemColor key={c.git}>
                   {c.name ? `${c.name}: ` : ''}
@@ -74,7 +77,7 @@ export default function ProjectPage({
             <Heading as="h2" fontSize="lg" color="red.300">
               Live
             </Heading>
-            <UnorderedList sx={{ listStyle: 'none' }}>
+            <UnorderedList>
               <ListItemColor>
                 <Link
                   href={links.live}
@@ -118,11 +121,11 @@ export default function ProjectPage({
           >
             Lessons learned
           </Heading>
-          <Text fontSize="lg" maxWidth="60ch">
+          <Text fontSize="lg" maxWidth="60ch" as="div">
             {lessons.length === 1 ? (
               lessons[0]
             ) : (
-              <UnorderedList sx={{ listStyle: 'none' }}>
+              <UnorderedList>
                 {lessons.map((l) => (
                   <ListItemColor key={l}>{l}</ListItemColor>
                 ))}
