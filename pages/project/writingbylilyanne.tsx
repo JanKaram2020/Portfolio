@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectPage from 'components/ProjectPage';
+import { MY } from '../../lib/constants';
 
 export default function LilyanneBlog() {
   return (
@@ -14,7 +15,7 @@ export default function LilyanneBlog() {
         title="Writing by Lilyanne"
         subtitle={
           <>
-            Writing by Lilyanne is a JAMstack powered blog built for my dear
+            Writing by Lilyanne is a JAMstack powered blog built for {MY}dear
             friend Lilyanne. <br />I built this project from scratch with
             Gatsby, React ,GraphQL, Theme-UI, Framer motion , react-intl and
             Sanity CMS.
@@ -57,7 +58,7 @@ export default function LilyanneBlog() {
             it and it's amazing integration with Sanity CMS.
             <br />
             Theme-UI was the styling choice because I wanted the blog to support
-            dark mode without losing my sanity, it's amazing and supports
+            dark mode without losing {MY}sanity, it's amazing and supports
             multiple color modes by default. and framer motion because of it's
             amazing performance and ease of use.
             <br />

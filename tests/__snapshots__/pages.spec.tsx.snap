@@ -28,26 +28,25 @@ exports[`pages > should Eargasm match snapshot 1`] = `
         Stack
       </h2>
       <ul
-        className="css-1ohgahs"
-        role="list"
+        className="list-none"
       >
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           React
         </li>
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           Bootstrap
         </li>
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           Fuse.js
         </li>
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           JSON file as a database
         </li>
@@ -62,11 +61,10 @@ exports[`pages > should Eargasm match snapshot 1`] = `
         Code
       </h2>
       <ul
-        className="css-1ohgahs"
-        role="list"
+        className="list-none"
       >
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           <a
             className="chakra-link css-1081t4c"
@@ -88,11 +86,10 @@ exports[`pages > should Eargasm match snapshot 1`] = `
         Live
       </h2>
       <ul
-        className="css-1ohgahs"
-        role="list"
+        className="list-none"
       >
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           <a
             className="chakra-link css-1081t4c"
@@ -241,11 +238,13 @@ exports[`pages > should Eargasm match snapshot 1`] = `
       <p
         className="chakra-text css-1ezsviu"
       >
-        i choose React because I wanted to get more familiar with and make a project on my own instead of following tutorials.
+        i choose React because I wanted to get more familiar with and make a project on 
+        my  
+        own instead of following tutorials.
         <br />
          Fuse.js was the search option of choice because I didn't want to build a full backend for this simple app with it's small database.
         <br />
-        Boostrap was the styling framework because I wanted to get my more familiar with React without focusing too much on styling.
+        Boostrap was the styling framework because I wanted to get more familiar with React without focusing too much on styling.
       </p>
     </div>
     <div
@@ -507,25 +506,24 @@ exports[`pages > should Eargasm match snapshot 1`] = `
     >
       Lessons learned
     </h2>
-    <p
+    <div
       className="chakra-text css-bvex1k"
     >
       <ul
-        className="css-1ohgahs"
-        role="list"
+        className="list-none"
       >
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           Gained more experience with React and it's ecosystem.
         </li>
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           used fuse js and learned how to make a mini fuzzy search engine.
         </li>
       </ul>
-    </p>
+    </div>
   </div>
 </div>
 `;
@@ -533,10 +531,10 @@ exports[`pages > should Eargasm match snapshot 1`] = `
 exports[`pages > should IndexPage match snapshot 1`] = `
 [
   <div
-    className="css-g8du1e"
+    className="h-screen p-30px gap-80px md:gap-40px lg:gap-30px xl:gap-10px flex flex-col justify-center items-center"
   >
     <h1
-      className="chakra-text css-1c512yn"
+      className="text-(red-400 5xl)"
       style={
         {
           "opacity": 0,
@@ -560,11 +558,9 @@ exports[`pages > should IndexPage match snapshot 1`] = `
       />
     </svg>
     <span
-      className="css-f8n5zr"
+      className="hidden"
     >
-      <h1
-        className="chakra-heading css-0"
-      >
+      <h1>
         Jan Karam
       </h1>
     </span>
@@ -578,9 +574,11 @@ exports[`pages > should IndexPage match snapshot 1`] = `
     >
       I'm a passionate introvert who loves building web apps and sites. 
       <br />
-      My first experience with web development was when I was 12, but it didn’t last long: 
+      My first experience with web development was when I was 12, but it didn't last long: 
       <br />
-      I was always fascinated by websites and wanted to make my own so I searched the internet on how to make websites and found 
+      I was always fascinated by websites and wanted to make 
+      my  
+      own so I searched the internet on how to make websites and found 
       <a
         className="chakra-link css-1hujroh"
         href="https://www.ahlamontada.com/"
@@ -589,7 +587,9 @@ exports[`pages > should IndexPage match snapshot 1`] = `
       >
         ahlamontada.com
       </a>
-       then I made my first website after this I forgot about it.
+       then I made 
+      my  
+      first website after this I forgot about it.
       <br />
        Years later I searched about the website and found it at 
       <a
@@ -737,129 +737,134 @@ exports[`pages > should IndexPage match snapshot 1`] = `
     <p
       className="chakra-text css-th6iea"
     >
-      then I took a web development course at my college in my second year and fell in love with it over again. since then, I’ve been honing my skills and learning Javascript and front-end development. I recently took web development specialization from the University of Michigan and took the open-source track at ITI summer internship.
+      then I took a web development course at 
+      my  
+      college in 
+      my  
+      second year and fell in love with it over again. since then, I’ve been honing 
+      my  
+      skills and learning Javascript and front-end development. I recently took web development specialization from the University of Michigan and took the open-source track at ITI summer internship.
       <br />
-      I’m seeking a full-time role where I can help a company achieve its goals.
+      I’m seeking a full-time role 
+      where  
+      I can help a company achieve its goals.
     </p>
   </div>,
   <h2
-    className="chakra-heading css-gaffzf"
+    className="text-4xl font-bold relative mt-10vh after:(content-empty absolute bottom-0 block h-2px scale-x-0 bg-red-400 transform duration-250 ease-in-out w-32 lg:w-40) hover:after:scale-x-100"
     id="skills"
   >
     My Skills
   </h2>,
   <div
-    className="css-1qi0srd"
+    className="grid pt text-2xl grid-cols-1 md:grid-cols-3 justify-evenly items-center"
   >
     <ul
-      className="css-1ohgahs"
-      role="list"
+      className="list-none"
     >
       <li
-        className="css-cahixa"
+        className="before:(content-['•'] text-red-400 mr-10px)"
       >
         Typescript
       </li>
       <li
-        className="css-cahixa"
+        className="before:(content-['•'] text-red-400 mr-10px)"
       >
         Javascript
       </li>
       <li
-        className="css-cahixa"
+        className="before:(content-['•'] text-red-400 mr-10px)"
       >
         React.js
       </li>
       <li
-        className="css-cahixa"
+        className="before:(content-['•'] text-red-400 mr-10px)"
       >
         Next js & Gatsby js
       </li>
       <li
-        className="css-cahixa"
+        className="before:(content-['•'] text-red-400 mr-10px)"
       >
         HTML & CSS
       </li>
     </ul>
     <ul
-      className="css-1ohgahs"
-      role="list"
+      className="list-none"
     >
       <li
-        className="css-cahixa"
+        className="before:(content-['•'] text-red-400 mr-10px)"
       >
         Git & Github
       </li>
       <li
-        className="css-cahixa"
+        className="before:(content-['•'] text-red-400 mr-10px)"
       >
         SCSS
       </li>
       <li
-        className="css-cahixa"
+        className="before:(content-['•'] text-red-400 mr-10px)"
       >
         Bootstrap
       </li>
       <li
-        className="css-cahixa"
+        className="before:(content-['•'] text-red-400 mr-10px)"
       >
         Styled-Components
       </li>
       <li
-        className="css-cahixa"
+        className="before:(content-['•'] text-red-400 mr-10px)"
       >
         Chakra-Ui
       </li>
     </ul>
     <ul
-      className="css-1ohgahs"
-      role="list"
+      className="list-none"
     >
       <li
-        className="css-cahixa"
+        className="before:(content-['•'] text-red-400 mr-10px)"
       >
         Ui design
       </li>
       <li
-        className="css-cahixa"
+        className="before:(content-['•'] text-red-400 mr-10px)"
       >
         Photoshop
       </li>
       <li
-        className="css-cahixa"
+        className="before:(content-['•'] text-red-400 mr-10px)"
       >
         Prototyping
       </li>
       <li
-        className="css-cahixa"
+        className="before:(content-['•'] text-red-400 mr-10px)"
       >
         Graphic design
       </li>
       <li
-        className="css-cahixa"
+        className="before:(content-['•'] text-red-400 mr-10px)"
       >
         Googling :D
       </li>
     </ul>
   </div>,
   <h2
-    className="chakra-heading css-qxy0u2"
+    className="text-4xl font-bold relative mt-10vh after:(content-empty absolute bottom-0 block h-2px scale-x-0 bg-red-400 transform duration-250 ease-in-out w-100 lg:w-120) hover:after:scale-x-100"
     id="projects"
   >
     What I've been working on
   </h2>,
   <p
-    className="chakra-text css-1xjw982"
+    className="text-2xl pt"
   >
     I like to stay busy and constantly learn new technologies and use them in a project.
     <br />
      Take a look at some of the projects I made.
   </p>,
   <div
-    className="css-t6quvl"
+    className="grid grid-cols-1 lg:grid-cols-2 space-y-10 p-8 gap-[200px] justify-center content-center"
   >
     <div
-      className="css-3tn754"
+      className="flex flex-col items-center content-center gap-10px max-w-800px mt-4"
       style={
         {
           "opacity": 0,
@@ -1013,7 +1018,7 @@ exports[`pages > should IndexPage match snapshot 1`] = `
       </a>
     </div>
     <div
-      className="css-3tn754"
+      className="flex flex-col items-center content-center gap-10px max-w-800px mt-4"
       style={
         {
           "opacity": 0,
@@ -1168,7 +1173,7 @@ exports[`pages > should IndexPage match snapshot 1`] = `
       </a>
     </div>
     <div
-      className="css-3tn754"
+      className="flex flex-col items-center content-center gap-10px max-w-800px mt-4"
       style={
         {
           "opacity": 0,
@@ -1322,7 +1327,7 @@ exports[`pages > should IndexPage match snapshot 1`] = `
       </a>
     </div>
     <div
-      className="css-3tn754"
+      className="flex flex-col items-center content-center gap-10px max-w-800px mt-4"
       style={
         {
           "opacity": 0,
@@ -1477,10 +1482,10 @@ exports[`pages > should IndexPage match snapshot 1`] = `
     </div>
   </div>,
   <div
-    className="css-q3g7fy"
+    className="css-1464yz8"
   >
     <h2
-      className="chakra-heading css-cu0kqv"
+      className="text-4xl font-bold relative mt-10vh after:(content-empty absolute bottom-0 block h-2px scale-x-0 bg-red-400 transform duration-250 ease-in-out w-80% lg:w-34%) hover:after:scale-x-100"
     >
       Let's Build Something Together
     </h2>
@@ -1639,7 +1644,9 @@ exports[`pages > should ResumePage match snapshot 1`] = `
               className="chakra-text css-1mbc7ya"
             >
               <li>
-                Worked on Shory Motors app where I refactored code for better performance and readability
+                Worked on Shory Motors app 
+                where  
+                I refactored code for better performance and readability
               </li>
               <li>
                  Added features using React, Redux, RTK and RTK query
@@ -1666,7 +1673,9 @@ exports[`pages > should ResumePage match snapshot 1`] = `
               className="chakra-text css-1mbc7ya"
             >
               <li>
-                Implemented Tax calculator module in Zabbat web app (a fintech application) where each year has a different calculations than the previous year and each profit segment has a different calculations.
+                Implemented Tax calculator module in Zabbat web app (a fintech application) 
+                where  
+                each year has a different calculations than the previous year and each profit segment has a different calculations.
               </li>
               <li>
                 Implemented uploading data to server via excel sheet by parsing data in excel using sheet js and transforming it to match Graphql schema and sending to it the server.
@@ -1890,12 +1899,18 @@ exports[`pages > should TestTable match snapshot 1`] = `
   <h1
     className="chakra-heading css-1lnsct4"
   >
-    Test table generator
+    Test table  generator
   </h1>
   <p
     className="chakra-text css-1ezsviu"
   >
-    Test table generator is a table getter website that scrapes the faculty of science's test table page and displays the results.
+    Test 
+    table  
+    generator is a 
+    table  
+    getter website that scrapes the faculty of science's test 
+    table  
+    page and displays the results.
     <br />
     I built this project using Nextjs, Puppeteer and Mantine component library.
   </p>
@@ -1911,26 +1926,25 @@ exports[`pages > should TestTable match snapshot 1`] = `
         Stack
       </h2>
       <ul
-        className="css-1ohgahs"
-        role="list"
+        className="list-none"
       >
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           Next js
         </li>
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           React
         </li>
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           Puppeteer
         </li>
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           Mantine component library
         </li>
@@ -1945,11 +1959,10 @@ exports[`pages > should TestTable match snapshot 1`] = `
         Code
       </h2>
       <ul
-        className="css-1ohgahs"
-        role="list"
+        className="list-none"
       >
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           <a
             className="chakra-link css-1081t4c"
@@ -1971,11 +1984,10 @@ exports[`pages > should TestTable match snapshot 1`] = `
         Live
       </h2>
       <ul
-        className="css-1ohgahs"
-        role="list"
+        className="list-none"
       >
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           <a
             className="chakra-link css-1081t4c"
@@ -2047,7 +2059,7 @@ exports[`pages > should TestTable match snapshot 1`] = `
         />
       </span>
       <img
-        alt="screenshots of Test table generator on different devices"
+        alt="screenshots of Test table  generator on different devices"
         data-nimg="intrinsic"
         decoding="async"
         onError={[Function]}
@@ -2078,7 +2090,7 @@ exports[`pages > should TestTable match snapshot 1`] = `
       />
       <noscript>
         <img
-          alt="screenshots of Test table generator on different devices"
+          alt="screenshots of Test table  generator on different devices"
           data-nimg="intrinsic"
           decoding="async"
           loading="lazy"
@@ -2126,7 +2138,11 @@ exports[`pages > should TestTable match snapshot 1`] = `
       >
         I choose Next-js and React because of the awesome DX and api routes.
         <br />
-        Puppeteer because in my opinion it's the best library to web scrape using javascript and is used here to scrape the test table page and get the user's courses by codes or names.
+        Puppeteer because in 
+        my  
+        opinion it's the best library to web scrape using javascript and is used here to scrape the test 
+        table  
+        page and get the user's courses by codes or names.
         <br />
         Mantine dev was the component library of choice because of it's amazing, beautiful and accessible components.
       </p>
@@ -2513,30 +2529,29 @@ exports[`pages > should TestTable match snapshot 1`] = `
     >
       Lessons learned
     </h2>
-    <p
+    <div
       className="chakra-text css-bvex1k"
     >
       <ul
-        className="css-1ohgahs"
-        role="list"
+        className="list-none"
       >
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           Solved a problem for me and other students and future students
         </li>
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           Gained more experience with Puppeteer and Nextjs's api routes.
         </li>
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           used mantine dev component library.
         </li>
       </ul>
-    </p>
+    </div>
   </div>
 </div>
 `;
@@ -2569,26 +2584,25 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
         Stack
       </h2>
       <ul
-        className="css-1ohgahs"
-        role="list"
+        className="list-none"
       >
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           React
         </li>
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           Redux
         </li>
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           Bootstrap
         </li>
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           JSON file as a fake database
         </li>
@@ -2603,11 +2617,10 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
         Code
       </h2>
       <ul
-        className="css-1ohgahs"
-        role="list"
+        className="list-none"
       >
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           <a
             className="chakra-link css-1081t4c"
@@ -2629,11 +2642,10 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
         Live
       </h2>
       <ul
-        className="css-1ohgahs"
-        role="list"
+        className="list-none"
       >
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           <a
             className="chakra-link css-1081t4c"
@@ -2782,11 +2794,15 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
       <p
         className="chakra-text css-1ezsviu"
       >
-        React was the ui framework for me because my familiarity with it and it's amazing react-redux package that binds both well.
+        React was the ui framework for me because 
+        my  
+        familiarity with it and it's amazing react-redux package that binds both well.
         <br />
          I chose Redux because I wanted a managed global store and predictable state
         <br />
-        Boostrap was the styling framework because I wanted to get my hands dirty with Redux without focusing too much on styling.
+        Boostrap was the styling framework because I wanted to get 
+        my  
+        hands dirty with Redux without focusing too much on styling.
       </p>
     </div>
     <div
@@ -3171,25 +3187,24 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
     >
       Lessons learned
     </h2>
-    <p
+    <div
       className="chakra-text css-bvex1k"
     >
       <ul
-        className="css-1ohgahs"
-        role="list"
+        className="list-none"
       >
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           Never write vanilla Redux again :D , seriously after writing a few reduces and actions , I felt that it was complex, hard to manage and code was hard to keep track of. then I found Redux-toolkit package and I was amazed by the amount of boilerplate i removed from the code base and it was amazing.
         </li>
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           Gained more experience with React and it's ecosystem.
         </li>
       </ul>
-    </p>
+    </div>
   </div>
 </div>
 `;
@@ -3206,7 +3221,9 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
   <p
     className="chakra-text css-1ezsviu"
   >
-    Writing by Lilyanne is a JAMstack powered blog built for my dear friend Lilyanne. 
+    Writing by Lilyanne is a JAMstack powered blog built for 
+    my  
+    dear friend Lilyanne. 
     <br />
     I built this project from scratch with Gatsby, React ,GraphQL, Theme-UI, Framer motion , react-intl and Sanity CMS.
     <br />
@@ -3224,46 +3241,45 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
         Stack
       </h2>
       <ul
-        className="css-1ohgahs"
-        role="list"
+        className="list-none"
       >
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           Gatsby
         </li>
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           React
         </li>
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           GraphQL
         </li>
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           Theme-UI
         </li>
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           Framer motion
         </li>
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           react-intl
         </li>
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           Sanity CMS
         </li>
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           Google analytics
         </li>
@@ -3278,11 +3294,10 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
         Code
       </h2>
       <ul
-        className="css-1ohgahs"
-        role="list"
+        className="list-none"
       >
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           Frontend: 
           <a
@@ -3295,7 +3310,7 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
           </a>
         </li>
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           CMS: 
           <a
@@ -3318,11 +3333,10 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
         Live
       </h2>
       <ul
-        className="css-1ohgahs"
-        role="list"
+        className="list-none"
       >
         <li
-          className="css-cahixa"
+          className="before:(content-['•'] text-red-400 mr-10px)"
         >
           <a
             className="chakra-link css-1081t4c"
@@ -3475,7 +3489,9 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
         <br />
          After choosing the CMS choosing Gatsby was easy, because of it's plugin system , how it's easy to make a site multi-lang using it and it's amazing integration with Sanity CMS.
         <br />
-        Theme-UI was the styling choice because I wanted the blog to support dark mode without losing my sanity, it's amazing and supports multiple color modes by default. and framer motion because of it's amazing performance and ease of use.
+        Theme-UI was the styling choice because I wanted the blog to support dark mode without losing 
+        my  
+        sanity, it's amazing and supports multiple color modes by default. and framer motion because of it's amazing performance and ease of use.
         <br />
         Google analytics because I wanted to track engagement and to know which article attracts more people.
       </p>
@@ -3985,11 +4001,11 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
     >
       Lessons learned
     </h2>
-    <p
+    <div
       className="chakra-text css-bvex1k"
     >
       I could spend all day describing the lessons that I learned while working on this project, but the most important ones involved my new found understanding of Gatsby,GraphQl, Git management, and API integration with Sanity Io and how to use google analytics. As my first large project using React, I learned a lot of lessons regarding code structure and organization.
-    </p>
+    </div>
   </div>
 </div>
 `;

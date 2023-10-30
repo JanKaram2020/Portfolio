@@ -1,19 +1,13 @@
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
-import { Box, useColorMode } from '@chakra-ui/react';
 import Image from 'next/legacy/image';
 
-const AnimatedBox = motion(Box);
-
 export default function FadeInWhenVisible(): React.ReactElement {
-  const { colorMode } = useColorMode();
   const controls = useAnimation();
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-assignment
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
-
   useEffect(() => {
     if (inView) {
       // eslint-disable-next-line no-void
@@ -22,8 +16,7 @@ export default function FadeInWhenVisible(): React.ReactElement {
   }, [controls, inView]);
 
   return (
-    <AnimatedBox
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */
+    <motion.div
       ref={ref}
       animate={controls}
       initial={{ opacity: 0, scale: 0 }}
@@ -40,26 +33,17 @@ export default function FadeInWhenVisible(): React.ReactElement {
       onHoverEnd={async () => {
         await controls.start('normal');
       }}
-      display={['none', 'none', 'none', 'block']}
+      className="hidden lg:block"
     >
-      <Box
-        as="figure"
-        sx={{
-          filter: 'drop-shadow(0px 0px 12px #F56565)',
-          '.image': {
-            borderRadius: '50%',
-            filter: colorMode === 'dark' ? 'brightness(80%)' : '',
-          },
-        }}
-      >
+      <figure className="drop-shadow-[0px_0px_12px_#F56565]">
         <Image
           src="/jancropped.jpg"
           height="340"
           width="340"
-          className="image"
+          className="rounded-full dark:brightness-80"
           alt="Jan Karam smiling"
         />
-      </Box>
-    </AnimatedBox>
+      </figure>
+    </motion.div>
   );
 }

@@ -11,6 +11,7 @@ import {
 import SEO from 'components/SEO';
 import type { ReactNode } from 'react';
 import TimeSinceHire from 'components/TimeSinceHire';
+import { WHERE } from '../lib/constants';
 
 const FullWidthColumn = ({ children }: { children: ReactNode }) => (
   <SimpleGrid
@@ -182,7 +183,7 @@ export default function ResumePage() {
                 </Text>
                 <Text as="ol" ml="1rem" fontSize="14px">
                   <li>
-                    Worked on Shory Motors app where I refactored code for
+                    Worked on Shory Motors app {WHERE}I refactored code for
                     better performance and readability
                   </li>
                   <li> Added features using React, Redux, RTK and RTK query</li>
@@ -207,7 +208,7 @@ export default function ResumePage() {
                 <Text as="ol" ml="1rem" fontSize="14px">
                   <li>
                     Implemented Tax calculator module in Zabbat web app (a
-                    fintech application) where each year has a different
+                    fintech application) {WHERE}each year has a different
                     calculations than the previous year and each profit segment
                     has a different calculations.
                   </li>

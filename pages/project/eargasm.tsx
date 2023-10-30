@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectPage from 'components/ProjectPage';
+import { MY } from '../../lib/constants';
 
 export default function Eargasm() {
   return (
@@ -29,11 +30,11 @@ export default function Eargasm() {
       whyStack={
         <>
           i choose React because I wanted to get more familiar with and make a
-          project on my own instead of following tutorials.
+          project on {MY}own instead of following tutorials.
           <br /> Fuse.js was the search option of choice because I didn't want
           to build a full backend for this simple app with it's small database.
           <br />
-          Boostrap was the styling framework because I wanted to get my more
+          Boostrap was the styling framework because I wanted to get more
           familiar with React without focusing too much on styling.
         </>
       }

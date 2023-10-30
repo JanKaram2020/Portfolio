@@ -1,6 +1,7 @@
 import React from 'react';
 import { SimpleGrid, Text, Link as StyledLink } from '@chakra-ui/react';
 import FadeInWhenVisible from 'components/FadeInWhenVisible';
+import { MY, WHERE } from '../lib/constants';
 
 export default function AboutMeSection(): React.ReactElement {
   return (
@@ -13,17 +14,11 @@ export default function AboutMeSection(): React.ReactElement {
       justifyItems="center"
       my="6vw"
     >
-      <Text
-        maxWidth="60ch"
-        ml="2"
-        mr="4"
-        fontSize="xl"
-        // gridArea={['1 / 1 / 2 / 2', '1 / 1 / 2 / 2', '1 / 1 / 2 / 2']}
-      >
+      <Text maxWidth="60ch" ml="2" mr="4" fontSize="xl">
         I'm a passionate introvert who loves building web apps and sites. <br />
         My first experience with web development was when I was 12, but it
-        didn’t last long: <br />I was always fascinated by websites and wanted
-        to make my own so I searched the internet on how to make websites and
+        didn't last long: <br />I was always fascinated by websites and wanted
+        to make {MY}own so I searched the internet on how to make websites and
         found&nbsp;
         <StyledLink
           href="https://www.ahlamontada.com/"
@@ -33,7 +28,7 @@ export default function AboutMeSection(): React.ReactElement {
         >
           ahlamontada.com
         </StyledLink>
-        &nbsp;then I made my first website after this I forgot about it.
+        &nbsp;then I made {MY}first website after this I forgot about it.
         <br /> Years later I searched about the website and found it at&nbsp;
         <StyledLink
           href="https://jan12.rigala.net/"
@@ -46,20 +41,14 @@ export default function AboutMeSection(): React.ReactElement {
         &nbsp; (if you're a recruiter please don't visit it :D )
       </Text>
       <FadeInWhenVisible />
-      <Text
-        maxWidth="60ch"
-        ml="2"
-        mr="4"
-        fontSize="xl"
-        // gridArea={['', '', '1 / 3 / 2 / 4']}
-      >
-        then I took a web development course at my college in my second year and
-        fell in love with it over again. since then, I’ve been honing my skills
-        and learning Javascript and front-end development. I recently took web
-        development specialization from the University of Michigan and took the
-        open-source track at ITI summer internship.
+      <Text maxWidth="60ch" ml="2" mr="4" fontSize="xl">
+        then I took a web development course at {MY}college in {MY}second year
+        and fell in love with it over again. since then, I’ve been honing {MY}
+        skills and learning Javascript and front-end development. I recently
+        took web development specialization from the University of Michigan and
+        took the open-source track at ITI summer internship.
         <br />
-        I’m seeking a full-time role where I can help a company achieve its
+        I’m seeking a full-time role {WHERE}I can help a company achieve its
         goals.
       </Text>
     </SimpleGrid>

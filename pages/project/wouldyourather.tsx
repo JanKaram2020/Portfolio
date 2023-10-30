@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectPage from '../../components/ProjectPage';
+import { MY } from '../../lib/constants';
 
 export default function WouldYouRather() {
   return (
@@ -30,12 +31,12 @@ export default function WouldYouRather() {
         }}
         whyStack={
           <>
-            React was the ui framework for me because my familiarity with it and
-            it's amazing react-redux package that binds both well.
+            React was the ui framework for me because {MY}familiarity with it
+            and it's amazing react-redux package that binds both well.
             <br /> I chose Redux because I wanted a managed global store and
             predictable state
             <br />
-            Boostrap was the styling framework because I wanted to get my hands
+            Boostrap was the styling framework because I wanted to get {MY}hands
             dirty with Redux without focusing too much on styling.
           </>
         }

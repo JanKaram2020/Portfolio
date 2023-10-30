@@ -1,50 +1,20 @@
-import { Heading, SimpleGrid, Text } from '@chakra-ui/react';
 import React from 'react';
 import Project from 'components/Project';
 
 const ProjectsSection = () => (
   <>
-    <Heading
+    <h2
       id="projects"
-      as="h2"
-      position="relative"
-      mt="10vh"
-      _after={{
-        content: '""',
-        position: 'absolute',
-        bottom: 0,
-        display: 'block',
-        width: ['25rem', '25rem', '30rem'],
-        height: '2px',
-        transform: 'scaleX(0)',
-        background: 'red.400',
-        transition: 'transform 250ms ease-in-out',
-      }}
-      sx={{
-        '&:hover': {
-          '&:after': {
-            transform: 'scaleX(1)',
-          },
-        },
-      }}
+      className="text-4xl font-bold relative mt-10vh after:(content-empty absolute bottom-0 block h-2px scale-x-0 bg-red-400 transform duration-250 ease-in-out w-100 lg:w-120) hover:after:scale-x-100"
     >
       What I've been working on
-    </Heading>
-    <Text fontSize="1.5rem" pt="1rem">
+    </h2>
+    <p className="text-2xl pt">
       I like to stay busy and constantly learn new technologies and use them in
       a project.
       <br /> Take a look at some of the projects I made.
-    </Text>
-    <SimpleGrid
-      columns={[1, 1, 2]}
-      spacing={10}
-      p="2rem"
-      overflowWrap="normal"
-      minChildWidth="350px"
-      columnGap="200px"
-      justifyContent="center"
-      alignContent="center"
-    >
+    </p>
+    <div className="grid grid-cols-1 lg:grid-cols-2 space-y-10 p-8 gap-[200px] justify-center content-center">
       <Project
         image="/lilyanneMockup.png"
         text="A responsive PWA multi language blog built with Gatsby Js, Theme UI and Sanity CMS"
@@ -74,7 +44,7 @@ const ProjectsSection = () => (
         alt="Eargasm website screenshot"
         name="Eargasm"
       />
-    </SimpleGrid>
+    </div>
   </>
 );
 
