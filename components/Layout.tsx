@@ -2,12 +2,14 @@ import React from 'react';
 import { AnimateSharedLayout } from 'framer-motion';
 import Navigation from './Navigation';
 import Footer from './Footer';
+import { useDarkMode } from '../lib/useDarkMode';
 
 function Layout({
   children,
 }: {
   children: React.ReactNode;
 }): React.ReactElement {
+  useDarkMode();
   return (
     <>
       <Navigation />
