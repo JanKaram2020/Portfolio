@@ -2,25 +2,32 @@ import { useColorMode } from '@chakra-ui/react';
 import { RiMoonClearFill } from 'react-icons/ri';
 import { IoMdSunny } from 'react-icons/io';
 import { AnimatePresence, motion } from 'framer-motion';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTwDarkMode } from 'lib/useTwDarkMode';
 
 function ColorModeToggle(): React.ReactElement {
-  const { toggleColorMode } = useColorMode();
-  // const isDark = colorMode === `dark`;
-  const { isDark, toggleMode } = useTwDarkMode();
+  const { toggleColorMode: toggleChakraMode, colorMode } = useColorMode();
+  const { isDark: isTwDark, toggleMode: toggleTwMode } = useTwDarkMode();
+  const isChakraDark = colorMode === 'dark';
+
+  useEffect(() => {
+    if (isChakraDark !== isTwDark) {
+      toggleTwMode();
+    }
+  }, [isChakraDark, isTwDark, toggleTwMode]);
+
   return (
     <>
       <motion.button
-        aria-label={isDark ? `Activate Light mode` : `Activate Dark mode`}
-        title={isDark ? `Activate Light mode` : `Activate Dark mode`}
+        aria-label={isTwDark ? `Activate Light mode` : `Activate Dark mode`}
+        title={isTwDark ? `Activate Light mode` : `Activate Dark mode`}
         className="grid justify-center content-center w-fit active:scale-80"
         onClick={() => {
-          toggleMode();
-          toggleColorMode();
+          toggleTwMode();
+          toggleChakraMode();
         }}
       >
-        {isDark ? (
+        {isTwDark ? (
           <AnimatePresence>
             <motion.div
               key="sunny"
