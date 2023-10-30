@@ -14,16 +14,7 @@ const ProjectsSection = () => (
       a project.
       <br /> Take a look at some of the projects I made.
     </p>
-    <div
-      // columns={[1, 1, 2]}
-      // spacing={10}
-      // p="2rem"
-      // overflowWrap="normal"
-      // columnGap="200px"
-      // justifyContent="center"
-      // alignContent="center"
-      className="grid grid-cols-1 lg:grid-cols-2 space-y-10 p-8 gap-[200px] justify-center content-center"
-    >
+    <div className="grid grid-cols-1 lg:grid-cols-2 space-y-10 p-8 gap-[200px] justify-center content-center">
       <Project
         image="/lilyanneMockup.png"
         text="A responsive PWA multi language blog built with Gatsby Js, Theme UI and Sanity CMS"

@@ -1,23 +1,11 @@
-import {
-  Box,
-  Text,
-  Link as StyledLink,
-  useColorMode,
-  Heading,
-} from '@chakra-ui/react';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
-import { motion, useAnimation } from 'framer-motion';
+import { motion, useAnimation, Variants } from 'framer-motion';
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-const AnimatedLink = motion(StyledLink);
-const AnimatedBox = motion(Box);
-const SlashMotion = {
+const SlashMotion: Variants = {
   hover: { scale: 1.1 },
-  transition: {
-    ease: 'easeInOut',
-  },
 };
 interface ProjectInterface {
   name: string;
@@ -35,7 +23,6 @@ const Project = ({
   inProgress,
   alt,
 }: ProjectInterface) => {
-  const { colorMode } = useColorMode();
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -60,51 +47,28 @@ const Project = ({
         hidden: { x: -200, opacity: 0 },
       }}
     >
-      <AnimatedBox
-        layoutId={image}
-        as="figure"
-        variants={SlashMotion}
-        sx={{
-          '.image': {
-            borderRadius: '20px',
-            filter: colorMode === 'dark' ? 'brightness(80%)' : '',
-          },
-        }}
-      >
+      <motion.figure layoutId={image} variants={SlashMotion}>
         <Image
           src={image}
           height="380"
           width="900"
           objectFit="cover"
-          className="image"
+          className="rounded-20px dark:brightness-80"
           alt={alt}
         />
-      </AnimatedBox>
-      <Heading as="h2" fontSize="2xl">
-        {' '}
-        {name}
-      </Heading>
-      <Text color="gray.500">{text}</Text>
+      </motion.figure>
+      <h2 className="text-2xl"> {name}</h2>
+      <p className="text-gray-500">{text}</p>
       {inProgress ? (
-        <Text fontSize="xl"> In development...</Text>
+        <p className="text-xl"> In development...</p>
       ) : (
         <Link href={`project/${page}`} legacyBehavior>
-          <AnimatedLink
+          <motion.a
             variants={SlashMotion}
-            fontSize="xl"
-            postion="relative"
-            _hover={{ textDecoration: 'none' }}
-            _after={{
-              content: '""',
-              position: 'absolute',
-              display: 'block',
-              width: '7rem',
-              height: '2px',
-              background: 'red.400',
-            }}
+            className="text-xl relative hover:decoration-none after:(content-empty absolute block w-28 h-2px bg-red-400)"
           >
             View Project
-          </AnimatedLink>
+          </motion.a>
         </Link>
       )}
     </motion.div>
