@@ -149,6 +149,7 @@
 @media print{
 .print\:m-0,
 .print\:m0{margin:0;}
+.print\:inline{display:inline;}
 .print\:hidden{display:none;}
 }
 @media (min-width: 768px){

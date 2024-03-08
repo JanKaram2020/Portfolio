@@ -9,9 +9,7 @@ const SummarySection = () => {
         Professional Summary
       </Heading>
       <Text fontSize="14px">
-        Meticulous full stack web developer trained in React js, Node js,
-        and Express with over 3 years of experience and passion for
-        creating web applications.
+        Full-stack developer with 3+ years of experience in React.js, React Native, NextJs, Node.js, Express,  and TypeScript. Passionate about building innovative and performant web and mobile applications.
       </Text>
     </FullWidthColumn>
   );

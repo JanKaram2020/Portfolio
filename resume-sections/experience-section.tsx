@@ -1,7 +1,6 @@
 import React from 'react';
 import {Heading, Text} from "@chakra-ui/react";
 import TimeSinceHire from "../components/TimeSinceHire";
-import {WHERE} from "../lib/constants";
 import FullWidthColumn from "../components/FullWidthColumn";
 
 const ExperienceSection = () => {
@@ -28,13 +27,10 @@ const ExperienceSection = () => {
             <TimeSinceHire />
           </Text>
           <Text as="ol" ml="1rem" fontSize="14px">
-            <li>
-              Worked on Shory Motors app {WHERE}I refactored code for
-              better performance and readability
-            </li>
-            <li> Added features using React, Redux, RTK and RTK query</li>
+            <li> Added features using React, Redux, RTK and RTK query to our Nextjs apps and React Native apps</li>
+            <li> Introduced Unit, Component and Hooks testing with Jest and React-Testing-Library to our DLS</li>
+            <li> Implemented the TAMM microservice (Backend For Frontend) using Node and Express with 100% test coverage</li>
           </Text>
-          {/* <Divider /> */}
         </Text>
         <Text as="div">
           <Heading as="h3" fontSize="lg">
@@ -53,27 +49,20 @@ const ExperienceSection = () => {
           </Text>
           <Text as="ol" ml="1rem" fontSize="14px">
             <li>
-              Implemented Tax calculator module in Zabbat web app (a
-              fintech application) {WHERE}each year has a different
-              calculations than the previous year and each profit segment
-              has a different calculations.
+              Developed a complex tax calculator module in Zabbat web app with dynamic calculations based on year and profit segment.
             </li>
             <li>
-              Implemented uploading data to server via excel sheet by
-              parsing data in excel using sheet js and transforming it to
-              match Graphql schema and sending to it the server.
+              Built a data upload module for importing Excel data using SheetJs and transforming it for GraphQL consumption to make it easier to onboard new customers in Zabbat app.
             </li>
             <li>
               Designed and Implemented the notification page module in
-              Zabbat using Corejs/React.
+              Zabbat using Corejs/React with realtime notifications using Firebase and service workers.
             </li>
             <li>
               Devloped Easypass application (A compound security system)
-              with React Native, React Native Paper, Redux, RTK and RTK
-              query.
+              with React Native, Paper, Redux, and RTK.
             </li>
           </Text>
-          {/* <Divider /> */}
         </Text>
         <Text as="div">
           <Heading
@@ -100,8 +89,8 @@ const ExperienceSection = () => {
           </Text>
           <Text as="ol" ml="1rem" fontSize="14px">
             <li>
-              Implemented an app interface for a customer-facing Medical
-              application using react, typescript, and Material Ui
+              Implemented an app interface for a Medical
+              application using Nextjs, React, Typescript, and MUI
             </li>
             <li>
               Implemented API endpoints and relations between models using
@@ -159,7 +148,7 @@ const ExperienceSection = () => {
           </Text>
           <Text fontSize="14px">
             attended open source development (120 hours) including:
-            HTML-CSS-Javascript-MySQL-Php-Laravel
+            <span className={"block print:inline"}> HTML - CSS - Javascript - MySQL - Php - Laravel</span>
           </Text>
         </Text>
       </Text>
