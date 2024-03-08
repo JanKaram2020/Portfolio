@@ -1,14 +1,20 @@
 import React from 'react';
 import FullWidthColumn from "../components/FullWidthColumn";
-import {Heading, Link, Text} from "@chakra-ui/react";
+import {Divider, Heading, Link, Text} from "@chakra-ui/react";
+import Section from "../components/Section";
 
 const ProjectsSection = () => {
   return (
     <FullWidthColumn>
-      <Heading as="h2" fontSize="xl" id="projects" textAlign="center">
+      <Heading as="h2" fontSize="xl" id="projects">
         Projects
       </Heading>
-      <Text as="div">
+      <Divider my={1} sx={{
+        '@media print': {
+          border: "1px solid rgba(0,0,0,0.2)"
+        }
+      }}/>      <Section className={"flex flex-col gap-2.5"}>
+        <div>
         <Text as="div">
           <Heading
             as="h3"
@@ -35,12 +41,10 @@ const ProjectsSection = () => {
           </Link>
         </Text>
         <Text fontSize="14px">
-          Made it using React for UI development, Gatsby for SSG and
-          Graphql for data fetching, i18next for internalization, Theme Ui
-          for light & dark mode and styling, and Sanity CMS for content
-          management.
+          Stack: React, Gatsby, Graphql, i18next, ThemeUI, and Sanity CMS
         </Text>
-        {/* <Divider /> */}
+        </div>
+<div>
         <Text as="div">
           <Heading
             as="h3"
@@ -66,13 +70,10 @@ const ProjectsSection = () => {
             https://jan-would-you-rather.surge.sh
           </Link>
         </Text>
-        <Text fontSize="14px">
-          Would you rather is a React and Redux powered web app built to
-          mimic would you rather game? built this project with React,
-          Redux, Redux-toolkit, React-strap, and Bootstrap for styling.
+        <Text fontSize="14px" ml={1}>
+          Stack: React, Redux, Redux-toolkit, React-strap, and Bootstrap for styling
         </Text>
-        {/* <Divider /> */}
-      </Text>
+</div>      </Section>
     </FullWidthColumn>
 
   );

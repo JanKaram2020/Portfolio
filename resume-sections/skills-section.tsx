@@ -1,22 +1,12 @@
 import React from 'react';
 import FullWidthColumn from "../components/FullWidthColumn";
-import {Heading, Text} from "@chakra-ui/react";
+import {Divider, Heading, Text} from "@chakra-ui/react";
 
 const skills = [
-  "Reactjs",
-  "React Native",
   "Expo",
-  "NextJs",
-  "Typescript",
-  "Javascript",
-  "Graphql",
-  "REST api",
-  "Redux",
   "Redux Toolkit",
   "RTK query",
   "Tanstack query",
-  "HTML",
-  "CSS",
   "Git",
   "GitHub",
   "Tailwind CSS",
@@ -24,11 +14,7 @@ const skills = [
   "Core UI",
   "CSS-in-Js",
   "SCSS",
-  "NodeJs",
-  "Express",
   "Prisma",
-  "Unit testing",
-  "Jest",
   "Vitest",
   "Prototyping with Framer",
   "Graphic design & Photo editing",
@@ -38,10 +24,14 @@ const skills = [
 const SkillsSection = () => {
   return (
     <FullWidthColumn>
-      <Heading as="h2" fontSize="xl" id="skills" textAlign="center">
+      <Heading as="h2" fontSize="xl" id="skills">
         Skills
       </Heading>
-      <Text as="ol" ml="1rem" fontSize="14px">
+      <Divider my={1} sx={{
+        '@media print': {
+          border: "1px solid rgba(0,0,0,0.2)"
+        }
+      }}/>      <Text as="ol" ml="1rem" fontSize="14px">
         {skills.map((s,i) => {
           return <span key={s}> {s} {i+1 !== skills.length ? "•" : ""}</span>
         })}

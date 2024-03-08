@@ -1,14 +1,19 @@
 import React from 'react';
 import FullWidthColumn from "../components/FullWidthColumn";
-import {Heading, Text} from "@chakra-ui/react";
+import {Divider, Heading, Text} from "@chakra-ui/react";
+import Section from "../components/Section";
 
 const EducationSection = () => {
   return (
     <FullWidthColumn>
-      <Heading as="h2" fontSize="xl" textAlign="center">
+      <Heading as="h2" fontSize="xl">
         Education
       </Heading>
-      <Text as="div">
+      <Divider my={1} sx={{
+        '@media print': {
+          border: "1px solid rgba(0,0,0,0.2)"
+        }
+      }}/>      <Section className={"flex flex-col gap-2.5"}>
         <Text as="div">
           <Heading
             as="h3"
@@ -56,7 +61,7 @@ const EducationSection = () => {
             University of Michigan via Coursera (2019)
           </Text>
         </Text>
-      </Text>
+      </Section>
     </FullWidthColumn>
   );
 };

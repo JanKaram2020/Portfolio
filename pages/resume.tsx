@@ -32,7 +32,7 @@ export default function ResumePage() {
       <div className={"flex items-center justify-center"}>
         <VStack
           spacing={2}
-          divider={<Divider />}
+          // divider={<Divider />}
           maxW="700px"
           mt="5vh"
           borderWidth="5px"
