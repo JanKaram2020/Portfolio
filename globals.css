@@ -40,6 +40,7 @@
 .mr{margin-right:1rem;}
 .mt,
 .mt-4{margin-top:1rem;}
+.mt-\[5vh\]{margin-top:5vh;}
 .mt-10vh{margin-top:10vh;}
 .before\:mr-10px::before{margin-right:10px;}
 .inline{display:inline;}
@@ -146,6 +147,7 @@
 .before\:content-\[\'•\'\]::before{content:'•';}
 .after\:content-empty::after{content:"";}
 @media print{
+.print\:m-0,
 .print\:m0{margin:0;}
 .print\:hidden{display:none;}
 }

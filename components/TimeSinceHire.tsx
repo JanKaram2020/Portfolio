@@ -1,18 +1,26 @@
 import React, { useEffect, useState } from 'react';
 
-const formatTime = (seconds: number) => {
+const singularOrPlural = (time: number) => (time > 1 ? 's' : '');
+
+const formatTime = (time: number) => {
   const month = 1000 * 60 * 60 * 24 * 30;
   const day = 1000 * 60 * 60 * 24;
   const hour = 1000 * 60 * 60;
   const minute = 1000 * 60;
-  const months = Math.floor(seconds / month);
-  const days = Math.floor((seconds % month) / day);
-  const hours = Math.floor((seconds % day) / hour);
-  const minutes = Math.floor((seconds % hour) / minute);
-  const second = Math.floor((seconds % minute) / 1000);
-  return `${months} months, ${days} days, ${hours} hours, ${minutes} minutes, ${second} seconds`;
+  const months = Math.floor(time / month);
+  const days = Math.floor((time % month) / day);
+  const hours = Math.floor((time % day) / hour);
+  const minutes = Math.floor((time % hour) / minute);
+  const seconds = Math.floor((time % minute) / 1000);
+  return `1 year, ${months} month${singularOrPlural(months)}, ${days} day${singularOrPlural(
+    days
+  )}, ${hours} hour${singularOrPlural(hours)}, ${minutes} minute${singularOrPlural(
+    minutes
+  )}, ${seconds} second${singularOrPlural(seconds)}`;
 };
-const timeOfHire = new Date('2023-01-16T09:00:00');
+
+const timeOfHire = new Date('2024-01-16T09:00:00');
+
 const TimeSinceHire = () => {
   const [ctime, setCTime] = useState<number | undefined>(undefined);
 
