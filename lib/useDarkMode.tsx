@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useSyncExternalStore } from "react";
+import { useSyncExternalStore } from "react";
 import Cookies from "js-cookie";
 
 function subscribe(callback: () => void) {
@@ -32,18 +32,9 @@ export const toggleMode = (v?: "light" | "dark") => {
     return;
   }
   document.body.classList.toggle("dark");
-  Cookies.set("theme", Cookies.get("theme") === "light" ? "dark" : "light");
+  const nextCookie = Cookies.get("theme") === "light" ? "dark" : "light";
+  Cookies.set("theme", nextCookie);
 };
 export const useDarkMode = () => {
-  const isDark = useSyncExternalStore(subscribe, getSnapshot, () => false);
-
-  useEffect(() => {
-    const isDarkTheme = localStorage.isDarkTheme;
-
-    if (isDarkTheme === "true") {
-      toggleMode("dark");
-    }
-  }, []);
-
-  return isDark;
+  return useSyncExternalStore(subscribe, getSnapshot, () => false);
 };
