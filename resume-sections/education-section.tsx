@@ -1,5 +1,4 @@
 import React from 'react';
-import { Heading, Text } from '@chakra-ui/react';
 import FullWidthColumn from '../components/FullWidthColumn';
 import Section from '../components/Section';
 
@@ -8,53 +7,27 @@ const EducationSection = () => (
     <h2 className="text-xl font-bold leading-[1.2]">Education</h2>
     <hr className="print:border print:border-gray-200 my-1" />
     <Section className="flex flex-col gap-2.5">
-      <Text as="div">
-        <Heading
-          as="h3"
-          fontSize="lg"
-          sx={{
-            '@media print': {
-              display: 'inline',
-            },
-          }}
-        >
+      <div>
+        <h3 className={"text-lg print:inline"}>
           BS, Computer Science and Statistics{' '}
-        </Heading>
-        <Text
-          fontSize="14px"
-          sx={{
-            '@media print': {
-              display: 'inline',
-            },
-          }}
+        </h3>
+        <div className={"text-sm print:inline"}
         >
           Alexandria University. (2022)
-        </Text>
-        {/* <Divider /> */}
-      </Text>
-      <Text as="div">
-        <Heading
-          as="h3"
-          fontSize="lg"
-          sx={{
-            '@media print': {
-              display: 'inline',
-            },
-          }}
+        </div>
+      </div>
+      <div>
+        <h3
+          className={"text-lg print:inline"}
         >
           Web development specialization{' '}
-        </Heading>
-        <Text
-          fontSize="14px"
-          sx={{
-            '@media print': {
-              display: 'inline',
-            },
-          }}
+        </h3>
+        <p
+          className={"print:inline text-sm"}
         >
           University of Michigan via Coursera (2019)
-        </Text>
-      </Text>
+        </p>
+      </div>
     </Section>
   </FullWidthColumn>
 );

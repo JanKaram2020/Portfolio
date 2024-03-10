@@ -1,12 +1,3 @@
-import {
-  Box,
-  Flex,
-  Heading,
-  Link,
-  SimpleGrid,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
 import ListItemColor from 'components/ListItemColor';
 import SEO from 'components/SEO';
 import { ReactNode } from 'react';
@@ -31,97 +22,76 @@ export default function ProjectPage({
   return (
     <>
       <SEO {...Seo} />
-      <VStack mt="30px" gridGap="30px" alignItems="start" spacing={10}>
-        <Heading as="h1" color="red.400" fontSize="3xl">
+      <div className={"flex flex-col mt-[30px] gap-[30px] items-start space-y-10"}>
+        <h1 className={"text-3xl text-red-400"}>
           {title}
-        </Heading>
-        <Text fontSize="lg">{subtitle}</Text>
-        <SimpleGrid
-          columns={[1, 2, 3]}
-          w="100%"
-          gridGap="30px"
-          justifyContent="start"
-          alignContent="start"
-        >
-          <VStack>
-            <Heading as="h2" fontSize="lg" color="red.300">
+        </h1>
+        <p className={"text-lg"}>{subtitle}</p>
+        <div className={"w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-[30px] justify-start content-start"}>
+          <div className={"flex flex-col"}>
+            <h2 className={"font-bold text-lg text-red-400"}>
               Stack
-            </Heading>
+            </h2>
             <UnorderedList>
               {stack.map((t) => (
                 <ListItemColor key={t}>{t}</ListItemColor>
               ))}
             </UnorderedList>
-          </VStack>
-          <VStack>
-            <Heading as="h2" fontSize="lg" color="red.300">
+          </div>
+          <div className={"flex flex-col"}>
+            <h2 className={"text-lg text-red-300 font-bold"}>
               Code
-            </Heading>
+            </h2>
             <UnorderedList>
               {links.code.map((c) => (
                 <ListItemColor key={c.git}>
                   {c.name ? `${c.name}: ` : ''}
-                  <Link
+                  <a
                     href={c.git}
-                    textDecoration="underline"
-                    isExternal
                     rel="noopener"
                   >
                     Repository
-                  </Link>
+                  </a>
                 </ListItemColor>
               ))}
             </UnorderedList>
-          </VStack>
-          <VStack>
-            <Heading as="h2" fontSize="lg" color="red.300">
+          </div>
+          <div className={"flex flex-col"}>
+            <h2 className={"text-red-300 font-bold text-lg"}>
               Live
-            </Heading>
+            </h2>
             <UnorderedList>
               <ListItemColor>
-                <Link
+                <a
                   href={links.live}
-                  isExternal
                   rel="noopener"
-                  textDecoration="underline"
                 >
                   View site
-                </Link>
+                </a>
               </ListItemColor>
             </UnorderedList>
-          </VStack>
-        </SimpleGrid>
+          </div>
+        </div>
         <ProjectImage image={projectImage} title={title} />
-        <SimpleGrid columns={[1, 1, 2]}>
-          <Box>
-            <Heading as="h2" fontSize="2xl" mb="30px" color="red.300">
+        <div className={"grid grid-cols-1 lg:grid-cols-2"}>
+          <div>
+            <h2 className={"text-2xl mb-[30px] text-red-300"}>
               Why this stack?
-            </Heading>
-            <Text fontSize="lg">{whyStack}</Text>
-          </Box>
-          <Flex
-            flexDirection={['row', 'column']}
-            alignItems="center"
-            justifyContent="center"
-            flexWrap="wrap"
-            gridGap="15px"
-            borderRadius="15px"
-            display={['none', 'flex']}
+            </h2>
+            <p className={"text-lg"}>{whyStack}</p>
+          </div>
+          <div className={"flex flex-row md:flex-col items-center content-center flex-wrap gap-[15px] rounded-4 hidden md:flex"}
           >
             {[stackInfo.map((t) => <Technology key={t} tech={t} />)]}
-          </Flex>
-        </SimpleGrid>
-        <VStack w="100%">
-          <Heading
-            as="h2"
-            fontSize="2xl"
-            mb="30px"
-            color="red.300"
-            textAlign="center"
+          </div>
+        </div>
+        <div className={"flex flex-col w-full"}>
+          <h2
+            className={"text-2xl mb-[30px] text-red-300 text-center"}
           >
             Lessons learned
-          </Heading>
-          <Text fontSize="lg" maxWidth="60ch" as="div">
+          </h2>
+          <div className={"text-lg max-w-[60ch]"}>
             {lessons.length === 1 ? (
               lessons[0]
             ) : (
@@ -131,9 +101,9 @@ export default function ProjectPage({
                 ))}
               </UnorderedList>
             )}
-          </Text>
-        </VStack>
-      </VStack>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
