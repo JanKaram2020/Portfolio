@@ -13,9 +13,9 @@ const formatTime = (time: number) => {
   const minutes = Math.floor((time % hour) / minute);
   const seconds = Math.floor((time % minute) / 1000);
   return `1 year, ${months} month${singularOrPlural(months)}, ${days} day${singularOrPlural(
-    days
+    days,
   )}, ${hours} hour${singularOrPlural(hours)}, ${minutes} minute${singularOrPlural(
-    minutes
+    minutes,
   )}, ${seconds} second${singularOrPlural(seconds)}`;
 };
 

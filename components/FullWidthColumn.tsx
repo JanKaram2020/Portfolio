@@ -1,17 +1,6 @@
-import type {ReactNode} from "react";
-import {SimpleGrid} from "@chakra-ui/react";
+import type { ReactNode } from 'react';
 
 const FullWidthColumn = ({ children }: { children: ReactNode }) => (
-  <SimpleGrid
-    columns={{ sm: 1 }}
-    sx={{
-      '@media print': {
-        gridTemplateColumns: '1fr',
-      },
-    }}
-    w="100%"
-  >
-    {children}
-  </SimpleGrid>
+  <div className="grid grid-cols-1 w-full">{children}</div>
 );
 export default FullWidthColumn;

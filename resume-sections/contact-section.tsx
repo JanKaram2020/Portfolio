@@ -1,87 +1,51 @@
 import React from 'react';
-import {Center, Heading, Link, SimpleGrid} from "@chakra-ui/react";
+import FullWidthColumn from '../components/FullWidthColumn';
 
-const ContactSection = () => {
-  return (
-    <SimpleGrid>
-      <Heading
-        as="h1"
-        textAlign="center"
-        fontSize="2xl"
-        display="none"
-        sx={{
-          '@media print': {
-            display: 'block',
-          },
-        }}
+const ContactSection = () => (
+  <FullWidthColumn>
+    <h2 className="text-xl font-bold leading-[1.2] print:hidden">Contact</h2>
+    <hr className="print:hidden print:border print:border-gray-200 my-1" />
+    <div className="grid gap-[5px] items-center grid-cols-2 print:grid-cols-[1fr_auto_1fr] w-full">
+      <a
+        href="tel: +201277440641"
+        target="_blank"
+        className="hidden print:block"
+        rel="noreferrer"
       >
+        +201277440641
+      </a>
+      <h1 className="hidden print:block font-bold text-2xl text-center">
         Jan Karam Aziz Ghaly
-      </Heading>
-      <Heading
-        as="h2"
-        textAlign="center"
-        fontSize="2xl"
-        display="block"
-        sx={{
-          '@media print': {
-            display: 'none',
-          },
-        }}
+      </h1>
+      <a
+        href="https://www.jankaram.com/"
+        target="_blank"
+        className="print:text-right"
+        rel="noreferrer"
       >
-        Contact
-      </Heading>
-      <SimpleGrid
-        columns={[1, 3]}
-        sx={{
-          '@media print': {
-            gridTemplateColumns: '1fr 1fr 1fr 1fr',
-          },
-        }}
-        gap="5px"
+        jankaram.com
+      </a>
+      <a href="mailto: jankaram2020@gmail.com" target="_blank" rel="noreferrer">
+        jankaram2020@gmail.com
+      </a>
+      <a
+        href="https://www.linkedin.com/in/jankaram2020/"
+        target="_blank"
+        className="print:text-center"
+        rel="noreferrer"
       >
-        <Center>
-          <Link
-            href="mailto: jankaram2020@gmail.com"
-            isExternal
-            target="_blank"
-          >
-            jankaram2020@gmail.com
-          </Link>
-        </Center>
-        <Center
-          display="none"
-          sx={{
-            '@media print': {
-              display: 'flex',
-            },
-          }}
-        >
-          <Link href="tel: +201277440641" isExternal target="_blank">
-            (+2) 012 77 44 0641
-          </Link>
-        </Center>
-        <Center>
-          <Link
-            href="https://www.linkedin.com/in/jankaram2020/"
-            isExternal
-            target="_blank"
-          >
-            LinkedIn
-          </Link>
-        </Center>
-        <Center>
-          <Link
-            href="https://github.com/JanKaram2020"
-            isExternal
-            target="_blank"
-          >
-            Github
-          </Link>
-        </Center>
-      </SimpleGrid>
-    </SimpleGrid>
-
-  );
-};
+        linkedin.com/in/jankaram2020
+      </a>
+      <a
+        href="https://github.com/JanKaram2020"
+        target="_blank"
+        className="print:text-right"
+        rel="noreferrer"
+      >
+        github.com/jankaram2020
+      </a>
+    </div>
+  </FullWidthColumn>
+);
 
 export default ContactSection;

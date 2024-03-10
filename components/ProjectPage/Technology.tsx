@@ -1,4 +1,3 @@
-import { Link } from '@chakra-ui/react';
 import Image from 'next/legacy/image';
 import React from 'react';
 import type { StackLogo } from './types';
@@ -16,15 +15,17 @@ export const TechLinks = {
   themeui: 'https://theme-ui.com/',
 } as const;
 
-const Technology = ({ tech }: { tech: StackLogo }) => (
-  <Link href={TechLinks[tech]} isExternal rel="noopener">
-    <Image
-      src={`/logos/${tech}.png`}
-      width={190}
-      height={72.5}
-      alt={`${tech} logo`}
-      objectFit="contain"
-    />
-  </Link>
-);
+const Technology = ({ tech }: { tech: StackLogo }) => {
+  return(
+    <a href={TechLinks[tech]} className={"block"} rel="noopener">
+      <Image
+        src={`/logos/${tech}.png`}
+        width={190}
+        height={72.5}
+        alt={`${tech} logo`}
+        objectFit="contain"
+      />
+    </a>
+  )
+}
 export default Technology;

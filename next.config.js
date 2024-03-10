@@ -1,5 +1,5 @@
 // next.config.js
-
+/* eslint-disable */
 const UnoCSS = require('@unocss/webpack').default
 
 /** @type {import('next').NextConfig} */

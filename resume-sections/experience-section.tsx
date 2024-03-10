@@ -1,159 +1,107 @@
-import React from 'react';
-import {Divider, Heading, Text} from "@chakra-ui/react";
-import TimeSinceHire from "../components/TimeSinceHire";
-import FullWidthColumn from "../components/FullWidthColumn";
-import Section from "../components/Section";
+import React, { ReactNode } from 'react';
+import TimeSinceHire from '../components/TimeSinceHire';
+import FullWidthColumn from '../components/FullWidthColumn';
+import Section from '../components/Section';
 
-const ExperienceSection = () => {
+type JobProps = {
+  title: string;
+  company: string;
+  time: ReactNode;
+  points?: string[] | ReactNode;
+};
+
+const Job = ({ title, company, time, points }: JobProps) => {
+  const inlineCompanyInPrint = !points;
+
   return (
-    <FullWidthColumn>
-      <Heading as="h2" fontSize="xl">
-        Experience
-      </Heading>
-      <Divider my={1} sx={{
-        '@media print': {
-          border: "1px solid rgba(0,0,0,0.2)"
-        }
-      }}/>
-      <Section className={"flex flex-col gap-2.5"}>
-        <Text as="div">
-          <Heading as="h3" fontSize="lg">
-            Frontend (Nextjs) & React Native developer
-          </Heading>
-          Shory, (Cairo, Egypt) Hybrid{' '}
-          <Text
-            fontSize="sm"
-            sx={{
-              '@media print': {
-                display: 'inline',
-              },
-            }}
-          >
-            (Jan 2023 - present) {" "}
-            <TimeSinceHire/>
-          </Text>
-          <Text as="ol" ml="2rem" fontSize="14px">
-            <li> Added features using React, Redux, RTK and RTK query to our Nextjs apps and React Native apps</li>
-            <li> Introduced Unit, Component and Hooks testing with Jest and React-Testing-Library to our DLS, improving code quality and maintainability.</li>
-            <li> Created the TAMM Backend For Frontend using Node and Express with 100% test scoverage
-            </li>
-          </Text>
-        </Text>
-        <Text as="div">
-          <Heading as="h3" fontSize="lg">
-            Fullstack web & React Native developer
-          </Heading>
-          Tech Hive, (Alexandria,Egypt) Remote{' '}
-          <Text
-            fontSize="sm"
-            sx={{
-              '@media print': {
-                display: 'inline',
-              },
-            }}
-          >
-            (Feb 2022 - Jan 2023){' '}
-          </Text>
-          <Text as="ol" ml="2rem" fontSize="14px">
-            <li>
-              Developed a complex tax calculator module in Zabbat web app with different calculations based on year and
-              profit segment.
-            </li>
-            <li>
-              Built a data upload module for importing Excel data using SheetJs and transforming it for GraphQL
-              consumption to make it easier to onboard new customers in Zabbat app.
-            </li>
-            <li>
-              Designed and Implemented the notification page module in
-              Zabbat using Corejs/React with realtime notifications using Firebase and service workers.
-            </li>
-            <li>
-              Devloped Easypass application (A compound security system)
-              with React Native, Paper, Redux, and RTK.
-            </li>
-          </Text>
-        </Text>
-        <Text as="div">
-          <Heading
-            as="h3"
-            fontSize="lg"
-            sx={{
-              '@media print': {
-                display: 'inline',
-              },
-            }}
-          >
-            Full stack web developer{' '}
-          </Heading>
-          Cool code marketing agency, Remote{' '}
-          <Text
-            fontSize="sm"
-            sx={{
-              '@media print': {
-                display: 'inline',
-              },
-            }}
-          >
-            (Aug 2021 - Nov 2021)
-          </Text>
-          <Text as="ol" ml="2rem" fontSize="14px">
-            <li>
-              Implemented an app interface for a Medical
-              application using Nextjs, React, Typescript, and MUI
-            </li>
-            <li>
-              Implemented API endpoints and relations between models using
-              Node, Express, and Sequelize.
-            </li>
-          </Text>
-        </Text>
-        <Text as="div">
-          <Heading
-            as="h3"
-            fontSize="lg"
-            sx={{
-              '@media print': {
-                display: 'inline',
-              },
-            }}
-          >
-            Fullstack web developer{' '}
-          </Heading>
-          Freelance, Self Employed{' '}
-          <Text
-            display="inline"
-            fontSize="sm"
-          >
-            (Aug 2019 - Jul 2021)
-          </Text>
-        </Text>
-        <Text as="div">
-          <Heading
-            as="h3"
-            fontSize="lg"
-            sx={{
-              '@media print': {
-                display: 'inline',
-              },
-            }}
-          >
-            Internship Trainee{' '}
-          </Heading>
-          Information Technology Institute (ITI){' '}
-          <Text
-            display="inline"
-            fontSize="sm"
-          >
-            (Jul 2019 - Aug 2019)
-          </Text>
-          <Text fontSize="14px" ml={"1rem"}>
-            Open source development track:
-            <span className={"block print:inline"}> HTML - CSS - Javascript - MySQL - Php - Laravel</span>
-          </Text>
-        </Text>
-      </Section>
-    </FullWidthColumn>
+    <div>
+      <h3
+        className={`text-lg font-bold leading-[1.2]${
+          inlineCompanyInPrint ? ' print:inline' : ''
+        }`}
+      >
+        {title}
+        {inlineCompanyInPrint ? ' ' : ''}
+      </h3>
+      <span className="text-base leading-none">{company}</span>
+      <p className="text-sm print:inline">&nbsp;{time}</p>
+      {Array.isArray(points) ? (
+        <ol className="ml-8 text-sm">
+          {points?.map((p) => <li key={p}>{p}</li>)}
+        </ol>
+      ) : (
+        points
+      )}
+    </div>
   );
 };
+
+const jobs: JobProps[] = [
+  {
+    title: 'Frontend (Nextjs) & React Native developer',
+    company: 'Shory, (Cairo, Egypt) Hybrid',
+    time: (
+      <>
+        (Jan 2023 - present)
+        <TimeSinceHire />
+      </>
+    ),
+    points: [
+      'Added features using React, Redux, RTK and RTK query to our Nextjs apps and React Native apps',
+      'Introduced Unit, Component and Hooks testing with Jest and React-Testing-Library to our DLS, improving code quality and maintainability',
+      'Created the TAMM Backend For Frontend using Node and Express with 100% test coverage',
+    ],
+  },
+  {
+    title: 'Fullstack web & React Native developer',
+    company: 'Tech Hive, (Alexandria,Egypt) Remote',
+    time: '(Feb 2022 - Jan 2023)',
+    points: [
+      'Developed a complex tax calculator module in Zabbat web app with different calculations based on year and profit segment.',
+      'Built a data upload module for importing Excel data using SheetJs and transforming it for GraphQL consumption to make it easier to onboard new customers in Zabbat app.',
+      'Designed and Implemented the notification page module in Zabbat using Corejs/React with realtime notifications using Firebase and service workers.',
+      'Developed Easypass application (compound security) app with React Native, Paper, Redux, and RTK.',
+    ],
+  },
+  {
+    title: 'Fullstack web developer',
+    company: 'Cool code marketing agency, Remote',
+    time: '(Aug 2021 - Nov 2021)',
+    points: [
+      'Implemented an app interface for a Medical application using Nextjs, React, Typescript, and MUI',
+      'Implemented API endpoints and relations between models using Node, Express, and Sequelize.',
+    ],
+  },
+  {
+    title: 'Fullstack web developer',
+    company: 'Freelance, Self Employed',
+    time: '(Aug 2019 - Jul 2021)',
+  },
+  {
+    title: 'Internship Trainee',
+    company: 'Information Technology Institute (ITI)',
+    time: '(Jul 2019 - Aug 2019)',
+    points: (
+      <p className="text-sm">
+        Open source development track:
+        <span className="block print:inline text-sm">
+          HTML - CSS - Javascript - MySQL - Php - Laravel
+        </span>
+      </p>
+    ),
+  },
+];
+
+const ExperienceSection = () => (
+  <FullWidthColumn>
+    <h2 className="text-xl font-bold leading-[1.2]">Experience</h2>
+    <hr className="print:border print:border-gray-200 my-1" />
+    <Section className="flex flex-col gap-2.5">
+      {jobs.map((j, i) => (
+        <Job key={i} {...j} />
+      ))}
+    </Section>
+  </FullWidthColumn>
+);
 
 export default ExperienceSection;

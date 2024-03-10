@@ -20,7 +20,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "extends": "eslint-config-wesbos/tsconfig.json",
   "include": [
     "next-env.d.ts",
     "**/*.ts",
