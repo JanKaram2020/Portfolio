@@ -1,31 +1,31 @@
-import React from 'react';
-import ProjectPage from 'components/ProjectPage';
-import { MY } from '../../lib/constants';
+import React from "react";
+import ProjectPage from "components/ProjectPage";
+import { MY } from "../../../lib/constants";
 
-export default function Eargasm() {
+export default function Page() {
   return (
     <ProjectPage
       Seo={{
-        description: 'Eargasm is a music website built with React by Jan Karam',
-        title: 'Eargasm | Jan Karam',
-        image: '/eargasmMockup.png',
+        description: "Page is a music website built with React by Jan Karam",
+        title: "Page | Jan Karam",
+        image: "/eargasmMockup.png",
       }}
-      title="Eargasm"
+      title="Page"
       subtitle={
         <>
-          Eargasm is a music website built with React.
+          Page is a music website built with React.
           <br />I built this project with React and React-strap and Bootstrap
           for styling.
         </>
       }
-      stack={['React', 'Bootstrap', 'Fuse.js', 'JSON file as a database']}
+      stack={["React", "Bootstrap", "Fuse.js", "JSON file as a database"]}
       links={{
         code: [
           {
-            git: 'https://github.com/JanKaram2020/eargasm.git',
+            git: "https://github.com/JanKaram2020/eargasm.git",
           },
         ],
-        live: 'https://eargasm.surge.sh/',
+        live: "https://eargasm.surge.sh/",
       }}
       whyStack={
         <>
@@ -38,10 +38,10 @@ export default function Eargasm() {
           familiar with React without focusing too much on styling.
         </>
       }
-      stackInfo={['react', 'bootstrap']}
+      stackInfo={["react", "bootstrap"]}
       lessons={[
         "Gained more experience with React and it's ecosystem.",
-        'used fuse js and learned how to make a mini fuzzy search engine.',
+        "used fuse js and learned how to make a mini fuzzy search engine.",
       ]}
       projectImage="/eargasmMockup.png"
     />

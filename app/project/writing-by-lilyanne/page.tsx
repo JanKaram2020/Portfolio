@@ -1,15 +1,15 @@
-import React from 'react';
-import ProjectPage from 'components/ProjectPage';
-import { MY } from '../../lib/constants';
+import React from "react";
+import ProjectPage from "components/ProjectPage";
+import { MY } from "../../../lib/constants";
 
 export default function LilyanneBlog() {
   return (
     <ProjectPage
       Seo={{
-        title: 'Writing by Lilyanne | Jan Karam',
+        title: "Writing by Lilyanne | Jan Karam",
         description:
-          'Writing by Lilyanne is a JAMstack powered blog made by Jan Karam and built for my Lilyanne.I built this project from scratch with Gatsby, React ,GraphQL, Theme-UI, Framer motion , react-intl and Sanity CMS.',
-        image: '/lilyanneMockup.png',
+          "Writing by Lilyanne is a JAMstack powered blog made by Jan Karam and built for my Lilyanne.I built this project from scratch with Gatsby, React ,GraphQL, Theme-UI, Framer motion , react-intl and Sanity CMS.",
+        image: "/lilyanneMockup.png",
       }}
       title="Writing by Lilyanne"
       subtitle={
@@ -23,27 +23,27 @@ export default function LilyanneBlog() {
         </>
       }
       stack={[
-        'Gatsby',
-        'React',
-        'GraphQL',
-        'Theme-UI',
-        'Framer motion',
-        'react-intl',
-        'Sanity CMS',
-        'Google analytics',
+        "Gatsby",
+        "React",
+        "GraphQL",
+        "Theme-UI",
+        "Framer motion",
+        "react-intl",
+        "Sanity CMS",
+        "Google analytics",
       ]}
       links={{
         code: [
           {
-            name: 'Frontend',
-            git: 'https://github.com/JanKaram2020/Lilyanne-blog-gatsby',
+            name: "Frontend",
+            git: "https://github.com/JanKaram2020/Lilyanne-blog-gatsby",
           },
           {
-            name: 'CMS',
-            git: 'https://github.com/JanKaram2020/Lilyanne-blog-cms',
+            name: "CMS",
+            git: "https://github.com/JanKaram2020/Lilyanne-blog-cms",
           },
         ],
-        live: 'https://lilyannehany.netlify.app/',
+        live: "https://lilyannehany.netlify.app/",
       }}
       whyStack={
         <>
@@ -64,7 +64,7 @@ export default function LilyanneBlog() {
           which article attracts more people.
         </>
       }
-      stackInfo={['sanity', 'gatsby', 'themeui', 'framer']}
+      stackInfo={["sanity", "gatsby", "themeui", "framer"]}
       lessons={[
         `I could spend all day describing the lessons that I learned while working on this project, but the most important ones involved my new found understanding of Gatsby,GraphQl, Git management, and API integration with Sanity Io and how to use google analytics. As my first large project using React, I learned a lot of lessons regarding code structure and organization.`,
       ]}

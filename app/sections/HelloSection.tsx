@@ -1,6 +1,8 @@
-import { motion } from 'framer-motion';
-import React from 'react';
-import AnimatedLogo from 'components/AnimatedLogo';
+"use client";
+
+import { motion } from "framer-motion";
+import React from "react";
+import AnimatedLogo from "components/AnimatedLogo";
 
 const HelloSection = () => (
   <div className="h-screen p-30px gap-80px md:gap-40px lg:gap-30px xl:gap-10px flex flex-col justify-center items-center">

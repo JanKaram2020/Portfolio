@@ -1,7 +1,9 @@
-import { RiMoonClearFill } from 'react-icons/ri';
-import { IoMdSunny } from 'react-icons/io';
-import { AnimatePresence, motion } from 'framer-motion';
-import { useDarkMode, toggleMode } from 'lib/useDarkMode';
+"use client";
+
+import { RiMoonClearFill } from "react-icons/ri";
+import { IoMdSunny } from "react-icons/io";
+import { AnimatePresence, motion } from "framer-motion";
+import { useDarkMode, toggleMode } from "lib/useDarkMode";
 
 function ColorModeToggle() {
   const isDark = useDarkMode();
@@ -21,7 +23,7 @@ function ColorModeToggle() {
             key="sunny"
             className="text-yellow-500"
             style={{
-              gridArea: '1 / 1 / 2 / 2',
+              gridArea: "1 / 1 / 2 / 2",
             }}
             color="yellow.500"
             initial={{ rotate: 90, y: 30, opacity: 0 }}
@@ -38,12 +40,12 @@ function ColorModeToggle() {
             key="moon"
             className="text-black"
             style={{
-              gridArea: '1 / 1 / 2 / 2',
+              gridArea: "1 / 1 / 2 / 2",
             }}
             color="black"
             initial={{ rotate: 90, y: 30, opacity: 0 }}
             animate={{ rotate: 0, y: 0, opacity: 1 }}
-            exit={{ rotate: 90, y: 30, opacity: 0, color: 'white' }} // Arshy's touch
+            exit={{ rotate: 90, y: 30, opacity: 0, color: "white" }} // Arshy's touch
             transition={{ duration: 1 }}
           >
             <RiMoonClearFill size={30} />

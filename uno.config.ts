@@ -6,7 +6,7 @@ import transformerAttributifyJsx from '@unocss/transformer-attributify-jsx';
 export default defineConfig({
   content: {
     filesystem: [
-      './pages/**/*.{js,ts,jsx,tsx,mdx}',
+      './app/**/*.{js,ts,jsx,tsx,mdx}',
       './components/**/*.{js,ts,jsx,tsx,mdx}',
       './sections/**/*.{js,ts,jsx,tsx,mdx}',
     ],
@@ -15,6 +15,6 @@ export default defineConfig({
     presetUno({
       dark: 'class',
     }),
-  ],
+  ],// @ts-ignore
   transformers: [transformerVariantGroup(), transformerAttributifyJsx()],
 });

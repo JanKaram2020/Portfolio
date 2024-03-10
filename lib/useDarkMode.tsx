@@ -1,10 +1,12 @@
-import { useEffect, useSyncExternalStore } from 'react';
-import { useColorMode } from '@chakra-ui/react';
+"use client";
+
+import { useEffect, useSyncExternalStore } from "react";
+import Cookies from "js-cookie";
 
 function subscribe(callback: () => void) {
   const mutationObserver = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
-      if (mutation.attributeName === 'class') {
+      if (mutation.attributeName === "class") {
         callback();
       }
     });
@@ -16,40 +18,32 @@ function subscribe(callback: () => void) {
   };
 }
 function getSnapshot() {
-  return document.body.classList.contains('dark');
+  return document.body.classList.contains("dark");
 }
-export const toggleMode = (v?: 'light' | 'dark') => {
-  if (v === 'light') {
-    localStorage.isDarkTheme = false;
-    document.body.classList.remove('dark');
+export const toggleMode = (v?: "light" | "dark") => {
+  if (v === "light") {
+    document.body.classList.remove("dark");
+    Cookies.set("theme", "light");
     return;
   }
-  if (v === 'dark') {
-    localStorage.isDarkTheme = true;
-    document.body.classList.add('dark');
+  if (v === "dark") {
+    document.body.classList.add("dark");
+    Cookies.set("theme", "dark");
     return;
   }
-  localStorage.isDarkTheme = !document.body.classList.contains('dark');
-  document.body.classList.toggle('dark');
+  document.body.classList.toggle("dark");
+  Cookies.set("theme", Cookies.get("theme") === "light" ? "dark" : "light");
 };
 export const useDarkMode = () => {
   const isDark = useSyncExternalStore(subscribe, getSnapshot, () => false);
-  const { toggleColorMode, colorMode, setColorMode } = useColorMode();
 
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    const mode = localStorage['chakra-ui-color-mode'];
-    if (typeof mode === 'string' && (mode === 'light' || mode === 'dark')) {
-      toggleMode(mode);
-      setColorMode(mode);
-    }
-  }, [setColorMode]);
+    const isDarkTheme = localStorage.isDarkTheme;
 
-  useEffect(() => {
-    if ((colorMode === 'dark') !== isDark) {
-      toggleColorMode();
+    if (isDarkTheme === "true") {
+      toggleMode("dark");
     }
-  }, [colorMode, isDark, toggleColorMode]);
+  }, []);
 
   return isDark;
 };

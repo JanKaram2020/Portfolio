@@ -1,8 +1,10 @@
-import Image from 'next/legacy/image';
-import Link from 'next/link';
-import { motion, useAnimation, Variants } from 'framer-motion';
-import React, { useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
+"use client";
+
+import Image from "next/legacy/image";
+import Link from "next/link";
+import { motion, useAnimation, Variants } from "framer-motion";
+import React, { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 const SlashMotion: Variants = {
   hover: { scale: 1.1 },
@@ -19,7 +21,7 @@ const Project = ({
   name,
   image,
   text,
-  page = '/',
+  page = "/",
   inProgress,
   alt,
 }: ProjectInterface) => {
@@ -31,7 +33,7 @@ const Project = ({
   useEffect(() => {
     if (inView) {
       // eslint-disable-next-line no-void
-      void controls.start('visible');
+      void controls.start("visible");
     }
   }, [controls, inView]);
   return (

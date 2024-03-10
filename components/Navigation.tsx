@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import Image from 'next/legacy/image';
-import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
-import { HiDocumentText } from 'react-icons/hi';
-import React from 'react';
-import ColorModeToggle from './ColorModeToggle';
+import Link from "next/link";
+import Image from "next/legacy/image";
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import { HiDocumentText } from "react-icons/hi";
+import React from "react";
+import ColorModeToggle from "./ColorModeToggle";
 
 const Navigation = (): React.ReactElement => (
   <header

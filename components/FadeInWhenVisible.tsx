@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
-import { motion, useAnimation } from 'framer-motion';
-import Image from 'next/legacy/image';
+"use client";
+
+import React, { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
+import Image from "next/legacy/image";
 
 export default function FadeInWhenVisible(): React.ReactElement {
   const controls = useAnimation();
@@ -11,7 +13,7 @@ export default function FadeInWhenVisible(): React.ReactElement {
   useEffect(() => {
     if (inView) {
       // eslint-disable-next-line no-void
-      void controls.start('visible');
+      void controls.start("visible");
     }
   }, [controls, inView]);
 
@@ -28,10 +30,10 @@ export default function FadeInWhenVisible(): React.ReactElement {
         normal: { opacity: 1, scale: 1 },
       }}
       onHoverStart={async () => {
-        await controls.start('hover');
+        await controls.start("hover");
       }}
       onHoverEnd={async () => {
-        await controls.start('normal');
+        await controls.start("normal");
       }}
       className="hidden lg:block"
     >

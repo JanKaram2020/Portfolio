@@ -1,5 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+"use client";
+
+import React from "react";
+import { motion } from "framer-motion";
 
 function Icon(): React.ReactElement {
   return (

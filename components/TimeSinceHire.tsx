@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react';
+"use client";
 
-const singularOrPlural = (time: number) => (time > 1 ? 's' : '');
+import React, { useEffect, useState } from "react";
+
+const singularOrPlural = (time: number) => (time > 1 ? "s" : "");
 
 const formatTime = (time: number) => {
   const month = 1000 * 60 * 60 * 24 * 30;
@@ -19,7 +21,7 @@ const formatTime = (time: number) => {
   )}, ${seconds} second${singularOrPlural(seconds)}`;
 };
 
-const timeOfHire = new Date('2024-01-16T09:00:00');
+const timeOfHire = new Date("2024-01-16T09:00:00");
 
 const TimeSinceHire = () => {
   const [ctime, setCTime] = useState<number | undefined>(undefined);

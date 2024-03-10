@@ -1,14 +1,13 @@
-import Head from 'next/head';
-import { useColorMode } from '@chakra-ui/react';
-import React from 'react';
+import Head from "next/head";
+import React from "react";
 
 const defaults = {
   description:
-    'Jan Karam is a web developer , graphic designer , and a life long learner.',
+    "Jan Karam is a web developer , graphic designer , and a life long learner.",
   keywords:
-    'Jan Karam , Jan , Karam , Web developer, Front-end developer , Reactjs , Front-end , Next js ',
-  title: 'Jan Karam',
-  image: '/site.png',
+    "Jan Karam , Jan , Karam , Web developer, Front-end developer , Reactjs , Front-end , Next js ",
+  title: "Jan Karam",
+  image: "/site.png",
 };
 function SEO({
   description = defaults.description,
@@ -21,13 +20,9 @@ function SEO({
   title?: string;
   image?: string;
 }): React.ReactElement {
-  const { colorMode } = useColorMode();
-  const isDark = colorMode === `dark`;
-  const themeColor = isDark ? '#1A202C' : '#FFFFFF';
   return (
     <Head>
       <title>{title}</title>
-      <meta name="theme-color" content={themeColor} />
       <meta name="image" content={image} />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />

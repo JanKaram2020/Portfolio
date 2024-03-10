@@ -1,6 +1,6 @@
-import React from 'react';
-import FullWidthColumn from '../components/FullWidthColumn';
-import Section from '../components/Section';
+import React from "react";
+import FullWidthColumn from "../../../components/FullWidthColumn";
+import Section from "../../../components/Section";
 
 const ProjectsSection = () => (
   <FullWidthColumn>
@@ -12,7 +12,7 @@ const ProjectsSection = () => (
       <div>
         <div>
           <h3 className="text-lg font-bold print:inline">
-            A responsive PWA multi language blog{' '}
+            A responsive PWA multi language blog{" "}
           </h3>
           <a
             className="block print-inline"
@@ -29,7 +29,7 @@ const ProjectsSection = () => (
       <div>
         <div>
           <h3 className="text-lg font-bold print:inline">
-            Would you rather game{' '}
+            Would you rather game{" "}
           </h3>
           <a
             className="block print-inline"

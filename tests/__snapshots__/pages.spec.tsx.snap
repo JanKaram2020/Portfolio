@@ -2,28 +2,28 @@
 
 exports[`pages > should Eargasm match snapshot 1`] = `
 <div
-  className="chakra-stack css-hula3z"
+  className="flex flex-col mt-[30px] gap-[30px] items-start space-y-10"
 >
   <h1
-    className="chakra-heading css-1lnsct4"
+    className="text-3xl text-red-400"
   >
-    Eargasm
+    Page
   </h1>
   <p
-    className="chakra-text css-1ezsviu"
+    className="text-lg"
   >
-    Eargasm is a music website built with React.
+    Page is a music website built with React.
     <br />
     I built this project with React and React-strap and Bootstrap for styling.
   </p>
   <div
-    className="css-12b704b"
+    className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-[30px] justify-start content-start"
   >
     <div
-      className="chakra-stack css-owjkmg"
+      className="flex flex-col"
     >
       <h2
-        className="chakra-heading css-1eihn08"
+        className="font-bold text-lg text-red-400"
       >
         Stack
       </h2>
@@ -53,10 +53,10 @@ exports[`pages > should Eargasm match snapshot 1`] = `
       </ul>
     </div>
     <div
-      className="chakra-stack css-owjkmg"
+      className="flex flex-col"
     >
       <h2
-        className="chakra-heading css-1eihn08"
+        className="text-lg text-red-300 font-bold"
       >
         Code
       </h2>
@@ -67,10 +67,8 @@ exports[`pages > should Eargasm match snapshot 1`] = `
           className="before:(content-['•'] text-red-400 mr-10px)"
         >
           <a
-            className="chakra-link css-1081t4c"
             href="https://github.com/JanKaram2020/eargasm.git"
             rel="noopener"
-            target="_blank"
           >
             Repository
           </a>
@@ -78,10 +76,10 @@ exports[`pages > should Eargasm match snapshot 1`] = `
       </ul>
     </div>
     <div
-      className="chakra-stack css-owjkmg"
+      className="flex flex-col"
     >
       <h2
-        className="chakra-heading css-1eihn08"
+        className="text-red-300 font-bold text-lg"
       >
         Live
       </h2>
@@ -92,10 +90,8 @@ exports[`pages > should Eargasm match snapshot 1`] = `
           className="before:(content-['•'] text-red-400 mr-10px)"
         >
           <a
-            className="chakra-link css-1081t4c"
             href="https://eargasm.surge.sh/"
             rel="noopener"
-            target="_blank"
           >
             View site
           </a>
@@ -104,7 +100,7 @@ exports[`pages > should Eargasm match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="css-1lads1q"
+    className="w-full"
     style={{}}
   >
     <span
@@ -161,7 +157,7 @@ exports[`pages > should Eargasm match snapshot 1`] = `
         />
       </span>
       <img
-        alt="screenshots of Eargasm on different devices"
+        alt="screenshots of Page on different devices"
         data-nimg="intrinsic"
         decoding="async"
         onError={[Function]}
@@ -192,7 +188,7 @@ exports[`pages > should Eargasm match snapshot 1`] = `
       />
       <noscript>
         <img
-          alt="screenshots of Eargasm on different devices"
+          alt="screenshots of Page on different devices"
           data-nimg="intrinsic"
           decoding="async"
           loading="lazy"
@@ -225,18 +221,16 @@ exports[`pages > should Eargasm match snapshot 1`] = `
     </span>
   </div>
   <div
-    className="css-kl37xa"
+    className="grid grid-cols-1 lg:grid-cols-2"
   >
-    <div
-      className="css-0"
-    >
+    <div>
       <h2
-        className="chakra-heading css-17dqea7"
+        className="text-2xl mb-[30px] text-red-300"
       >
         Why this stack?
       </h2>
       <p
-        className="chakra-text css-1ezsviu"
+        className="text-lg"
       >
         i choose React because I wanted to get more familiar with and make a project on 
         my  
@@ -248,13 +242,12 @@ exports[`pages > should Eargasm match snapshot 1`] = `
       </p>
     </div>
     <div
-      className="css-vwgfpk"
+      className="flex flex-row md:flex-col items-center content-center flex-wrap gap-[15px] rounded-4 hidden md:flex"
     >
       <a
-        className="chakra-link css-0"
+        className="block"
         href="https://react.dev/"
         rel="noopener"
-        target="_blank"
       >
         <span
           style={
@@ -374,10 +367,9 @@ exports[`pages > should Eargasm match snapshot 1`] = `
         </span>
       </a>
       <a
-        className="chakra-link css-0"
+        className="block"
         href="https://getbootstrap.com/docs/5.0/getting-started/introduction/"
         rel="noopener"
-        target="_blank"
       >
         <span
           style={
@@ -499,15 +491,15 @@ exports[`pages > should Eargasm match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="chakra-stack css-1qqukx9"
+    className="flex flex-col w-full"
   >
     <h2
-      className="chakra-heading css-hpox18"
+      className="text-2xl mb-[30px] text-red-300 text-center"
     >
       Lessons learned
     </h2>
     <div
-      className="chakra-text css-bvex1k"
+      className="text-lg max-w-[60ch]"
     >
       <ul
         className="list-none"
@@ -566,11 +558,11 @@ exports[`pages > should IndexPage match snapshot 1`] = `
     </span>
   </div>,
   <div
-    className="css-zzcbsn"
+    className="grid grid-cols-1 lg:grid-cols-3 space-y-5 space-x-5 content-center items-center my-[6vw]"
     id="aboutMe"
   >
     <p
-      className="chakra-text css-th6iea"
+      className="min-w-[320px] max-w-[60ch] ml-2 mr-4 text-xl"
     >
       I'm a passionate introvert who loves building web apps and sites. 
       <br />
@@ -580,10 +572,9 @@ exports[`pages > should IndexPage match snapshot 1`] = `
       my  
       own so I searched the internet on how to make websites and found 
       <a
-        className="chakra-link css-1hujroh"
+        className="text-red-400"
         href="https://www.ahlamontada.com/"
         rel="noopener"
-        target="_blank"
       >
         ahlamontada.com
       </a>
@@ -593,44 +584,28 @@ exports[`pages > should IndexPage match snapshot 1`] = `
       <br />
        Years later I searched about the website and found it at 
       <a
-        className="chakra-link css-1hujroh"
+        className="text-red-400"
         href="https://jan12.rigala.net/"
         rel="noopener"
-        target="_blank"
       >
         https://jan12.rigala.net/
       </a>
         (if you're a recruiter please don't visit it :D )
     </p>
     <div
-      className="css-1ii9g27"
-      style={
-        {
-          "opacity": 0,
-          "transform": "scale(0) translateZ(0)",
-        }
-      }
+      className="min-w-[320px] flex items-center justify-center"
     >
-      <figure
-        className="css-srqxh6"
-      >
-        <span
-          style={
-            {
-              "background": "none",
-              "border": 0,
-              "boxSizing": "border-box",
-              "display": "inline-block",
-              "height": "initial",
-              "margin": 0,
-              "maxWidth": "100%",
-              "opacity": 1,
-              "overflow": "hidden",
-              "padding": 0,
-              "position": "relative",
-              "width": "initial",
-            }
+      <div
+        className="hidden lg:block"
+        style={
+          {
+            "opacity": 0,
+            "transform": "scale(0) translateZ(0)",
           }
+        }
+      >
+        <figure
+          className="drop-shadow-[0px_0px_12px_#F56565]"
         >
           <span
             style={
@@ -638,24 +613,24 @@ exports[`pages > should IndexPage match snapshot 1`] = `
                 "background": "none",
                 "border": 0,
                 "boxSizing": "border-box",
-                "display": "block",
+                "display": "inline-block",
                 "height": "initial",
                 "margin": 0,
                 "maxWidth": "100%",
                 "opacity": 1,
+                "overflow": "hidden",
                 "padding": 0,
+                "position": "relative",
                 "width": "initial",
               }
             }
           >
-            <img
-              alt=""
-              aria-hidden={true}
-              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27340%27%20height=%27340%27/%3e"
+            <span
               style={
                 {
                   "background": "none",
                   "border": 0,
+                  "boxSizing": "border-box",
                   "display": "block",
                   "height": "initial",
                   "margin": 0,
@@ -665,48 +640,34 @@ exports[`pages > should IndexPage match snapshot 1`] = `
                   "width": "initial",
                 }
               }
-            />
-          </span>
-          <img
-            alt="Jan Karam smiling"
-            className="image"
-            data-nimg="intrinsic"
-            decoding="async"
-            onError={[Function]}
-            onLoad={[Function]}
-            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            style={
-              {
-                "border": "none",
-                "bottom": 0,
-                "boxSizing": "border-box",
-                "display": "block",
-                "height": 0,
-                "left": 0,
-                "margin": "auto",
-                "maxHeight": "100%",
-                "maxWidth": "100%",
-                "minHeight": "100%",
-                "minWidth": "100%",
-                "objectFit": undefined,
-                "objectPosition": undefined,
-                "padding": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-                "width": 0,
-              }
-            }
-          />
-          <noscript>
+            >
+              <img
+                alt=""
+                aria-hidden={true}
+                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27340%27%20height=%27340%27/%3e"
+                style={
+                  {
+                    "background": "none",
+                    "border": 0,
+                    "display": "block",
+                    "height": "initial",
+                    "margin": 0,
+                    "maxWidth": "100%",
+                    "opacity": 1,
+                    "padding": 0,
+                    "width": "initial",
+                  }
+                }
+              />
+            </span>
             <img
               alt="Jan Karam smiling"
-              className="image"
+              className="rounded-full dark:brightness-80"
               data-nimg="intrinsic"
               decoding="async"
-              loading="lazy"
-              src="/_next/image?url=%2Fjancropped.jpg&w=750&q=75"
-              srcSet="/_next/image?url=%2Fjancropped.jpg&w=384&q=75 1x, /_next/image?url=%2Fjancropped.jpg&w=750&q=75 2x"
+              onError={[Function]}
+              onLoad={[Function]}
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
               style={
                 {
                   "border": "none",
@@ -730,12 +691,45 @@ exports[`pages > should IndexPage match snapshot 1`] = `
                 }
               }
             />
-          </noscript>
-        </span>
-      </figure>
+            <noscript>
+              <img
+                alt="Jan Karam smiling"
+                className="rounded-full dark:brightness-80"
+                data-nimg="intrinsic"
+                decoding="async"
+                loading="lazy"
+                src="/_next/image?url=%2Fjancropped.jpg&w=750&q=75"
+                srcSet="/_next/image?url=%2Fjancropped.jpg&w=384&q=75 1x, /_next/image?url=%2Fjancropped.jpg&w=750&q=75 2x"
+                style={
+                  {
+                    "border": "none",
+                    "bottom": 0,
+                    "boxSizing": "border-box",
+                    "display": "block",
+                    "height": 0,
+                    "left": 0,
+                    "margin": "auto",
+                    "maxHeight": "100%",
+                    "maxWidth": "100%",
+                    "minHeight": "100%",
+                    "minWidth": "100%",
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "padding": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": 0,
+                  }
+                }
+              />
+            </noscript>
+          </span>
+        </figure>
+      </div>
     </div>
     <p
-      className="chakra-text css-th6iea"
+      className="min-w-[320px] max-w-[60ch] ml-2 mr-4 text-xl"
     >
       then I took a web development course at 
       my  
@@ -873,7 +867,6 @@ exports[`pages > should IndexPage match snapshot 1`] = `
       }
     >
       <figure
-        className="css-cn7ha"
         style={{}}
       >
         <span
@@ -931,7 +924,7 @@ exports[`pages > should IndexPage match snapshot 1`] = `
           </span>
           <img
             alt="Lilyanne Hany's blog screenshot"
-            className="image"
+            className="rounded-20px dark:brightness-80"
             data-nimg="intrinsic"
             decoding="async"
             onError={[Function]}
@@ -963,7 +956,7 @@ exports[`pages > should IndexPage match snapshot 1`] = `
           <noscript>
             <img
               alt="Lilyanne Hany's blog screenshot"
-              className="image"
+              className="rounded-20px dark:brightness-80"
               data-nimg="intrinsic"
               decoding="async"
               loading="lazy"
@@ -996,22 +989,21 @@ exports[`pages > should IndexPage match snapshot 1`] = `
         </span>
       </figure>
       <h2
-        className="chakra-heading css-1n49pl7"
+        className="text-2xl"
       >
          
         Writing by Lilyanne
       </h2>
       <p
-        className="chakra-text css-ax9bdp"
+        className="text-gray-500"
       >
         A responsive PWA multi language blog built with Gatsby Js, Theme UI and Sanity CMS
       </p>
       <a
-        className="chakra-link css-1iyhnvn"
+        className="text-xl relative hover:decoration-none after:(content-empty absolute block w-28 h-2px bg-red-400)"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onTouchStart={[Function]}
-        postion="relative"
         style={{}}
       >
         View Project
@@ -1027,7 +1019,6 @@ exports[`pages > should IndexPage match snapshot 1`] = `
       }
     >
       <figure
-        className="css-cn7ha"
         style={{}}
       >
         <span
@@ -1085,7 +1076,7 @@ exports[`pages > should IndexPage match snapshot 1`] = `
           </span>
           <img
             alt="test table screenshot"
-            className="image"
+            className="rounded-20px dark:brightness-80"
             data-nimg="intrinsic"
             decoding="async"
             onError={[Function]}
@@ -1117,7 +1108,7 @@ exports[`pages > should IndexPage match snapshot 1`] = `
           <noscript>
             <img
               alt="test table screenshot"
-              className="image"
+              className="rounded-20px dark:brightness-80"
               data-nimg="intrinsic"
               decoding="async"
               loading="lazy"
@@ -1150,23 +1141,22 @@ exports[`pages > should IndexPage match snapshot 1`] = `
         </span>
       </figure>
       <h2
-        className="chakra-heading css-1n49pl7"
+        className="text-2xl"
       >
          
         Test table
       </h2>
       <p
-        className="chakra-text css-ax9bdp"
+        className="text-gray-500"
       >
         A website to get your test table by course codes or names
           built with Nextjs, Nextjs's api routes, puppeteer and Mantine
       </p>
       <a
-        className="chakra-link css-1iyhnvn"
+        className="text-xl relative hover:decoration-none after:(content-empty absolute block w-28 h-2px bg-red-400)"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onTouchStart={[Function]}
-        postion="relative"
         style={{}}
       >
         View Project
@@ -1182,7 +1172,6 @@ exports[`pages > should IndexPage match snapshot 1`] = `
       }
     >
       <figure
-        className="css-cn7ha"
         style={{}}
       >
         <span
@@ -1240,7 +1229,7 @@ exports[`pages > should IndexPage match snapshot 1`] = `
           </span>
           <img
             alt="Would you rather website screenshot"
-            className="image"
+            className="rounded-20px dark:brightness-80"
             data-nimg="intrinsic"
             decoding="async"
             onError={[Function]}
@@ -1272,7 +1261,7 @@ exports[`pages > should IndexPage match snapshot 1`] = `
           <noscript>
             <img
               alt="Would you rather website screenshot"
-              className="image"
+              className="rounded-20px dark:brightness-80"
               data-nimg="intrinsic"
               decoding="async"
               loading="lazy"
@@ -1305,22 +1294,21 @@ exports[`pages > should IndexPage match snapshot 1`] = `
         </span>
       </figure>
       <h2
-        className="chakra-heading css-1n49pl7"
+        className="text-2xl"
       >
          
         Would you rather
       </h2>
       <p
-        className="chakra-text css-ax9bdp"
+        className="text-gray-500"
       >
         Would you rather game built with Reactjs , Redux and Redux-toolkit
       </p>
       <a
-        className="chakra-link css-1iyhnvn"
+        className="text-xl relative hover:decoration-none after:(content-empty absolute block w-28 h-2px bg-red-400)"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onTouchStart={[Function]}
-        postion="relative"
         style={{}}
       >
         View Project
@@ -1336,7 +1324,6 @@ exports[`pages > should IndexPage match snapshot 1`] = `
       }
     >
       <figure
-        className="css-cn7ha"
         style={{}}
       >
         <span
@@ -1393,8 +1380,8 @@ exports[`pages > should IndexPage match snapshot 1`] = `
             />
           </span>
           <img
-            alt="Eargasm website screenshot"
-            className="image"
+            alt="Page website screenshot"
+            className="rounded-20px dark:brightness-80"
             data-nimg="intrinsic"
             decoding="async"
             onError={[Function]}
@@ -1425,8 +1412,8 @@ exports[`pages > should IndexPage match snapshot 1`] = `
           />
           <noscript>
             <img
-              alt="Eargasm website screenshot"
-              className="image"
+              alt="Page website screenshot"
+              className="rounded-20px dark:brightness-80"
               data-nimg="intrinsic"
               decoding="async"
               loading="lazy"
@@ -1459,22 +1446,21 @@ exports[`pages > should IndexPage match snapshot 1`] = `
         </span>
       </figure>
       <h2
-        className="chakra-heading css-1n49pl7"
+        className="text-2xl"
       >
          
         Eargasm
       </h2>
       <p
-        className="chakra-text css-ax9bdp"
+        className="text-gray-500"
       >
         A responsive music website built with React Js, Bootstrap and JSON file as a database
       </p>
       <a
-        className="chakra-link css-1iyhnvn"
+        className="text-xl relative hover:decoration-none after:(content-empty absolute block w-28 h-2px bg-red-400)"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onTouchStart={[Function]}
-        postion="relative"
         style={{}}
       >
         View Project
@@ -1482,7 +1468,7 @@ exports[`pages > should IndexPage match snapshot 1`] = `
     </div>
   </div>,
   <div
-    className="css-1464yz8"
+    className="flex flex-col gap-5vh mx-1vw"
   >
     <h2
       className="text-4xl font-bold relative mt-10vh after:(content-empty absolute bottom-0 block h-2px scale-x-0 bg-red-400 transform duration-250 ease-in-out w-80% lg:w-34%) hover:after:scale-x-100"
@@ -1490,15 +1476,12 @@ exports[`pages > should IndexPage match snapshot 1`] = `
       Let's Build Something Together
     </h2>
     <p
-      className="chakra-text css-1g78lej"
+      className="text-xl pt"
     >
       Feel free to reach out if you're looking for a developer, have a question, or just want to connect
     </p>
     <a
-      className="chakra-link css-0"
       href="mailto: jankaram2020@gmail.com"
-      rel="noopener"
-      target="_blank"
     >
       jankaram2020@gmail.com
     </a>
@@ -1509,383 +1492,505 @@ exports[`pages > should IndexPage match snapshot 1`] = `
 exports[`pages > should ResumePage match snapshot 1`] = `
 [
   <div
-    className="css-s4pi8o"
+    className="flex items-center justify-center mt-[5vh] print:(m-0 hidden)"
   >
     <button
-      className="chakra-button css-1tisx4m"
+      className="text-2xl hover:underline inline-flex appearance-none items-center justify-center relative whitespace-nowrap align-baseline outline-none outline-offset-2 w-auto leading-normal rounded-md font-bold transition-all duration-100 h-auto min-w-10 text-blue-300 text-center p-0"
       onClick={[Function]}
-      type="button"
     >
       Download Resume
     </button>
   </div>,
   <div
-    className="css-gmuwbf"
+    className="flex items-center justify-center"
   >
     <div
-      className="chakra-stack css-17pts3u"
+      className="flex flex-col border-[5px] rounded-lg mt-[5vh] max-w-[750px] space-x-2 p-[20px] print:(m-0 p-0 min-w-full border-none bg-white color-black)"
     >
       <div
-        className="css-1sju5ng"
+        className="grid grid-cols-1 w-full"
       >
-        <h1
-          className="chakra-heading css-x8hn1q"
-        >
-          Jan Karam Aziz Ghaly
-        </h1>
         <h2
-          className="chakra-heading css-774qm8"
+          className="text-xl font-bold leading-[1.2] print:hidden"
         >
           Contact
         </h2>
+        <hr
+          className="print:hidden print:border print:border-gray-200 my-1"
+        />
         <div
-          className="css-w44bej"
+          className="ml-2.5 grid gap-[5px] items-center grid-cols-1 md:grid-cols-2 print:grid-cols-[1fr_auto_1fr] w-full print:ml-0"
         >
-          <div
-            className="css-gmuwbf"
+          <a
+            className="hidden print:block"
+            href="tel: +201277440641"
+            rel="noreferrer"
+            target="_blank"
           >
-            <a
-              className="chakra-link css-0"
-              href="mailto: jankaram2020@gmail.com"
-              rel="noopener"
-              target="_blank"
-            >
-              jankaram2020@gmail.com
-            </a>
-          </div>
-          <div
-            className="css-u3wwtx"
+            +201277440641
+          </a>
+          <h1
+            className="hidden print:block font-bold text-2xl text-center"
           >
-            <a
-              className="chakra-link css-0"
-              href="tel: +201277440641"
-              rel="noopener"
-              target="_blank"
-            >
-              (+2) 012 77 44 0641
-            </a>
-          </div>
-          <div
-            className="css-gmuwbf"
+            Jan Karam Aziz Ghaly
+          </h1>
+          <a
+            className="print:text-right"
+            href="https://www.jankaram.com/"
+            rel="noreferrer"
+            target="_blank"
           >
-            <a
-              className="chakra-link css-0"
-              href="https://www.linkedin.com/in/jankaram2020/"
-              rel="noopener"
-              target="_blank"
-            >
-              LinkedIn
-            </a>
-          </div>
-          <div
-            className="css-gmuwbf"
+            jankaram.com
+          </a>
+          <a
+            href="mailto: jankaram2020@gmail.com"
+            rel="noreferrer"
+            target="_blank"
           >
-            <a
-              className="chakra-link css-0"
-              href="https://github.com/JanKaram2020"
-              rel="noopener"
-              target="_blank"
-            >
-              Github
-            </a>
-          </div>
+            jankaram2020@gmail.com
+          </a>
+          <a
+            className="print:text-center"
+            href="https://www.linkedin.com/in/jankaram2020/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            linkedin.com/in/jankaram2020
+          </a>
+          <a
+            className="print:text-right"
+            href="https://github.com/JanKaram2020"
+            rel="noreferrer"
+            target="_blank"
+          >
+            github.com/jankaram2020
+          </a>
         </div>
       </div>
-      <hr
-        aria-orientation="horizontal"
-        className="chakra-divider css-iarav0"
-      />
       <div
-        className="css-1at3mro"
+        className="grid grid-cols-1 w-full"
       >
         <h2
-          className="chakra-heading css-1eu14j0"
+          className="text-xl font-bold leading-[1.2]"
           id="aboutMe"
         >
-          Professional Summary
+          Summary
         </h2>
-        <p
-          className="chakra-text css-1kuy7z7"
+        <hr
+          className="print:border print:border-gray-200 my-1"
+        />
+        <div
+          className="ml-2.5 "
         >
-          Meticulous full stack web developer trained in React js, Node js, and Express with over 3 years of experience and passion for creating web applications.
-        </p>
+          <p
+            className="text-sm"
+          >
+            Full-stack developer with 3+ years of experience in React.js, React Native, NextJs, Node.js, Express, and TypeScript. Passionate about building innovative and performant web and mobile applications.
+          </p>
+        </div>
       </div>
-      <hr
-        aria-orientation="horizontal"
-        className="chakra-divider css-iarav0"
-      />
       <div
-        className="css-1at3mro"
+        className="grid grid-cols-1 w-full"
       >
         <h2
-          className="chakra-heading css-1eu14j0"
+          className="text-xl font-bold leading-[1.2]"
         >
           Experience
         </h2>
+        <hr
+          className="print:border print:border-gray-200 my-1"
+        />
         <div
-          className="chakra-text css-0"
+          className="ml-2.5 flex flex-col gap-2.5"
         >
-          <div
-            className="chakra-text css-0"
-          >
+          <div>
             <h3
-              className="chakra-heading css-1ezsviu"
+              className="text-lg font-bold leading-[1.2]"
             >
               Frontend (Nextjs) & React Native developer
             </h3>
-            Shory, (Cairo, Egypt) Hybrid
-             
-            <p
-              className="chakra-text css-1w4rjd4"
+            <span
+              className="text-base leading-none"
             >
+              Shory, (Cairo, Egypt) Hybrid
+            </span>
+            <p
+              className="text-sm print:inline"
+            >
+               
               (Jan 2023 - present)
             </p>
             <ol
-              className="chakra-text css-1mbc7ya"
+              className="ml-8 text-sm"
             >
               <li>
-                Worked on Shory Motors app 
-                where  
-                I refactored code for better performance and readability
+                Added features using React, Redux, RTK and RTK query to our Nextjs apps and React Native apps
               </li>
               <li>
-                 Added features using React, Redux, RTK and RTK query
+                Introduced Unit, Component and Hooks testing with Jest and React-Testing-Library to our DLS, improving code quality and maintainability
+              </li>
+              <li>
+                Created the TAMM Backend For Frontend using Node and Express with 100% test coverage
               </li>
             </ol>
           </div>
-          <div
-            className="chakra-text css-0"
-          >
+          <div>
             <h3
-              className="chakra-heading css-1ezsviu"
+              className="text-lg font-bold leading-[1.2]"
             >
-              Frontend (Reactjs) & React Native developer
+              Fullstack web & React Native developer
             </h3>
-            Tech Hive, (Alexandria,Egypt) Remote
-             
-            <p
-              className="chakra-text css-1w4rjd4"
+            <span
+              className="text-base leading-none"
             >
+              Tech Hive, (Alexandria,Egypt) Remote
+            </span>
+            <p
+              className="text-sm print:inline"
+            >
+               
               (Feb 2022 - Jan 2023)
-               
             </p>
             <ol
-              className="chakra-text css-1mbc7ya"
+              className="ml-8 text-sm"
             >
               <li>
-                Implemented Tax calculator module in Zabbat web app (a fintech application) 
-                where  
-                each year has a different calculations than the previous year and each profit segment has a different calculations.
+                Developed a complex tax calculator module in Zabbat web app with different calculations based on year and profit segment.
               </li>
               <li>
-                Implemented uploading data to server via excel sheet by parsing data in excel using sheet js and transforming it to match Graphql schema and sending to it the server.
+                Built a data upload module for importing Excel data using SheetJs and transforming it for GraphQL consumption to make it easier to onboard new customers in Zabbat app.
               </li>
               <li>
-                Designed and Implemented the notification page module in Zabbat using Corejs/React.
+                Designed and Implemented the notification page module in Zabbat using Corejs/React with realtime notifications using Firebase and service workers.
               </li>
               <li>
-                Devloped Easypass application (A compound security system) with React Native, React Native Paper, Redux, RTK and RTK query.
+                Developed Easypass application (compound security) app with React Native, Paper, Redux, and RTK.
               </li>
             </ol>
           </div>
-          <div
-            className="chakra-text css-0"
-          >
+          <div>
             <h3
-              className="chakra-heading css-1vefw2e"
+              className="text-lg font-bold leading-[1.2]"
             >
-              Full stack web developer
-               
+              Fullstack web developer
             </h3>
-            Cool code marketing agency, Remote
-             
-            <p
-              className="chakra-text css-1w4rjd4"
+            <span
+              className="text-base leading-none"
             >
+              Cool code marketing agency, Remote
+            </span>
+            <p
+              className="text-sm print:inline"
+            >
+               
               (Aug 2021 - Nov 2021)
             </p>
             <ol
-              className="chakra-text css-1mbc7ya"
+              className="ml-8 text-sm"
             >
               <li>
-                Implemented an app interface for a customer-facing Medical application using react, typescript, and Material Ui
+                Implemented an app interface for a Medical application using Nextjs, React, Typescript, and MUI
               </li>
               <li>
                 Implemented API endpoints and relations between models using Node, Express, and Sequelize.
               </li>
             </ol>
           </div>
-          <div
-            className="chakra-text css-0"
-          >
+          <div>
             <h3
-              className="chakra-heading css-1vefw2e"
+              className="text-lg font-bold leading-[1.2] print:inline"
             >
-              Frontend Developer
+              Fullstack web developer
                
             </h3>
-            Freelance, Self Employed
-             
-            <p
-              className="chakra-text css-1ue903u"
+            <span
+              className="text-base leading-none"
             >
+              Freelance, Self Employed
+            </span>
+            <p
+              className="text-sm print:inline"
+            >
+               
               (Aug 2019 - Jul 2021)
             </p>
           </div>
-          <div
-            className="chakra-text css-0"
-          >
+          <div>
             <h3
-              className="chakra-heading css-1vefw2e"
+              className="text-lg font-bold leading-[1.2]"
             >
               Internship Trainee
-               
             </h3>
-            Information Technology Institute (ITI)
-             
-            <p
-              className="chakra-text css-1lfq1l3"
+            <span
+              className="text-base leading-none"
             >
+              Information Technology Institute (ITI)
+            </span>
+            <p
+              className="text-sm print:inline"
+            >
+               
               (Jul 2019 - Aug 2019)
-               
             </p>
             <p
-              className="chakra-text css-1kuy7z7"
+              className="text-sm"
             >
-              attended open source development (120 hours) including: HTML-CSS-Javascript-MySQL-Php-Laravel
+              Open source development track:
+              <span
+                className="block print:inline text-sm"
+              >
+                HTML - CSS - Javascript - MySQL - Php - Laravel
+              </span>
             </p>
           </div>
         </div>
       </div>
-      <hr
-        aria-orientation="horizontal"
-        className="chakra-divider css-iarav0"
-      />
       <div
-        className="css-1at3mro"
+        className="grid grid-cols-1 w-full"
       >
         <h2
-          className="chakra-heading css-1eu14j0"
-          id="projects"
-        >
-          Projects
-        </h2>
-        <div
-          className="chakra-text css-0"
-        >
-          <div
-            className="chakra-text css-0"
-          >
-            <h3
-              className="chakra-heading css-1vefw2e"
-            >
-              A responsive PWA multi language blog
-               
-            </h3>
-            <a
-              className="chakra-link css-1jv6842"
-              href="https://lilyannehany.netlify.app/"
-              rel="noopener"
-              target="_blank"
-            >
-              https://lilyannehany.netlify.app/
-            </a>
-          </div>
-          <p
-            className="chakra-text css-1kuy7z7"
-          >
-            Made it using React for UI development, Gatsby for SSG and Graphql for data fetching, i18next for internalization, Theme Ui for light & dark mode and styling, and Sanity CMS for content management.
-          </p>
-          <div
-            className="chakra-text css-0"
-          >
-            <h3
-              className="chakra-heading css-1vefw2e"
-            >
-              Would you rather game
-               
-            </h3>
-            <a
-              className="chakra-link css-1jv6842"
-              href="https://jan-would-you-rather.surge.sh"
-              rel="noopener"
-              target="_blank"
-            >
-              https://jan-would-you-rather.surge.sh
-            </a>
-          </div>
-          <p
-            className="chakra-text css-1kuy7z7"
-          >
-            Would you rather is a React and Redux powered web app built to mimic would you rather game? built this project with React, Redux, Redux-toolkit, React-strap, and Bootstrap for styling.
-          </p>
-        </div>
-      </div>
-      <hr
-        aria-orientation="horizontal"
-        className="chakra-divider css-iarav0"
-      />
-      <div
-        className="css-1at3mro"
-      >
-        <h2
-          className="chakra-heading css-1eu14j0"
+          className="text-xl font-bold leading-[1.2]"
         >
           Education
         </h2>
+        <hr
+          className="print:border print:border-gray-200 my-1"
+        />
         <div
-          className="chakra-text css-0"
+          className="ml-2.5 flex flex-col gap-2.5"
         >
-          <div
-            className="chakra-text css-0"
-          >
+          <div>
             <h3
-              className="chakra-heading css-1vefw2e"
+              className="text-lg print:inline"
             >
               BS, Computer Science and Statistics
                
             </h3>
-            <p
-              className="chakra-text css-1lfq1l3"
+            <div
+              className="text-sm print:inline"
             >
               Alexandria University. (2022)
-            </p>
+            </div>
           </div>
-          <div
-            className="chakra-text css-0"
-          >
+          <div>
             <h3
-              className="chakra-heading css-1vefw2e"
+              className="text-lg print:inline"
             >
               Web development specialization
                
             </h3>
             <p
-              className="chakra-text css-1lfq1l3"
+              className="print:inline text-sm"
             >
               University of Michigan via Coursera (2019)
             </p>
           </div>
         </div>
       </div>
-      <hr
-        aria-orientation="horizontal"
-        className="chakra-divider css-iarav0"
-      />
       <div
-        className="css-1at3mro"
+        className="grid grid-cols-1 w-full"
       >
         <h2
-          className="chakra-heading css-1eu14j0"
+          className="text-xl font-bold leading-[1.2]"
+          id="projects"
+        >
+          Projects
+        </h2>
+        <hr
+          className="print:border print:border-gray-200 my-1"
+        />
+        <div
+          className="ml-2.5 flex flex-col gap-2.5"
+        >
+          <div>
+            <div>
+              <h3
+                className="text-lg font-bold print:inline"
+              >
+                A responsive PWA multi language blog
+                 
+              </h3>
+              <a
+                className="block print-inline"
+                href="https://lilyannehany.netlify.app/"
+                rel="noopener"
+              >
+                https://lilyannehany.netlify.app/
+              </a>
+            </div>
+            <p
+              className="text-sm ml-1"
+            >
+              Stack: React, Gatsby, Graphql, i18next, ThemeUI, and Sanity CMS
+            </p>
+          </div>
+          <div>
+            <div>
+              <h3
+                className="text-lg font-bold print:inline"
+              >
+                Would you rather game
+                 
+              </h3>
+              <a
+                className="block print-inline"
+                href="https://jan-would-you-rather.surge.sh"
+                rel="noopener"
+              >
+                https://jan-would-you-rather.surge.sh
+              </a>
+            </div>
+            <p
+              className="text-sm ml-1"
+            >
+              Stack: React, Redux, Redux-toolkit, React-strap, and Bootstrap for styling
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="grid grid-cols-1 w-full"
+      >
+        <h2
+          className="text-xl font-bold leading-[1.2]"
           id="skills"
         >
           Skills
         </h2>
-        <ol
-          className="chakra-text css-1mbc7ya"
+        <hr
+          className="print:border print:border-gray-200 my-1"
+        />
+        <ul
+          className="ml-4 text-sm"
         >
-          Reactjs • Nextjs & Gatsbyjs • Typescript & Javascript • Graphql & REST api • Redux & Redux toolkit • HTML & CSS • Git& GitHub • CSS-in-Js & SASS • NodeJs - Express • Prototyping with Framer • Graphic design & Photo editing • Googling !
-        </ol>
+          <li
+            className="inline"
+          >
+             
+            Expo
+             
+            •
+          </li>
+          <li
+            className="inline"
+          >
+             
+            Redux Toolkit
+             
+            •
+          </li>
+          <li
+            className="inline"
+          >
+             
+            RTK query
+             
+            •
+          </li>
+          <li
+            className="inline"
+          >
+             
+            Tanstack query
+             
+            •
+          </li>
+          <li
+            className="inline"
+          >
+             
+            Git
+             
+            •
+          </li>
+          <li
+            className="inline"
+          >
+             
+            GitHub
+             
+            •
+          </li>
+          <li
+            className="inline"
+          >
+             
+            Tailwind CSS
+             
+            •
+          </li>
+          <li
+            className="inline"
+          >
+             
+            Chakra UI
+             
+            •
+          </li>
+          <li
+            className="inline"
+          >
+             
+            Core UI
+             
+            •
+          </li>
+          <li
+            className="inline"
+          >
+             
+            CSS-in-Js
+             
+            •
+          </li>
+          <li
+            className="inline"
+          >
+             
+            SCSS
+             
+            •
+          </li>
+          <li
+            className="inline"
+          >
+             
+            Prisma
+             
+            •
+          </li>
+          <li
+            className="inline"
+          >
+             
+            Vitest
+             
+            •
+          </li>
+          <li
+            className="inline"
+          >
+             
+            Prototyping with Framer
+             
+            •
+          </li>
+          <li
+            className="inline"
+          >
+             
+            Graphic design & Photo editing
+             
+            •
+          </li>
+          <li
+            className="inline"
+          >
+             
+            Googling !
+             
+          </li>
+        </ul>
       </div>
     </div>
   </div>,
@@ -1894,15 +1999,15 @@ exports[`pages > should ResumePage match snapshot 1`] = `
 
 exports[`pages > should TestTable match snapshot 1`] = `
 <div
-  className="chakra-stack css-hula3z"
+  className="flex flex-col mt-[30px] gap-[30px] items-start space-y-10"
 >
   <h1
-    className="chakra-heading css-1lnsct4"
+    className="text-3xl text-red-400"
   >
     Test table  generator
   </h1>
   <p
-    className="chakra-text css-1ezsviu"
+    className="text-lg"
   >
     Test 
     table  
@@ -1915,13 +2020,13 @@ exports[`pages > should TestTable match snapshot 1`] = `
     I built this project using Nextjs, Puppeteer and Mantine component library.
   </p>
   <div
-    className="css-12b704b"
+    className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-[30px] justify-start content-start"
   >
     <div
-      className="chakra-stack css-owjkmg"
+      className="flex flex-col"
     >
       <h2
-        className="chakra-heading css-1eihn08"
+        className="font-bold text-lg text-red-400"
       >
         Stack
       </h2>
@@ -1951,10 +2056,10 @@ exports[`pages > should TestTable match snapshot 1`] = `
       </ul>
     </div>
     <div
-      className="chakra-stack css-owjkmg"
+      className="flex flex-col"
     >
       <h2
-        className="chakra-heading css-1eihn08"
+        className="text-lg text-red-300 font-bold"
       >
         Code
       </h2>
@@ -1965,10 +2070,8 @@ exports[`pages > should TestTable match snapshot 1`] = `
           className="before:(content-['•'] text-red-400 mr-10px)"
         >
           <a
-            className="chakra-link css-1081t4c"
             href="https://github.com/JanKaram2020/test-table"
             rel="noopener"
-            target="_blank"
           >
             Repository
           </a>
@@ -1976,10 +2079,10 @@ exports[`pages > should TestTable match snapshot 1`] = `
       </ul>
     </div>
     <div
-      className="chakra-stack css-owjkmg"
+      className="flex flex-col"
     >
       <h2
-        className="chakra-heading css-1eihn08"
+        className="text-red-300 font-bold text-lg"
       >
         Live
       </h2>
@@ -1990,10 +2093,8 @@ exports[`pages > should TestTable match snapshot 1`] = `
           className="before:(content-['•'] text-red-400 mr-10px)"
         >
           <a
-            className="chakra-link css-1081t4c"
             href="https://test-table-jankaram2020.vercel.app/"
             rel="noopener"
-            target="_blank"
           >
             View site
           </a>
@@ -2002,7 +2103,7 @@ exports[`pages > should TestTable match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="css-1lads1q"
+    className="w-full"
     style={{}}
   >
     <span
@@ -2123,18 +2224,16 @@ exports[`pages > should TestTable match snapshot 1`] = `
     </span>
   </div>
   <div
-    className="css-kl37xa"
+    className="grid grid-cols-1 lg:grid-cols-2"
   >
-    <div
-      className="css-0"
-    >
+    <div>
       <h2
-        className="chakra-heading css-17dqea7"
+        className="text-2xl mb-[30px] text-red-300"
       >
         Why this stack?
       </h2>
       <p
-        className="chakra-text css-1ezsviu"
+        className="text-lg"
       >
         I choose Next-js and React because of the awesome DX and api routes.
         <br />
@@ -2148,13 +2247,12 @@ exports[`pages > should TestTable match snapshot 1`] = `
       </p>
     </div>
     <div
-      className="css-vwgfpk"
+      className="flex flex-row md:flex-col items-center content-center flex-wrap gap-[15px] rounded-4 hidden md:flex"
     >
       <a
-        className="chakra-link css-0"
+        className="block"
         href="https://nextjs.org/"
         rel="noopener"
-        target="_blank"
       >
         <span
           style={
@@ -2274,10 +2372,9 @@ exports[`pages > should TestTable match snapshot 1`] = `
         </span>
       </a>
       <a
-        className="chakra-link css-0"
+        className="block"
         href="https://pptr.dev/"
         rel="noopener"
-        target="_blank"
       >
         <span
           style={
@@ -2397,10 +2494,9 @@ exports[`pages > should TestTable match snapshot 1`] = `
         </span>
       </a>
       <a
-        className="chakra-link css-0"
+        className="block"
         href="https://mantine.dev/"
         rel="noopener"
-        target="_blank"
       >
         <span
           style={
@@ -2522,15 +2618,15 @@ exports[`pages > should TestTable match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="chakra-stack css-1qqukx9"
+    className="flex flex-col w-full"
   >
     <h2
-      className="chakra-heading css-hpox18"
+      className="text-2xl mb-[30px] text-red-300 text-center"
     >
       Lessons learned
     </h2>
     <div
-      className="chakra-text css-bvex1k"
+      className="text-lg max-w-[60ch]"
     >
       <ul
         className="list-none"
@@ -2558,28 +2654,28 @@ exports[`pages > should TestTable match snapshot 1`] = `
 
 exports[`pages > should WouldYouRather match snapshot 1`] = `
 <div
-  className="chakra-stack css-hula3z"
+  className="flex flex-col mt-[30px] gap-[30px] items-start space-y-10"
 >
   <h1
-    className="chakra-heading css-1lnsct4"
+    className="text-3xl text-red-400"
   >
     Would You Rather
   </h1>
   <p
-    className="chakra-text css-1ezsviu"
+    className="text-lg"
   >
     Would you rather is a React and Redux powered web app built to mimic would you rather game. 
     <br />
     I built this project from with React ,Redux, Redux-toolkit , React-strap and Bootstrap for styling.
   </p>
   <div
-    className="css-12b704b"
+    className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-[30px] justify-start content-start"
   >
     <div
-      className="chakra-stack css-owjkmg"
+      className="flex flex-col"
     >
       <h2
-        className="chakra-heading css-1eihn08"
+        className="font-bold text-lg text-red-400"
       >
         Stack
       </h2>
@@ -2609,10 +2705,10 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
       </ul>
     </div>
     <div
-      className="chakra-stack css-owjkmg"
+      className="flex flex-col"
     >
       <h2
-        className="chakra-heading css-1eihn08"
+        className="text-lg text-red-300 font-bold"
       >
         Code
       </h2>
@@ -2623,10 +2719,8 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
           className="before:(content-['•'] text-red-400 mr-10px)"
         >
           <a
-            className="chakra-link css-1081t4c"
             href="https://github.com/JanKaram2020/would-you-rather-game"
             rel="noopener"
-            target="_blank"
           >
             Repository
           </a>
@@ -2634,10 +2728,10 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
       </ul>
     </div>
     <div
-      className="chakra-stack css-owjkmg"
+      className="flex flex-col"
     >
       <h2
-        className="chakra-heading css-1eihn08"
+        className="text-red-300 font-bold text-lg"
       >
         Live
       </h2>
@@ -2648,10 +2742,8 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
           className="before:(content-['•'] text-red-400 mr-10px)"
         >
           <a
-            className="chakra-link css-1081t4c"
             href="https://jan-would-you-rather.surge.sh/"
             rel="noopener"
-            target="_blank"
           >
             View site
           </a>
@@ -2660,7 +2752,7 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="css-1lads1q"
+    className="w-full"
     style={{}}
   >
     <span
@@ -2781,18 +2873,16 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
     </span>
   </div>
   <div
-    className="css-kl37xa"
+    className="grid grid-cols-1 lg:grid-cols-2"
   >
-    <div
-      className="css-0"
-    >
+    <div>
       <h2
-        className="chakra-heading css-17dqea7"
+        className="text-2xl mb-[30px] text-red-300"
       >
         Why this stack?
       </h2>
       <p
-        className="chakra-text css-1ezsviu"
+        className="text-lg"
       >
         React was the ui framework for me because 
         my  
@@ -2806,13 +2896,12 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
       </p>
     </div>
     <div
-      className="css-vwgfpk"
+      className="flex flex-row md:flex-col items-center content-center flex-wrap gap-[15px] rounded-4 hidden md:flex"
     >
       <a
-        className="chakra-link css-0"
+        className="block"
         href="https://react.dev/"
         rel="noopener"
-        target="_blank"
       >
         <span
           style={
@@ -2932,10 +3021,9 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
         </span>
       </a>
       <a
-        className="chakra-link css-0"
+        className="block"
         href="https://redux.js.org/"
         rel="noopener"
-        target="_blank"
       >
         <span
           style={
@@ -3055,10 +3143,9 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
         </span>
       </a>
       <a
-        className="chakra-link css-0"
+        className="block"
         href="https://getbootstrap.com/docs/5.0/getting-started/introduction/"
         rel="noopener"
-        target="_blank"
       >
         <span
           style={
@@ -3180,15 +3267,15 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="chakra-stack css-1qqukx9"
+    className="flex flex-col w-full"
   >
     <h2
-      className="chakra-heading css-hpox18"
+      className="text-2xl mb-[30px] text-red-300 text-center"
     >
       Lessons learned
     </h2>
     <div
-      className="chakra-text css-bvex1k"
+      className="text-lg max-w-[60ch]"
     >
       <ul
         className="list-none"
@@ -3211,15 +3298,15 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
 
 exports[`pages > should WritingByLilyanne match snapshot 1`] = `
 <div
-  className="chakra-stack css-hula3z"
+  className="flex flex-col mt-[30px] gap-[30px] items-start space-y-10"
 >
   <h1
-    className="chakra-heading css-1lnsct4"
+    className="text-3xl text-red-400"
   >
     Writing by Lilyanne
   </h1>
   <p
-    className="chakra-text css-1ezsviu"
+    className="text-lg"
   >
     Writing by Lilyanne is a JAMstack powered blog built for 
     my  
@@ -3230,13 +3317,13 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
     The blog is available in Arabic , English and French and can be viewed in light and dark mode.
   </p>
   <div
-    className="css-12b704b"
+    className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-[30px] justify-start content-start"
   >
     <div
-      className="chakra-stack css-owjkmg"
+      className="flex flex-col"
     >
       <h2
-        className="chakra-heading css-1eihn08"
+        className="font-bold text-lg text-red-400"
       >
         Stack
       </h2>
@@ -3286,10 +3373,10 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
       </ul>
     </div>
     <div
-      className="chakra-stack css-owjkmg"
+      className="flex flex-col"
     >
       <h2
-        className="chakra-heading css-1eihn08"
+        className="text-lg text-red-300 font-bold"
       >
         Code
       </h2>
@@ -3301,10 +3388,8 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
         >
           Frontend: 
           <a
-            className="chakra-link css-1081t4c"
             href="https://github.com/JanKaram2020/Lilyanne-blog-gatsby"
             rel="noopener"
-            target="_blank"
           >
             Repository
           </a>
@@ -3314,10 +3399,8 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
         >
           CMS: 
           <a
-            className="chakra-link css-1081t4c"
             href="https://github.com/JanKaram2020/Lilyanne-blog-cms"
             rel="noopener"
-            target="_blank"
           >
             Repository
           </a>
@@ -3325,10 +3408,10 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
       </ul>
     </div>
     <div
-      className="chakra-stack css-owjkmg"
+      className="flex flex-col"
     >
       <h2
-        className="chakra-heading css-1eihn08"
+        className="text-red-300 font-bold text-lg"
       >
         Live
       </h2>
@@ -3339,10 +3422,8 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
           className="before:(content-['•'] text-red-400 mr-10px)"
         >
           <a
-            className="chakra-link css-1081t4c"
             href="https://lilyannehany.netlify.app/"
             rel="noopener"
-            target="_blank"
           >
             View site
           </a>
@@ -3351,7 +3432,7 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="css-1lads1q"
+    className="w-full"
     style={{}}
   >
     <span
@@ -3472,18 +3553,16 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
     </span>
   </div>
   <div
-    className="css-kl37xa"
+    className="grid grid-cols-1 lg:grid-cols-2"
   >
-    <div
-      className="css-0"
-    >
+    <div>
       <h2
-        className="chakra-heading css-17dqea7"
+        className="text-2xl mb-[30px] text-red-300"
       >
         Why this stack?
       </h2>
       <p
-        className="chakra-text css-1ezsviu"
+        className="text-lg"
       >
         I wanted the website to be multi-lang and I tried a lot of content management systems but the only one who supported internalization the way I wanted was Sanity CMS. also it's ease of use and customization made it the clear winner for me.
         <br />
@@ -3497,13 +3576,12 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
       </p>
     </div>
     <div
-      className="css-vwgfpk"
+      className="flex flex-row md:flex-col items-center content-center flex-wrap gap-[15px] rounded-4 hidden md:flex"
     >
       <a
-        className="chakra-link css-0"
+        className="block"
         href="https://www.sanity.io/"
         rel="noopener"
-        target="_blank"
       >
         <span
           style={
@@ -3623,10 +3701,9 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
         </span>
       </a>
       <a
-        className="chakra-link css-0"
+        className="block"
         href="https://www.gatsbyjs.com/"
         rel="noopener"
-        target="_blank"
       >
         <span
           style={
@@ -3746,10 +3823,9 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
         </span>
       </a>
       <a
-        className="chakra-link css-0"
+        className="block"
         href="https://theme-ui.com/"
         rel="noopener"
-        target="_blank"
       >
         <span
           style={
@@ -3869,10 +3945,9 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
         </span>
       </a>
       <a
-        className="chakra-link css-0"
+        className="block"
         href="https://www.framer.com/docs/"
         rel="noopener"
-        target="_blank"
       >
         <span
           style={
@@ -3994,15 +4069,15 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="chakra-stack css-1qqukx9"
+    className="flex flex-col w-full"
   >
     <h2
-      className="chakra-heading css-hpox18"
+      className="text-2xl mb-[30px] text-red-300 text-center"
     >
       Lessons learned
     </h2>
     <div
-      className="chakra-text css-bvex1k"
+      className="text-lg max-w-[60ch]"
     >
       I could spend all day describing the lessons that I learned while working on this project, but the most important ones involved my new found understanding of Gatsby,GraphQl, Git management, and API integration with Sanity Io and how to use google analytics. As my first large project using React, I learned a lot of lessons regarding code structure and organization.
     </div>

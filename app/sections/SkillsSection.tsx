@@ -1,5 +1,5 @@
-import ListItem from 'components/ListItemColor';
-import React from 'react';
+import ListItem from "components/ListItemColor";
+import React from "react";
 
 const SkillsSection = () => (
   <>

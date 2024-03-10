@@ -1,13 +1,11 @@
-import { motion } from 'framer-motion';
-import { Center } from '@chakra-ui/react';
-import Image from 'next/legacy/image';
-import React from 'react';
-import type { IImage } from './types';
+"use client";
 
-const MotionCenter = motion(Center);
-
+import { motion } from "framer-motion";
+import Image from "next/legacy/image";
+import React from "react";
+import type { IImage } from "./types";
 const ProjectImage = ({ image, title }: { image: IImage; title: string }) => (
-  <MotionCenter w="100%" layoutId={image}>
+  <motion.div className={"w-full"} layoutId={image}>
     <Image
       src={image}
       width={900}
@@ -15,6 +13,6 @@ const ProjectImage = ({ image, title }: { image: IImage; title: string }) => (
       objectFit="cover"
       alt={`screenshots of ${title} on different devices`}
     />
-  </MotionCenter>
+  </motion.div>
 );
 export default ProjectImage;

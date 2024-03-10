@@ -1,14 +1,14 @@
-import React from 'react';
-import ProjectPage from 'components/ProjectPage';
-import { MY, TABLE } from '../../lib/constants';
+import React from "react";
+import ProjectPage from "components/ProjectPage";
+import { MY, TABLE } from "../../../lib/constants";
 
-export default function TestTable() {
+export default function Page() {
   return (
     <ProjectPage
       Seo={{
         description: `Test ${TABLE}is a ${TABLE}generator website built with Nextjs and pupeteer by Jan Karam`,
         title: `Test ${TABLE}| Jan Karam`,
-        image: '/test-table.PNG',
+        image: "/test-table.PNG",
       }}
       title={`Test ${TABLE}generator`}
       subtitle={
@@ -19,14 +19,14 @@ export default function TestTable() {
           component library.
         </>
       }
-      stack={['Next js', 'React', 'Puppeteer', 'Mantine component library']}
+      stack={["Next js", "React", "Puppeteer", "Mantine component library"]}
       links={{
         code: [
           {
-            git: 'https://github.com/JanKaram2020/test-table',
+            git: "https://github.com/JanKaram2020/test-table",
           },
         ],
-        live: 'https://test-table-jankaram2020.vercel.app/',
+        live: "https://test-table-jankaram2020.vercel.app/",
       }}
       whyStack={
         <>
@@ -40,11 +40,11 @@ export default function TestTable() {
           amazing, beautiful and accessible components.
         </>
       }
-      stackInfo={['next', 'puppeteer', 'mantine']}
+      stackInfo={["next", "puppeteer", "mantine"]}
       lessons={[
-        'Solved a problem for me and other students and future students',
+        "Solved a problem for me and other students and future students",
         "Gained more experience with Puppeteer and Nextjs's api routes.",
-        'used mantine dev component library.',
+        "used mantine dev component library.",
       ]}
       projectImage="/test-table.PNG"
     />

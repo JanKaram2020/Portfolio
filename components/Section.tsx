@@ -1,8 +1,8 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode } from "react";
 
 const Section = ({
   children,
-  className = '',
+  className = "",
 }: {
   children: ReactNode;
   className?: string;

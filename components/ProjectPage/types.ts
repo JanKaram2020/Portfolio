@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
-import { TechLinks } from './Technology';
+import { ReactNode } from "react";
+import { TechLinks } from "./Technology";
 
 export type IImage = `/${string}.${string}`;
 export type StackLogo = keyof typeof TechLinks;
