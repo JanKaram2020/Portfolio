@@ -1,20 +1,17 @@
 // next.config.js
 /* eslint-disable */
-const UnoCSS = require('@unocss/webpack').default
+const UnoCSS = require("@unocss/webpack").default;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-    webpack: (config) => {
+  webpack: (config) => {
     config.cache = false;
     config.plugins.push(
-        UnoCSS(), // <--
-    )
-    return config
+      UnoCSS(), // <--
+    );
+    return config;
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

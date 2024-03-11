@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
-import TimeSinceHire from "../../../components/TimeSinceHire";
-import FullWidthColumn from "../../../components/FullWidthColumn";
-import Section from "../../../components/Section";
+import TimeSinceHire from "components/TimeSinceHire";
+import FullWidthColumn from "components/FullWidthColumn";
+import Section from "components/Section";
 
 type JobProps = {
   title: string;
@@ -26,7 +26,7 @@ const Job = ({ title, company, time, points }: JobProps) => {
       <span className="text-base leading-none">{company}</span>
       <p className="text-sm print:inline">&nbsp;{time}</p>
       {Array.isArray(points) ? (
-        <ol className="ml-8 text-sm">
+        <ol className="ml-8 text-sm list-disc">
           {points?.map((p) => <li key={p}>{p}</li>)}
         </ol>
       ) : (
@@ -42,7 +42,7 @@ const jobs: JobProps[] = [
     company: "Shory, (Cairo, Egypt) Hybrid",
     time: (
       <>
-        (Jan 2023 - present)
+        (Jan 2023 - present)&nbsp;
         <TimeSinceHire />
       </>
     ),

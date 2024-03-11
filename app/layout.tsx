@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Suspense } from "react";
+import "@unocss/reset/tailwind.css";
 import "theme/smoothscroll.css";
 import "globals.css";
-import "@unocss/reset/tailwind.css";
 import { Analytics } from "../components/Analytics";
 import Layout from "../components/Layout";
 import { GA_TRACKING_ID } from "../lib/constants";
@@ -36,7 +36,9 @@ export default async function RootLayout({
         />
       </head>
       <body className={theme?.value === "dark" ? "dark" : ""}>
-        <Analytics />
+        <Suspense fallback={<></>}>
+          <Analytics />
+        </Suspense>
         <Layout>{children}</Layout>
       </body>
     </html>

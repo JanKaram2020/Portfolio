@@ -15,7 +15,7 @@ export default function ResumePage() {
         <PrintButton />
       </div>
       <div className="flex items-center justify-center">
-        <div className="flex flex-col border-[5px] rounded-lg mt-[5vh] max-w-[750px] space-x-2 p-[20px] print:(m-0 p-0 min-w-full border-none bg-white color-black)">
+        <div className="flex flex-col border-[5px] rounded-lg mt-[5vh] max-w-[750px] space-y-1 p-[20px] print:(m-0 p-0 min-w-full border-none bg-white color-black)">
           <ContactSection />
           <SummarySection />
           <ExperienceSection />
