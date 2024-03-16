@@ -232,9 +232,7 @@ exports[`pages > should Eargasm match snapshot 1`] = `
       <p
         className="text-lg"
       >
-        i choose React because I wanted to get more familiar with and make a project on 
-        my  
-        own instead of following tutorials.
+        i choose React because I wanted to get more familiar with and make a project on my own instead of following tutorials.
         <br />
          Fuse.js was the search option of choice because I didn't want to build a full backend for this simple app with it's small database.
         <br />
@@ -1505,7 +1503,7 @@ exports[`pages > should ResumePage match snapshot 1`] = `
     className="flex items-center justify-center"
   >
     <div
-      className="flex flex-col border-[5px] rounded-lg mt-[5vh] max-w-[750px] space-x-2 p-[20px] print:(m-0 p-0 min-w-full border-none bg-white color-black)"
+      className="flex flex-col border-[5px] rounded-lg mt-[5vh] max-w-[750px] space-y-1 p-[20px] print:(m-0 p-0 min-w-full border-none bg-white color-black)"
     >
       <div
         className="grid grid-cols-1 w-full"
@@ -1618,10 +1616,10 @@ exports[`pages > should ResumePage match snapshot 1`] = `
               className="text-sm print:inline"
             >
                
-              (Jan 2023 - present)
+              (Jan 2023 - present) 
             </p>
             <ol
-              className="ml-8 text-sm"
+              className="ml-8 text-sm list-disc"
             >
               <li>
                 Added features using React, Redux, RTK and RTK query to our Nextjs apps and React Native apps
@@ -1652,7 +1650,7 @@ exports[`pages > should ResumePage match snapshot 1`] = `
               (Feb 2022 - Jan 2023)
             </p>
             <ol
-              className="ml-8 text-sm"
+              className="ml-8 text-sm list-disc"
             >
               <li>
                 Developed a complex tax calculator module in Zabbat web app with different calculations based on year and profit segment.
@@ -1686,7 +1684,7 @@ exports[`pages > should ResumePage match snapshot 1`] = `
               (Aug 2021 - Nov 2021)
             </p>
             <ol
-              className="ml-8 text-sm"
+              className="ml-8 text-sm list-disc"
             >
               <li>
                 Implemented an app interface for a Medical application using Nextjs, React, Typescript, and MUI
@@ -2004,18 +2002,12 @@ exports[`pages > should TestTable match snapshot 1`] = `
   <h1
     className="text-3xl text-red-400"
   >
-    Test table  generator
+    Test table generator
   </h1>
   <p
     className="text-lg"
   >
-    Test 
-    table  
-    generator is a 
-    table  
-    getter website that scrapes the faculty of science's test 
-    table  
-    page and displays the results.
+    Test table generator is a table getter website that scrapes the faculty of science's test table page and displays the results.
     <br />
     I built this project using Nextjs, Puppeteer and Mantine component library.
   </p>
@@ -2160,7 +2152,7 @@ exports[`pages > should TestTable match snapshot 1`] = `
         />
       </span>
       <img
-        alt="screenshots of Test table  generator on different devices"
+        alt="screenshots of Test table generator on different devices"
         data-nimg="intrinsic"
         decoding="async"
         onError={[Function]}
@@ -2191,7 +2183,7 @@ exports[`pages > should TestTable match snapshot 1`] = `
       />
       <noscript>
         <img
-          alt="screenshots of Test table  generator on different devices"
+          alt="screenshots of Test table generator on different devices"
           data-nimg="intrinsic"
           decoding="async"
           loading="lazy"
@@ -2237,11 +2229,7 @@ exports[`pages > should TestTable match snapshot 1`] = `
       >
         I choose Next-js and React because of the awesome DX and api routes.
         <br />
-        Puppeteer because in 
-        my  
-        opinion it's the best library to web scrape using javascript and is used here to scrape the test 
-        table  
-        page and get the user's courses by codes or names.
+        Puppeteer because in my opinion it's the best library to web scrape using javascript and is used here to scrape the test table page and get the user's courses by codes or names.
         <br />
         Mantine dev was the component library of choice because of it's amazing, beautiful and accessible components.
       </p>
@@ -2884,15 +2872,11 @@ exports[`pages > should WouldYouRather match snapshot 1`] = `
       <p
         className="text-lg"
       >
-        React was the ui framework for me because 
-        my  
-        familiarity with it and it's amazing react-redux package that binds both well.
+        React was the ui framework for me because my familiarity with it and it's amazing react-redux package that binds both well.
         <br />
          I chose Redux because I wanted a managed global store and predictable state
         <br />
-        Boostrap was the styling framework because I wanted to get 
-        my  
-        hands dirty with Redux without focusing too much on styling.
+        Boostrap was the styling framework because I wanted to get my hands dirty with Redux without focusing too much on styling.
       </p>
     </div>
     <div
@@ -3308,9 +3292,7 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
   <p
     className="text-lg"
   >
-    Writing by Lilyanne is a JAMstack powered blog built for 
-    my  
-    dear friend Lilyanne. 
+    Writing by Lilyanne is a JAMstack powered blog built for my dear friend Lilyanne. 
     <br />
     I built this project from scratch with Gatsby, React ,GraphQL, Theme-UI, Framer motion , react-intl and Sanity CMS.
     <br />
@@ -3568,9 +3550,7 @@ exports[`pages > should WritingByLilyanne match snapshot 1`] = `
         <br />
          After choosing the CMS choosing Gatsby was easy, because of it's plugin system , how it's easy to make a site multi-lang using it and it's amazing integration with Sanity CMS.
         <br />
-        Theme-UI was the styling choice because I wanted the blog to support dark mode without losing 
-        my  
-        sanity, it's amazing and supports multiple color modes by default. and framer motion because of it's amazing performance and ease of use.
+        Theme-UI was the styling choice because I wanted the blog to support dark mode without losing my sanity, it's amazing and supports multiple color modes by default. and framer motion because of it's amazing performance and ease of use.
         <br />
         Google analytics because I wanted to track engagement and to know which article attracts more people.
       </p>

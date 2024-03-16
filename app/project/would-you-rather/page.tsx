@@ -1,50 +1,20 @@
 import React from "react";
 import ProjectPage from "../../../components/ProjectPage";
-import { MY } from "../../../lib/constants";
+import Projects from "../Projects";
+import { Metadata } from "next";
 
+const title = "would-you-rather";
+
+const project = Projects[title];
+export const metadata: Metadata = {
+  title: project.Seo.title,
+  description: project.Seo.description,
+  openGraph: {
+    title: project.Seo.title,
+    images: "https://www.jankaram.com" + project.Seo.image,
+    url: "https://www.jankaram.com/project/" + title,
+  },
+};
 export default function Page() {
-  return (
-    <ProjectPage
-      Seo={{
-        description:
-          "Would you rather is a React and Redux powered web app built to mimic would you rather game made by Jan Karam.this project is built with React ,Redux, Redux-toolkit , React-strap and Bootstrap for styling.",
-        title: "Would You Rather | Jan Karam",
-        image: "/wouldYouRatherMockup.png",
-      }}
-      title="Would You Rather"
-      subtitle={
-        <>
-          Would you rather is a React and Redux powered web app built to mimic
-          would you rather game. <br />I built this project from with React
-          ,Redux, Redux-toolkit , React-strap and Bootstrap for styling.
-        </>
-      }
-      stack={["React", "Redux", "Bootstrap", "JSON file as a fake database"]}
-      links={{
-        code: [
-          {
-            git: "https://github.com/JanKaram2020/would-you-rather-game",
-          },
-        ],
-        live: "https://jan-would-you-rather.surge.sh/",
-      }}
-      whyStack={
-        <>
-          React was the ui framework for me because {MY}familiarity with it and
-          it's amazing react-redux package that binds both well.
-          <br /> I chose Redux because I wanted a managed global store and
-          predictable state
-          <br />
-          Boostrap was the styling framework because I wanted to get {MY}hands
-          dirty with Redux without focusing too much on styling.
-        </>
-      }
-      stackInfo={["react", "redux", "bootstrap"]}
-      lessons={[
-        `Never write vanilla Redux again :D , seriously after writing a few reduces and actions , I felt that it was complex, hard to manage and code was hard to keep track of. then I found Redux-toolkit package and I was amazed by the amount of boilerplate i removed from the code base and it was amazing.`,
-        "Gained more experience with React and it's ecosystem.",
-      ]}
-      projectImage="/wouldYouRatherMockup.png"
-    />
-  );
+  return <ProjectPage {...project} />;
 }

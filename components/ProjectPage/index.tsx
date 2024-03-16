@@ -1,5 +1,4 @@
 import ListItemColor from "components/ListItemColor";
-import SEO from "components/SEO";
 import { ReactNode } from "react";
 import Technology from "./Technology";
 import type { IProjectPage } from "./types";
@@ -9,7 +8,6 @@ const UnorderedList = ({ children }: { children: ReactNode }) => (
   <ul className="list-none">{children}</ul>
 );
 export default function ProjectPage({
-  Seo,
   title,
   subtitle,
   stack,
@@ -21,7 +19,6 @@ export default function ProjectPage({
 }: IProjectPage) {
   return (
     <>
-      <SEO {...Seo} />
       <div
         className={"flex flex-col mt-[30px] gap-[30px] items-start space-y-10"}
       >

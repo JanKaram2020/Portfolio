@@ -4,7 +4,7 @@ import { TechLinks } from "./Technology";
 export type IImage = `/${string}.${string}`;
 export type StackLogo = keyof typeof TechLinks;
 
-export interface IProjectPage {
+export type IProjectPage = Readonly<{
   Seo: {
     description: string;
     title: string;
@@ -21,4 +21,4 @@ export interface IProjectPage {
   stackInfo: StackLogo[];
   lessons: string[];
   projectImage: IImage;
-}
+}>;
