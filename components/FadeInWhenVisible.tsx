@@ -35,7 +35,6 @@ export default function FadeInWhenVisible(): React.ReactElement {
       onHoverEnd={async () => {
         await controls.start("normal");
       }}
-      className="hidden lg:block"
     >
       <figure className="drop-shadow-[0px_0px_12px_#F56565]">
         <Image

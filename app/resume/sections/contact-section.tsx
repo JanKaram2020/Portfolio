@@ -6,7 +6,7 @@ const ContactSection = () => (
   <FullWidthColumn>
     <h2 className="text-xl font-bold leading-[1.2] print:hidden">Contact</h2>
     <hr className="print:hidden print:border print:border-gray-200 my-1" />
-    <Section className="grid gap-[5px] items-center grid-cols-1 md:grid-cols-2 print:grid-cols-[1fr_auto_1fr] w-full print:ml-0">
+    <Section className="grid gap-[5px] items-center grid-cols-1 md:grid-cols-3 print:grid-cols-[1fr_auto_1fr] w-full print:ml-0">
       <a
         href="tel: +201277440641"
         target="_blank"
@@ -21,7 +21,7 @@ const ContactSection = () => (
       <a
         href="https://www.jankaram.com/"
         target="_blank"
-        className="print:text-right"
+        className="hidden print:(text-right block)"
         rel="noreferrer"
       >
         jankaram.com

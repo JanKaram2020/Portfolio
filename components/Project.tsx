@@ -6,10 +6,12 @@ import { motion, useAnimation, Variants } from "framer-motion";
 import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
+const MotionLink = motion(Link);
+
 const SlashMotion: Variants = {
   hover: { scale: 1.1 },
 };
-interface ProjectInterface {
+export interface ProjectInterface {
   name: string;
   image: string;
   alt: string;
@@ -64,14 +66,13 @@ const Project = ({
       {inProgress ? (
         <p className="text-xl"> In development...</p>
       ) : (
-        <Link href={`project/${page}`} legacyBehavior>
-          <motion.a
-            variants={SlashMotion}
-            className="text-xl relative hover:decoration-none after:(content-empty absolute block w-28 h-2px bg-red-400)"
-          >
-            View Project
-          </motion.a>
-        </Link>
+        <MotionLink
+          href={`project/${page}`}
+          variants={SlashMotion}
+          className="text-xl relative hover:decoration-none after:(content-empty absolute block w-28 h-2px bg-red-400)"
+        >
+          View Project
+        </MotionLink>
       )}
     </motion.div>
   );

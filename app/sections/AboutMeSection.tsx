@@ -6,7 +6,7 @@ export default function AboutMeSection(): React.ReactElement {
   return (
     <div
       className={
-        "grid grid-cols-1 lg:grid-cols-3 space-y-5 space-x-5 content-center items-center my-[6vw]"
+        "grid grid-cols-1 lg:grid-cols-3 content-center items-center my-[6vw]"
       }
       id="aboutMe"
     >
@@ -34,10 +34,12 @@ export default function AboutMeSection(): React.ReactElement {
         </a>
         &nbsp; (if you're a recruiter please don't visit it :D )
       </p>
-      <div className="min-w-[320px] flex items-center justify-center">
+      <div className="hidden lg:flex min-w-[320px] items-center justify-center">
         <FadeInWhenVisible />
       </div>
-      <p className={"min-w-[320px] max-w-[60ch] ml-2 mr-4 text-xl"}>
+      <p
+        className={"min-w-[320px] max-w-[60ch] ml-2 mr-4 text-xl mt-6 lg:mt-0"}
+      >
         then I took a web development course at {MY}college in {MY}second year
         and fell in love with it over again. since then, I’ve been honing {MY}
         skills and learning Javascript and front-end development. I recently

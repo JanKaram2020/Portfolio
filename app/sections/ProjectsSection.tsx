@@ -1,6 +1,36 @@
 import React from "react";
-import Project from "components/Project";
+import Project, { ProjectInterface } from "components/Project";
 
+const projects: ProjectInterface[] = [
+  {
+    image: "/lilyanneMockup.png",
+    text: "A responsive PWA multi language blog built with Gatsby Js, Theme UI and Sanity CMS",
+    page: "writing-by-lilyanne",
+    alt: "Lilyanne Hany's blog screenshot",
+    name: "Writing by Lilyanne",
+  },
+  {
+    image: "/test-table.PNG",
+    text: "A website to get your test table by course codes or names built with Nextjs, Nextjs's api routes, puppeteer and Mantine",
+    page: "test-table",
+    alt: "test table screenshot",
+    name: "Test table",
+  },
+  {
+    image: "/wouldYouRatherMockup.png",
+    text: "Would you rather game built with Reactjs , Redux and Redux-toolkit",
+    page: "would-you-rather",
+    alt: "Would you rather website screenshot",
+    name: "Would you rather",
+  },
+  {
+    image: "/eargasmMockup.png",
+    text: "A responsive music website built with React Js, Bootstrap and JSON file as a database",
+    page: "eargasm",
+    alt: "Page website screenshot",
+    name: "Eargasm",
+  },
+];
 const ProjectsSection = () => (
   <>
     <h2
@@ -15,35 +45,9 @@ const ProjectsSection = () => (
       <br /> Take a look at some of the projects I made.
     </p>
     <div className="grid grid-cols-1 lg:grid-cols-2 space-y-10 p-8 gap-[200px] justify-center content-center">
-      <Project
-        image="/lilyanneMockup.png"
-        text="A responsive PWA multi language blog built with Gatsby Js, Theme UI and Sanity CMS"
-        page="writing-by-lilyanne"
-        alt="Lilyanne Hany's blog screenshot"
-        name="Writing by Lilyanne"
-      />
-      <Project
-        image="/test-table.PNG"
-        text="A website to get your test table by course codes or names
-          built with Nextjs, Nextjs's api routes, puppeteer and Mantine"
-        page="test-table"
-        alt="test table screenshot"
-        name="Test table"
-      />
-      <Project
-        image="/wouldYouRatherMockup.png"
-        text="Would you rather game built with Reactjs , Redux and Redux-toolkit"
-        page="would-you-rather"
-        alt="Would you rather website screenshot"
-        name="Would you rather"
-      />
-      <Project
-        image="/eargasmMockup.png"
-        text="A responsive music website built with React Js, Bootstrap and JSON file as a database"
-        page="eargasm"
-        alt="Page website screenshot"
-        name="Eargasm"
-      />
+      {projects.map((p) => (
+        <Project key={p.name} {...p} />
+      ))}
     </div>
   </>
 );
