@@ -21,19 +21,22 @@ function getSnapshot() {
   return document.body.classList.contains("dark");
 }
 export const toggleMode = (v?: "light" | "dark") => {
-  if (v === "light") {
+  const isDark = document.body.classList.contains("dark");
+
+  if (v === "light" && isDark) {
     document.body.classList.remove("dark");
     Cookies.set("theme", "light");
     return;
   }
-  if (v === "dark") {
+  if (v === "dark" && !isDark) {
     document.body.classList.add("dark");
     Cookies.set("theme", "dark");
     return;
   }
+
   document.body.classList.toggle("dark");
-  const nextCookie = Cookies.get("theme") === "light" ? "dark" : "light";
-  Cookies.set("theme", nextCookie);
+  const newTheme = isDark ? "light" : "dark";
+  Cookies.set("theme", newTheme);
 };
 export const useDarkMode = () => {
   return useSyncExternalStore(subscribe, getSnapshot, () => false);
