@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/legacy/image";
-import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import { AiFillLinkedin, AiFillGithub, AiFillBook } from "react-icons/ai";
 import { HiDocumentText } from "react-icons/hi";
 import React from "react";
 import ColorModeToggle from "./ColorModeToggle";
@@ -12,7 +12,7 @@ const Navigation = (): React.ReactElement => (
   >
     <div className="flex items-center justify-center relative gap-2.5">
       <Link href="/" legacyBehavior>
-        <a className="transition-transform duration-250 ease-in-out after:(content-empty absolute top-80% block w-full h-2px scale-x-0 bg-red-400 hover:scale-x-100)">
+        <a className="transition-transform duration-250 ease-in-out after:(content-empty absolute top-80% left-[-40px] block w-full h-2px scale-x-0 bg-red-400 hover:scale-x-100)">
           <figure className="dark:(invert hover:invert) hover:(rotate-[-10deg]) active:(scale-80 rotate-[-15deg])">
             <span className="hidden"> website's home page</span>
             <Image
@@ -23,6 +23,14 @@ const Navigation = (): React.ReactElement => (
             />
           </figure>
         </a>
+      </Link>
+      <Link
+        title="linkedin profile"
+        href="/blog"
+        rel="noopener"
+        className="hover:(text-red-400 rotate-[5deg]) active:(rotate-[10deg] scale-80) transition duration-100 ease-in-out"
+      >
+        Blog
       </Link>
     </div>
     <div className="flex gap-2.5">
