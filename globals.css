@@ -5,6 +5,7 @@
 .relative{position:relative;}
 .after\:absolute::after{position:absolute;}
 .after\:bottom-0::after{bottom:0;}
+.after\:left-\[-40px\]::after{left:-40px;}
 .after\:top-80\%::after{top:80%;}
 .z-0{z-index:0;}
 .grid{display:grid;}
@@ -35,6 +36,7 @@
 .hidden{display:none;}
 .h-auto{height:auto;}
 .h-screen{height:100vh;}
+.max-w-\[100ch\]{max-width:100ch;}
 .max-w-\[60ch\]{max-width:60ch;}
 .max-w-\[750px\]{max-width:750px;}
 .max-w-800px{max-width:800px;}
@@ -133,6 +135,7 @@
 .leading-\[1\.2\]{line-height:1.2;}
 .leading-none{line-height:1;}
 .leading-normal{line-height:1.5;}
+.leading-relaxed{line-height:1.625;}
 .hover\:underline:hover{text-decoration-line:underline;}
 .hover\:decoration-none:hover{text-decoration:none;}
 .outline-offset-2{outline-offset:2px;}
