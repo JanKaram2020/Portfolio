@@ -7,3 +7,16 @@ body.dark {
   background: #1a202c;
   color: rgba(255, 255, 255, 0.92);
 }
+code,
+code span {
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
+}
+body.dark code[data-theme*=" "],
+body.dark code[data-theme*=" "] span {
+  color: var(--shiki-dark);
+  background-color: var(--shiki-dark-bg);
+}
+figure[data-rehype-pretty-code-figure] pre {
+  @apply p-3;
+}

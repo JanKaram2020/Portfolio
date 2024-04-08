@@ -2,8 +2,6 @@ import React, { Suspense } from "react";
 import "@unocss/reset/tailwind.css";
 import "theme/smoothscroll.css";
 import "globals.css";
-import "code-style.css";
-import "code-style-dark.css";
 import { Analytics } from "../components/Analytics";
 import Layout from "../components/Layout";
 import { GA_TRACKING_ID } from "../lib/constants";

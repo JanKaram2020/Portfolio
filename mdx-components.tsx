@@ -1,14 +1,20 @@
 import type { MDXComponents } from "mdx/types";
 import { Mermaid } from "mdx-mermaid/lib/Mermaid";
-import { ReactNode } from "react";
-const CodeBlock = ({ children }: { children?: ReactNode }) => {
-  return <div className={"block"}>{children}</div>;
-};
+import {
+  CodeBlock,
+  HeadingThree,
+  HeadingTwo,
+  PreBLock,
+} from "./components/MDX";
+
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     ...components,
     mermaid: Mermaid,
     Mermaid,
-    div: CodeBlock,
+    pre: PreBLock,
+    h2: HeadingTwo,
+    h3: HeadingThree,
+    code: CodeBlock,
   };
 }
