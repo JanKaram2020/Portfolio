@@ -17,6 +17,9 @@ body.dark code[data-theme*=" "] span {
   color: var(--shiki-dark);
   background-color: var(--shiki-dark-bg);
 }
-figure[data-rehype-pretty-code-figure] pre {
-  @apply p-3;
+.toc-level {
+  @apply ml-3;
+}
+figure {
+  @apply my-3;
 }

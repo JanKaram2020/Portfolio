@@ -6,6 +6,8 @@ import transformerAttributifyJsx from "@unocss/transformer-attributify-jsx";
 export default defineConfig({
   content: {
     filesystem: [
+      "./app/blog/**/*.{js,ts,jsx,tsx,mdx}",
+      "./app/blog/*.{js,ts,jsx,tsx,mdx}",
       "./app/**/*.{js,ts,jsx,tsx,mdx}",
       "./components/**/*.{js,ts,jsx,tsx,mdx}",
       "./sections/**/*.{js,ts,jsx,tsx,mdx}",

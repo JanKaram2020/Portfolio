@@ -1,3 +1,11 @@
+---
+title: 'Typesafe functions'
+publishedAt: '2024-04-08'
+summary: 'Explore the enduring debate between using spaces and tabs for code indentation, and why this choice matters more than you might think.'
+---
+<div style={{
+    maxWidth:"100ch"
+}}>
 Imagine a function signIn that takes two parameters and returns nothing, for example:
 
 ```ts
@@ -68,7 +76,7 @@ type SignInTypes = {
 
 This defines `SignInTypes` as key-value pairs where the key is the provider type and the value is the type of the provider's values.
 
-### 2\. Create a Generic Function Type:
+### 2\. Create a Generic Function Type.
 
 ```ts
 type SignInFunction = <T extends keyof SignInTypes>(
@@ -97,3 +105,4 @@ We can override the third-party package types, but that's a topic for another po
 ## Conclusion
 
 By leveraging generics and TypeScript’s powerful type system, we’ve successfully ensured the type safety of our `signIn` function without altering the function’s signature.
+</div>
