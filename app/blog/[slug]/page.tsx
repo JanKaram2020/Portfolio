@@ -16,7 +16,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
   }
   const { content } = post;
   return (
-    <section className={"flex flex-col md:flex-row-reverse gap-6"}>
+    <section className={"flex flex-col md:flex-row-reverse gap-6 max-w-full"}>
       {content}
     </section>
   );

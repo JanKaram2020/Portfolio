@@ -2,8 +2,6 @@
 
 import { useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
-import { useDarkMode } from "../lib/useDarkMode";
-
 import { GA_TRACKING_ID } from "../lib/constants";
 
 export function Analytics() {
@@ -18,7 +16,6 @@ export function Analytics() {
       });
     }
   };
-  useDarkMode();
 
   useEffect(() => {
     const url = `${pathname}?${searchParams}`;

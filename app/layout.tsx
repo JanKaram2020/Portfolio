@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import "@unocss/reset/tailwind.css";
-import "theme/smoothscroll.css";
+import "base.css";
 import "globals.css";
 import { Analytics } from "../components/Analytics";
 import Layout from "../components/Layout";
@@ -31,7 +31,6 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" href="" />
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}

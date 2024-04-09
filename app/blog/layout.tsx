@@ -1,7 +1,8 @@
 import React, { ReactNode } from "react";
 import { formatDate, getBlogPosts } from "./utils";
 import Link from "next/link";
-export async function BlogPosts() {
+
+async function BlogPosts() {
   let allBlogs = await getBlogPosts();
 
   return (
