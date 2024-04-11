@@ -17,9 +17,6 @@ body.dark code[data-theme*=" "] span {
   color: var(--shiki-dark);
   background-color: var(--shiki-dark-bg);
 }
-.toc-level {
-  @apply ml-3;
-}
 figure {
   @apply my-3;
 }

@@ -1,6 +1,5 @@
-import { getBlogPosts } from "./utils";
-
 import React from "react";
+import getBlogPosts from "./utils/get-blog-posts";
 
 const BlogPage = async () => {
   let allBlogs = await getBlogPosts();

@@ -14,7 +14,6 @@
     "test:update": "vitest run -u"
   },
   "dependencies": {
-    "@jsdevtools/rehype-toc": "^3.0.2",
     "@types/mdx": "^2.0.12",
     "@unocss/reset": "^0.58.5",
     "framer-motion": "4",

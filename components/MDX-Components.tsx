@@ -1,23 +1,29 @@
 import React from "react";
 import CopyButton from "./CopyButton";
+import { Mermaid } from "mdx-mermaid/lib/Mermaid";
 
-export const PreBLock = (props: any) => {
+const PreBLock = (props: any) => {
   const { children, raw, ...other } = props;
   const lang = props["data-language"] || "ts";
 
   return (
-    <pre {...other} className={"mb-3"}>
+    <pre
+      {...other}
+      className={
+        "mb-3 dark:bg-[var(--shiki-dark-bg)] bg-[var(--shiki-light-bg)]"
+      }
+    >
       <div className={"flex justify-end text-sm p-3 pb-0"}>
         <CopyButton text={raw} />
       </div>
       <div className={"p-3"}>{children}</div>
       <div className={"flex justify-end text-sm p-3"}>
-        <p className={"text-gray-100 text-sm"}>{lang}</p>
+        <p className={"text-sm text-gray-800 dark:text-gray-100"}>{lang}</p>
       </div>
     </pre>
   );
 };
-export const HeadingTwo = ({ className, ...props }: any) => {
+const HeadingTwo = ({ className, ...props }: any) => {
   return (
     <h2
       className={"text-2xl font-bold text-red-400 mt-3 " + className}
@@ -27,14 +33,14 @@ export const HeadingTwo = ({ className, ...props }: any) => {
     </h2>
   );
 };
-export const HeadingThree = ({ className, ...props }: any) => {
+const HeadingThree = ({ className, ...props }: any) => {
   return (
     <h2 className={"text-xl font-semibold py-2 " + className} {...props}>
       {props.children}
     </h2>
   );
 };
-export const CodeBlock = ({ className, ...props }: any) => {
+const CodeBlock = ({ className, ...props }: any) => {
   return (
     <code
       className={"max-w-full overflow-x-scroll " + (className ?? "")}
@@ -44,3 +50,13 @@ export const CodeBlock = ({ className, ...props }: any) => {
     </code>
   );
 };
+
+const MDXComponents = {
+  mermaid: Mermaid,
+  Mermaid,
+  pre: PreBLock,
+  h2: HeadingTwo,
+  h3: HeadingThree,
+  code: CodeBlock,
+};
+export default MDXComponents;

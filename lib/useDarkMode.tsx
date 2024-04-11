@@ -39,5 +39,5 @@ export const toggleMode = (v?: "light" | "dark") => {
   Cookies.set("theme", newTheme);
 };
 export const useDarkMode = () => {
-  return useSyncExternalStore(subscribe, getSnapshot, () => false);
+  return useSyncExternalStore(subscribe, getSnapshot, () => true);
 };
