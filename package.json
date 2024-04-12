@@ -5,7 +5,7 @@
   "scripts": {
     "dev:next": "next dev",
     "dev:uno": "unocss '*/**/*.tsx' '*/**/*.mdx' --out-file=globals.css --watch",
-    "dev": "concurrently 'yarn dev:next' 'yarn dev:uno'",
+    "dev": "concurrently 'pnpm dev:next' 'pnpm dev:uno'",
     "build": "unocss '*/**/*.tsx' --out-file=globals.css && next build",
     "start": "next start",
     "lint": "next lint",
@@ -14,6 +14,8 @@
     "test:update": "vitest run -u"
   },
   "dependencies": {
+    "@agentofuser/rehype-section": "^1.0.5",
+    "@hbsnow/rehype-sectionize": "^1.0.7",
     "@types/mdx": "^2.0.12",
     "@unocss/reset": "^0.58.5",
     "framer-motion": "4",

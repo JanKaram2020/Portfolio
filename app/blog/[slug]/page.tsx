@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import getBlogPosts from "app/blog/utils/get-blog-posts";
 import React from "react";
+import TableOfContent from "./TableOfContent";
+import { TableOfContentProvider } from "./TableOfContentContext";
 
 export async function generateStaticParams() {
   let posts = await getBlogPosts();
@@ -19,23 +21,10 @@ export default async function Blog({ params }: { params: { slug: string } }) {
       <div className={"lg:w-7/12 w-12/12 flex flex-col max-w-full"}>
         {post.content}
       </div>
-      <div className={"hidden lg:flex w-2/12 flex-col"}>
-        Table of content
-        <ol
-          className={
-            "sticky top-10 h-fit pl-3 border-l-1 text-gray-700 dark:text-gray-300"
-          }
-        >
-          {post.tableOfContent.map((c) => {
-            return (
-              <li className={c.level > 2 ? "pl-3" : ""} key={c.id}>
-                <a href={"#" + c.id} className={"hover:text-red-400"}>
-                  {c.text}
-                </a>
-              </li>
-            );
-          })}
-        </ol>
+      <div className={"hidden lg:flex w-3/12 flex-col"}>
+        <TableOfContentProvider tableOfContent={post.tableOfContent}>
+          <TableOfContent tableOfContent={post.tableOfContent} />
+        </TableOfContentProvider>
       </div>
     </>
   );
