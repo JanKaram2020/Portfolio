@@ -4,3 +4,6 @@ Allow: /
 
 # Host
 Host: https://www.jankaram.com/
+
+# Sitemaps
+Sitemap: https://www.jankaram.com/sitemap.xml

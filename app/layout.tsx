@@ -5,7 +5,6 @@ import "globals.css";
 import { Analytics } from "../components/Analytics";
 import Layout from "../components/Layout";
 import { GA_TRACKING_ID } from "../lib/constants";
-import { cookies } from "next/headers";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,14 +19,11 @@ export const metadata: Metadata = {
     url: "https://www.jankaram.com/",
   },
 };
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const cookieStore = cookies();
-  const theme = cookieStore.get("theme");
-
   return (
     <html lang="en">
       <head>
@@ -48,7 +44,7 @@ export default async function RootLayout({
           }}
         />
       </head>
-      <body className={theme?.value === "dark" ? "dark" : ""}>
+      <body className={"dark"}>
         <Suspense fallback={<></>}>
           <Analytics />
         </Suspense>
