@@ -19,16 +19,9 @@ const TableOfContent = ({
 }: {
   tableOfContent: TableOfContentItem[];
 }) => {
-  const [highlightTableOfContent, setHighlightTableOfContent] = useState<
-    (TableOfContentItem & {
-      distance: number;
-    })[]
-  >(
-    tableOfContent.map((c) => ({
-      ...c,
-      distance: 0,
-    })),
-  );
+  const [highlighted, setHighlighted] = useState<
+    TableOfContentItem["id"] | undefined
+  >(undefined);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,17 +36,19 @@ const TableOfContent = ({
             distance: distance,
           };
         });
-      setHighlightTableOfContent(tableOfContentWithDistances);
+
+      const topElement = tableOfContentWithDistances
+        .sort((a, b) => a.distance - b.distance)
+        .find((i) => i.distance > 0)?.id;
+
+      setHighlighted(topElement);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const topElement = highlightTableOfContent
-    .sort((a, b) => a.distance - b.distance)
-    .find((i) => i.distance > 0)?.id;
 
   return (
     <>
@@ -67,7 +62,7 @@ const TableOfContent = ({
           <li className={item.level > 2 ? "pl-3" : ""} key={item.id}>
             <a
               href={"#" + item.id}
-              data-top-element={topElement === item.id}
+              data-top-element={highlighted === item.id}
               className={
                 "hover:text-red-400 data-[top-element='true']:text-red-400"
               }
