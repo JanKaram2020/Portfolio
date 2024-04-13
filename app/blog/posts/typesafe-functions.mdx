@@ -75,7 +75,7 @@ This defines `SignInTypes` as key-value pairs where the key is the provider type
 
 ### 2\. Create a Generic Function Type.
 
-```ts
+```ts showLineNumbers{6}
 type SignInFunction = <T extends keyof SignInTypes>(
   type: T,
   values: SignInTypes[T]
@@ -89,16 +89,31 @@ This defines a generic function type SignInFunction. It takes two parameters:
 
 ### 3\. Use the type
 
-```ts
+```ts showLineNumbers{11}
 const signIn:SignInFunction = (type, values) => {
 // do something
 }
 ```
 
 Now it's working perfectly without changing the function signature.
+<br/>
+Here is the final code
+```ts
+type SignInTypes = {
+  credentials: { email: string; password: string };
+  phone: { mobile: number; otp: number };
+};
+
+type SignInFunction = <T extends keyof SignInTypes>(
+  type: T,
+  values: SignInTypes[T]
+) => void;
+
+const signIn:SignInFunction = (type, values) => {
+// do something
+}
+```
 We can override the third-party package types, but that's a topic for another post.
 
-
 ## Conclusion
-
 By leveraging generics and TypeScript’s powerful type system, we’ve successfully ensured the type safety of our `signIn` function without altering the function’s signature.

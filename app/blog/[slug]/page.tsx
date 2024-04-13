@@ -3,6 +3,7 @@ import getBlogPosts from "app/blog/utils/get-blog-posts";
 import React from "react";
 import TableOfContent from "./TableOfContent";
 import { frontMatterId } from "lib/constants";
+import DesktopOnlyComponent from "components/DesktopOnlyComponent";
 
 export async function generateStaticParams() {
   let posts = await getBlogPosts();
@@ -39,7 +40,9 @@ export default async function Blog({ params }: { params: { slug: string } }) {
         {post.content}
       </div>
       <div className={"hidden lg:flex w-3/12 flex-col"}>
-        <TableOfContent tableOfContent={post.tableOfContent} />
+        <DesktopOnlyComponent>
+          <TableOfContent tableOfContent={post.tableOfContent} />
+        </DesktopOnlyComponent>
       </div>
     </>
   );
