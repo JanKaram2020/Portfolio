@@ -16,11 +16,7 @@ export default async function getBlogPosts() {
     let slug = path.basename(file, path.extname(file));
 
     return {
-      frontmatter: frontmatter as {
-        title: string;
-        publishedAt: string;
-        timeToRead: string;
-      },
+      frontmatter,
       content,
       slug,
       tableOfContent,

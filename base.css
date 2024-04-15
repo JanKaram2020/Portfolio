@@ -24,15 +24,15 @@ body.dark code span {
   background-color: var(--shiki-dark-bg);
 }
 
-figure {
+article figure {
   @apply my-3;
 }
 
-code {
+article code {
   counter-reset: line;
 }
 
-code > [data-line]::before {
+article code > [data-line]::before {
   counter-increment: line;
   content: counter(line);
 
@@ -43,6 +43,6 @@ code > [data-line]::before {
   color: gray;
 }
 
-:not(div.p-3) > code {
+article :not(div.p-3) > code {
   @apply px-2;
 }

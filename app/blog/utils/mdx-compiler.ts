@@ -12,7 +12,11 @@ import { rawCodeExtractorOne, rawCodeExtractorTwo } from "./raw-code-extractor";
 const mdxCompiler = async (text: string) => {
   const timeToRead = readingDuration(text);
   const tableOfContent = getHeadings(text);
-  const { content, frontmatter } = await compileMDX({
+  const { content, frontmatter } = await compileMDX<{
+    title: string;
+    publishedAt: string;
+    summary: string;
+  }>({
     source: text,
     options: {
       mdxOptions: {
