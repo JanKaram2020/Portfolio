@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import CopyButton from "./CopyButton";
 import { Mermaid } from "mdx-mermaid/lib/Mermaid";
 
@@ -50,7 +50,22 @@ const CodeBlock = ({ className, ...props }: any) => {
     </code>
   );
 };
-
+const OrderedList = ({ className, ...props }: any) => {
+  return (
+    <ul className={"list-unordered " + (className ?? "")} {...props}>
+      {props.children}
+    </ul>
+  );
+};
+const ListItem = ({ className, ...props }: any) => (
+  <li
+    className={
+      "before:(content-['•'] text-red-400 mr-10px) " + (className ?? "")
+    }
+  >
+    {props.children}
+  </li>
+);
 const MDXComponents = {
   mermaid: Mermaid,
   Mermaid,
@@ -58,5 +73,7 @@ const MDXComponents = {
   h2: HeadingTwo,
   h3: HeadingThree,
   code: CodeBlock,
+  ol: OrderedList,
+  li: ListItem,
 };
 export default MDXComponents;

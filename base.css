@@ -24,25 +24,30 @@ body.dark code span {
   background-color: var(--shiki-dark-bg);
 }
 
-article figure {
+figure[data-rehype-pretty-code-figure] {
   @apply my-3;
 }
 
-article code {
+figure[data-rehype-pretty-code-figure] code[data-line-numbers] {
   counter-reset: line;
 }
 
-article code > [data-line]::before {
-  counter-increment: line;
-  content: counter(line);
-
+figure[data-rehype-pretty-code-figure] code > [data-line]::before {
+  content: "";
+  margin-right: 2rem;
   display: inline-block;
   width: 1rem;
-  margin-right: 2rem;
   text-align: right;
   color: gray;
 }
 
-article :not(div.p-3) > code {
+figure[data-rehype-pretty-code-figure]
+  code[data-line-numbers]
+  > [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+}
+
+figure[data-rehype-pretty-code-figure] :not(div.p-3) > code[data-line-numbers] {
   @apply px-2;
 }

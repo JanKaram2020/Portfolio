@@ -27,7 +27,10 @@ export default async function Blog({ params }: { params: { slug: string } }) {
   }
   return (
     <>
-      <article className={"lg:w-7/12 w-12/12 flex flex-col max-w-full"}>
+      <article
+        className={"lg:w-7/12 w-12/12 flex flex-col max-w-full"}
+        id={"blog"}
+      >
         <div id={frontMatterId} className={"mb-6"}>
           <h1 className={"text-4xl text-red-400 mb-2 capitalize"}>
             {post.frontmatter.title}

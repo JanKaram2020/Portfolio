@@ -23,5 +23,13 @@ export default async function getBlogPosts() {
     };
   });
 
-  return await Promise.all(promises);
+  const articles = await Promise.all(promises);
+  return articles.sort((a, b) => {
+    if (
+      new Date(a.frontmatter.publishedAt) > new Date(b.frontmatter.publishedAt)
+    ) {
+      return -1;
+    }
+    return 1;
+  });
 }

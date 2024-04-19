@@ -6,6 +6,7 @@ import { Analytics } from "../components/Analytics";
 import Layout from "../components/Layout";
 import { GA_TRACKING_ID } from "../lib/constants";
 import { Metadata } from "next";
+import { ViewTransitions } from "next-view-transitions";
 
 export const metadata: Metadata = {
   title: "Jan Karam",
@@ -25,15 +26,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+    <ViewTransitions>
+      <html lang="en">
+        <head>
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -41,15 +43,16 @@ export default function RootLayout({
               page_path: window.location.pathname,
             });
           `,
-          }}
-        />
-      </head>
-      <body className={"dark"}>
-        <Suspense fallback={<></>}>
-          <Analytics />
-        </Suspense>
-        <Layout>{children}</Layout>
-      </body>
-    </html>
+            }}
+          />
+        </head>
+        <body className={"dark"}>
+          <Suspense fallback={<></>}>
+            <Analytics />
+          </Suspense>
+          <Layout>{children}</Layout>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import getBlogPosts from "./utils/get-blog-posts";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { BsArrowRight } from "react-icons/bs";
 import formatDate from "./utils/format-date";
 
@@ -12,7 +12,7 @@ const BlogPage = async () => {
       <div className={"flex flex-col gap-6 mt-6"}>
         {allBlogs.map((b) => {
           return (
-            <article>
+            <article key={b.slug}>
               <Link href={`/blog/${b.slug}`} className={"hover:text-red-400"}>
                 <h3 className={"text-2xl font-bold capitalize"}>
                   {b.frontmatter.title}

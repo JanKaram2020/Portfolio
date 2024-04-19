@@ -12,7 +12,10 @@ export default function getHeadings(source: string) {
   // Transform the string '## Some text' into an object
   // with the shape '{ text: 'Some text', level: 2 }'
   return headingLines.map((raw) => {
-    const text = raw.replace(/^###*\s/, "").replace("\\", "");
+    const text = raw
+      .replace(/^###*\s/, "")
+      .replace("\\", "")
+      .replace(/\{:(.*?)\}/, "");
     // I only care about h2 and h3.
     // If I wanted more levels, I'd need to count the
     // number of #s.

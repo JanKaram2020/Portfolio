@@ -1248,13 +1248,6 @@
   dependencies:
     "@unocss/core" "0.58.9"
 
-"@unocss/transformer-attributify-jsx@^0.56.5":
-  version "0.56.5"
-  resolved "https://registry.yarnpkg.com/@unocss/transformer-attributify-jsx/-/transformer-attributify-jsx-0.56.5.tgz#404c39429d4dbb4a457950ceda832774628b61aa"
-  integrity sha512-SQW7t58s26qHYuD8v3covXtWoXlflw3FV5dlBCw/2iOfNo3OTVUWReAB5y0XQIT3828nHnPqeQq4IhmnuOENdw==
-  dependencies:
-    "@unocss/core" "0.56.5"
-
 "@unocss/transformer-compile-class@0.58.9":
   version "0.58.9"
   resolved "https://registry.yarnpkg.com/@unocss/transformer-compile-class/-/transformer-compile-class-0.58.9.tgz#5fe5ee3b813c56e932b9258c25c57067744bc829"
@@ -4245,6 +4238,11 @@ next-sitemap@^1.6.148:
   dependencies:
     "@corex/deepmerge" "^2.6.148"
     minimist "^1.2.5"
+
+next-view-transitions@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/next-view-transitions/-/next-view-transitions-0.1.1.tgz#3d672f503984dca8645bf155e400ea5cf8ebc3ea"
+  integrity sha512-1rpXhWF8j0VJwJG52c8WeeAYpr1K7o3ub82lahbSoUwAry54TEm1d3mqBbSLLIMl85c3OewkZjxncTHwYFk+IA==
 
 next@^14.1.3:
   version "14.2.0"

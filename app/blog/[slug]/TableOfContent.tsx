@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { frontMatterId } from "lib/constants";
+import Link from "next/link";
 
 type TableOfContentItem = {
   text: string;
@@ -60,7 +61,7 @@ const TableOfContent = ({
       >
         {tableOfContent.map((item) => (
           <li className={item.level > 2 ? "pl-3" : ""} key={item.id}>
-            <a
+            <Link
               href={"#" + item.id}
               data-top-element={highlighted === item.id}
               className={
@@ -68,7 +69,7 @@ const TableOfContent = ({
               }
             >
               {item.text}
-            </a>
+            </Link>
           </li>
         ))}
       </ol>
