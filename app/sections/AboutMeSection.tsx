@@ -1,6 +1,5 @@
 import React from "react";
 import FadeInWhenVisible from "components/FadeInWhenVisible";
-import { MY, WHERE } from "../../lib/constants";
 
 export default function AboutMeSection(): React.ReactElement {
   return (
@@ -14,7 +13,7 @@ export default function AboutMeSection(): React.ReactElement {
         I'm a passionate introvert who loves building web apps and sites. <br />
         My first experience with web development was when I was 12, but it
         didn't last long: <br />I was always fascinated by websites and wanted
-        to make {MY}own so I searched the internet on how to make websites and
+        to make my own so I searched the internet on how to make websites and
         found&nbsp;
         <a
           className={"text-red-400"}
@@ -23,7 +22,7 @@ export default function AboutMeSection(): React.ReactElement {
         >
           ahlamontada.com
         </a>
-        &nbsp;then I made {MY}first website after this I forgot about it.
+        &nbsp;then I made my first website after this I forgot about it.
         <br /> Years later I searched about the website and found it at&nbsp;
         <a
           className={"text-red-400"}
@@ -40,13 +39,13 @@ export default function AboutMeSection(): React.ReactElement {
       <p
         className={"min-w-[320px] max-w-[60ch] ml-2 mr-4 text-xl mt-6 lg:mt-0"}
       >
-        then I took a web development course at {MY}college in {MY}second year
-        and fell in love with it over again. since then, I’ve been honing {MY}
-        skills and learning Javascript and front-end development. I recently
-        took web development specialization from the University of Michigan and
-        took the open-source track at ITI summer internship.
+        then I took a web development course at my college in my second year and
+        fell in love with it over again. since then, I’ve been honing my skills
+        and learning Javascript and front-end development. I recently took web
+        development specialization from the University of Michigan and took the
+        open-source track at ITI summer internship.
         <br />
-        I’m seeking a full-time role {WHERE}I can help a company achieve its
+        I’m seeking a full-time role where I can help a company achieve its
         goals.
       </p>
     </div>

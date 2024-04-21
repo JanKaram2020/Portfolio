@@ -1,0 +1,53 @@
+html,
+body {
+  scroll-behavior: smooth;
+  --shiki-light: #4c4f69;
+  --shiki-dark: #d6deeb;
+  --shiki-light-bg: #eff1f5;
+  --shiki-dark-bg: #011627;
+}
+
+body.dark {
+  background: #1a202c;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+code,
+code span {
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
+}
+
+body.dark code,
+body.dark code span {
+  color: var(--shiki-dark);
+  background-color: var(--shiki-dark-bg);
+}
+
+figure[data-rehype-pretty-code-figure] {
+  @apply my-3;
+}
+
+figure[data-rehype-pretty-code-figure] code[data-line-numbers] {
+  counter-reset: line;
+}
+
+figure[data-rehype-pretty-code-figure] code > [data-line]::before {
+  content: "";
+  margin-right: 2rem;
+  display: inline-block;
+  width: 1rem;
+  text-align: right;
+  color: gray;
+}
+
+figure[data-rehype-pretty-code-figure]
+  code[data-line-numbers]
+  > [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+}
+
+figure[data-rehype-pretty-code-figure] :not(div.p-3) > code[data-line-numbers] {
+  @apply px-2;
+}

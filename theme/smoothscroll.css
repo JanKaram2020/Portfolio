@@ -1,9 +1,0 @@
-html,
-body {
-  scroll-behavior: smooth;
-}
-
-body.dark {
-  background: #1a202c;
-  color: rgba(255, 255, 255, 0.92);
-}
