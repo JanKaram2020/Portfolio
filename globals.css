@@ -136,9 +136,8 @@
 .space-x-10>:not([hidden])~:not([hidden]){--un-space-x-reverse:0;margin-left:calc(2.5rem * calc(1 - var(--un-space-x-reverse)));margin-right:calc(2.5rem * var(--un-space-x-reverse));}
 .space-y-1>:not([hidden])~:not([hidden]){--un-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--un-space-y-reverse)));margin-bottom:calc(0.25rem * var(--un-space-y-reverse));}
 .space-y-10>:not([hidden])~:not([hidden]){--un-space-y-reverse:0;margin-top:calc(2.5rem * calc(1 - var(--un-space-y-reverse)));margin-bottom:calc(2.5rem * var(--un-space-y-reverse));}
-.overflow-x-scroll{overflow-x:scroll;}
+.overflow-x-auto{overflow-x:auto;}
 .whitespace-nowrap{white-space:nowrap;}
-.b{border-width:1px;}
 .border-\[5px\]{border-width:5px;}
 .border-b-\[0\.2rem\]{border-bottom-width:0.2rem;}
 .border-l-1{border-left-width:1px;}

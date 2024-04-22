@@ -1,4 +1,3 @@
-import React, { ReactNode } from "react";
 import CopyButton from "./CopyButton";
 import { Mermaid } from "mdx-mermaid/lib/Mermaid";
 
@@ -8,10 +7,10 @@ const PreBLock = (props: any) => {
 
   return (
     <pre
-      {...other}
       className={
-        "mb-3 dark:bg-[var(--shiki-dark-bg)] bg-[var(--shiki-light-bg)]"
+        "mb-3 dark:bg-[var(--shiki-dark-bg)] bg-[var(--shiki-light-bg)] "
       }
+      {...other}
     >
       <div className={"flex justify-end text-sm p-3 pb-0"}>
         <CopyButton text={raw} />
@@ -43,7 +42,7 @@ const HeadingThree = ({ className, ...props }: any) => {
 const CodeBlock = ({ className, ...props }: any) => {
   return (
     <code
-      className={"max-w-full overflow-x-scroll " + (className ?? "")}
+      className={"max-w-full overflow-x-auto " + (className ?? "")}
       {...props}
     >
       {props.children}
@@ -57,13 +56,14 @@ const OrderedList = ({ className, ...props }: any) => {
     </ul>
   );
 };
-const ListItem = ({ className, ...props }: any) => (
+const ListItem = ({ className, children, ...props }: any) => (
   <li
     className={
       "before:(content-['•'] text-red-400 mr-10px) " + (className ?? "")
     }
+    {...props}
   >
-    {props.children}
+    {children}
   </li>
 );
 const MDXComponents = {
