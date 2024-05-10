@@ -1,15 +1,26 @@
 import CopyButton from "./CopyButton";
 import { Mermaid } from "mdx-mermaid/lib/Mermaid";
+import { mergeClasses } from "lib/mergeClasses";
+import { DetailedHTMLProps, HTMLAttributes, ReactNode } from "react";
+import { type MDXComponents } from "mdx/types";
 
-const PreBLock = (props: any) => {
-  const { children, raw, ...other } = props;
+type Element<T> = DetailedHTMLProps<HTMLAttributes<T>, T>;
+
+const PreBLock = (
+  props: Element<HTMLPreElement> & {
+    "data-language": string;
+    raw: string;
+  },
+) => {
+  const { children, raw, className, ...other } = props;
   const lang = props["data-language"] || "ts";
 
   return (
     <pre
-      className={
-        "mb-3 dark:bg-[var(--shiki-dark-bg)] bg-[var(--shiki-light-bg)] "
-      }
+      className={mergeClasses(
+        "mb-3 dark:bg-[var(--shiki-dark-bg)] bg-[var(--shiki-light-bg)]",
+        className,
+      )}
       {...other}
     >
       <div className={"flex justify-end text-sm p-3 pb-0"}>
@@ -22,58 +33,88 @@ const PreBLock = (props: any) => {
     </pre>
   );
 };
-const HeadingTwo = ({ className, ...props }: any) => {
+
+const HeadingTwo = ({
+  className,
+  children,
+  ...props
+}: Element<HTMLHeadingElement>) => {
   return (
     <h2
-      className={"text-2xl font-bold text-red-400 mt-3 " + className}
+      className={mergeClasses(
+        "text-2xl font-bold text-red-400 mt-3",
+        className,
+      )}
       {...props}
     >
-      {props.children}
+      {children}
     </h2>
   );
 };
-const HeadingThree = ({ className, ...props }: any) => {
+
+const HeadingThree = ({
+  className,
+  children,
+  ...props
+}: Element<HTMLHeadingElement>) => {
   return (
-    <h2 className={"text-xl font-semibold py-2 " + className} {...props}>
-      {props.children}
-    </h2>
+    <h3
+      className={mergeClasses("text-xl font-semibold py-2", className)}
+      {...props}
+    >
+      {children}
+    </h3>
   );
 };
-const CodeBlock = ({ className, ...props }: any) => {
+
+const CodeBlock = ({ className, children, ...props }: Element<HTMLElement>) => {
   return (
     <code
-      className={"max-w-full overflow-x-auto " + (className ?? "")}
+      className={mergeClasses("max-w-full overflow-x-auto", className)}
       {...props}
     >
-      {props.children}
+      {children}
     </code>
   );
 };
-const OrderedList = ({ className, ...props }: any) => {
+
+const OrderedList = ({
+  className,
+  children,
+  ...props
+}: Element<HTMLUListElement>) => {
   return (
-    <ul className={"list-unordered " + (className ?? "")} {...props}>
-      {props.children}
+    <ul className={mergeClasses("list-unordered", className)} {...props}>
+      {children}
     </ul>
   );
 };
-const ListItem = ({ className, children, ...props }: any) => (
+
+const ListItem = ({
+  className,
+  children,
+  ...props
+}: Element<HTMLLIElement>) => (
   <li
-    className={
-      "before:(content-['•'] text-red-400 mr-10px) " + (className ?? "")
-    }
+    className={mergeClasses(
+      "before:(content-['•'] text-red-400 mr-10px)",
+      className,
+    )}
     {...props}
   >
     {children}
   </li>
 );
-const MDXComponents = {
+
+const MDXComponents: MDXComponents = {
   mermaid: Mermaid,
   Mermaid,
-  pre: PreBLock,
+  pre: PreBLock as Required<MDXComponents>["pre"],
   h2: HeadingTwo,
   h3: HeadingThree,
   code: CodeBlock,
   ol: OrderedList,
   li: ListItem,
 };
+
 export default MDXComponents;

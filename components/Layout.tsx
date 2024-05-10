@@ -10,7 +10,10 @@ function Layout({
   return (
     <>
       <Navigation />
-      <main className="z-0 mx-20px mb-50px min-h-75vh print:m-0" id={"main"}>
+      <main
+        className="z-0 mx-20px mb-50px min-h-75vh print:m-0 container mx-auto px-4 md:px-8"
+        id={"main"}
+      >
         {children}
       </main>
       <Footer />
