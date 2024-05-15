@@ -2,6 +2,25 @@ import path from "path";
 import fs from "fs";
 import mdxCompiler from "./mdx-compiler";
 
+const sortArticles = <
+  T extends {
+    frontmatter: {
+      publishedAt: string;
+    };
+  },
+>(
+  articles: T[],
+) => {
+  return articles.sort((a, b) => {
+    if (
+      new Date(a.frontmatter.publishedAt) > new Date(b.frontmatter.publishedAt)
+    ) {
+      return -1;
+    }
+    return 1;
+  });
+};
+
 export default async function getBlogPosts(n?: number) {
   const dir = path.join(process.cwd(), "app", "blog", "posts");
 
@@ -23,26 +42,11 @@ export default async function getBlogPosts(n?: number) {
     };
   });
 
+  const articles = await Promise.all(promises);
+
   if (n) {
-    const articles = await Promise.all(promises.slice(0, n));
-    return articles.sort((a, b) => {
-      if (
-        new Date(a.frontmatter.publishedAt) >
-        new Date(b.frontmatter.publishedAt)
-      ) {
-        return -1;
-      }
-      return 1;
-    });
+    return sortArticles(articles).slice(0, n);
   }
 
-  const articles = await Promise.all(promises);
-  return articles.sort((a, b) => {
-    if (
-      new Date(a.frontmatter.publishedAt) > new Date(b.frontmatter.publishedAt)
-    ) {
-      return -1;
-    }
-    return 1;
-  });
+  return sortArticles(articles);
 }

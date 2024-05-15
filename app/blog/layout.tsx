@@ -30,7 +30,6 @@ const Layout = async ({ children }: { children: ReactNode }) => {
     >
       <div className={"hidden lg:flex w-2/12 flex-col"}>
         <h3 className={"text-2xl mb-5"}>All Blogs</h3>
-        {/* @ts-ignore */}
         <BlogPosts />
       </div>
       {children}
