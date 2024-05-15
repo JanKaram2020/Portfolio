@@ -10,7 +10,7 @@ const HelloSection = () => (
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.8 }}
-      className="text-(red-400 5xl)"
+      className="text-red-400 text-5xl"
     >
       Hello, I'm
     </motion.h1>
