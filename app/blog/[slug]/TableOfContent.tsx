@@ -14,49 +14,29 @@ const frontMatter: TableOfContentItem = {
   text: "",
   level: 0,
 };
-
 const TableOfContent = ({
   tableOfContent,
 }: {
   tableOfContent: TableOfContentItem[];
 }) => {
-  const [highlighted, setHighlighted] = useState<
-    TableOfContentItem["id"] | undefined
-  >(undefined);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const tableOfContentWithDistances = tableOfContent
-        .concat(frontMatter)
-        .map((c) => {
-          const distance =
-            document.getElementById(c.id)?.getBoundingClientRect().top ?? 0;
-
-          return {
-            ...c,
-            distance: distance,
-          };
-        });
-
-      const topElement = tableOfContentWithDistances
-        .sort((a, b) => a.distance - b.distance)
-        .find((i) => i.distance > 0)?.id;
-
-      setHighlighted(topElement);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
+  const [highlighted, scrollPercentage] = useTableScroll(tableOfContent);
   return (
     <>
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+      #table-of-content:after {
+      transform-origin: 0%;
+      height: ${scrollPercentage}%
+      }
+    `,
+        }}
+      ></style>
       Table of content
       <ol
+        id={"table-of-content"}
         className={
-          "sticky top-5 h-fit pl-3 border-l-1 text-gray-700 dark:text-gray-300"
+          "sticky relative top-5 h-fit pl-3 before:(content-[''] rounded block absolute top-0 h-full left-0 w-0.5 h-full bg-gray-700 dark:bg-gray-300) after:(content-[''] rounded block absolute top-0 left-0 w-0.5 h-full bg-red) text-gray-700 dark:text-gray-300"
         }
       >
         {tableOfContent.map((item) => (
@@ -76,4 +56,52 @@ const TableOfContent = ({
     </>
   );
 };
+
+function useTableScroll(tableOfContent: TableOfContentItem[]) {
+  const [scrollPercentage, setScrollPercentage] = useState(0);
+  const [highlighted, setHighlighted] = useState<
+    TableOfContentItem["id"] | undefined
+  >(undefined);
+
+  useEffect(() => {
+    const highlightSetter = () => {
+      const tableOfContentWithDistances = tableOfContent
+        .concat(frontMatter)
+        .map((c) => {
+          const distance =
+            document.getElementById(c.id)?.getBoundingClientRect().top ?? 0;
+
+          return {
+            ...c,
+            distance: distance,
+          };
+        });
+
+      const topElement = tableOfContentWithDistances
+        .sort((a, b) => a.distance - b.distance)
+        .find((i) => i.distance > 0)?.id;
+
+      setHighlighted(topElement);
+    };
+    const currentScrollPercentage = () => {
+      setScrollPercentage(
+        ((document.documentElement.scrollTop + document.body.scrollTop) /
+          (document.documentElement.scrollHeight -
+            document.documentElement.clientHeight)) *
+          100,
+      );
+    };
+    const handleScroll = () => {
+      highlightSetter();
+      currentScrollPercentage();
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return [highlighted, scrollPercentage] as const;
+}
+
 export default TableOfContent;

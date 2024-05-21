@@ -28,22 +28,13 @@ export default async function NewFooter() {
             </Link>
           </div>
           <nav className="flex flex-col gap-2">
-            <Link
-              className="hover:text-gray-600 dark:hover:text-gray-400"
-              href="/blog"
-            >
+            <Link className="hover:text-red-400" href="/blog">
               Blog
             </Link>
-            <Link
-              className="hover:text-gray-600 dark:hover:text-gray-400"
-              href="/#projects"
-            >
+            <Link className="hover:text-red-400" href="/#projects">
               Portfolio
             </Link>
-            <Link
-              className="hover:text-gray-600 dark:hover:text-gray-400"
-              href="/#aboutMe"
-            >
+            <Link className="hover:text-red-400" href="/#aboutMe">
               About
             </Link>
           </nav>
@@ -52,14 +43,14 @@ export default async function NewFooter() {
           <h4 className="text-lg font-semibold">Social</h4>
           <div className="flex flex-col items-start gap-2">
             <a
-              className="flex items-center text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+              className="flex items-center hover:text-red-400"
               href="https://github.com/JanKaram2020"
             >
               <AiFillGithub className="h-6 w-6 mr-2" />
               <span>GitHub</span>
             </a>
             <a
-              className="flex items-center text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+              className="flex items-center hover:text-red-400"
               href="https://www.linkedin.com/in/jankaram2020/"
             >
               <AiFillLinkedin className="h-6 w-6 mr-2" />
@@ -67,7 +58,7 @@ export default async function NewFooter() {
             </a>
             <a
               href="mailto: jankaram2020@gmail.com"
-              className="flex items-center text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+              className="flex items-center hover:text-red-400"
             >
               <MdEmail className="h-6 w-6 mr-2" />
               <span>Jankaram2020@gmail.com</span>
@@ -79,8 +70,9 @@ export default async function NewFooter() {
           <div className="space-y-2">
             {blogs.map((blog, index) => (
               <Link
-                className="hover:text-gray-600 dark:hover:text-gray-400"
+                className="hover:text-red-400"
                 href={"/blog/" + blog.slug}
+                key={blog.slug}
               >
                 <h5 className="font-medium">{blog.frontmatter.title}</h5>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
