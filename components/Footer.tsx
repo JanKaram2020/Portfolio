@@ -6,7 +6,7 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 
 export default async function NewFooter() {
-  let blogs = await getBlogPosts(3);
+  let blogs = await getBlogPosts(2);
 
   return (
     <footer className="bg-gray-100 text-gray-900 py-12 dark:bg-gray-900 dark:text-white">

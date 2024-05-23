@@ -20,6 +20,15 @@ const sortArticles = <
     return 1;
   });
 };
+export function getBlogPostsSlugs() {
+  const dir = path.join(process.cwd(), "app", "blog", "posts");
+
+  let mdxFiles = fs
+    .readdirSync(dir)
+    .filter((file) => path.extname(file) === ".mdx");
+
+  return mdxFiles.map((file) => path.basename(file, path.extname(file)));
+}
 
 export default async function getBlogPosts(n?: number) {
   const dir = path.join(process.cwd(), "app", "blog", "posts");

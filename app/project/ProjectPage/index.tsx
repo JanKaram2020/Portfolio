@@ -1,12 +1,8 @@
 import ListItemColor from "components/ListItemColor";
-import { ReactNode } from "react";
 import Technology from "./Technology";
 import type { IProjectPage } from "./types";
 import ProjectImage from "./ProjectImage";
 
-const UnorderedList = ({ children }: { children: ReactNode }) => (
-  <ul className="list-none">{children}</ul>
-);
 export default function ProjectPage({
   title,
   subtitle,
@@ -31,15 +27,15 @@ export default function ProjectPage({
         >
           <div className={"flex flex-col"}>
             <h2 className={"font-bold text-lg text-red-400"}>Stack</h2>
-            <UnorderedList>
+            <ul className="list-none">
               {stack.map((t) => (
                 <ListItemColor key={t}>{t}</ListItemColor>
               ))}
-            </UnorderedList>
+            </ul>
           </div>
           <div className={"flex flex-col"}>
             <h2 className={"text-lg text-red-300 font-bold"}>Code</h2>
-            <UnorderedList>
+            <ul className="list-none">
               {links.code.map((c) => (
                 <ListItemColor key={c.git}>
                   {c.name ? `${c.name}: ` : ""}
@@ -48,17 +44,17 @@ export default function ProjectPage({
                   </a>
                 </ListItemColor>
               ))}
-            </UnorderedList>
+            </ul>
           </div>
           <div className={"flex flex-col"}>
             <h2 className={"text-red-300 font-bold text-lg"}>Live</h2>
-            <UnorderedList>
+            <ul className="list-none">
               <ListItemColor>
                 <a href={links.live} rel="noopener">
                   View site
                 </a>
               </ListItemColor>
-            </UnorderedList>
+            </ul>
           </div>
         </div>
         <ProjectImage image={projectImage} title={title} />
@@ -85,11 +81,11 @@ export default function ProjectPage({
             {lessons.length === 1 ? (
               lessons[0]
             ) : (
-              <UnorderedList>
+              <ul className="list-none">
                 {lessons.map((l) => (
                   <ListItemColor key={l}>{l}</ListItemColor>
                 ))}
-              </UnorderedList>
+              </ul>
             )}
           </div>
         </div>

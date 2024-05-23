@@ -4,7 +4,7 @@ import Eargasm from "app/project/eargasm/page";
 import TestTable from "app/project/test-table/page";
 import WouldYouRather from "app/project/would-you-rather/page";
 import WritingByLilyanne from "app/project/writing-by-lilyanne/page";
-import IndexPage from "app/page";
+import IndexPage from "app/home";
 import ResumePage from "app/resume/page";
 
 describe("pages", () => {

@@ -1,8 +1,9 @@
 import CopyButton from "./CopyButton";
 import { Mermaid } from "mdx-mermaid/lib/Mermaid";
 import { mergeClasses } from "lib/mergeClasses";
-import { DetailedHTMLProps, HTMLAttributes, ReactNode } from "react";
+import { DetailedHTMLProps, HTMLAttributes } from "react";
 import { type MDXComponents } from "mdx/types";
+import ListItemColor from "../../../components/ListItemColor";
 
 type Element<T> = DetailedHTMLProps<HTMLAttributes<T>, T>;
 
@@ -90,22 +91,6 @@ const OrderedList = ({
   );
 };
 
-const ListItem = ({
-  className,
-  children,
-  ...props
-}: Element<HTMLLIElement>) => (
-  <li
-    className={mergeClasses(
-      "before:(content-['•'] text-red-400 mr-10px)",
-      className,
-    )}
-    {...props}
-  >
-    {children}
-  </li>
-);
-
 const MDXComponents: MDXComponents = {
   mermaid: Mermaid,
   Mermaid,
@@ -114,7 +99,7 @@ const MDXComponents: MDXComponents = {
   h3: HeadingThree,
   code: CodeBlock,
   ol: OrderedList,
-  li: ListItem,
+  li: ListItemColor,
 };
 
 export default MDXComponents;

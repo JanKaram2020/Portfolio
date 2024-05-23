@@ -2,7 +2,7 @@ import mdxMermaid from "mdx-mermaid";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import { compileMDX } from "next-mdx-remote/rsc";
-import MDXComponents from "components/MDX-Components";
+import MDXComponents from "app/blog/components/MDX-Components";
 import rehypeSlug from "rehype-slug";
 import getHeadings from "./get-headings";
 import readingDuration from "./reading-duration";

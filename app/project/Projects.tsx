@@ -1,16 +1,17 @@
 import React from "react";
-import { IProjectPage } from "../../components/ProjectPage/types";
+import { IProjectPage } from "./ProjectPage/types";
 
-const projects = [
+export const projectNames = [
   "eargasm",
   "test-table",
   "writing-by-lilyanne",
   "would-you-rather",
 ] as const;
-type Projects = (typeof projects)[number];
+
+export type ProjectsKeys = (typeof projectNames)[number];
 
 const Projects: {
-  [k in Projects]: IProjectPage;
+  [k in ProjectsKeys]: IProjectPage;
 } = {
   "writing-by-lilyanne": {
     Seo: {
