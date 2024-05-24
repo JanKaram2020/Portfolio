@@ -1,5 +1,5 @@
 import React from "react";
-import { IProjectPage } from "./ProjectPage/types";
+import { IProjectPage } from "./components/types";
 
 export const projectNames = [
   "eargasm",
@@ -10,7 +10,7 @@ export const projectNames = [
 
 export type ProjectsKeys = (typeof projectNames)[number];
 
-const Projects: {
+const ProjectsData: {
   [k in ProjectsKeys]: IProjectPage;
 } = {
   "writing-by-lilyanne": {
@@ -212,4 +212,4 @@ const Projects: {
   },
 };
 
-export default Projects;
+export default ProjectsData;
