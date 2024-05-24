@@ -14,8 +14,8 @@ const Navigation = (): React.ReactElement => (
     >
       <div className="flex items-center justify-center relative gap-2.5">
         <Link
-          href="/public"
-          className="transition-transform duration-250 ease-in-out after:(content-empty absolute top-80% left-[-40px] block w-full h-2px scale-x-0 bg-red-400 hover:scale-x-100)"
+          href="/"
+          className="transition-transform duration-250 ease-in-out after:(content-empty absolute top-80% left-[-20px] block w-full h-2px scale-x-0 bg-red-400 hover:scale-x-70)"
         >
           <figure className="dark:(invert hover:invert) hover:(rotate-[-10deg]) active:(scale-80 rotate-[-15deg])">
             <span className="hidden"> website's home page</span>

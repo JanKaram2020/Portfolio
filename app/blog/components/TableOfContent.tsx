@@ -26,8 +26,8 @@ const TableOfContent = ({
         dangerouslySetInnerHTML={{
           __html: `
       #table-of-content:after {
-      transform-origin: 0%;
-      height: ${scrollPercentage}%
+        transform-origin: 0%;
+        height: ${scrollPercentage}%
       }
     `,
         }}
@@ -36,7 +36,9 @@ const TableOfContent = ({
       <ol
         id={"table-of-content"}
         className={
-          "sticky relative top-5 h-fit pl-3 before:(content-[''] rounded block absolute top-0 h-full left-0 w-0.5 h-full bg-gray-700 dark:bg-gray-300) after:(content-[''] rounded block absolute top-0 left-0 w-0.5 h-full bg-red) text-gray-700 dark:text-gray-300"
+          "sticky relative top-5 h-fit pl-3 text-gray-700 dark:text-gray-300 " +
+          "before:content-[''] before:rounded before:block before:absolute before:top-0 before:h-full before:left-0 before:w-0.5 before:h-full before:bg-gray-700 before:dark:bg-gray-300 " +
+          "after:content-[''] after:rounded after:block after:absolute after:top-0 after:left-0 after:w-0.5 after:h-full after:bg-red"
         }
       >
         {tableOfContent.map((item) => (
