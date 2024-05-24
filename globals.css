@@ -153,7 +153,6 @@
 .space-y-4>:not([hidden])~:not([hidden]){--un-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--un-space-y-reverse)));margin-bottom:calc(1rem * var(--un-space-y-reverse));}
 .overflow-x-auto{overflow-x:auto;}
 .whitespace-nowrap{white-space:nowrap;}
-.b{border-width:1px;}
 .border-\[5px\]{border-width:5px;}
 .border-b-\[0\.2rem\]{border-bottom-width:0.2rem;}
 .rounded-20px{border-radius:20px;}
