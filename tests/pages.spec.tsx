@@ -1,35 +1,59 @@
-import { describe, expect, it } from "vitest";
-import renderer from "react-test-renderer";
-import Eargasm from "app/project/eargasm/page";
-import TestTable from "app/project/test-table/page";
-import WouldYouRather from "app/project/would-you-rather/page";
-import WritingByLilyanne from "app/project/writing-by-lilyanne/page";
-import IndexPage from "app/page";
+import { describe, expect, it, vi } from "vitest";
+import IndexPage from "app/home";
 import ResumePage from "app/resume/page";
+import ProjectPage from "../app/project/[slug]/page";
+import ProjectsData from "../app/project/projects-data";
+import { render } from "@testing-library/react";
+import { getBlogPostsSlugs } from "../app/blog/utils/get-blog-posts";
+import Blog from "../app/blog/[slug]/page";
 
-describe("pages", () => {
-  it("should Eargasm match snapshot", () => {
-    const tree = renderer.create(<Eargasm />).toJSON();
-    expect(tree).toMatchSnapshot();
+vi.mock("next-view-transitions", async () => {
+  // const mod = await importOriginal<typeof import("next-view-transitions")>();
+  const NextLink = await import("next/link");
+  return {
+    Link: NextLink,
+  };
+});
+const intersectionObserverMock = () => ({
+  observe: () => null,
+  unobserve: () => null,
+  disconnect: () => null,
+});
+
+window.IntersectionObserver = vi
+  .fn()
+  .mockImplementation(intersectionObserverMock);
+
+describe("blogs posts", () => {
+  const slugs = getBlogPostsSlugs();
+  slugs.forEach((slug) => {
+    it(`should the blog posts ${slug} match the snapshot`, async () => {
+      const page = render(await Blog({ params: { slug } }));
+      expect(page).toMatchSnapshot();
+    });
   });
-  it("should TestTable match snapshot", () => {
-    const tree = renderer.create(<TestTable />).toJSON();
-    expect(tree).toMatchSnapshot();
+});
+
+describe("home page", () => {
+  it(`should the home page match the snapshot`, async () => {
+    const page = render(await IndexPage());
+    expect(page).toMatchSnapshot();
   });
-  it("should WouldYouRather match snapshot", () => {
-    const tree = renderer.create(<WouldYouRather />).toJSON();
-    expect(tree).toMatchSnapshot();
+});
+
+describe("resume page", () => {
+  it(`should the resume page match the snapshot`, async () => {
+    const page = render(await ResumePage());
+    expect(page).toMatchSnapshot();
   });
-  it("should WritingByLilyanne match snapshot", () => {
-    const tree = renderer.create(<WritingByLilyanne />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-  it("should IndexPage match snapshot", () => {
-    const tree = renderer.create(<IndexPage />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-  it("should ResumePage match snapshot", () => {
-    const tree = renderer.create(<ResumePage />).toJSON();
-    expect(tree).toMatchSnapshot();
+});
+
+describe("project pages", () => {
+  Object.keys(ProjectsData).map((k) => {
+    const key = k as keyof typeof ProjectsData;
+    it(`should ${key} page match snapshot`, async () => {
+      const page = render(await ProjectPage({ params: { slug: key } }));
+      expect(page).toMatchSnapshot();
+    });
   });
 });

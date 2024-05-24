@@ -1,16 +1,12 @@
 import { notFound } from "next/navigation";
-import getBlogPosts from "app/blog/utils/get-blog-posts";
+import getBlogPosts, { getBlogPostsSlugs } from "app/blog/utils/get-blog-posts";
 import React from "react";
-import TableOfContent from "./TableOfContent";
+import TableOfContent from "../components/TableOfContent";
 import { frontMatterId } from "lib/constants";
-import DesktopOnlyComponent from "components/DesktopOnlyComponent";
+import DesktopOnlyComponent from "app/blog/components/DesktopOnlyComponent";
+import { Metadata } from "next";
+type PageProps = { params: { slug: string } };
 
-export async function generateStaticParams() {
-  let posts = await getBlogPosts();
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
-}
 const dateTimeFormatter = (d: string) => {
   return new Intl.DateTimeFormat("en-US", {
     weekday: "long",
@@ -19,7 +15,7 @@ const dateTimeFormatter = (d: string) => {
     day: "numeric",
   }).format(new Date(d));
 };
-export default async function Blog({ params }: { params: { slug: string } }) {
+export default async function Blog({ params }: PageProps) {
   const allPosts = await getBlogPosts();
   const post = allPosts.find((post) => post.slug === params.slug);
   if (!post) {
@@ -49,4 +45,30 @@ export default async function Blog({ params }: { params: { slug: string } }) {
       </div>
     </>
   );
+}
+
+export function generateStaticParams() {
+  let posts = getBlogPostsSlugs();
+  return posts.map((slug) => ({
+    slug,
+  }));
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata | null> {
+  const allPosts = await getBlogPosts();
+  const post = allPosts.find((post) => post.slug === params.slug);
+  if (!post) {
+    notFound();
+  }
+  return {
+    title: post.frontmatter.title + " | Jan Karam",
+    description: post.frontmatter.summary,
+    openGraph: {
+      title: post.frontmatter.title + " | Jan Karam",
+      images: "https://www.jankaram.com" + "/janfinal.svg",
+      url: "https://www.jankaram.com/blog/" + post.slug,
+    },
+  };
 }

@@ -4,7 +4,7 @@ import ExperienceSection from "app/resume/sections/experience-section";
 import ProjectsSection from "app/resume/sections/projects-section";
 import EducationSection from "app/resume/sections/education-section";
 import SkillsSection from "app/resume/sections/skills-section";
-import PrintButton from "./PrintButton";
+import PrintButton from "./components/PrintButton";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

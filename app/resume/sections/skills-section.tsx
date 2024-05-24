@@ -1,5 +1,5 @@
 import React from "react";
-import FullWidthColumn from "../../../components/FullWidthColumn";
+import FullWidthColumn from "../components/FullWidthColumn";
 
 const skills = [
   "Expo",

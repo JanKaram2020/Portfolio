@@ -1,5 +1,5 @@
 import React from "react";
-import FadeInWhenVisible from "components/FadeInWhenVisible";
+import FadeInWhenVisible from "app/home/components/FadeInWhenVisible";
 
 export default function AboutMeSection(): React.ReactElement {
   return (

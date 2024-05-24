@@ -1,6 +1,6 @@
 import React from "react";
-import FullWidthColumn from "../../../components/FullWidthColumn";
-import Section from "../../../components/Section";
+import FullWidthColumn from "../components/FullWidthColumn";
+import Section from "../components/Section";
 
 const SummarySection = () => (
   <FullWidthColumn>

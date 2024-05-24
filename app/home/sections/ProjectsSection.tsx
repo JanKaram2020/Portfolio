@@ -1,5 +1,5 @@
 import React from "react";
-import Project, { ProjectInterface } from "components/Project";
+import Project, { ProjectInterface } from "app/home/components/Project";
 
 const projects: ProjectInterface[] = [
   {

@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
-import TimeSinceHire from "components/TimeSinceHire";
-import FullWidthColumn from "components/FullWidthColumn";
-import Section from "components/Section";
+import TimeSinceHire from "app/resume/components/TimeSinceHire";
+import FullWidthColumn from "app/resume/components/FullWidthColumn";
+import Section from "app/resume/components/Section";
 
 type JobProps = {
   title: string;
