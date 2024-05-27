@@ -254,17 +254,20 @@
 @media print{
 .print\:grid-cols-\[1fr_auto_1fr\]{grid-template-columns:1fr auto 1fr;}
 .print\:m-0{margin:0;}
+.print\:m-0\!{margin:0 !important;}
 .print\:ml-0{margin-left:0;}
 .print-inline,
 .print\:inline{display:inline;}
 .print\:block{display:block;}
 .print\:hidden{display:none;}
+.print\:max-w-full\!{max-width:100% !important;}
 .print\:min-w-full{min-width:100%;}
 .print\:border{border-width:1px;}
 .print\:border-gray-200{--un-border-opacity:1;border-color:rgb(229 231 235 / var(--un-border-opacity));}
 .print\:border-none{border-style:none;}
 .print\:bg-white{--un-bg-opacity:1;background-color:rgb(255 255 255 / var(--un-bg-opacity));}
 .print\:p-0{padding:0;}
+.print\:p-0\!{padding:0 !important;}
 .print\:text-center{text-align:center;}
 .print\:text-right{text-align:right;}
 .print\:color-black{--un-text-opacity:1;color:rgb(0 0 0 / var(--un-text-opacity));}

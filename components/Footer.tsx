@@ -9,7 +9,7 @@ export default async function NewFooter() {
   let blogs = await getBlogPosts(2);
 
   return (
-    <footer className="bg-gray-100 text-gray-900 py-12 dark:bg-gray-900 dark:text-white">
+    <footer className="bg-gray-100 text-gray-900 py-12 dark:bg-gray-900 dark:text-white print:hidden">
       <div className="container mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="space-y-4">
           <div className="flex items-center gap-2">
