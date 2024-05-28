@@ -1,6 +1,6 @@
 import ProjectsData, { projectNames, ProjectsKeys } from "../projects-data";
 import { Metadata } from "next";
-import ProjectPageComponent from "../components";
+import ProjectPageComponent from "../components/ProjectPage";
 import React from "react";
 import { notFound } from "next/navigation";
 

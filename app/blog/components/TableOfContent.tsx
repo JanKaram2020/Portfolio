@@ -9,11 +9,6 @@ type TableOfContentItem = {
   id: string;
 };
 
-const frontMatter: TableOfContentItem = {
-  id: frontMatterId,
-  text: "",
-  level: 0,
-};
 const TableOfContent = ({
   tableOfContent,
 }: {
@@ -59,7 +54,13 @@ const TableOfContent = ({
   );
 };
 
-function useTableScroll(tableOfContent: TableOfContentItem[]) {
+const frontMatter: TableOfContentItem = {
+  id: frontMatterId,
+  text: "",
+  level: 0,
+};
+
+const useTableScroll = (tableOfContent: TableOfContentItem[]) => {
   const [scrollPercentage, setScrollPercentage] = useState(0);
   const [highlighted, setHighlighted] = useState<
     TableOfContentItem["id"] | undefined
@@ -68,10 +69,10 @@ function useTableScroll(tableOfContent: TableOfContentItem[]) {
   useEffect(() => {
     const highlightSetter = () => {
       const tableOfContentWithDistances = tableOfContent
-        .concat(frontMatter)
+        .concat([frontMatter])
         .map((c) => {
           const distance =
-            document.getElementById(c.id)?.getBoundingClientRect().top ?? 0;
+            document.getElementById(c.id)?.getBoundingClientRect().top ?? -1;
 
           return {
             ...c,
@@ -81,7 +82,7 @@ function useTableScroll(tableOfContent: TableOfContentItem[]) {
 
       const topElement = tableOfContentWithDistances
         .sort((a, b) => a.distance - b.distance)
-        .find((i) => i.distance > 0)?.id;
+        .find((i) => i.distance >= 0)?.id;
 
       setHighlighted(topElement);
     };
@@ -104,6 +105,6 @@ function useTableScroll(tableOfContent: TableOfContentItem[]) {
   }, []);
 
   return [highlighted, scrollPercentage] as const;
-}
+};
 
 export default TableOfContent;
