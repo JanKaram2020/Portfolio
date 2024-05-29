@@ -24,7 +24,7 @@ export default async function Blog({ params }: PageProps) {
   return (
     <>
       <article
-        className={"lg:w-7/12 w-12/12 flex flex-col max-w-full"}
+        className={"lg:w-7/12 w-12/12 flex flex-col max-w-full break-words"}
         id={"blog"}
       >
         <div id={frontMatterId} className={"mb-6"}>
@@ -36,7 +36,7 @@ export default async function Blog({ params }: PageProps) {
             {post.frontmatter.timeToRead}
           </p>
         </div>
-        {post.content}
+        <post.Content />
       </article>
       <div className={"hidden lg:flex w-3/12 flex-col"}>
         <DesktopOnlyComponent>

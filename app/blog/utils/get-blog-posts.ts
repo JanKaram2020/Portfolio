@@ -1,6 +1,7 @@
 import path from "path";
 import fs from "fs";
-import mdxCompiler from "./mdx-compiler";
+import readingDuration from "./reading-duration";
+import getHeadings from "./get-headings";
 
 const sortArticles = <
   T extends {
@@ -20,6 +21,7 @@ const sortArticles = <
     return 1;
   });
 };
+
 export function getBlogPostsSlugs() {
   const dir = path.join(process.cwd(), "app", "blog", "posts");
 
@@ -37,21 +39,27 @@ export default async function getBlogPosts(n?: number) {
     .readdirSync(dir)
     .filter((file) => path.extname(file) === ".mdx");
 
-  const promises = mdxFiles.map(async (file) => {
-    let rawContent = fs.readFileSync(path.join(dir, file), "utf-8");
-    let { content, frontmatter, tableOfContent } =
-      await mdxCompiler(rawContent);
-    let slug = path.basename(file, path.extname(file));
-
-    return {
-      frontmatter,
-      content,
-      slug,
-      tableOfContent,
-    };
-  });
-
-  const articles = await Promise.all(promises);
+  const articles = await Promise.all(
+    mdxFiles.map(async (f) => {
+      const rawContent = fs.readFileSync(dir + "/" + f, "utf-8");
+      const timeToRead = readingDuration(rawContent);
+      const tableOfContent = getHeadings(rawContent);
+      const fileImport = await import("../posts/" + f);
+      let slug = path.basename(f, path.extname(f));
+      if (!fileImport.default) {
+        throw new Error(`${slug} must have default export`);
+      }
+      if (!fileImport.PageData) {
+        throw new Error(`${slug} must have PageData`);
+      }
+      return {
+        Content: fileImport.default,
+        frontmatter: { ...fileImport.PageData, timeToRead },
+        tableOfContent,
+        slug,
+      };
+    }),
+  );
 
   if (n) {
     return sortArticles(articles).slice(0, n);
