@@ -1,25 +1,9 @@
 import path from "path";
 import fs from "fs";
-import mdxCompiler from "./mdx-compiler";
+import readingDuration from "./reading-duration";
+import getHeadings from "./get-headings";
+import sortArticles from "./sort-articles";
 
-const sortArticles = <
-  T extends {
-    frontmatter: {
-      publishedAt: string;
-    };
-  },
->(
-  articles: T[],
-) => {
-  return articles.sort((a, b) => {
-    if (
-      new Date(a.frontmatter.publishedAt) > new Date(b.frontmatter.publishedAt)
-    ) {
-      return -1;
-    }
-    return 1;
-  });
-};
 export function getBlogPostsSlugs() {
   const dir = path.join(process.cwd(), "app", "blog", "posts");
 
@@ -37,21 +21,49 @@ export default async function getBlogPosts(n?: number) {
     .readdirSync(dir)
     .filter((file) => path.extname(file) === ".mdx");
 
-  const promises = mdxFiles.map(async (file) => {
-    let rawContent = fs.readFileSync(path.join(dir, file), "utf-8");
-    let { content, frontmatter, tableOfContent } =
-      await mdxCompiler(rawContent);
-    let slug = path.basename(file, path.extname(file));
+  const articles = await Promise.all(
+    mdxFiles.map(async (f) => {
+      const slug = path.basename(f, path.extname(f));
+      const rawContent = fs.readFileSync(dir + "/" + f, "utf-8");
+      const timeToRead = readingDuration(rawContent);
+      const tableOfContent = getHeadings(rawContent);
+      const fileImport = await import("../posts/" + f);
 
-    return {
-      frontmatter,
-      content,
-      slug,
-      tableOfContent,
-    };
-  });
+      const Content = fileImport.default as () => JSX.Element;
 
-  const articles = await Promise.all(promises);
+      const frontmatter = {
+        ...fileImport.frontmatter,
+        timeToRead,
+      } as {
+        title: string;
+        summary: string;
+        publishedAt: `${number}-${number}-${number}`;
+        timeToRead: string;
+      };
+
+      if (!Content) {
+        throw new Error(`${slug} must have default export`);
+      }
+
+      if (
+        !frontmatter ||
+        !frontmatter.title ||
+        !frontmatter.summary ||
+        !frontmatter.publishedAt
+      ) {
+        throw new Error(
+          `${slug} must have frontmatter with title, summary and publishedAt`,
+        );
+      }
+
+      return {
+        Content,
+        frontmatter,
+        tableOfContent,
+        slug,
+      };
+    }),
+  );
 
   if (n) {
     return sortArticles(articles).slice(0, n);

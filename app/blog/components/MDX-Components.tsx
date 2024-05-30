@@ -3,7 +3,7 @@ import { Mermaid } from "mdx-mermaid/lib/Mermaid";
 import { mergeClasses } from "lib/mergeClasses";
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 import { type MDXComponents } from "mdx/types";
-import ListItemColor from "../../../components/ListItemColor";
+import ListItemColor from "components/ListItemColor";
 
 type Element<T> = DetailedHTMLProps<HTMLAttributes<T>, T>;
 
