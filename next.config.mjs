@@ -40,16 +40,11 @@ export const rawCodeExtractorTwo = () => (tree) => {
 };
 
 const withMDX = MDXCompiler({
-    // Optionally provide remark and rehype plugins
     options: {
-        // If you use remark-gfm, you'll need to use next.config.mjs
-        // as the package is ESM only
-        // https://github.com/remarkjs/remark-gfm#install
         remarkPlugins: [mdxMermaid],
         rehypePlugins: [
             rawCodeExtractorOne,
             [
-                //@ts-ignore
                 rehypePrettyCode,
                 {
                     theme: {
@@ -60,12 +55,9 @@ const withMDX = MDXCompiler({
             ],
             rawCodeExtractorTwo,
             rehypeSlug,
-            rehypeAutolinkHeadings, //@ts-ignore
+            rehypeAutolinkHeadings,
             rehypeSection,
         ],
-
-        // If you use `MDXProvider`, uncomment the following line.
-        // providerImportSource: "@mdx-js/react",
     },
 })
 

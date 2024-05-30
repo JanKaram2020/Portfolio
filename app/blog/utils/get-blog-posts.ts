@@ -2,25 +2,7 @@ import path from "path";
 import fs from "fs";
 import readingDuration from "./reading-duration";
 import getHeadings from "./get-headings";
-
-const sortArticles = <
-  T extends {
-    frontmatter: {
-      publishedAt: string;
-    };
-  },
->(
-  articles: T[],
-) => {
-  return articles.sort((a, b) => {
-    if (
-      new Date(a.frontmatter.publishedAt) > new Date(b.frontmatter.publishedAt)
-    ) {
-      return -1;
-    }
-    return 1;
-  });
-};
+import sortArticles from "./sort-articles";
 
 export function getBlogPostsSlugs() {
   const dir = path.join(process.cwd(), "app", "blog", "posts");
@@ -41,20 +23,42 @@ export default async function getBlogPosts(n?: number) {
 
   const articles = await Promise.all(
     mdxFiles.map(async (f) => {
+      const slug = path.basename(f, path.extname(f));
       const rawContent = fs.readFileSync(dir + "/" + f, "utf-8");
       const timeToRead = readingDuration(rawContent);
       const tableOfContent = getHeadings(rawContent);
       const fileImport = await import("../posts/" + f);
-      let slug = path.basename(f, path.extname(f));
-      if (!fileImport.default) {
+
+      const Content = fileImport.default as () => JSX.Element;
+
+      const frontmatter = {
+        ...fileImport.frontmatter,
+        timeToRead,
+      } as {
+        title: string;
+        summary: string;
+        publishedAt: `${number}-${number}-${number}`;
+        timeToRead: string;
+      };
+
+      if (!Content) {
         throw new Error(`${slug} must have default export`);
       }
-      if (!fileImport.PageData) {
-        throw new Error(`${slug} must have PageData`);
+
+      if (
+        !frontmatter ||
+        !frontmatter.title ||
+        !frontmatter.summary ||
+        !frontmatter.publishedAt
+      ) {
+        throw new Error(
+          `${slug} must have frontmatter with title, summary and publishedAt`,
+        );
       }
+
       return {
-        Content: fileImport.default,
-        frontmatter: { ...fileImport.PageData, timeToRead },
+        Content,
+        frontmatter,
         tableOfContent,
         slug,
       };
