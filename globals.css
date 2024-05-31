@@ -142,6 +142,7 @@
 .gap-10px{gap:10px;}
 .gap-2{gap:0.5rem;}
 .gap-2\.5{gap:0.625rem;}
+.gap-3{gap:0.75rem;}
 .gap-4{gap:1rem;}
 .gap-5vh{gap:5vh;}
 .gap-6{gap:1.5rem;}
@@ -154,6 +155,7 @@
 .overflow-x-auto{overflow-x:auto;}
 .whitespace-nowrap{white-space:nowrap;}
 .break-words{overflow-wrap:break-word;}
+.b{border-width:1px;}
 .border-\[5px\]{border-width:5px;}
 .border-b-\[0\.2rem\]{border-bottom-width:0.2rem;}
 .rounded-20px{border-radius:20px;}

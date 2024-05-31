@@ -4,6 +4,9 @@ export const frontmatter = {
     "Guide to setting up unit testing in your project using Vitest, explaining its advantages over Jest and walking you through creating your first test.",
   publishedAt: "2023-10-25",
 };
+import {MultiLangCodeBlock} from './MultiLangCodeBlock';
+
+
 
 Unit testing is a software development process in which the smallest testable parts of an application, called units, are individually and independently tested. The goal is to verify that each unit of code meets its design and behaves as expected.
 In simpler terms unit testing is isolating the smallest sets of code and testing them to verify that they behave as expected.
@@ -22,11 +25,23 @@ In simpler terms unit testing is isolating the smallest sets of code and testing
 you only have to change a few things, and you're good to go. check the migration guide [here](https://vitest.dev/guide/migration.html#migrating-from-jest)
 
 ## Installing Vitest in your project
+<MultiLangCodeBlock>
 
 ``` shell
-yarn add -D vitest vite jsdom
+yarn add -D vitest vite jsdom shell
 ```
 
+``` js
+import { defineConfig } from 'vitest/config';
+```
+
+``` ts
+import { defineConfig } from 'vitest/config';
+import tsconfigPaths from 'vite-tsconfig-paths';
+```
+
+
+</MultiLangCodeBlock>
 to test react components and/or hooks run
 
 ``` shell
