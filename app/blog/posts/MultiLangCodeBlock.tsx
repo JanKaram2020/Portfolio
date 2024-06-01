@@ -2,15 +2,21 @@
 import React, { ReactElement, ReactNode } from "react";
 import * as Tabs from "@radix-ui/react-tabs";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { mergeClasses } from "../../../lib/mergeClasses";
 
 export const MultiLangCodeBlock = ({
   children,
+  className,
 }: {
   children: ReactElement[];
+  className?: string;
 }) => {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+
+  const isMulti = children.length > 1;
+
   const blocks: Array<{ language: string; content: ReactNode }> = children.map(
     (child) => {
       return {
@@ -19,7 +25,17 @@ export const MultiLangCodeBlock = ({
       };
     },
   );
-  const value = searchParams.get("selected") ?? blocks[0].language;
+
+  const selectedParam = searchParams.get("selected");
+
+  const value =
+    selectedParam && blocks.find((b) => b.language === selectedParam)
+      ? selectedParam
+      : blocks[0].language;
+
+  if (!isMulti) {
+    return children;
+  }
 
   return (
     <Tabs.Root
@@ -32,9 +48,22 @@ export const MultiLangCodeBlock = ({
         });
       }}
     >
-      <Tabs.List className={"flex flex-row gap-3"}>
+      <Tabs.List
+        className={mergeClasses(
+          "dark:bg-[var(--shiki-dark-bg)] bg-[var(--shiki-light-bg)] rounded rounded-b-none w-fit px-3",
+          "flex flex-row gap-3 mb-[-12px] mt-[12px]",
+          className,
+        )}
+      >
         {blocks.map(({ language }) => {
-          return <Tabs.Trigger value={language}>{language}</Tabs.Trigger>;
+          return (
+            <Tabs.Trigger
+              value={language}
+              className={"hover:text-red-400 aria-selected:text-red-400"}
+            >
+              {language}
+            </Tabs.Trigger>
+          );
         })}
       </Tabs.List>
 
