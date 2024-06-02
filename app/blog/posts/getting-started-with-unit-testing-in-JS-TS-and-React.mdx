@@ -4,9 +4,9 @@ export const frontmatter = {
     "Guide to setting up unit testing in your project using Vitest, explaining its advantages over Jest and walking you through creating your first test.",
   publishedAt: "2023-10-25",
 };
-import { MultiLangCodeBlock, MultiLangCodeRoot } from "./MultiLangCodeBlock";
+import { MultiLangCodeBlock, MultiLangCodeRoot } from "../components/MultiLangCodeBlock";
 
-<MultiLangCodeRoot values={["js","react","ts"]}>
+<MultiLangCodeRoot values={["js","ts","react"]}>
 
 Unit testing is a software development process in which the smallest testable parts of an application, called units, are individually and independently tested. The goal is to verify that each unit of code meets its design and behaves as expected.
 In simpler terms unit testing is isolating the smallest sets of code and testing them to verify that they behave as expected.
@@ -23,27 +23,30 @@ In simpler terms unit testing is isolating the smallest sets of code and testing
 3.  In watch mode, it's smart and only reruns the related changes, just like HMR for tests!
 4.  If you know Jest you already know Vitest, it provides a Jest-compatible API that allows you to use it as a drop-in replacement in most projects.
     you only have to change a few things, and you're good to go. check the migration guide [here](https://vitest.dev/guide/migration.html#migrating-from-jest)
+<br/>
+this post covers testing javascript, typescript and react's enviroment setup
+you can choose at every block what you want to setup
 
 ## Installing Vitest in your project
 
 <MultiLangCodeBlock>
 
-```shell
+``` shell
 yarn add -D vitest vite jsdom shell
 ```
 
-```js
-import { defineConfig } from "vitest/config";
+```shell
+yarn add -D vitest vite jsdom shell js
 ```
 
-```ts
-import { defineConfig } from "vitest/config";
-import tsconfigPaths from "vite-tsconfig-paths";
+
+```shell
+yarn add -D vitest vite jsdom shell ts
 ```
 
 </MultiLangCodeBlock>
 to test react components and/or hooks run
-<MultiLangCodeBlock sync={false}>
+<MultiLangCodeBlock>
 ``` shell
 yarn add -D @vitejs/plugin-react react-test-renderer @testing-library/react @testing-library/jest-dom
 ```
