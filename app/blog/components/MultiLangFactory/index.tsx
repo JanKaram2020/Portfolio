@@ -162,23 +162,45 @@ const Factory = <T extends string>(displayValues?: T[]) => {
     );
   };
 
-  const InnerMultiLangTextBlock = ({ children }: { children: ReactNode[] }) => {
+  const InnerMultiLangTextBlock = ({
+    children,
+    values,
+  }:
+    | { children: ReactNode[]; values?: never }
+    | { children?: never; values: string[] }) => {
+    const textArray = children ? children : values ? values : undefined;
+
+    if (!textArray) {
+      throw new Error("must provide children or values array");
+    }
+
     const { value } = useSyncSelectedValue();
+
     if (!displayValues)
       throw new Error(
         "displayValues must be provided if MultiLangTextBlock is used",
       );
     const valueIndex = displayValues.indexOf(value as T);
-    if (valueIndex > -1 && children[valueIndex]) {
-      return children[valueIndex];
+
+    if (valueIndex > -1 && textArray[valueIndex]) {
+      return textArray[valueIndex];
     }
     return <></>;
   };
 
-  const MultiLangTextBlock = ({ children }: { children: ReactNode[] }) => {
+  const MultiLangTextBlock = ({
+    children,
+    values,
+  }:
+    | { children: ReactNode[]; values?: never }
+    | { children?: never; values: string[] }) => {
     return (
       <Suspense fallback={null}>
-        <InnerMultiLangTextBlock>{children}</InnerMultiLangTextBlock>
+        {children ? (
+          <InnerMultiLangTextBlock>{children}</InnerMultiLangTextBlock>
+        ) : (
+          <InnerMultiLangTextBlock values={values} />
+        )}
       </Suspense>
     );
   };

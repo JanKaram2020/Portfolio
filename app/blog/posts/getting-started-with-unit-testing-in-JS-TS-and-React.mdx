@@ -46,7 +46,7 @@ yarn add -D vitest vite jsdom vite-tsconfig-paths @vitejs/plugin-react @testing-
 </MultiLangCodeBlock>
 ## Configuring Vitest
 
-### Make a file in the root of the project called `vitest.config.ts{:plaintext}` with the following code
+### Make a file in the root of the project called `vitest.config.js` | `vitest.config.ts` with the following code
 
 <MultiLangCodeBlock>
 ``` ts showLineNumbers
@@ -84,7 +84,8 @@ export default defineConfig({
 `vite-tsconfig-paths` makes vite use the paths defined in your tsconfig.
 `environment: 'jsdom'` by default the environment is `node` which means that any code meant for the browser can't run in the test, so we use jsdom which provides a browser-like environment to run the test in it.
 
-### Make file called `tests/setupTests.ts` with the following code (in case of React testing)
+<br/>
+    Make file called `tests/setupTests.ts` with the following code
 
 ```ts showLineNumbers
 import "@testing-library/jest-dom/vitest";
@@ -109,11 +110,23 @@ the after each cleanup configures Vitest and @testing-library/react to clean up 
 
 ## Writing our first test
 
-let's start with something simple create a file called `tests/add.ts` with the following code
+let's start with something simple create a file called `tests/add.js` | `tests/add.ts` with the following code
+
+<MultiLangCodeBlock>
+```js showLineNumbers
+export const add = (a, b) => a + b;
+```
 
 ```ts showLineNumbers
 export const add = (a: number, b: number) => a + b;
 ```
+
+```ts showLineNumbers
+export const add = (a: number, b: number) => a + b;
+```
+
+</MultiLangCodeBlock>
+
 
 to test a unit is to check whether it matches something<br/>
 eg: you expect 1 + 2 = 3\. this is human language<br/>
@@ -124,7 +137,7 @@ eg: `expect(object).toHaveProperty(property){:ts}`<br/>
 eg: `expect(array).toContain(element){:ts}`<br/>
 eg: `expect(boolean).not.toBe(false){:ts}`<br/>
 
-to create a test file you must use the extension `.spec.(ts/tsx/js/jsx)` or `.test.(ts/tsx/js/jsx)` A spec comes from "specification" where you specify how code should behave, the extension doesn't change anything in how we write the tests it's just a preference. so create a file in the same folder you created the add file called `add.test.ts` with the following code
+to create a test file you must use the extension `.spec.(ts/tsx/js/jsx)` or `.test.(ts/tsx/js/jsx)` A spec comes from "specification" where you specify how code should behave, the extension doesn't change anything in how we write the tests it's just a preference. so create a file in the same folder you created the add file called `add.test.js` | `add.test.ts` with the following code
 
 ```ts showLineNumbers
 import { add } from "./add";
@@ -140,12 +153,3 @@ then fire up the terminal and run `yarn test` your terminal should look like thi
 ![](/uploaded/146644df09f3bbcdf6aac7/1.png)
 
 congratulations! you just ran your first test successfully.
-
-    <MultiLangTextBlock>
-        jan
-
-        osman
-
-
-        joo
-    </MultiLangTextBlock>
