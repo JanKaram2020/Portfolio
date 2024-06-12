@@ -165,9 +165,10 @@ const Factory = <T extends string>(displayValues?: T[]) => {
   const InnerMultiLangTextBlock = ({
     children,
     values,
+    isCode = false,
   }:
-    | { children: ReactNode[]; values?: never }
-    | { children?: never; values: string[] }) => {
+    | { children: ReactNode[]; values?: never; isCode?: never }
+    | { children?: never; values: string[]; isCode?: boolean }) => {
     const textArray = children ? children : values ? values : undefined;
 
     if (!textArray) {
@@ -183,6 +184,9 @@ const Factory = <T extends string>(displayValues?: T[]) => {
     const valueIndex = displayValues.indexOf(value as T);
 
     if (valueIndex > -1 && textArray[valueIndex]) {
+      if (isCode) {
+        return <code>{textArray[valueIndex]}</code>;
+      }
       return textArray[valueIndex];
     }
     return <></>;
@@ -191,15 +195,16 @@ const Factory = <T extends string>(displayValues?: T[]) => {
   const MultiLangTextBlock = ({
     children,
     values,
+    isCode = false,
   }:
-    | { children: ReactNode[]; values?: never }
-    | { children?: never; values: string[] }) => {
+    | { children: ReactNode[]; values?: never; isCode?: never }
+    | { children?: never; values: string[]; isCode?: boolean }) => {
     return (
       <Suspense fallback={null}>
         {children ? (
           <InnerMultiLangTextBlock>{children}</InnerMultiLangTextBlock>
         ) : (
-          <InnerMultiLangTextBlock values={values} />
+          <InnerMultiLangTextBlock values={values} isCode={isCode} />
         )}
       </Suspense>
     );
