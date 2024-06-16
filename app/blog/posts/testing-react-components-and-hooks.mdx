@@ -90,6 +90,7 @@ it('should respond to an onClick', async () => {
 - then we expect the mocked `onClicked` to have been called<br/>
 
 the test should run successfully! <br/>
+<br/>
 
 While we initially included a separate test to verify the button rendered correctly, it's not necessary.<br/> Testing
 the `onClick` behavior inherently checks for rendering as well. When a button is clicked, it must be rendered properly in the
@@ -114,47 +115,57 @@ export function useCounter() {
 }
 ```
 
-We want to ensure that the hook works correctly and that count value is correct and increments and decrements when
-calling the function.
-
+We want to ensure that
+- the hook works correctly and that count value is initialized with zero
+- the value increments correctly
+- the value decrements correctly
+<br/>
+let's test that it initializes correctly and that count value is initialized with zero
 ```tsx
-import { describe, expect, it } from 'vitest';
-import { act, renderHook } from '@testing-library/react';
+import { expect, it } from 'vitest';
+import { renderHook } from '@testing-library/react';
 import { useCounter } from './useCounter';
 
-describe("useCounter hook", () => {
-  it("should initialize with count 0", () => {
-    const { result } = renderHook(() => useCounter());
-    expect(result.current.count).toBe(0);
-  });
-
-  it("should increment the count", () => {
-    const { result } = renderHook(() => useCounter());
-
-    act(() => {
-      result.current.increment();
-    });
-
-    expect(result.current.count).toBe(1);
-  });
-
-  it("should decrement the count", () => {
-    const { result } = renderHook(() => useCounter());
-
-    act(() => {
-      result.current.decrement();
-    });
-
-    expect(result.current.count).toBe(-1);
-  });
+it("should initialize with count 0", () => {
+ const { result } = renderHook(() => useCounter());
+ expect(result.current.count).toBe(0);
 });
 ```
 - we use the `renderHook` from `@testing-library/react` to render the hook and test it in isolation without a component.
 - `renderHook` returns an object containing the property `result` to test the result of the render.
 - `result` contains an object with the property `current` which we use to test the current value in the render
   (note that it's preferred to test `result.current` immediately not assigning it to another variable to avoid stale closures)
+
+<br/>
+Testing that it increments correctly
+```tsx
+import { act } from '@testing-library/react';
+
+it("should increment the count", () => {
+  const { result } = renderHook(() => useCounter());
+
+  act(() => {
+    result.current.increment();
+  });
+
+  expect(result.current.count).toBe(1);
+});
+```
 - when doing an action that changes the state we must use the `act` method (it tells the testing library something about to change in the render so update it after the call)<br/>
 
+<br/>
+Testing that it decrements correctly
+```tsx
+it("should decrement the count", () => {
+  const { result } = renderHook(() => useCounter());
+
+  act(() => {
+    result.current.decrement();
+  });
+
+  expect(result.current.count).toBe(-1);
+});
+```
 the tests should run successfully! <br/>
 ## Testing React Hooks with browser events
 
@@ -195,7 +206,7 @@ We want to ensure that the hook works correctly so we want to test
 - it initializes with the state set to `true` (when first running the js in the browser, it must be online)
 - it should update the state to `false` when `offline` and call the `onOffline` prop
 - it should update the state to `true` when `online` and call the `onOffline` prop
-- it should remove the two event listeners when unmounted (to avoid leaky subscription)
+- it should remove the two event listeners when unmounted (to avoid leaky subscriptions)
 
 so let's test that it initializes with `true`
 ```tsx
