@@ -2,11 +2,12 @@ export const frontmatter = {
   title: "Testing React hooks and Components",
   summary:
     "Guide to unit testing React components and hooks with user events and browser events",
-  publishedAt: "2024-06-12",
+  publishedAt: "2024-07-08",
 };
+import Admonition from '../components/Admonitions'
 
 In our previous blog post, we discussed getting started with unit testing in JavaScript/TypeScript. check it if you
-missed it [here](http://localhost:3000/blog/2023/10/25/getting-started-with-unit-testing-in-js-ts-and-react) Now that we
+missed it [here](/blog/getting-started-with-unit-testing-in-JS-TS-and-React) Now that we
 have a testing environment set up, let's explore how to test React hooks and components.
 
 ## Testing React Components
@@ -15,13 +16,13 @@ Imagine a simple `Button` component that accepts two props: `children` and `onCl
 
 ```tsx
 const Button = ({
-	children,
-	onClick,
+  children,
+  onClick,
 }: {
-	children: ReactNode;
-	onClick: React.MouseEventHandler<HTMLButtonElement>;
+  children: ReactNode;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 }) => {
-	return <button onClick={onClick}>{children}</button>;
+  return <button onClick={onClick}>{children}</button>;
 };
 ```
 
@@ -35,13 +36,14 @@ import { render, screen } from '@testing-library/react';
 import { Button } from './Button';
 
 describe('<Button/>', () => {
-	it('should render properly', () => {
-		const testText = 'test text';
+  it('should render properly', () => {
+    const testText = 'test text';
 
-		render(<Button onClick={() => console.log('clicked')}>{testText}</Button>);
+    render(<Button onClick={() => console.log('clicked')}>{testText}</Button>);
 
-		expect(screen.getByText(testText)).toBeInTheDocument();
-	});
+    expect(screen.getByText(testText)).toBeInTheDocument();
+
+  });
 });
 ```
 
@@ -52,32 +54,24 @@ describe('<Button/>', () => {
 
 the test should run successfully ! congrats the button component renders properly. <br/> now let's test the onClick
 
-### Testing onClick behavior
+### Testing the click functionality
 
 in order to test a user behavior, we have to simulate the user action. luckily `@testing-library/user-event` provides
 exactly this
-
-first we install the package
-
-```shell
-yarn add -D @testing-library/user-event
-```
-
-then import it and use it
 
 ```tsx
 import userEvent from '@testing-library/user-event';
 
 it('should respond to an onClick', async () => {
-	const user = userEvent.setup();
-	const onClick = vi.fn();
-	const testText = 'test text';
+  const user = userEvent.setup();
+  const onClick = vi.fn();
+  const testText = 'test text';
 
-	render(<Button onClick={onClick}>{testText}</Button>);
+  render(<Button onClick={onClick}>{testText}</Button>);
 
-	await user.click(screen.getByText(testText));
+  await user.click(screen.getByText(testText));
 
-	expect(onClick).toHaveBeenCalled();
+  expect(onClick).toHaveBeenCalled();
 });
 ```
 
@@ -92,11 +86,16 @@ it('should respond to an onClick', async () => {
 the test should run successfully! <br/>
 <br/>
 
-While we initially included a separate test to verify the button rendered correctly, it's not necessary.<br/> Testing
-the `onClick` behavior inherently checks for rendering as well. When a button is clicked, it must be rendered properly in the
-document.<br/> we can now remove the first test and be sure that both cases are covered by the `onClick` test.<br/> This
-allows us to streamline our tests and focus on the core functionalities.<br/>
-in short: if you check any functionality other than render you test the render implicitly
+<Admonition type="warning" title="Skip redundant tests: ">
+
+We can skip checking things that are implied by other tests.<br/>
+In our example, we had separate tests for rendering and button click functionality.
+However, testing interactions like clicks inherently verifies that the component is rendered correctly.
+When a button is clicked, it must be present in the DOM to be interactive.<br/>
+We can now remove the render test and be confident that it's tested in the click functionality.
+
+
+</Admonition>
 
 ## Testing React Hooks
 
@@ -106,12 +105,12 @@ Imagine a simple `useCounter` hook that manages a counter state and provides fun
 import { useState } from 'react';
 
 export function useCounter() {
-	const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
 
-	const increment = () => setCount(count + 1);
-	const decrement = () => setCount(count - 1);
+  const increment = () => setCount(count + 1);
+  const decrement = () => setCount(count - 1);
 
-	return { count, increment, decrement };
+  return { count, increment, decrement };
 }
 ```
 
@@ -119,7 +118,7 @@ We want to ensure that
 - the hook works correctly and that count value is initialized with zero
 - the value increments correctly
 - the value decrements correctly
-<br/>
+  <br/>
 let's test that it initializes correctly and that count value is initialized with zero
 ```tsx
 import { expect, it } from 'vitest';
@@ -127,8 +126,8 @@ import { renderHook } from '@testing-library/react';
 import { useCounter } from './useCounter';
 
 it("should initialize with count 0", () => {
- const { result } = renderHook(() => useCounter());
- expect(result.current.count).toBe(0);
+  const { result } = renderHook(() => useCounter());
+  expect(result.current.count).toBe(0);
 });
 ```
 - we use the `renderHook` from `@testing-library/react` to render the hook and test it in isolation without a component.
@@ -151,7 +150,7 @@ it("should increment the count", () => {
   expect(result.current.count).toBe(1);
 });
 ```
-- when doing an action that changes the state we must use the `act` method (it tells the testing library something about to change in the render so update it after the call)<br/>
+we must use the `act` method to wrap actions that cause a state update/s when using `react-testing-library`.<br/>
 
 <br/>
 Testing that it decrements correctly
@@ -214,11 +213,11 @@ import { expect, it } from 'vitest';
 import { renderHook } from '@testing-library/react';
 import { useIsOnline } from './useIsOnline';
 
-  it('should return initial online state', () => {
-    const { result } = renderHook(() => useIsOnline());
+it('should return initial online state', () => {
+  const { result } = renderHook(() => useIsOnline());
 
-    expect(result.current).toBe(true);
-  });
+  expect(result.current).toBe(true);
+});
 ```
 
 now let's test the offline functionality
@@ -244,19 +243,19 @@ it('should update state and call onOffline when "offline" event occurs', () => {
 now let's test the online functionality
 ```tsx
   it('should update state and call onOnline when "online" event occurs', () => {
-  const onOnline = vi.fn();
-  const { result } = renderHook(() => useIsOnline({ onOnline }));
-	// first we dispatch the offline to make sure that the value is not the initial one
-  act(() => {
-    window.dispatchEvent(new Event('offline'));
-  });
+    const onOnline = vi.fn();
+    const { result } = renderHook(() => useIsOnline({ onOnline }));
+    // first we dispatch the offline to make sure that the value is not the initial one
+    act(() => {
+      window.dispatchEvent(new Event('offline'));
+    });
 
-  act(() => {
-    window.dispatchEvent(new Event('online'));
-  });
+    act(() => {
+      window.dispatchEvent(new Event('online'));
+    });
 
-  expect(onOnline).toHaveBeenCalledTimes(1);
-  expect(result.current).toBe(true);
+    expect(onOnline).toHaveBeenCalledTimes(1);
+    expect(result.current).toBe(true);
 });
 ```
 now let's test that it removes the event listeners
@@ -268,7 +267,7 @@ now let's test that it removes the event listeners
     unmount();
 
     expect(removerListener).toHaveBeenCalledTimes(2); // 2 events, each added and removed
-  });
+});
 ```
 - we spy on the `removeEventListener` method via `vi.spyOn` and mock it's implementation via `vi.fn` to test it
 - `renderHook` returns an object containing the property `unmount` which we can use to test the un-mouting of the hooks
