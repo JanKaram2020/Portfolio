@@ -1,0 +1,169 @@
+html,
+body {
+  scroll-behavior: smooth;
+  --shiki-light: #4c4f69;
+  --shiki-dark: #d6deeb;
+  --shiki-light-bg: #eff1f5;
+  --shiki-dark-bg: #011627;
+}
+
+code,
+code span {
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
+}
+
+body.dark {
+  background: #1a202c;
+  color: rgba(255, 255, 255, 0.92);
+  code,
+  code span {
+    color: var(--shiki-dark);
+    background-color: var(--shiki-dark-bg);
+  }
+}
+
+figure[data-rehype-pretty-code-figure] {
+  @apply my-3;
+  code[data-line-numbers] {
+    counter-reset: line;
+  }
+  code > [data-line]::before {
+    content: "";
+    margin-right: 2rem;
+    display: inline-block;
+    width: 1rem;
+    text-align: right;
+    color: gray;
+  }
+  code[data-line-numbers] > [data-line]::before {
+    counter-increment: line;
+    content: counter(line);
+  }
+}
+
+figure[data-rehype-pretty-code-figure] :not(div.p-3) > code[data-line-numbers] {
+  @apply px-2;
+}
+/**
+ Docusaurus-like styling for `remarkable-admonitions` blocks
+ */
+
+.admonition {
+  margin-bottom: 1em;
+}
+.admonition-content {
+  padding: 0 30px 15px 15px;
+}
+.admonition-heading {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 8px;
+  width: 100%;
+}
+.admonition h5 {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  margin-left: 40px;
+}
+
+.admonition-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 5px;
+  position: absolute;
+}
+
+.admonition-icon svg {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  stroke-width: 0;
+}
+
+.admonition-content > :last-child {
+  margin-bottom: 0;
+}
+
+.admonition-tip {
+  background-color: rgba(46, 204, 113, 0.1);
+  border-left: 8px solid #2ecc71;
+  h5 {
+    color: #2ecc71;
+  }
+  .admonition-icon {
+    background-color: #2ecc71;
+    padding: 12px 8px 12px 0;
+    border-bottom-right-radius: 10px;
+    svg {
+      stroke: #ffffff;
+      fill: #ffffff;
+    }
+  }
+}
+
+.admonition-warning {
+  background-color: rgba(230, 126, 34, 0.1);
+  border-left: 8px solid #e67e22;
+  h5 {
+    color: #e67e22;
+  }
+  .admonition-icon {
+    padding: 12px 8px 12px 8px;
+    svg {
+      stroke: #e67e22;
+      fill: #e67e22;
+    }
+  }
+}
+
+.admonition-caution {
+  background-color: rgba(231, 76, 60, 0.1);
+  border-left: 8px solid #e74c3c;
+  h5 {
+    color: #e74c3c;
+  }
+  .admonition-icon svg {
+    stroke: #e74c3c;
+    fill: #e74c3c;
+  }
+}
+
+.admonition-important {
+  background-color: rgba(52, 152, 219, 0.1);
+  border-left: 8px solid #3498db;
+  h5 {
+    color: #3498db;
+  }
+  .admonition-icon svg {
+    stroke: #3498db;
+    fill: #3498db;
+  }
+}
+
+.admonition-note {
+  background-color: rgba(241, 196, 15, 0.1);
+  border-left: 8px solid #f1c40f;
+  h5 {
+    color: #f1c40f;
+  }
+  .admonition-icon svg {
+    stroke: #f1c40f;
+    fill: #f1c40f;
+  }
+}
+
+.admonition-question {
+  background-color: rgba(8, 61, 119, 0.1);
+  border-left: 8px solid #083d77;
+  h5 {
+    color: #083d77;
+  }
+  .admonition-icon svg {
+    stroke: #083d77;
+    fill: #083d77;
+  }
+}

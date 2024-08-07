@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import "@unocss/reset/tailwind.css";
-import "base.css";
+import "base.scss";
 import "globals.css";
 import { Analytics } from "../components/Analytics";
 import Layout from "../components/Layout";

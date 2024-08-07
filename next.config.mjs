@@ -1,5 +1,4 @@
 import UnoCSS from '@unocss/webpack'
-import mdxMermaid from "mdx-mermaid";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
@@ -41,7 +40,7 @@ export const rawCodeExtractorTwo = () => (tree) => {
 
 const withMDX = MDXCompiler({
     options: {
-        remarkPlugins: [mdxMermaid],
+        remarkPlugins: [],
         rehypePlugins: [
             rawCodeExtractorOne,
             [

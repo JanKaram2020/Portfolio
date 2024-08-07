@@ -15,7 +15,8 @@ export default function getHeadings(source: string) {
     const text = raw
       .replace(/^###*\s/, "")
       .replace("\\", "")
-      .replace(/\{:(.*?)\}/, "");
+      .replace(/\{:(.*?)\}/, "")
+      .replaceAll("`", "");
     // I only care about h2 and h3.
     // If I wanted more levels, I'd need to count the
     // number of #s.
