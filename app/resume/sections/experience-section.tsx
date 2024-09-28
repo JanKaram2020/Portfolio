@@ -38,14 +38,23 @@ const Job = ({ title, company, time, points }: JobProps) => {
 
 const jobs: JobProps[] = [
   {
-    title: "Frontend (Nextjs) & React Native developer",
-    company: "Shory, (Cairo, Egypt) Hybrid",
+    title: "Senior Frontend & React Native developer",
+    company: "Damas Engineering Consulting (Client Puba Arabia)- Remote",
     time: (
       <>
-        (Jan 2023 - present)&nbsp;
-        <TimeSinceHire />
+        (Aug 2024 - present)&nbsp;
+        <TimeSinceHire date={"2024-08-18"} />
       </>
     ),
+    points: [
+      "Migrating existing apps from Outsystems to React, React Native, Expo and Nextjs",
+      "Mentored developers learning React, React Native, Expo and Nextjs",
+    ],
+  },
+  {
+    title: "Frontend (Nextjs) & React Native developer",
+    company: "Shory, (Cairo, Egypt) Hybrid",
+    time: "(Jan 2023 - Aug 2024)",
     points: [
       "Added features using React, Redux, RTK and RTK query to our Nextjs apps and React Native apps",
       "Introduced Unit, Component and Hooks testing with Jest and React-Testing-Library to our DLS, improving code quality and maintainability",
@@ -53,7 +62,7 @@ const jobs: JobProps[] = [
     ],
   },
   {
-    title: "Fullstack web & React Native developer",
+    title: "Fullstack Web & React Native developer",
     company: "Tech Hive, (Alexandria,Egypt) Remote",
     time: "(Feb 2022 - Jan 2023)",
     points: [
@@ -64,16 +73,16 @@ const jobs: JobProps[] = [
     ],
   },
   {
-    title: "Fullstack web developer",
+    title: "Fullstack Web developer",
     company: "Cool code marketing agency, Remote",
-    time: "(Aug 2021 - Nov 2021)",
-    points: [
-      "Implemented an app interface for a Medical application using Nextjs, React, Typescript, and MUI",
-      "Implemented API endpoints and relations between models using Node, Express, and Sequelize.",
-    ],
+    time: "(Aug 2021 - Feb 2022)",
+    // points: [
+    //   "Implemented an app interface for a Medical application using Nextjs, React, Typescript, and MUI",
+    //   "Implemented API endpoints and relations between models using Node, Express, and Sequelize.",
+    // ],
   },
   {
-    title: "Fullstack web developer",
+    title: "Fullstack Web developer",
     company: "Freelance, Self Employed",
     time: "(Aug 2019 - Jul 2021)",
   },
@@ -81,14 +90,14 @@ const jobs: JobProps[] = [
     title: "Internship Trainee",
     company: "Information Technology Institute (ITI)",
     time: "(Jul 2019 - Aug 2019)",
-    points: (
-      <p className="text-sm">
-        Open source development track:
-        <span className="block print:inline text-sm">
-          HTML - CSS - Javascript - MySQL - Php - Laravel
-        </span>
-      </p>
-    ),
+    // points: (
+    //   <p className="text-sm">
+    //     Open source development track:
+    //     <span className="block print:inline text-sm">
+    //       HTML - CSS - Javascript - MySQL - Php - Laravel
+    //     </span>
+    //   </p>
+    // ),
   },
 ];
 
