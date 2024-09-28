@@ -10,7 +10,7 @@ const SummarySection = () => (
     <hr className="print:border print:border-gray-200 my-1" />
     <Section>
       <p className="text-sm">
-        Full-stack developer with 3+ years of experience in React.js, React
+        Full-stack developer with 4+ years of experience in React.js, React
         Native, NextJs, Node.js, Express, and TypeScript. Passionate about
         building innovative and performant web and mobile applications.
       </p>

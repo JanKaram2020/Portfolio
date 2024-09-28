@@ -14,17 +14,16 @@ const formatTime = (time: number) => {
   const hours = Math.floor((time % day) / hour);
   const minutes = Math.floor((time % hour) / minute);
   const seconds = Math.floor((time % minute) / 1000);
-  return `1 year, ${months} month${singularOrPlural(months)}, ${days} day${singularOrPlural(
+  return `${months} month${singularOrPlural(months)}, ${days} day${singularOrPlural(
     days,
   )}, ${hours} hour${singularOrPlural(hours)}, ${minutes} minute${singularOrPlural(
     minutes,
   )}, ${seconds} second${singularOrPlural(seconds)}`;
 };
 
-const timeOfHire = new Date("2024-01-16T09:00:00");
-
-const TimeSinceHire = () => {
+const TimeSinceHire = ({ date }: { date: `${number}-${number}-${number}` }) => {
   const [ctime, setCTime] = useState<number | undefined>(undefined);
+  const timeOfHire = new Date(date + "T09:00:00");
 
   useEffect(() => {
     const updateTime = () => {
