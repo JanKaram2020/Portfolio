@@ -12,14 +12,27 @@ export const metadata: Metadata = {
   title: "Jan Karam",
   description:
     "Jan Karam is a web developer , graphic designer , and a life long learner.",
-  keywords:
-    "Jan Karam , Jan , Karam , Web developer, Front-end developer , Reactjs , Front-end , Next js ",
+  keywords: [
+    "Jan Karam",
+    "Jan",
+    "Karam",
+    "Web developer",
+    "Front-end developer",
+    "Reactjs",
+    "Front-end",
+    "Next js",
+    "React Native",
+    "Front-end Engineer",
+    "Senior Front-end Engineer",
+    "Senior React Native Engineer",
+  ],
   openGraph: {
     title: "Jan Karam",
     images: "https://www.jankaram.com/site.png",
     url: "https://www.jankaram.com/",
   },
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{

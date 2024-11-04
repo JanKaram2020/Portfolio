@@ -4,17 +4,7 @@ import readingDuration from "./reading-duration";
 import getHeadings from "./get-headings";
 import sortArticles from "./sort-articles";
 
-export function getBlogPostsSlugs() {
-  const dir = path.join(process.cwd(), "app", "blog", "posts");
-
-  let mdxFiles = fs
-    .readdirSync(dir)
-    .filter((file) => path.extname(file) === ".mdx");
-
-  return mdxFiles.map((file) => path.basename(file, path.extname(file)));
-}
-
-export default async function getBlogPosts(n?: number) {
+async function innerGetPosts() {
   const dir = path.join(process.cwd(), "app", "blog", "posts");
 
   let mdxFiles = fs
@@ -65,9 +55,33 @@ export default async function getBlogPosts(n?: number) {
     }),
   );
 
-  if (n) {
-    return sortArticles(articles).slice(0, n);
-  }
-
   return sortArticles(articles);
+}
+
+let cachedArticles:
+  | {
+      Content: () => JSX.Element;
+      frontmatter: {
+        title: string;
+        summary: string;
+        publishedAt: `${number}-${number}-${number}`;
+        timeToRead: string;
+      };
+      tableOfContent: { text: string; level: number; id: string }[];
+      slug: string;
+    }[]
+  | undefined;
+
+export async function getBlogPostsSlugs() {
+  const blogPosts = await getBlogPosts();
+  return blogPosts.map((b) => b.slug);
+}
+
+export default async function getBlogPosts(n?: number) {
+  const articles = cachedArticles ? cachedArticles : await innerGetPosts();
+  cachedArticles = articles;
+  if (n) {
+    return articles.slice(0, n);
+  }
+  return articles;
 }

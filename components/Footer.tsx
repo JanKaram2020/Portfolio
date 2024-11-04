@@ -37,6 +37,9 @@ export default async function NewFooter() {
             <Link className="hover:text-red-400" href="/#aboutMe">
               About
             </Link>
+            <Link className="hover:text-red-400" href="/resume">
+              Resume
+            </Link>
           </nav>
         </div>
         <div className="space-y-4">
@@ -68,7 +71,7 @@ export default async function NewFooter() {
         <div className="space-y-4">
           <h4 className="text-lg font-semibold">Latest Blogs</h4>
           <div className="space-y-2">
-            {blogs.map((blog, index) => (
+            {blogs.map((blog) => (
               <Link
                 className="hover:text-red-400"
                 href={"/blog/" + blog.slug}

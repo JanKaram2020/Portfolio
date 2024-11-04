@@ -16,9 +16,11 @@ function subscribe(callback: () => void) {
     mutationObserver.disconnect();
   };
 }
+
 function getSnapshot() {
   return document.body.classList.contains("dark");
 }
+
 export const toggleMode = (v?: "light" | "dark", force?: boolean) => {
   const isDark = document.body.classList.contains("dark");
 
@@ -47,6 +49,7 @@ export const toggleMode = (v?: "light" | "dark", force?: boolean) => {
   }
   Cookies.set("theme", newTheme);
 };
+
 export const useDarkMode = () => {
   useEffect(() => {
     const storedThemeSetter = () => {

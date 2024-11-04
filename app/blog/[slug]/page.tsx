@@ -47,8 +47,8 @@ export default async function Blog({ params }: PageProps) {
   );
 }
 
-export function generateStaticParams() {
-  let posts = getBlogPostsSlugs();
+export async function generateStaticParams() {
+  let posts = await getBlogPostsSlugs();
   return posts.map((slug) => ({
     slug,
   }));
