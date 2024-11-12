@@ -49,8 +49,8 @@ const ContactSection = () => (
         <Image
           src={"/resume-photo.jpeg"}
           alt={"jan photo"}
-          width={100}
-          height={100}
+          width={500}
+          height={500}
           className={
             "rounded-full border-[2px] border-sky-500 size-32 print:size-22 hidden print:block lg:block"
           }
