@@ -5,6 +5,7 @@ import SectionHeading from "../components/SectionHeading";
 import { AiTwotoneCalendar } from "react-icons/ai";
 import { MdLocationOn } from "react-icons/md";
 import LineSeparator from "../components/LineSeparator";
+import ListItem from "../components/ListItem";
 
 type JobProps = {
   title: string;
@@ -17,7 +18,7 @@ type JobProps = {
 const Job = ({ title, company, time, points, location }: JobProps) => {
   return (
     <div className={"flex flex-col gap-0.2 group"}>
-      <h4 className={`text-lg print:text-base`}>{title}</h4>
+      <h4 className={`text-lg print:text-base capitalize`}>{title}</h4>
       <h5 className="text-sm leading-none font-bold text-sky-500">{company}</h5>
       <p className="text-sm print:inline-flex flex items-center">
         <AiTwotoneCalendar className={"inline"} />
@@ -28,11 +29,7 @@ const Job = ({ title, company, time, points, location }: JobProps) => {
       </p>
       {Array.isArray(points) ? (
         <ol className="text-sm mb-1">
-          {points?.map((p) => (
-            <li key={p} className={"m-0 p-0 before:(content-['•'])"}>
-              {p}
-            </li>
-          ))}
+          {points?.map((p) => <ListItem key={p}>{p}</ListItem>)}
         </ol>
       ) : (
         points
@@ -49,8 +46,11 @@ const jobs: JobProps[] = [
     time: "08/2024 - Present",
     location: "Saudi Arabia - Remote",
     points: [
-      "Migrating existing apps from Outsystems to React, React Native, Expo and Nextjs",
-      "Mentored developers learning React, React Native, Expo and Nextjs.",
+      "Migrating Bupa app from Outsystems to React Native and Expo",
+      "Integrate Zoom-SDK in React Native to have video calls in the app",
+      "Add fluid and performant animations using react-native-reanimated",
+      "Customize Metro transformer to transform SVGs to react components and CSS files to Stylesheet objects to ease the migration of exising CSS sheets",
+      "Mentoring team members learning React, React Native and Expo",
     ],
   },
   {
@@ -59,8 +59,7 @@ const jobs: JobProps[] = [
     time: "01/2023 - 08/2024",
     location: "Cairo, Egypt - Hybrid",
     points: [
-      "Improved Landing page performance by 55% which increased SEO",
-      "Added features using React, Redux, RTK and RTK query to our Nextjs apps and React Native apps",
+      "Improved Landing page performance by 55% by using React Server Components and Server Side Rendering which increased SEO",
       "Introduced Unit, Component and Hooks testing with Jest and React-Testing-Library to our DLS, improving code quality and maintainability",
       "Created the TAMM Backend For Frontend using Node and Express with 100% test coverage",
     ],
@@ -71,8 +70,8 @@ const jobs: JobProps[] = [
     time: "02/2022 - 01/2023",
     location: "Alexandria, Egypt - Remote",
     points: [
-      "Built a data upload module for importing Excel data using SheetJs and transforming it for GraphQL consumption to make it easier to onboard new customers in the Zabbat app.",
-      "Designed and Implemented the notification page module in Zabbat using Corejs/React with real-time notifications using Firebase and service workers.",
+      "Developed the ERD drawer frontend in AppAsap using React Flow and sending the result to backend to generate Frontend with React Admin, Backend with Nodejs, Express, Prisma and Passport JS, MySQL database and Expo mobile app",
+      "Built a data upload module for importing Excel data using SheetJs and transforming it match GraphQL schema to make it easier to onboard new customers in the Zabbat app.",
       "Developed Easypass application (compound security) app with React Native, Paper, Redux, and RTK.",
     ],
   },
@@ -98,8 +97,7 @@ const jobs: JobProps[] = [
     time: "07/2019 - 08/2019",
     location: "Alexandria, Egypt",
     points: [
-      "Web development basics with HTML and CSS (12 hours)",
-      "JavaScript programming (24 hours)",
+      "Web development basics with HTML, CSS and JS (36 hours)",
       "MySQL (18 hours)",
       "Apache Web Server (6 hours)",
       "PHP programming language (30 hours)",
@@ -111,7 +109,7 @@ const jobs: JobProps[] = [
 const ExperienceSection = () => (
   <FullWidthColumn>
     <SectionHeading>Experience</SectionHeading>
-    <Section className="flex flex-col space-y-4">
+    <Section className="flex flex-col space-y-2">
       {jobs.map((j, i) => (
         <Job key={i} {...j} />
       ))}

@@ -10,7 +10,7 @@ const ContactSection = () => (
       <div>
         <h1 className="font-bold text-2xl">Jan Karam Aziz Ghaly</h1>
         <h2 className={"text-sky-500 font-bold my-1"}>
-          Senior Frontend React & React Native Engineer
+          Senior Frontend React & React Native Developer
         </h2>
         <div className="grid print:grid-cols-2 lg:grid-cols-2 gap-x-8">
           <a

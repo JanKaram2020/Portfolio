@@ -3,6 +3,7 @@ import FullWidthColumn from "../components/FullWidthColumn";
 import Section from "../components/Section";
 import SectionHeading from "../components/SectionHeading";
 import LineSeparator from "../components/LineSeparator";
+import ListItem from "../components/ListItem";
 
 const Projects = [
   {
@@ -41,12 +42,7 @@ const ProjectsSection = () => (
           </div>
           <ol className="text-sm">
             {points.map((p) => (
-              <li
-                key={p}
-                className="m-0 p-0 before:(content-['•'] text-2xl m-0 p-0 leading-none)"
-              >
-                {p}
-              </li>
+              <ListItem key={p}>{p}</ListItem>
             ))}
           </ol>
           <LineSeparator />
