@@ -105,14 +105,6 @@ const jobs: JobProps[] = [
       "PHP programming language (30 hours)",
       "Laravel framework (30 hours)",
     ],
-    // points: (
-    //   <p className="text-sm">
-    //     Open source development track:
-    //     <span className="block print:inline text-sm">
-    //       HTML - CSS - Javascript - MySQL - Php - Laravel
-    //     </span>
-    //   </p>
-    // ),
   },
 ];
 

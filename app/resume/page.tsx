@@ -23,12 +23,14 @@ export default function ResumePage() {
       <div className="flex items-center justify-center" id={resumeId}>
         <div className="font-sans flex flex-col border-[5px] rounded-lg mt-[5vh] max-w-[850px] p-[20px] print:(max-w-full m-0 p-0 min-w-full border-none bg-white color-gray-700)">
           <ContactSection />
-          <div className={"flex flex-row gap-10"}>
-            <div className={"w-8/12 space-y-4"}>
+          <div
+            className={"flex flex-col print:flex-row lg:flex-row gap-10 mt-4"}
+          >
+            <div className={"print:w-8/12 lg:w-8/12 space-y-4"}>
               <ExperienceSection />
               <EducationSection />
             </div>
-            <div className={"w-4/12 space-y-4"}>
+            <div className={"print:w-4/12 lg:w-4/12 space-y-4"}>
               <SummarySection />
               <SkillsSection />
               <FindMeSection />

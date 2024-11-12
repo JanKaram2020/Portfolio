@@ -9,10 +9,10 @@ const ContactSection = () => (
     <div className="flex flex-row items-center justify-between">
       <div>
         <h1 className="font-bold text-2xl">Jan Karam Aziz Ghaly</h1>
-        <h2 className={"text-sky-500 font-bold"}>
+        <h2 className={"text-sky-500 font-bold my-1"}>
           Senior Frontend React & React Native Engineer
         </h2>
-        <div className="grid grid-cols-2 gap-x-8">
+        <div className="grid print:grid-cols-2 lg:grid-cols-2 gap-x-8">
           <a
             href="tel: +201277440641"
             target="_blank"
@@ -51,7 +51,9 @@ const ContactSection = () => (
           alt={"jan photo"}
           width={100}
           height={100}
-          className={"rounded-full border-[2px] border-sky-500"}
+          className={
+            "rounded-full border-[2px] border-sky-500 size-32 print:size-22 hidden print:block lg:block"
+          }
         />
       </div>
     </div>

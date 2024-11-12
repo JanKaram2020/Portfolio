@@ -6,6 +6,6 @@ const Section = ({
 }: {
   children: ReactNode;
   className?: string;
-}) => <div className={`${className}`}>{children}</div>;
+}) => <section className={`${className}`}>{children}</section>;
 
 export default Section;
