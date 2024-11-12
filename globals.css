@@ -156,6 +156,7 @@
 .gap-6{gap:1.5rem;}
 .gap-8{gap:2rem;}
 .gap-80px{gap:80px;}
+.gap-x-2{column-gap:0.5rem;}
 .gap-x-8{column-gap:2rem;}
 .space-y-1>:not([hidden])~:not([hidden]){--un-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--un-space-y-reverse)));margin-bottom:calc(0.25rem * var(--un-space-y-reverse));}
 .space-y-10>:not([hidden])~:not([hidden]){--un-space-y-reverse:0;margin-top:calc(2.5rem * calc(1 - var(--un-space-y-reverse)));margin-bottom:calc(2.5rem * var(--un-space-y-reverse));}
