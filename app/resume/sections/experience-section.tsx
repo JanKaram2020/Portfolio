@@ -1,4 +1,3 @@
-import React, { ReactNode } from "react";
 import FullWidthColumn from "app/resume/components/FullWidthColumn";
 import Section from "app/resume/components/Section";
 import SectionHeading from "../components/SectionHeading";
@@ -7,12 +6,25 @@ import { MdLocationOn } from "react-icons/md";
 import LineSeparator from "../components/LineSeparator";
 import ListItem from "../components/ListItem";
 
+type Enumerate<
+  N extends number,
+  Acc extends number[] = [],
+> = Acc["length"] extends N
+  ? Acc[number]
+  : Enumerate<N, [...Acc, Acc["length"]]>;
+type IntRange<F extends number, T extends number> = Exclude<
+  Enumerate<T>,
+  Enumerate<F>
+>;
+type month = `${0}${IntRange<1, 10>}` | `${1}${IntRange<0, 3>}`;
+type year = `20${IntRange<1, 3>}${IntRange<0, 10>}`;
+type date = `${month}/${year}`;
 type JobProps = {
   title: string;
   company: string;
-  time: ReactNode;
-  location: string;
-  points?: string[] | ReactNode;
+  time: `${date} - ${date | "Present"}`;
+  location: "Remote" | `${string} - ${"Remote" | "Hybrid" | "Onsite"}`;
+  points?: string[];
 };
 
 const Job = ({ title, company, time, points, location }: JobProps) => {
@@ -98,7 +110,7 @@ const jobs: JobProps[] = [
     title: "Internship Trainee",
     company: "Information Technology Institute (ITI)",
     time: "07/2019 - 08/2019",
-    location: "Alexandria, Egypt",
+    location: "Alexandria, Egypt - Onsite",
     points: [
       "Web development basics with HTML, CSS and JS (36 hours)",
       "MySQL (18 hours)",
