@@ -82,7 +82,7 @@ const jobs: JobProps[] = [
     title: "Fullstack Web developer",
     company: "Cool Code Marketing Agency",
     time: "08/2021 - 02/2022",
-    location: "Remote",
+    location: "Turkey - Remote",
     points: [
       "Implemented an app interface for a Medical application using Nextjs, React, Typescript, and MUI",
       "Implemented API endpoints and relations between models using Node, Express, and Sequelize.",
