@@ -7,7 +7,21 @@ body {
   --shiki-dark-bg: #011627;
 }
 * {
-  font-family: var(--font-plex), serif;
+  font-family:
+    var(--font-plex),
+    sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji" serif;
 }
 code,
 code span {
@@ -182,5 +196,6 @@ figure[data-rehype-pretty-code-figure] :not(div.p-3) > code[data-line-numbers] {
   * {
     line-height: 1 !important;
     letter-spacing: -0em !important;
+    font-family: sans-serif !important;
   }
 }

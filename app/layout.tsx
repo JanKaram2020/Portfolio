@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: "https://www.jankaram.com/",
   },
 };
-const font = IBM_Plex_Sans({
+const IBMPlexSans = IBM_Plex_Sans({
   weight: ["100", "200", "300", "400", "500", "600", "700"],
   subsets: ["cyrillic"],
   variable: "--font-plex",
@@ -65,7 +65,7 @@ export default function RootLayout({
             }}
           />
         </head>
-        <body className={"dark " + font.variable}>
+        <body className={`dark ${IBMPlexSans.variable}`}>
           <Suspense fallback={<></>}>
             <Analytics />
           </Suspense>
