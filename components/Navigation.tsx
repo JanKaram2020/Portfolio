@@ -42,6 +42,7 @@ const Navigation = (): React.ReactElement => (
           title="linkedin profile"
           href="https://www.linkedin.com/in/jankaram2020/"
           rel="noopener"
+          target="_blank"
           className="hover:(text-red-400 rotate-[5deg]) active:(rotate-[10deg] scale-80) transition duration-100 ease-in-out"
         >
           <span className="hidden"> Jan Karam's Linkedin profile</span>
@@ -51,6 +52,7 @@ const Navigation = (): React.ReactElement => (
           title="github profile"
           href="https://github.com/JanKaram2020"
           rel="noopener"
+          target="_blank"
           className="hover:(text-red-400 rotate-[10deg]) active:(rotate-[15deg] scale-80) transition duration-100 ease-in-out"
         >
           <span className="hidden"> Jan Karam's Github profile</span>

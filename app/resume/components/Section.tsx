@@ -6,6 +6,6 @@ const Section = ({
 }: {
   children: ReactNode;
   className?: string;
-}) => <div className={`ml-2.5 ${className}`}>{children}</div>;
+}) => <div className={`${className}`}>{children}</div>;
 
 export default Section;

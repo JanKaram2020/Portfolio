@@ -18,4 +18,8 @@ export default defineConfig({
     }),
   ], // @ts-ignore
   transformers: [transformerVariantGroup()],
+  extendTheme: (theme) => {
+    // @ts-ignore
+    theme.colors.sky[500] = `#008CFF`;
+  },
 });

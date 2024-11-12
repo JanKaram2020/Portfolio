@@ -1,27 +1,47 @@
 import React from "react";
 import FullWidthColumn from "../components/FullWidthColumn";
 import Section from "../components/Section";
+import SectionHeading from "../components/SectionHeading";
+import { AiTwotoneCalendar } from "react-icons/ai";
+import { MdLocationOn } from "react-icons/md";
+import LineSeparator from "../components/LineSeparator";
 
 const EducationSection = () => (
   <FullWidthColumn>
-    <h2 className="text-xl font-bold leading-[1.2]">Education</h2>
-    <hr className="print:border print:border-gray-200 my-1" />
-    <Section className="flex flex-col gap-2.5">
+    <SectionHeading>Education</SectionHeading>
+    <Section className="flex flex-col gap-0.5">
       <div>
-        <h3 className={"text-lg print:inline"}>
+        <h3 className={"text-lg print:text-base"}>
           BS, Computer Science and Statistics{" "}
         </h3>
-        <div className={"text-sm print:inline"}>
-          Alexandria University. (2022)
+        <div className={"text-sm flex flex-row gap-2"}>
+          <div className={"flex flex-row items-center"}>
+            <AiTwotoneCalendar className={"inline"} />
+            &nbsp;2017 - 2022
+          </div>
+          <p className={"flex flex-row items-center"}>
+            <MdLocationOn className={"inline"} />
+            <span className={"text-sky-500"}>Alexandria University.</span>
+          </p>
         </div>
       </div>
+      <LineSeparator />
       <div>
-        <h3 className={"text-lg print:inline"}>
-          Web development specialization{" "}
+        <h3 className={"text-lg print:text-base"}>
+          Web development Specialization
         </h3>
-        <p className={"print:inline text-sm"}>
-          University of Michigan via Coursera (2019)
-        </p>
+        <div className={"text-sm flex flex-row gap-2"}>
+          <div className={"flex flex-row items-center"}>
+            <AiTwotoneCalendar className={"inline"} />
+            &nbsp;2019 - 2021
+          </div>
+          <p className={"flex flex-row items-center"}>
+            <MdLocationOn className={"inline"} />
+            <span className={"text-sky-500"}>
+              University of Michigan via Coursera.
+            </span>
+          </p>
+        </div>
       </div>
     </Section>
   </FullWidthColumn>

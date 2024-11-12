@@ -7,6 +7,7 @@ import Layout from "../components/Layout";
 import { GA_TRACKING_ID } from "../lib/constants";
 import { Metadata } from "next";
 import { ViewTransitions } from "next-view-transitions";
+import { IBM_Plex_Sans } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Jan Karam",
@@ -32,6 +33,11 @@ export const metadata: Metadata = {
     url: "https://www.jankaram.com/",
   },
 };
+const font = IBM_Plex_Sans({
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  subsets: ["cyrillic"],
+  variable: "--font-plex",
+});
 
 export default function RootLayout({
   children,
@@ -59,7 +65,7 @@ export default function RootLayout({
             }}
           />
         </head>
-        <body className={"dark"}>
+        <body className={"dark " + font.variable}>
           <Suspense fallback={<></>}>
             <Analytics />
           </Suspense>

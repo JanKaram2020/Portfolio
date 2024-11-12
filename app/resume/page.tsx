@@ -5,7 +5,9 @@ import ProjectsSection from "app/resume/sections/projects-section";
 import EducationSection from "app/resume/sections/education-section";
 import SkillsSection from "app/resume/sections/skills-section";
 import PrintButton from "./components/PrintButton";
-import { Metadata } from "next";
+import FindMeSection from "./sections/find-me-section";
+import type { Metadata } from "next";
+import { resumeId } from "../../lib/constants";
 
 export const metadata: Metadata = {
   title: "Resume | Jan Karam",
@@ -13,20 +15,26 @@ export const metadata: Metadata = {
     title: "Resume | Jan Karam",
   },
 };
+
 export default function ResumePage() {
   return (
     <>
-      <div className="flex items-center justify-center mt-[5vh] print:(m-0 hidden)">
-        <PrintButton />
-      </div>
-      <div className="flex items-center justify-center">
-        <div className="flex flex-col border-[5px] rounded-lg mt-[5vh] max-w-[750px] space-y-1 p-[20px] print:(m-0 p-0 min-w-full border-none bg-white color-black)">
+      <PrintButton />
+      <div className="flex items-center justify-center" id={resumeId}>
+        <div className="font-sans flex flex-col border-[5px] rounded-lg mt-[5vh] max-w-[850px] p-[20px] print:(max-w-full m-0 p-0 min-w-full border-none bg-white color-gray-700)">
           <ContactSection />
-          <SummarySection />
-          <ExperienceSection />
-          <EducationSection />
-          <ProjectsSection />
-          <SkillsSection />
+          <div className={"flex flex-row gap-10"}>
+            <div className={"w-8/12 space-y-4"}>
+              <ExperienceSection />
+              <EducationSection />
+            </div>
+            <div className={"w-4/12 space-y-4"}>
+              <SummarySection />
+              <SkillsSection />
+              <FindMeSection />
+              <ProjectsSection />
+            </div>
+          </div>
         </div>
       </div>
     </>

@@ -6,7 +6,9 @@ body {
   --shiki-light-bg: #eff1f5;
   --shiki-dark-bg: #011627;
 }
-
+* {
+  font-family: var(--font-plex), serif;
+}
 code,
 code span {
   color: var(--shiki-light);
@@ -165,5 +167,20 @@ figure[data-rehype-pretty-code-figure] :not(div.p-3) > code[data-line-numbers] {
   .admonition-icon svg {
     stroke: #083d77;
     fill: #083d77;
+  }
+}
+*::before {
+  line-height: 0 !important;
+  display: inline-block;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 2em !important;
+  top: 3px;
+  position: relative;
+}
+@media print {
+  * {
+    line-height: 1 !important;
+    letter-spacing: -0em !important;
   }
 }

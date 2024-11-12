@@ -1,51 +1,60 @@
 import React from "react";
 import FullWidthColumn from "../components/FullWidthColumn";
-import Section from "../components/Section";
+import Image from "next/image";
+import { MdLocationOn, MdPhone, MdOutlineAlternateEmail } from "react-icons/md";
+import { RiLinkM } from "react-icons/ri";
 
 const ContactSection = () => (
   <FullWidthColumn>
-    <h2 className="text-xl font-bold leading-[1.2] print:hidden">Contact</h2>
-    <hr className="print:hidden print:border print:border-gray-200 my-1" />
-    <Section className="grid gap-[5px] items-center grid-cols-1 md:grid-cols-3 print:grid-cols-[1fr_auto_1fr] w-full print:ml-0">
-      <a
-        href="tel: +201277440641"
-        target="_blank"
-        className="hidden print:block"
-        rel="noreferrer"
-      >
-        +201277440641
-      </a>
-      <h1 className="hidden print:block font-bold text-2xl text-center">
-        Jan Karam Aziz Ghaly
-      </h1>
-      <a
-        href="https://www.jankaram.com/"
-        target="_blank"
-        className="hidden print:(text-right block)"
-        rel="noreferrer"
-      >
-        jankaram.com
-      </a>
-      <a href="mailto: jankaram2020@gmail.com" target="_blank" rel="noreferrer">
-        jankaram2020@gmail.com
-      </a>
-      <a
-        href="https://www.linkedin.com/in/jankaram2020/"
-        target="_blank"
-        className="print:text-center"
-        rel="noreferrer"
-      >
-        linkedin.com/in/jankaram2020
-      </a>
-      <a
-        href="https://github.com/JanKaram2020"
-        target="_blank"
-        className="print:text-right"
-        rel="noreferrer"
-      >
-        github.com/jankaram2020
-      </a>
-    </Section>
+    <div className="flex flex-row items-center justify-between">
+      <div>
+        <h1 className="font-bold text-2xl">Jan Karam Aziz Ghaly</h1>
+        <h2 className={"text-sky-500 font-bold"}>
+          Senior Frontend React & React Native Engineer
+        </h2>
+        <div className="grid grid-cols-2 gap-x-8">
+          <a
+            href="tel: +201277440641"
+            target="_blank"
+            className="hidden print:block"
+            rel="noreferrer"
+          >
+            <MdPhone className={"inline text-sky-500"} />
+            &nbsp;+201277440641
+          </a>
+          <a
+            href="mailto: jankaram2020@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+            className={"block"}
+          >
+            <MdOutlineAlternateEmail className={"inline text-sky-500"} />
+            &nbsp;jankaram2020@gmail.com
+          </a>
+          <a
+            href="https://www.jankaram.com/"
+            target="_blank"
+            className="hidden print:(block)"
+            rel="noreferrer"
+          >
+            <RiLinkM className={"inline text-sky-500"} />
+            &nbsp;www.jankaram.com+201277440641
+          </a>
+          <p>
+            <MdLocationOn className={"inline text-sky-500"} /> Egypt
+          </p>
+        </div>
+      </div>
+      <div>
+        <Image
+          src={"/resume-photo.jpeg"}
+          alt={"jan photo"}
+          width={100}
+          height={100}
+          className={"rounded-full border-[2px] border-sky-500"}
+        />
+      </div>
+    </div>
   </FullWidthColumn>
 );
 
