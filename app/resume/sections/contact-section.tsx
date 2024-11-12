@@ -38,7 +38,7 @@ const ContactSection = () => (
             rel="noreferrer"
           >
             <RiLinkM className={"inline text-sky-500"} />
-            &nbsp;www.jankaram.com+201277440641
+            &nbsp;www.jankaram.com
           </a>
           <p>
             <MdLocationOn className={"inline text-sky-500"} /> Egypt
