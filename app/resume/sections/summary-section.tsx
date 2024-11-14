@@ -1,18 +1,16 @@
 import React from "react";
 import FullWidthColumn from "../components/FullWidthColumn";
-import Section from "../components/Section";
 import SectionHeading from "../components/SectionHeading";
+import { Summary } from "../data";
 
 const SummarySection = () => (
   <FullWidthColumn>
     <SectionHeading id={"aboutMe"}>Summary</SectionHeading>
-    <Section>
+    <section>
       <p className="text-sm print:tracking-tighter print:leading-none">
-        Senior Software Developer with 4+ years of experience in React.js, React
-        Native, NextJs, Node.js, Express, and TypeScript. Passionate about
-        building innovative and performant web and mobile applications.
+        {Summary}
       </p>
-    </Section>
+    </section>
   </FullWidthColumn>
 );
 

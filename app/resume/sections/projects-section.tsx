@@ -1,40 +1,20 @@
 import React from "react";
 import FullWidthColumn from "../components/FullWidthColumn";
-import Section from "../components/Section";
 import SectionHeading from "../components/SectionHeading";
 import LineSeparator from "../components/LineSeparator";
 import ListItem from "../components/ListItem";
-
-const Projects = [
-  {
-    name: "Writing By Lilyanne",
-    link: "https://www.jankaram.com/project/writing-by-lilyanne",
-    points: [
-      "JAMstack powered blog",
-      "I built this project from scratch with Gatsby, React, GraphQL, Theme-UI, Framer motion, react-intl and Sanity CMS.",
-      "The blog is available in Arabic, English and French and can be viewed in light and dark mode.",
-    ],
-  },
-  {
-    name: "Test Table Generator",
-    link: "https://www.jankaram.com/project/would-you-rather",
-    points: [
-      "Table getter website that scrapes the faculty of science's test table page and displays the results.",
-      "Built this project using Nextjs, Puppeteer and Mantine component library.",
-    ],
-  },
-];
+import { Projects } from "../data";
 
 const ProjectsSection = () => (
   <FullWidthColumn>
     <SectionHeading>Projects</SectionHeading>
-    <Section className="flex flex-col gap-2.5">
-      {Projects.map(({ name, link, points }) => (
+    <section className="flex flex-col gap-2.5">
+      {Projects.map(({ name, href, points }) => (
         <div className={"group"} key={name}>
           <div>
             <a
               className="block print-inline underline"
-              href={link}
+              href={href}
               rel="noopener"
             >
               <h3 className="text-lg print:text-base print:mb-1">{name}</h3>
@@ -48,7 +28,7 @@ const ProjectsSection = () => (
           <LineSeparator />
         </div>
       ))}
-    </Section>
+    </section>
   </FullWidthColumn>
 );
 

@@ -1,13 +1,12 @@
-import ContactSection from "app/resume/sections/contact-section";
-import SummarySection from "app/resume/sections/summary-section";
-import ExperienceSection from "app/resume/sections/experience-section";
-import ProjectsSection from "app/resume/sections/projects-section";
-import EducationSection from "app/resume/sections/education-section";
-import SkillsSection from "app/resume/sections/skills-section";
+import type { Metadata } from "next";
+import ContactSection from "./sections/contact-section";
+import SummarySection from "./sections/summary-section";
+import ExperienceSection from "./sections/experience-section";
+import ProjectsSection from "./sections/projects-section";
+import EducationSection from "./sections/education-section";
+import SkillsSection from "./sections/skills-section";
 import PrintSection from "./sections/print-section";
 import FindMeSection from "./sections/find-me-section";
-import type { Metadata } from "next";
-import { resumeId } from "../../lib/constants";
 
 export const metadata: Metadata = {
   title: "Resume | Jan Karam",
@@ -20,7 +19,7 @@ export default function ResumePage() {
   return (
     <>
       <PrintSection />
-      <div className="flex items-center justify-center" id={resumeId}>
+      <div className="flex items-center justify-center">
         <div className="font-sans flex flex-col border-[5px] rounded-lg mt-[5vh] max-w-[850px] p-[20px] print:(max-w-full m-0 p-0 min-w-full border-none bg-white color-gray-700)">
           <ContactSection />
           <div

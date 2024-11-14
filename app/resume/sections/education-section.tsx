@@ -1,28 +1,15 @@
 import React from "react";
 import FullWidthColumn from "../components/FullWidthColumn";
-import Section from "../components/Section";
 import SectionHeading from "../components/SectionHeading";
 import { AiTwotoneCalendar } from "react-icons/ai";
 import { MdLocationOn } from "react-icons/md";
 import LineSeparator from "../components/LineSeparator";
-
-const Education = [
-  {
-    name: "BS, Computer Science and Statistics",
-    time: "2017 - 2022",
-    place: "Alexandria University",
-  },
-  {
-    name: "Web development Specialization",
-    time: "2019 - 2021",
-    place: "University of Michigan via Coursera",
-  },
-];
+import { Education } from "../data";
 
 const EducationSection = () => (
   <FullWidthColumn>
     <SectionHeading>Education</SectionHeading>
-    <Section className="flex flex-col gap-0.5">
+    <section className="flex flex-col gap-0.5">
       {Education.map(({ name, time, place }) => (
         <div className={"group"} key={name}>
           <h3 className={"text-lg print:text-base"}>{name}</h3>
@@ -39,7 +26,7 @@ const EducationSection = () => (
           <LineSeparator />
         </div>
       ))}
-    </Section>
+    </section>
   </FullWidthColumn>
 );
 
