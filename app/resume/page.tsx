@@ -19,7 +19,7 @@ export default function ResumePage() {
   return (
     <>
       <PrintSection />
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center" id={"resume-page"}>
         <div className="font-sans flex flex-col border-[5px] rounded-lg mt-[5vh] max-w-[850px] p-[20px] print:(max-w-full m-0 p-0 min-w-full border-none bg-white color-gray-700)">
           <ContactSection />
           <div

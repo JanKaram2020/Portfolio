@@ -6,7 +6,9 @@ body {
   --shiki-light-bg: #eff1f5;
   --shiki-dark-bg: #011627;
 }
-* {
+*,
+*:before,
+*:after {
   font-family:
     var(--font-plex),
     sans-serif,
@@ -183,7 +185,8 @@ figure[data-rehype-pretty-code-figure] :not(div.p-3) > code[data-line-numbers] {
     fill: #083d77;
   }
 }
-*::before {
+
+#resume-page *::before {
   line-height: 0 !important;
   display: inline-block;
   margin: 0 !important;
@@ -192,8 +195,9 @@ figure[data-rehype-pretty-code-figure] :not(div.p-3) > code[data-line-numbers] {
   top: 3px;
   position: relative;
 }
+
 @media print {
-  * {
+  #resume-page * {
     line-height: 1 !important;
     letter-spacing: -0em !important;
     font-family: sans-serif !important;
