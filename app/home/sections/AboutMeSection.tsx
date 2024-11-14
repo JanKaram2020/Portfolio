@@ -19,6 +19,7 @@ export default function AboutMeSection(): React.ReactElement {
           className={"text-red-400"}
           href="https://www.ahlamontada.com/"
           rel="noopener"
+          target="_blank"
         >
           ahlamontada.com
         </a>
@@ -28,6 +29,7 @@ export default function AboutMeSection(): React.ReactElement {
           className={"text-red-400"}
           href="https://jan12.rigala.net/"
           rel="noopener"
+          target="_blank"
         >
           https://jan12.rigala.net/
         </a>
