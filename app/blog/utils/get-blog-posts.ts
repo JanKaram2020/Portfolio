@@ -62,7 +62,7 @@ const innerGetPosts = async () => {
   return sortArticles(articles);
 };
 
-let cachedArticles: ReturnType<typeof innerGetPosts> | undefined;
+let cachedArticles: Awaited<ReturnType<typeof innerGetPosts>> | undefined;
 
 export async function getBlogPostsSlugs() {
   const blogPosts = await getBlogPosts();
