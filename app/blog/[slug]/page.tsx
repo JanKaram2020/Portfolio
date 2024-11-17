@@ -29,20 +29,20 @@ export default async function Blog({ params }: PageProps) {
       >
         <div id={frontMatterId} className={"mb-6"}>
           <h1 className={"text-4xl text-red-400 mb-2 capitalize"}>
-            {post.frontmatter.title}
+            {post.frontMatter.title}
           </h1>
           <p>
-            {dateTimeFormatter(post.frontmatter.publishedAt)} - &nbsp;
-            {post.frontmatter.timeToRead}
+            {dateTimeFormatter(post.frontMatter.publishedAt)} - &nbsp;
+            {post.frontMatter.timeToRead}
           </p>
         </div>
         <post.Content />
       </article>
-      <div className={"hidden lg:flex w-3/12 flex-col"}>
+      <aside className={"hidden lg:flex w-3/12 flex-col"}>
         <DesktopOnlyComponent>
           <TableOfContent tableOfContent={post.tableOfContent} />
         </DesktopOnlyComponent>
-      </div>
+      </aside>
     </>
   );
 }
@@ -63,10 +63,10 @@ export async function generateMetadata({
     notFound();
   }
   return {
-    title: post.frontmatter.title + " | Jan Karam",
-    description: post.frontmatter.summary,
+    title: post.frontMatter.title + " | Jan Karam",
+    description: post.frontMatter.summary,
     openGraph: {
-      title: post.frontmatter.title + " | Jan Karam",
+      title: post.frontMatter.title + " | Jan Karam",
       images: "https://www.jankaram.com" + "/janfinal.svg",
       url: "https://www.jankaram.com/blog/" + post.slug,
     },

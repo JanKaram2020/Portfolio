@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect } from "react";
 import mermaid from "mermaid";
 import { mergeClasses } from "../../../../lib/mergeClasses";

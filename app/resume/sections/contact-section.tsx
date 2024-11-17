@@ -21,6 +21,7 @@ const ContactSection = () => (
               <Component
                 {...(href ? linkProps : {})}
                 className={printOnly ? "hidden print:block" : "block"}
+                key={href + display}
               >
                 <Icon className={"inline text-sky-500"} />
                 &nbsp;{display}

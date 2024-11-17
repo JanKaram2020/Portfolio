@@ -77,9 +77,9 @@ export default async function NewFooter() {
                 href={"/blog/" + blog.slug}
                 key={blog.slug}
               >
-                <h5 className="font-medium">{blog.frontmatter.title}</h5>
+                <h5 className="font-medium">{blog.frontMatter.title}</h5>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  {blog.frontmatter.summary}
+                  {blog.frontMatter.summary}
                 </p>
               </Link>
             ))}

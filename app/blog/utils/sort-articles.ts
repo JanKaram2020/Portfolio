@@ -1,6 +1,6 @@
 const sortArticles = <
   T extends {
-    frontmatter: {
+    frontMatter: {
       publishedAt: string;
     };
   },
@@ -9,7 +9,7 @@ const sortArticles = <
 ) => {
   return articles.sort((a, b) => {
     if (
-      new Date(a.frontmatter.publishedAt) > new Date(b.frontmatter.publishedAt)
+      new Date(a.frontMatter.publishedAt) > new Date(b.frontMatter.publishedAt)
     ) {
       return -1;
     }

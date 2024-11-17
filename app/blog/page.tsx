@@ -15,16 +15,16 @@ const BlogPage = async () => {
             <article key={b.slug}>
               <Link href={`/blog/${b.slug}`} className={"hover:text-red-400"}>
                 <h3 className={"text-2xl font-bold capitalize"}>
-                  {b.frontmatter.title}
+                  {b.frontMatter.title}
                 </h3>
               </Link>
-              <p>{b.frontmatter.summary}</p>
+              <p>{b.frontMatter.summary}</p>
               <div className="flex flex-row gap-2">
                 <p className="text-neutral-600 dark:text-neutral-400 tabular-nums">
-                  {formatDate(b.frontmatter.publishedAt, false)}
+                  {formatDate(b.frontMatter.publishedAt, false)}
                 </p>
                 <p>-</p>
-                <p>{b.frontmatter.timeToRead}</p>
+                <p>{b.frontMatter.timeToRead}</p>
               </div>
               <Link
                 href={`/blog/${b.slug}`}

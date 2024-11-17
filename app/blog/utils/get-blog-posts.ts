@@ -3,52 +3,56 @@ import fs from "fs";
 import readingDuration from "./reading-duration";
 import getHeadings from "./get-headings";
 import sortArticles from "./sort-articles";
+import getMdxFilesRecursively from "./get-mdx-files-recursively";
 
-async function innerGetPosts() {
+type FrontMatter = {
+  title: string;
+  summary: string;
+  publishedAt: `${number}-${number}-${number}`;
+  timeToRead: string;
+};
+
+const innerGetPosts = async () => {
   const dir = path.join(process.cwd(), "app", "blog", "posts");
-
-  let mdxFiles = fs
-    .readdirSync(dir)
-    .filter((file) => path.extname(file) === ".mdx");
-
+  const mdxFiles = getMdxFilesRecursively(dir);
   const articles = await Promise.all(
     mdxFiles.map(async (f) => {
-      const slug = path.basename(f, path.extname(f));
-      const rawContent = fs.readFileSync(dir + "/" + f, "utf-8");
+      const slug = path
+        .relative(dir, f)
+        .replace(/\\/g, "/")
+        .replace(/\.mdx$/, "")
+        .replace("/index", "");
+      const rawContent = fs.readFileSync(f, "utf-8");
       const timeToRead = readingDuration(rawContent);
       const tableOfContent = getHeadings(rawContent);
-      const fileImport = await import("../posts/" + f);
+      const relativeFilePath = f.split("/posts/")[1];
+      const fileImport = await import("../posts/" + relativeFilePath);
 
       const Content = fileImport.default as () => JSX.Element;
 
-      const frontmatter = {
-        ...fileImport.frontmatter,
+      const frontMatter = {
+        ...fileImport.frontMatter,
         timeToRead,
-      } as {
-        title: string;
-        summary: string;
-        publishedAt: `${number}-${number}-${number}`;
-        timeToRead: string;
-      };
+      } as FrontMatter;
 
       if (!Content) {
         throw new Error(`${slug} must have default export`);
       }
 
       if (
-        !frontmatter ||
-        !frontmatter.title ||
-        !frontmatter.summary ||
-        !frontmatter.publishedAt
+        !frontMatter ||
+        !frontMatter.title ||
+        !frontMatter.summary ||
+        !frontMatter.publishedAt
       ) {
         throw new Error(
-          `${slug} must have frontmatter with title, summary and publishedAt`,
+          `${slug} must have frontMatter with title, summary and publishedAt`,
         );
       }
 
       return {
         Content,
-        frontmatter,
+        frontMatter,
         tableOfContent,
         slug,
       };
@@ -56,21 +60,9 @@ async function innerGetPosts() {
   );
 
   return sortArticles(articles);
-}
+};
 
-let cachedArticles:
-  | {
-      Content: () => JSX.Element;
-      frontmatter: {
-        title: string;
-        summary: string;
-        publishedAt: `${number}-${number}-${number}`;
-        timeToRead: string;
-      };
-      tableOfContent: { text: string; level: number; id: string }[];
-      slug: string;
-    }[]
-  | undefined;
+let cachedArticles: ReturnType<typeof innerGetPosts> | undefined;
 
 export async function getBlogPostsSlugs() {
   const blogPosts = await getBlogPosts();

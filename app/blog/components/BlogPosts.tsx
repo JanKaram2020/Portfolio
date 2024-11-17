@@ -14,10 +14,10 @@ export async function BlogPosts() {
     >
       <div className="w-full flex flex-col hover:text-red-400">
         <p className="text-neutral-600 dark:text-neutral-400 tabular-nums">
-          {formatDate(post.frontmatter.publishedAt, false)}
+          {formatDate(post.frontMatter.publishedAt, false)}
         </p>
         <p className="text-neutral-900 dark:text-neutral-100 tracking-tight hover:text-red-400">
-          {post.frontmatter.title}
+          {post.frontMatter.title}
         </p>
       </div>
     </Link>
