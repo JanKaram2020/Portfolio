@@ -20,7 +20,7 @@ const emojisMap: {
 } as const;
 
 const svgMap: {
-  [key in AdmonitionType]: JSX.Element;
+  [key in AdmonitionType]: React.JSX.Element;
 } = {
   warning: (
     <svg

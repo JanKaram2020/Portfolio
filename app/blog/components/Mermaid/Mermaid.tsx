@@ -9,7 +9,7 @@ const Mermaid = ({
   isDark,
   className,
   ...props
-}: MermaidProps): JSX.Element => {
+}: MermaidProps): React.JSX.Element => {
   useEffect(() => {
     mermaid.initialize({
       startOnLoad: true,

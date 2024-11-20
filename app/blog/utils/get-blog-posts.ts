@@ -4,6 +4,7 @@ import readingDuration from "./reading-duration";
 import getHeadings from "./get-headings";
 import sortArticles from "./sort-articles";
 import getMdxFilesRecursively from "./get-mdx-files-recursively";
+import React from "react";
 
 type FrontMatter = {
   title: string;
@@ -28,7 +29,7 @@ const innerGetPosts = async () => {
       const relativeFilePath = f.split("/posts/")[1];
       const fileImport = await import("../posts/" + relativeFilePath);
 
-      const Content = fileImport.default as () => JSX.Element;
+      const Content = fileImport.default as () => React.JSX.Element;
 
       const frontMatter = {
         ...fileImport.frontMatter,
