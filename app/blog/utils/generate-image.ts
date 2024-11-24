@@ -1,53 +1,35 @@
-import { createCanvas, loadImage } from "canvas";
+import {
+  createCanvas,
+  loadImage,
+  registerFont,
+  type CanvasRenderingContext2D,
+} from "canvas";
 import fs from "fs";
 import path from "path";
 import type { BlogPosts } from "./get-blog-posts";
 
-// Function to add each name to an image and save it with the name as the filename
+registerFont(path.join(process.cwd(), "public", "og-font.otf"), {
+  family: "OgFont",
+});
+
+registerFont(path.join(process.cwd(), "public", "og-secondary-font.ttf"), {
+  family: "OgSecondaryFont",
+});
+
+const containerWidth = 900;
+const imageWidth = 1200;
+const imageHeight = 630;
+
 export default async function makeImage(posts: BlogPosts) {
   try {
-    const template = path.join(process.cwd(), "public", "test-table.PNG");
+    const template = path.join(process.cwd(), "public", "og-template.png");
     const image = await loadImage(template);
-    const { width, height } = image;
     posts.forEach(({ slug, frontMatter }) => {
-      const canvas = createCanvas(width, height);
+      const canvas = createCanvas(imageWidth, imageHeight);
       const ctx = canvas.getContext("2d");
-
-      // Draw the image onto the canvas
       ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
-
-      // Initial font size and styling
-      let fontSize = 150;
-      let textWidth, textHeight;
-
-      // Function to measure text size
-      const measureText = () => {
-        ctx.font = `${fontSize}px CustomArabicFont`;
-        const metrics = ctx.measureText(frontMatter.title);
-        textWidth = metrics.width;
-        textHeight =
-          metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent;
-      };
-
-      // Measure and adjust font size until it fits
-      measureText();
-      while ((textWidth ?? 0) > width || (textHeight ?? 0) > height) {
-        fontSize -= 1;
-        if (fontSize <= 0) break; // Stop if font size gets too small
-        measureText();
-      }
-
-      // Center the text
-      ctx.font = `${fontSize}px CustomArabicFont`;
-      ctx.fillStyle = "#ff9b13";
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-
-      const x = canvas.width / 2;
-      const y = canvas.height / 2 - 40;
-
-      // Draw the Arabic text
-      ctx.fillText(frontMatter.title, x, y);
+      writePrimaryText(frontMatter.title, ctx);
+      writeSecondaryText(frontMatter.summary, ctx);
 
       // Save the result to a file
       const outputFileName = path.join(
@@ -68,3 +50,59 @@ export default async function makeImage(posts: BlogPosts) {
     console.error("Error processing image:", err);
   }
 }
+
+const writePrimaryText = (text: string, ctx: CanvasRenderingContext2D) => {
+  let primaryFontSize = 32.1;
+  let primaryTextWidth = 0;
+  let primaryTextHeight = 0;
+  const primaryText = text.toUpperCase();
+  const measurePrimaryText = () => {
+    ctx.font = `${primaryFontSize}px OgFont`;
+    const metrics = ctx.measureText(primaryText);
+    primaryTextWidth = metrics.width;
+    primaryTextHeight =
+      metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent;
+  };
+  measurePrimaryText();
+  while (primaryTextWidth > containerWidth || primaryTextHeight > imageHeight) {
+    primaryFontSize -= 1;
+    if (primaryFontSize <= 0) break; // Stop if font size gets too small
+    measurePrimaryText();
+  }
+
+  ctx.fillStyle = "#191919";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  const x = imageWidth / 2;
+  const y = imageHeight / 2 - 40;
+  ctx.fillText(primaryText, x, y);
+};
+
+const writeSecondaryText = (text: string, ctx: CanvasRenderingContext2D) => {
+  let secondaryFontSize = 19.2;
+  let secondaryTextWidth = 0;
+  let secondaryTextHeight = 0;
+  const measureSecondaryText = () => {
+    ctx.font = `${secondaryFontSize}px OgSecondaryFont`;
+    const metrics = ctx.measureText(text);
+    secondaryTextWidth = metrics.width;
+    secondaryTextHeight =
+      metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent;
+  };
+  measureSecondaryText();
+  while (
+    secondaryTextWidth > containerWidth ||
+    secondaryTextHeight > imageHeight
+  ) {
+    secondaryFontSize -= 1;
+    if (secondaryFontSize <= 0) break; // Stop if font size gets too small
+    measureSecondaryText();
+  }
+
+  ctx.fillStyle = "#191919";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  const x = imageWidth / 2;
+  const y = imageHeight / 2 + 40;
+  ctx.fillText(text, x, y);
+};
