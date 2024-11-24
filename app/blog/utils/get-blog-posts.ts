@@ -29,7 +29,8 @@ const innerGetPosts = async () => {
         .relative(dir, f)
         .replace(/\\/g, "/")
         .replace(/\.mdx$/, "")
-        .replace("/index", "");
+        .replace("/index", "")
+        .toLowerCase();
       const rawContent = fs.readFileSync(f, "utf-8");
       const timeToRead = readingDuration(rawContent);
       const tableOfContent = getHeadings(rawContent);
