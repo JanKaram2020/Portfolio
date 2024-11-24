@@ -69,8 +69,6 @@ const nextConfig = {
     config.plugins.push(UnoCSS());
     return config;
   },
-  experimental: {
-    outputFileTracingExcludes: ["**canvas**"],
-  },
+  outputFileTracingExcludes: ["**canvas**"],
 };
 export default withMDX(nextConfig);

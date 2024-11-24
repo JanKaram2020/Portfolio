@@ -27,7 +27,7 @@
     "js-cookie": "^3.0.5",
     "mdx-mermaid": "^2.0.0",
     "mermaid": "^11.4.0",
-    "next": "^15.0.3",
+    "next": "^14.2.18",
     "next-view-transitions": "^0.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

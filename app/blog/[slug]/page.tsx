@@ -6,8 +6,7 @@ import { frontMatterId } from "lib/constants";
 import DesktopOnlyComponent from "app/blog/components/DesktopOnlyComponent";
 import { Metadata } from "next";
 
-type Params = Promise<{ slug: string }>;
-type Props = { params: Params };
+type Params = { slug: string };
 
 const dateTimeFormatter = (d: string) => {
   return new Intl.DateTimeFormat("en-US", {
@@ -17,8 +16,7 @@ const dateTimeFormatter = (d: string) => {
     day: "numeric",
   }).format(new Date(d));
 };
-export default async function Blog(props: Props) {
-  const params = await props.params;
+export default async function Blog({ params }: { params: Params }) {
   const allPosts = await getBlogPosts();
   const post = allPosts.find((post) => post.slug === params.slug);
   if (!post) {
@@ -57,8 +55,11 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata(props: Props): Promise<Metadata | null> {
-  const params = await props.params;
+export async function generateMetadata({
+  params,
+}: {
+  params: Params;
+}): Promise<Metadata | null> {
   const allPosts = await getBlogPosts();
   const post = allPosts.find((post) => post.slug === params.slug);
   if (!post) {
