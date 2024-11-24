@@ -3,7 +3,7 @@
 import { RiMoonClearFill } from "react-icons/ri";
 import { IoMdSunny } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
-import { useDarkMode, toggleMode } from "lib/useDarkMode";
+import { useDarkMode, toggleMode } from "hooks/useDarkMode";
 
 function ColorModeToggle() {
   const isDark = useDarkMode();

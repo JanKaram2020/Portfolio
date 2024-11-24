@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useDarkMode } from "lib/useDarkMode";
+import { useDarkMode } from "hooks/useDarkMode";
 import dynamic from "next/dynamic";
 import { MermaidProps } from "./types";
 

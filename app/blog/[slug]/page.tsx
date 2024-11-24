@@ -67,7 +67,7 @@ export async function generateMetadata({
     description: post.frontMatter.summary,
     openGraph: {
       title: post.frontMatter.title + " | Jan Karam",
-      images: "https://www.jankaram.com" + "/janfinal.svg",
+      images: "https://www.jankaram.com/og-images" + post.slug + ".png",
       url: "https://www.jankaram.com/blog/" + post.slug,
     },
   };

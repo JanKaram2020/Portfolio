@@ -5,6 +5,7 @@ import getHeadings from "./get-headings";
 import sortArticles from "./sort-articles";
 import getMdxFilesRecursively from "./get-mdx-files-recursively";
 import React from "react";
+import makeImages from "./generate-image";
 
 type FrontMatter = {
   title: string;
@@ -12,6 +13,12 @@ type FrontMatter = {
   publishedAt: `${number}-${number}-${number}`;
   timeToRead: string;
 };
+export type BlogPosts = {
+  Content: () => React.JSX.Element;
+  frontMatter: FrontMatter;
+  tableOfContent: { text: string; level: number; id: string }[];
+  slug: string;
+}[];
 
 const innerGetPosts = async () => {
   const dir = path.join(process.cwd(), "app", "blog", "posts");
@@ -59,6 +66,8 @@ const innerGetPosts = async () => {
       };
     }),
   );
+
+  await makeImages(articles);
 
   return sortArticles(articles);
 };

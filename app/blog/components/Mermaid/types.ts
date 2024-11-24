@@ -1,4 +1,4 @@
-import { useDarkMode } from "../../../../lib/useDarkMode";
+import { useDarkMode } from "hooks/useDarkMode";
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 
 export type MermaidProps = {
