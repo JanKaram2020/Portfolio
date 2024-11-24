@@ -13,7 +13,7 @@
     "test": "vitest run",
     "test:watch": "vitest run -w",
     "test:update": "vitest run -u",
-    "vercel-build": "sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev"
+    "vercel-build": "yum install libuuid-devel libmount-devel && cp /lib64/{libuuid,libmount,libblkid}.so.1 node_modules/canvas/build/Release/ && yarn build"
   },
   "dependencies": {
     "@hbsnow/rehype-sectionize": "^1.0.7",
