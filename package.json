@@ -12,8 +12,7 @@
     "postbuild": "next-sitemap",
     "test": "vitest run",
     "test:watch": "vitest run -w",
-    "test:update": "vitest run -u",
-    "vercel-build": "yum install libuuid-devel libmount-devel zlib && cp /lib64/{libuuid,libmount,libblkid,libz}.so.1 node_modules/canvas/build/Release/ && yarn build"
+    "test:update": "vitest run -u"
   },
   "dependencies": {
     "@hbsnow/rehype-sectionize": "^1.0.7",
