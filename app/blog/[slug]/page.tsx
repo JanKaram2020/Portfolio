@@ -5,7 +5,9 @@ import TableOfContent from "../components/TableOfContent";
 import { frontMatterId } from "lib/constants";
 import DesktopOnlyComponent from "app/blog/components/DesktopOnlyComponent";
 import { Metadata } from "next";
-type PageProps = { params: { slug: string } };
+
+type Params = Promise<{ slug: string }>;
+type Props = { params: Params };
 
 const dateTimeFormatter = (d: string) => {
   return new Intl.DateTimeFormat("en-US", {
@@ -15,7 +17,8 @@ const dateTimeFormatter = (d: string) => {
     day: "numeric",
   }).format(new Date(d));
 };
-export default async function Blog({ params }: PageProps) {
+export default async function Blog(props: Props) {
+  const params = await props.params;
   const allPosts = await getBlogPosts();
   const post = allPosts.find((post) => post.slug === params.slug);
   if (!post) {
@@ -54,9 +57,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({
-  params,
-}: PageProps): Promise<Metadata | null> {
+export async function generateMetadata(props: Props): Promise<Metadata | null> {
+  const params = await props.params;
   const allPosts = await getBlogPosts();
   const post = allPosts.find((post) => post.slug === params.slug);
   if (!post) {
