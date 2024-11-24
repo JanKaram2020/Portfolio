@@ -4,7 +4,7 @@ import React from "react";
 import TableOfContent from "../components/TableOfContent";
 import { frontMatterId } from "lib/constants";
 import DesktopOnlyComponent from "app/blog/components/DesktopOnlyComponent";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 type Params = { slug: string };
 
