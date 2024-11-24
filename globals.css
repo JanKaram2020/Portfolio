@@ -71,6 +71,7 @@
 .block{display:block;}
 .before\:block::before{display:block;}
 .after\:block::after{display:block;}
+.inline-block{display:inline-block;}
 .hidden,
 .group:last-child .group-last\:hidden{display:none;}
 .size-32{width:8rem;height:8rem;}
@@ -86,6 +87,7 @@
 .max-w-800px{max-width:800px;}
 .max-w-full{max-width:100%;}
 .min-h-75vh{min-height:75vh;}
+.min-w-\[2ch\]{min-width:2ch;}
 .min-w-\[320px\]{min-width:320px;}
 .min-w-10{min-width:2.5rem;}
 .w-\[98\%\]{width:98%;}
@@ -283,7 +285,8 @@
 .print\:m-0{margin:0;}
 .print\:m-0\!{margin:0 !important;}
 .print\:mb-1{margin-bottom:0.25rem;}
-.print-inline{display:inline;}
+.print-inline,
+.print\:inline{display:inline;}
 .print\:block{display:block;}
 .print\:hidden{display:none;}
 .print\:size-22{width:5.5rem;height:5.5rem;}
