@@ -13,7 +13,7 @@
     "test": "vitest run",
     "test:watch": "vitest run -w",
     "test:update": "vitest run -u",
-    "vercel-build": "yum install zlib"
+    "vercel-build": "sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev"
   },
   "dependencies": {
     "@hbsnow/rehype-sectionize": "^1.0.7",
