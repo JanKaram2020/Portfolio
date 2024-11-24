@@ -22,7 +22,7 @@
     "@next/mdx": "^14.2.3",
     "@radix-ui/react-tabs": "^1.0.4",
     "@unocss/reset": "^0.58.5",
-    "canvas": "^3.0.0-rc2",
+    "canvas": "^2.8.0",
     "clsx": "^2.1.0",
     "framer-motion": "^11.2.2",
     "js-cookie": "^3.0.5",
