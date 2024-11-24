@@ -38,7 +38,7 @@ export const Contact = {
 
 export const Experiences: JobsArray = [
   {
-    title: "Senior Frontend & React Native developer",
+    title: "Senior React Native developer",
     company: "Damas Engineering Consulting (Client Puba Arabia)",
     time: "08/2024 - Present",
     location: "Saudi Arabia - Remote",
@@ -46,7 +46,7 @@ export const Experiences: JobsArray = [
       "Migrating Bupa app from Outsystems to React Native and Expo",
       "Integrate Zoom-SDK in React Native to have video calls in the app",
       "Add fluid and performant animations using react-native-reanimated",
-      "Customize Metro transformer to transform SVGs to react components and CSS files to Stylesheet objects to ease the migration of exising CSS sheets",
+      "Customize Metro transformer to convert SVGs to components and CSS files to Stylesheet objects to ease the migration of exising sheets",
       "Mentoring team members learning React, React Native and Expo",
     ],
   },
@@ -56,7 +56,7 @@ export const Experiences: JobsArray = [
     time: "01/2023 - 08/2024",
     location: "Cairo, Egypt - Hybrid",
     points: [
-      "Improved Landing page performance by 55% by using React Server Components and Server Side Rendering which increased SEO",
+      "Increased landing page performance by 55% through the use of React Server Components, Server-Side Rendering, and various techniques, resulting in improved SEO",
       "Introduced Unit, Component and Hooks testing with Jest and React-Testing-Library to our DLS, improving code quality and maintainability",
       "Created the TAMM Backend For Frontend using Node and Express with 100% test coverage",
     ],
@@ -116,8 +116,8 @@ export const Education = [
   },
 ];
 
-export const Summary =
-  "Senior Software Developer with 4+ years of experience in React.js, React Native, NextJs, Node.js, Express, and TypeScript. Passionate about building innovative and performant web and mobile applications.";
+export const Summary1 = `Senior Software Developer with `;
+export const Summary2 = ` of experience in React.js, React Native, NextJs, Node.js, Express, and TypeScript. Passionate about building innovative and performant web and mobile applications.`;
 
 export const Skills = [
   "Zustand",
