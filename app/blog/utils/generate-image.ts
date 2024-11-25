@@ -53,6 +53,7 @@ export default async function makeImage(posts: BlogPosts) {
     console.error("Error processing image:", err);
   }
 }
+
 const variants = {
   primary: {
     fontSize: 50,
