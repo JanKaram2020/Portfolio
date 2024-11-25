@@ -68,6 +68,10 @@ const variants = {
   },
 } as const;
 
+function inRange(x: number, min: number, max: number) {
+  return (x - min) * (x - max) <= 0;
+}
+
 const writeText = (
   initialText: string,
   ctx: CanvasRenderingContext2D,
@@ -81,15 +85,9 @@ const writeText = (
     textWidth = ctx.measureText(text).width;
   };
   measureText();
+
   while (
-    ![
-      Math.floor(textWidth),
-      Math.round(textWidth),
-      Math.round(textWidth) + 1,
-      Math.round(textWidth) - 1,
-      Math.round(textWidth) + 2,
-      Math.round(textWidth) - 2,
-    ].includes(containerWidth)
+    !inRange(Math.floor(textWidth), containerWidth - 2, containerWidth + 2)
   ) {
     if (textWidth > containerWidth) {
       if (textWidth - 100 > containerWidth) {
@@ -109,15 +107,14 @@ const writeText = (
     measureText();
   }
   ctx.fillStyle = "#191919";
-  ctx.textAlign = variant === "primary" ? "center" : "left";
+  ctx.textAlign = "left";
   ctx.textBaseline = "middle";
+  const x = 200;
 
   if (variant == "primary") {
-    const x = imageWidth / 2;
     ctx.fillText(text, x, y);
   }
   if (variant == "secondary") {
-    const x = 200;
     const words = text.split(" ");
     let line = "";
     const lineHeight = fontSize * 1.2; // Adjust line height as needed
