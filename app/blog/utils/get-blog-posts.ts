@@ -68,7 +68,7 @@ const innerGetPosts = async () => {
     }),
   );
 
-  await makeImages(articles);
+  makeImages(articles);
 
   return sortArticles(articles);
 };
