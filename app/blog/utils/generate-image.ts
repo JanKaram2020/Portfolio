@@ -8,101 +8,134 @@ import fs from "fs";
 import path from "path";
 import type { BlogPosts } from "./get-blog-posts";
 
-registerFont(path.join(process.cwd(), "public", "og-font.otf"), {
-  family: "OgFont",
-});
-
-registerFont(path.join(process.cwd(), "public", "og-secondary-font.ttf"), {
-  family: "OgSecondaryFont",
-});
-
-const containerWidth = 900;
+const containerWidth = 800;
 const imageWidth = 1200;
 const imageHeight = 630;
 
+let generated: string[] = [];
+
 export default async function makeImage(posts: BlogPosts) {
   try {
+    registerFont(path.join(process.cwd(), "public", "og-font.otf"), {
+      family: "OgFont",
+    });
+
+    registerFont(path.join(process.cwd(), "public", "og-secondary-font.ttf"), {
+      family: "OgSecondaryFont",
+    });
     const template = path.join(process.cwd(), "public", "og-template.png");
     const image = await loadImage(template);
     posts.forEach(({ slug, frontMatter }) => {
-      const canvas = createCanvas(imageWidth, imageHeight);
-      const ctx = canvas.getContext("2d");
-      ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
-      writePrimaryText(frontMatter.title, ctx);
-      writeSecondaryText(frontMatter.summary, ctx);
+      if (!generated.includes(slug)) {
+        const canvas = createCanvas(imageWidth, imageHeight);
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+        writeText(frontMatter.title, ctx, "primary");
+        writeText(frontMatter.summary, ctx, "secondary");
 
-      // Save the result to a file
-      const outputFileName = path.join(
-        process.cwd(),
-        "public",
-        "og-images",
-        `${slug}.png`,
-      );
-      const buffer = canvas.toBuffer("image/png");
-      const dirPath = path.join(process.cwd(), "public", "og-images");
-      if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath);
+        const outputFileName = path.join(
+          process.cwd(),
+          "public",
+          "og-images",
+          `${slug}.png`,
+        );
+        const buffer = canvas.toBuffer("image/png");
+        const dirPath = path.join(process.cwd(), "public", "og-images");
+        if (!fs.existsSync(dirPath)) {
+          fs.mkdirSync(dirPath);
+        }
+        fs.writeFileSync(outputFileName, buffer);
+        console.log(`${slug} was created successfully at ${outputFileName}`);
+        generated.push(slug);
       }
-      fs.writeFileSync(outputFileName, buffer);
-      console.log(`${slug} was created successfully at ${outputFileName}`);
     });
   } catch (err) {
     console.error("Error processing image:", err);
   }
 }
+const variants = {
+  primary: {
+    fontSize: 50,
+    font: "OgFont",
+    formatText: (v: string) => v.toUpperCase(),
+    y: imageHeight / 2 - 40,
+  },
+  secondary: {
+    fontSize: 19.2,
+    font: "OgSecondaryFont",
+    formatText: (v: string) => v,
+    y: imageHeight / 2 + 40,
+  },
+} as const;
 
-const writePrimaryText = (text: string, ctx: CanvasRenderingContext2D) => {
-  let primaryFontSize = 32.1;
-  let primaryTextWidth = 0;
-  let primaryTextHeight = 0;
-  const primaryText = text.toUpperCase();
-  const measurePrimaryText = () => {
-    ctx.font = `${primaryFontSize}px OgFont`;
-    const metrics = ctx.measureText(primaryText);
-    primaryTextWidth = metrics.width;
-    primaryTextHeight =
-      metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent;
+const writeText = (
+  initialText: string,
+  ctx: CanvasRenderingContext2D,
+  variant: keyof typeof variants,
+) => {
+  let { fontSize, font, formatText, y } = variants[variant];
+  let textWidth = 0;
+  const text = formatText(initialText);
+  const measureText = () => {
+    ctx.font = `${fontSize}px ${font}`;
+    textWidth = ctx.measureText(text).width;
   };
-  measurePrimaryText();
-  while (primaryTextWidth > containerWidth || primaryTextHeight > imageHeight) {
-    primaryFontSize -= 1;
-    if (primaryFontSize <= 0) break; // Stop if font size gets too small
-    measurePrimaryText();
-  }
-
-  ctx.fillStyle = "#191919";
-  ctx.textAlign = "center";
-  ctx.textBaseline = "middle";
-  const x = imageWidth / 2;
-  const y = imageHeight / 2 - 40;
-  ctx.fillText(primaryText, x, y);
-};
-
-const writeSecondaryText = (text: string, ctx: CanvasRenderingContext2D) => {
-  let secondaryFontSize = 19.2;
-  let secondaryTextWidth = 0;
-  let secondaryTextHeight = 0;
-  const measureSecondaryText = () => {
-    ctx.font = `${secondaryFontSize}px OgSecondaryFont`;
-    const metrics = ctx.measureText(text);
-    secondaryTextWidth = metrics.width;
-    secondaryTextHeight =
-      metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent;
-  };
-  measureSecondaryText();
+  measureText();
   while (
-    secondaryTextWidth > containerWidth ||
-    secondaryTextHeight > imageHeight
+    ![
+      Math.floor(textWidth),
+      Math.round(textWidth),
+      Math.round(textWidth) + 1,
+      Math.round(textWidth) - 1,
+      Math.round(textWidth) + 2,
+      Math.round(textWidth) - 2,
+    ].includes(containerWidth)
   ) {
-    secondaryFontSize -= 1;
-    if (secondaryFontSize <= 0) break; // Stop if font size gets too small
-    measureSecondaryText();
+    if (textWidth > containerWidth) {
+      if (textWidth - 100 > containerWidth) {
+        fontSize -= 1;
+      } else {
+        fontSize -= 0.1;
+      }
+      if (fontSize <= 18) break; // Stop if font size gets too small
+    }
+    if (textWidth < containerWidth) {
+      if (textWidth + 100 > containerWidth) {
+        fontSize += 1;
+      } else {
+        fontSize += 0.1;
+      }
+    }
+    measureText();
   }
-
   ctx.fillStyle = "#191919";
-  ctx.textAlign = "center";
+  ctx.textAlign = variant === "primary" ? "center" : "left";
   ctx.textBaseline = "middle";
-  const x = imageWidth / 2;
-  const y = imageHeight / 2 + 40;
-  ctx.fillText(text, x, y);
+
+  if (variant == "primary") {
+    const x = imageWidth / 2;
+    ctx.fillText(text, x, y);
+  }
+  if (variant == "secondary") {
+    const x = 200;
+    const words = text.split(" ");
+    let line = "";
+    const lineHeight = fontSize * 1.2; // Adjust line height as needed
+
+    for (let i = 0; i < words.length; i++) {
+      const testLine = line + words[i] + " ";
+      const testWidth = ctx.measureText(testLine).width;
+
+      if (testWidth > containerWidth + 18 && line !== "") {
+        ctx.fillText(line, x, y);
+        line = words[i] + " ";
+        y += lineHeight; // Move to the next line
+      } else {
+        line = testLine;
+      }
+    }
+
+    // Draw the last line
+    ctx.fillText(line, x, y);
+  }
 };
