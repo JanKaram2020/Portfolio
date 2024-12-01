@@ -21,6 +21,14 @@ export default async function makeImage({
   slug,
   frontMatter,
 }: Pick<BlogPost, "frontMatter" | "slug">) {
+  console.log({
+    OgFont: path.join(process.cwd(), "public", "og-font.otf"),
+    OgSecondaryFont: path.join(
+      process.cwd(),
+      "public",
+      "og-secondary-font.otf",
+    ),
+  });
   try {
     registerFont(path.join(process.cwd(), "public", "og-font.otf"), {
       family: "OgFont",
