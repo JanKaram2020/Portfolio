@@ -3,18 +3,24 @@ import {
   loadImage,
   registerFont,
   type CanvasRenderingContext2D,
+  type Image,
 } from "canvas";
 import fs from "fs";
 import path from "path";
-import type { BlogPosts } from "./get-blog-posts";
+import type { BlogPost } from "../types";
 
-const containerWidth = 800;
-const imageWidth = 1200;
-const imageHeight = 630;
-
+let imageWidth = 1200;
+let imageHeight = 630;
+let secondaryFontSize = 22;
+let x = imageWidth / 2;
+let containerWidth = 900;
 let generated: string[] = [];
+let cachedImage: undefined | Image;
 
-export default async function makeImage(posts: BlogPosts) {
+export default async function makeImage({
+  slug,
+  frontMatter,
+}: Pick<BlogPost, "frontMatter" | "slug">) {
   try {
     registerFont(path.join(process.cwd(), "public", "og-font.otf"), {
       family: "OgFont",
@@ -24,69 +30,47 @@ export default async function makeImage(posts: BlogPosts) {
       family: "OgSecondaryFont",
     });
     const template = path.join(process.cwd(), "public", "og-template.png");
-    const image = await loadImage(template);
-    posts.forEach(({ slug, frontMatter }) => {
-      if (!generated.includes(slug)) {
-        const canvas = createCanvas(imageWidth, imageHeight);
-        const ctx = canvas.getContext("2d");
-        ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
-        writeText(frontMatter.title, ctx, "primary");
-        writeText(frontMatter.summary, ctx, "secondary");
-
-        const outputFileName = path.join(
-          process.cwd(),
-          "public",
-          "og-images",
-          `${slug}.png`,
-        );
-        const buffer = canvas.toBuffer("image/png");
-        const dirPath = path.join(process.cwd(), "public", "og-images");
-        if (!fs.existsSync(dirPath)) {
-          fs.mkdirSync(dirPath);
-        }
-        fs.writeFileSync(outputFileName, buffer);
-        console.log(`${slug} was created successfully at ${outputFileName}`);
-        generated.push(slug);
+    const image = cachedImage ? cachedImage : await loadImage(template);
+    if (!generated.includes(slug)) {
+      const canvas = createCanvas(imageWidth, imageHeight);
+      const ctx = canvas.getContext("2d");
+      ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#191919";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      writePrimaryText(frontMatter.title, ctx);
+      writeSecondaryText(frontMatter.summary, ctx);
+      const outputFileName = path.join(
+        process.cwd(),
+        "public",
+        "og-images",
+        `${slug}.png`,
+      );
+      const buffer = canvas.toBuffer("image/png");
+      const dirPath = path.join(process.cwd(), "public", "og-images");
+      if (!fs.existsSync(dirPath)) {
+        fs.mkdirSync(dirPath);
       }
-    });
+      fs.writeFileSync(outputFileName, buffer as unknown as string);
+      generated.push(slug);
+    }
   } catch (err) {
     console.error("Error processing image:", err);
   }
 }
 
-const variants = {
-  primary: {
-    fontSize: 50,
-    font: "OgFont",
-    formatText: (v: string) => v.toUpperCase(),
-    y: imageHeight / 2 - 40,
-  },
-  secondary: {
-    fontSize: 19.2,
-    font: "OgSecondaryFont",
-    formatText: (v: string) => v,
-    y: imageHeight / 2 + 40,
-  },
-} as const;
+function writePrimaryText(initialText: string, ctx: CanvasRenderingContext2D) {
+  let fontSize = 50,
+    font = "OgFont",
+    y = imageHeight / 2 - 40,
+    textWidth = 0;
 
-function inRange(x: number, min: number, max: number) {
-  return (x - min) * (x - max) <= 0;
-}
-
-const writeText = (
-  initialText: string,
-  ctx: CanvasRenderingContext2D,
-  variant: keyof typeof variants,
-) => {
-  let { fontSize, font, formatText, y } = variants[variant];
-  let textWidth = 0;
-  const text = formatText(initialText);
+  const text = initialText.toUpperCase();
   const measureText = () => {
     ctx.font = `${fontSize}px ${font}`;
     textWidth = ctx.measureText(text).width;
   };
   measureText();
-
   while (
     !inRange(Math.floor(textWidth), containerWidth - 2, containerWidth + 2)
   ) {
@@ -106,34 +90,62 @@ const writeText = (
       }
     }
     measureText();
+    secondaryFontSize = limitSecondaryFontSize(fontSize - 10);
   }
-  ctx.fillStyle = "#191919";
-  ctx.textAlign = "left";
-  ctx.textBaseline = "middle";
-  const x = 200;
+  ctx.fillText(text, x, y);
+}
 
-  if (variant == "primary") {
-    ctx.fillText(text, x, y);
+function writeSecondaryText(
+  initialText: string,
+  ctx: CanvasRenderingContext2D,
+) {
+  ctx.font = `${secondaryFontSize}px OgSecondaryFont`;
+  let y = imageHeight / 2 + 40;
+  const lines = splitTextToLines(initialText, ctx);
+  const lineHeight = secondaryFontSize * 1.2;
+  lines.forEach((line, i) => {
+    ctx.fillText(line, x, y + i * lineHeight);
+  });
+}
+
+function limitSecondaryFontSize(size: number) {
+  if (inRange(size, 18, 22)) {
+    return size;
   }
-  if (variant == "secondary") {
-    const words = text.split(" ");
-    let line = "";
-    const lineHeight = fontSize * 1.2; // Adjust line height as needed
+  if (size < 18) {
+    return 18;
+  }
+  if (size > 22) {
+    return 22;
+  }
+  return size;
+}
 
-    for (let i = 0; i < words.length; i++) {
-      const testLine = line + words[i] + " ";
-      const testWidth = ctx.measureText(testLine).width;
+function splitTextToLines(text: string, ctx: CanvasRenderingContext2D) {
+  const words = text.split(" ");
+  let line = "";
+  let lines: string[] = [];
 
-      if (testWidth > containerWidth + 18 && line !== "") {
-        ctx.fillText(line, x, y);
-        line = words[i] + " ";
-        y += lineHeight; // Move to the next line
-      } else {
-        line = testLine;
-      }
+  for (let i = 0; i < words.length; i++) {
+    const testLine = line + words[i] + " ";
+    const testWidth = ctx.measureText(testLine).width;
+    if (testWidth > containerWidth - 40 && line !== "") {
+      lines.push(line.trim());
+      line = words[i] + " ";
+    } else {
+      line = testLine;
     }
-
-    // Draw the last line
-    ctx.fillText(line, x, y);
   }
-};
+
+  if (line) lines.push(line.trim());
+
+  if (lines.length > 1 && lines[lines.length - 1].split(" ").length < 3) {
+    const lastLine = lines.pop(); // Remove the last line
+    lines[lines.length - 1] += " " + lastLine;
+  }
+  return lines;
+}
+
+function inRange(x: number, min: number, max: number) {
+  return (x - min) * (x - max) <= 0;
+}

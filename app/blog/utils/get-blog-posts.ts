@@ -1,24 +1,12 @@
+import React from "react";
 import path from "path";
 import fs from "fs";
 import readingDuration from "./reading-duration";
 import getHeadings from "./get-headings";
 import sortArticles from "./sort-articles";
 import getMdxFilesRecursively from "./get-mdx-files-recursively";
-import React from "react";
-import makeImages from "./generate-image";
-
-type FrontMatter = {
-  title: string;
-  summary: string;
-  publishedAt: `${number}-${number}-${number}`;
-  timeToRead: string;
-};
-export type BlogPosts = {
-  Content: () => React.JSX.Element;
-  frontMatter: FrontMatter;
-  tableOfContent: { text: string; level: number; id: string }[];
-  slug: string;
-}[];
+import generateImage from "./generate-image";
+import type { BlogPosts, FrontMatter } from "../types";
 
 const innerGetPosts = async () => {
   const dir = path.join(process.cwd(), "app", "blog", "posts");
@@ -59,6 +47,11 @@ const innerGetPosts = async () => {
         );
       }
 
+      await generateImage({
+        slug,
+        frontMatter,
+      });
+
       return {
         Content,
         frontMatter,
@@ -68,12 +61,10 @@ const innerGetPosts = async () => {
     }),
   );
 
-  await makeImages(articles);
-
   return sortArticles(articles);
 };
 
-let cachedArticles: Awaited<ReturnType<typeof innerGetPosts>> | undefined;
+let cachedArticles: BlogPosts | undefined;
 
 export async function getBlogPostsSlugs() {
   const blogPosts = await getBlogPosts();
