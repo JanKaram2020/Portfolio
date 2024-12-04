@@ -21,14 +21,6 @@ export default async function makeImage({
   slug,
   frontMatter,
 }: Pick<BlogPost, "frontMatter" | "slug">) {
-  console.log({
-    OgFont: path.join(process.cwd(), "public", "og-font.otf"),
-    OgSecondaryFont: path.join(
-      process.cwd(),
-      "public",
-      "og-secondary-font.otf",
-    ),
-  });
   try {
     registerFont(path.join(process.cwd(), "public", "og-font.otf"), {
       family: "OgFont",
@@ -59,7 +51,7 @@ export default async function makeImage({
       if (!fs.existsSync(dirPath)) {
         fs.mkdirSync(dirPath);
       }
-      fs.writeFileSync(outputFileName, buffer as unknown as string);
+      fs.writeFileSync(outputFileName, buffer);
       generated.push(slug);
     }
   } catch (err) {
@@ -69,13 +61,12 @@ export default async function makeImage({
 
 function writePrimaryText(initialText: string, ctx: CanvasRenderingContext2D) {
   let fontSize = 50,
-    font = "OgFont",
     y = imageHeight / 2 - 40,
     textWidth = 0;
 
   const text = initialText.toUpperCase();
   const measureText = () => {
-    ctx.font = `${fontSize}px ${font}`;
+    ctx.font = `${fontSize}px OgFont`;
     textWidth = ctx.measureText(text).width;
   };
   measureText();

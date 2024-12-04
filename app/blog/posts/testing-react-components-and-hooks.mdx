@@ -1,7 +1,7 @@
 export const frontMatter = {
   title: "Testing React hooks and Components",
   summary:
-    "Guide to unit testing React components and hooks with user events and browser events",
+    "Guide to unit testing React components and hooks with user events and browser events using Vitest and @testing-library/react",
   publishedAt: "2024-07-08",
 };
 import Admonition from '../components/Admonitions'
@@ -15,12 +15,14 @@ have a testing environment set up, let's explore how to test React hooks and com
 Imagine a simple `Button` component that accepts two props: `children` and `onClick`.
 
 ```tsx
+import { ReactNode, MouseEventHandler } from 'react';
+
 const Button = ({
   children,
   onClick,
 }: {
   children: ReactNode;
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  onClick: MouseEventHandler<HTMLButtonElement>;
 }) => {
   return <button onClick={onClick}>{children}</button>;
 };

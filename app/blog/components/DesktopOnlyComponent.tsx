@@ -1,9 +1,9 @@
 "use client";
 import { ReactNode } from "react";
-import useIsDesktop from "hooks/useIsDesktop";
+import useResponsive from "hooks/useResponsive";
 
 const DesktopOnlyComponent = ({ children }: { children: ReactNode }) => {
-  const isDesktop = useIsDesktop();
+  const { isDesktop } = useResponsive();
 
   if (isDesktop) {
     return <>{children}</>;

@@ -9,6 +9,8 @@ import {
   MultiLangCodeBlock,
   LangOnlyBlock
 } from "./LangFactory";
+import { Editor } from  './EditorFactory';
+
 
 Unit testing is a software development process in which the smallest testable parts of an application, called units, are individually and independently tested. The goal is to verify that each unit of code meets its design and behaves as expected.
 In simpler terms unit testing is isolating the smallest sets of code and testing them to verify that they behave as expected.
@@ -28,7 +30,7 @@ In simpler terms unit testing is isolating the smallest sets of code and testing
 
 ## Installing Vitest in your project
 
-<MultiLangCodeBlock>
+<MultiLangCodeBlock language={"shell"}>
 
 ```shell
 yarn add -D vitest vite jsdom
@@ -51,7 +53,11 @@ yarn add -D vitest vite jsdom vite-tsconfig-paths @vitejs/plugin-react @testing-
 ``` ts showLineNumbers
 import { defineConfig } from 'vitest/config';
 
-export default defineConfig();
+export default defineConfig({
+  test: {
+    globals: true,
+  },
+})
 ```
 
 ```ts showLineNumbers
@@ -73,6 +79,7 @@ export default defineConfig({
   test: {
     environment: "jsdom",
     setupFiles: ["./tests/setupTests.ts"],
+    globals: true
   },
 });
 ```
@@ -138,17 +145,16 @@ eg: `expect(boolean).not.toBe(false){:ts}`<br/>
 
 to create a test file you must use the extension `.spec.(ts/tsx/js/jsx)` or `.test.(ts/tsx/js/jsx)` A spec comes from "specification" where you specify how code should behave, the extension doesn't change anything in how we write the tests it's just a preference. so create a file in the same folder you created the add file called `add.test.js` | `add.test.ts` with the following code
 
-```ts showLineNumbers
-import { add } from "./add";
-import { expect, test } from "vitest";
 
-test("add()", () => {
-  expect(add(1, 2)).toBe(3);
-});
-```
+<Editor>
+    ```ts showLineNumbers
+    import { add } from "./add";
+    import { expect, test } from "vitest";
 
-then fire up the terminal and run `yarn test` your terminal should look like this
-
-![](/uploaded/146644df09f3bbcdf6aac7/1.png)
+    test("add()", () => {
+      expect(add(1, 2)).toBe(3);
+    });
+    ```
+</Editor>
 
 congratulations! you just ran your first test successfully.

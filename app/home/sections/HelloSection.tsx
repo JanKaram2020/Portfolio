@@ -7,8 +7,8 @@ import AnimatedLogo from "app/home/components/AnimatedLogo";
 const HelloSection = () => (
   <div className="h-screen p-30px gap-80px md:gap-40px lg:gap-30px xl:gap-10px flex flex-col justify-center items-center">
     <motion.h1
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 0 }}
+      animate={{ opacity: 1, y: -200 }}
       transition={{ delay: 0.8 }}
       className="text-red-400 text-5xl"
     >

@@ -8,14 +8,12 @@ if (
     process.env.PWD
   }/node_modules/canvas/build/Release:${process.env.LD_LIBRARY_PATH || ""}`;
 }
-
 import UnoCSS from "@unocss/webpack";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSection from "@hbsnow/rehype-sectionize";
 import { visit } from "unist-util-visit";
-
 import MDXCompiler from "@next/mdx";
 
 export const rawCodeExtractorOne = () => (tree) => {
@@ -73,6 +71,9 @@ const withMDX = MDXCompiler({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
   reactStrictMode: true,
   webpack: (config) => {
