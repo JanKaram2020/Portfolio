@@ -8,8 +8,8 @@ const AnimatedLogo = () => {
   const { scrollY } = useScroll();
   const dimensions = useLogoPosition();
   const layoutValues = useResponsiveValue({
-    mobile: { width: "80%", left: "10%" },
-    "4k": { width: "60%", left: "20%" },
+    sm: { width: "80%", left: "10%" },
+    xl: { width: "60%", left: "20%" },
   });
   const width = useTransform(
     scrollY,

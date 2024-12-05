@@ -15,12 +15,17 @@ const useResponsive = () => {
   }, []);
 
   return {
-    isMobile: widthValue <= 768,
-    isTablet: widthValue > 768 && widthValue < 1024,
-    isDesktop: widthValue >= 1024 && widthValue < 1440,
-    is4K: widthValue >= 1440,
+    sm: widthValue <= 768,
+    md: widthValue > 768 && widthValue < 1024,
+    lg: widthValue >= 1024 && widthValue < 1440,
+    xl: widthValue >= 1440,
   };
 };
+type RequireOneOrAll<T extends Object> =
+  | {
+      [K in keyof T]: Required<Pick<T, K>> & Partial<Omit<T, K>>;
+    }[keyof T]
+  | T;
 
 export const useResponsiveValue = <
   T extends
@@ -30,28 +35,21 @@ export const useResponsiveValue = <
     | number[]
     | Record<string, number | `${number}%`>,
 >(
-  values:
-    | [T, T, T, T]
-    | ({ mobile: T } & (
-        | { tablet: T; desktop: T; "4k": T }
-        | { tablet: T; desktop?: T; "4k"?: T }
-        | { tablet?: T; desktop: T; "4k"?: T }
-        | { tablet?: T; desktop?: T; "4k": T }
-      )),
+  values: [T, T, T, T] | ({ sm: T } & RequireOneOrAll<{ md: T; lg: T; xl: T }>),
 ) => {
-  const { isMobile, isTablet, isDesktop } = useResponsive();
+  const { sm, md, lg } = useResponsive();
 
   if (Array.isArray(values)) {
-    if (isMobile) return values[0];
-    if (isTablet) return values[1];
-    if (isDesktop) return values[2];
-    return values[3];
+    if (sm) return values[0];
+    if (md) return values[1] ?? values[0];
+    if (lg) return values[2] ?? values[0];
+    return values[3] ?? values[0];
   }
 
-  if (isMobile) return values.mobile;
-  if (isTablet) return values.tablet ?? values.mobile;
-  if (isDesktop) return values.desktop ?? values.mobile;
-  return values["4k"] ?? values.mobile;
+  if (sm) return values.sm;
+  if (md) return values.md ?? values.sm;
+  if (lg) return values.lg ?? values.sm;
+  return values.xl ?? values.sm;
 };
 
 export default useResponsive;
