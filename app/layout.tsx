@@ -1,13 +1,12 @@
-import React, { Suspense } from "react";
-import "@unocss/reset/tailwind.css";
-import "base.scss";
-import "globals.css";
-import { Analytics } from "../components/Analytics";
-import { GA_TRACKING_ID } from "../lib/constants";
 import { Metadata } from "next";
 import { ViewTransitions } from "next-view-transitions";
 import { IBM_Plex_Sans } from "next/font/google";
-import Footer from "../components/Footer";
+import "@unocss/reset/tailwind.css";
+import "base.scss";
+import "globals.css";
+import { GA_TRACKING_ID } from "../lib/constants";
+import Footer from "components/Footer";
+import Analytics from "components/Analytics";
 
 export const metadata: Metadata = {
   title: "Jan Karam",
@@ -33,6 +32,7 @@ export const metadata: Metadata = {
     url: "https://www.jankaram.com/",
   },
 };
+
 const IBMPlexSans = IBM_Plex_Sans({
   weight: ["100", "200", "300", "400", "500", "600", "700"],
   subsets: ["cyrillic"],
@@ -66,9 +66,7 @@ export default function RootLayout({
           />
         </head>
         <body className={`dark ${IBMPlexSans.variable}`}>
-          <Suspense fallback={<></>}>
-            <Analytics />
-          </Suspense>
+          <Analytics />
           {children}
           <Footer />
         </body>

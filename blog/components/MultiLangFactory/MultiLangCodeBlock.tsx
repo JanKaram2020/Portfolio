@@ -4,7 +4,7 @@ import { mergeClasses } from "lib/mergeClasses";
 import useSyncSelectedValue from "./useSyncSelectedValue";
 
 const MultiLangCodeBlock =
-  <T extends string>(displayValues?: T[]) =>
+  <T extends string>(displayValues: T[]) =>
   ({
     children,
     className,
@@ -14,6 +14,14 @@ const MultiLangCodeBlock =
     className?: string;
     sync?: boolean;
   }) => {
+    if (children.length < 2) {
+      return children;
+    }
+
+    if (displayValues.length !== children.length) {
+      throw new Error("displayValues must be the same length as the blocks");
+    }
+
     const blocks: Array<{ language: string; content: ReactNode }> =
       children.map((child, index) => {
         const codeLang = child.props.children.props["data-language"];
@@ -24,24 +32,13 @@ const MultiLangCodeBlock =
         };
       });
 
-    const { value, onValueChange, defaultValue } = useSyncSelectedValue({
-      blocks,
-    });
-
-    if (children.length < 2) {
-      return children;
-    }
-
-    if (displayValues && displayValues.length < blocks.length) {
-      throw new Error(
-        "displayValues must be the same length or more than the blocks",
-      );
-    }
+    const { value, onValueChange, defaultValue } =
+      useSyncSelectedValue(displayValues);
 
     const props = sync
       ? {
           value,
-          onValueChange,
+          onValueChange: onValueChange as (v: string) => void,
         }
       : {
           defaultValue,

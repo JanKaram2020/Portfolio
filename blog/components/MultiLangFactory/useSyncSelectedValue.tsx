@@ -1,27 +1,12 @@
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { ReactNode } from "react";
 
-const useSyncSelectedValue = (props?: {
-  blocks?: Array<{ language: string; content: ReactNode }>;
-  defaultValue?: string;
-}) => {
-  const blocks = props?.blocks;
+const useSyncSelectedValue = <T extends string>(values: Array<T>) => {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const value = validateValue(searchParams.get("selected"), values);
 
-  const selectedParam = searchParams.get("selected");
-  const defaultValue = props?.defaultValue ?? blocks?.[0].language;
-
-  const value = `${
-    selectedParam && blocks && blocks.find((b) => b.language === selectedParam)
-      ? selectedParam
-      : blocks
-        ? defaultValue
-        : selectedParam
-  }`;
-
-  const onValueChange = (v: string) => {
+  const onValueChange = (v: T) => {
     const newParams = new URLSearchParams(searchParams);
     newParams.set("selected", v);
     router.replace(`${pathname}?${newParams}`, {
@@ -32,7 +17,16 @@ const useSyncSelectedValue = (props?: {
   return {
     value,
     onValueChange,
-    defaultValue,
+    defaultValue: values[0],
   };
 };
+
+const validateValue = <T extends string>(v: string | null, values: T[]) => {
+  const elementIndex = values.indexOf(v as T);
+  if (v && elementIndex > -1) {
+    return values[elementIndex];
+  }
+  return values[0];
+};
+
 export default useSyncSelectedValue;

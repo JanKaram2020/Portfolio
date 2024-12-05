@@ -3,7 +3,7 @@ import getBlogPosts, { getBlogPostsSlugs } from "blog/utils/get-blog-posts";
 import React from "react";
 import TableOfContent from "blog/components/TableOfContent";
 import { frontMatterId } from "lib/constants";
-import DesktopOnlyComponent from "blog/components/DesktopOnlyComponent";
+import DesktopOnlyComponent from "components/DesktopOnlyComponent";
 import type { Metadata } from "next";
 
 type Params = { slug: string };

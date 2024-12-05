@@ -7,7 +7,6 @@ import {
 } from "@codesandbox/sandpack-react";
 import { useDarkMode } from "../../hooks/useDarkMode";
 import NightOwl from "./night-owl.json";
-import { jsxlib } from "../utils/jsx-lib";
 
 const mapper = {
   ts: "typescript",
@@ -56,12 +55,6 @@ export default function MonacoEditor({ filesTab }: { filesTab: boolean }) {
   }
   async function setEditorTheme(monaco: Monaco) {
     monaco.editor.defineTheme("night-owl", NightOwl);
-    await monaco.languages.typescript.typescriptDefaults.setExtraLibs([
-      {
-        content: jsxlib(),
-        filePath: `ts:filename/jsx.d.ts`,
-      },
-    ]);
     await setExtraLibs(monaco);
     monaco.languages.typescript.typescriptDefaults.setCompilerOptions({
       moduleResolution: monaco.languages.typescript.ModuleResolutionKind.NodeJs,

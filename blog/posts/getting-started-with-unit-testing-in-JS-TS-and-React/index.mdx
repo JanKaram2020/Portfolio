@@ -8,8 +8,8 @@ export const frontMatter = {
 import {
   MultiLangCodeBlock,
   LangOnlyBlock
-} from "./LangFactory";
-import { Editor } from './EditorFactory';
+} from "./LangComponents";
+import TestEditor from './TestEditor';
 
 
 Unit testing is a software development process in which the smallest testable parts of an application, called units, are individually and independently tested. The goal is to verify that each unit of code meets its design and behaves as expected.
@@ -17,8 +17,8 @@ In simpler terms unit testing is isolating the smallest sets of code and testing
 
 ## What do you need to get started?
 
-1.  a testing framework like Vitest or Jest (personally I prefer Vitest).
-2.  a project to test. I provided a repo to get started with [here](https://github.com/JanKaram2020/vitest-tutorial) ( start with main and compare your branch at every step with the "steps" branch) but you can start with any project
+1.  Test runner like Vitest or Jest (personally I prefer Vitest).
+2.  Project to test. I provided a repo to get started with [here](https://github.com/JanKaram2020/vitest-tutorial) ( start with main and compare your branch at every step with the "steps" branch) but you can start with any project
 
 ## Why Vitest, not Jest?
 
@@ -30,7 +30,7 @@ In simpler terms unit testing is isolating the smallest sets of code and testing
 
 ## Installing Vitest in your project
 
-<MultiLangCodeBlock language={"shell"}>
+<MultiLangCodeBlock>
 
 ```shell
 yarn add -D vitest vite jsdom
@@ -108,6 +108,9 @@ The `@testing-library/jest-dom/vitest` library provides a set of custom jest/vit
 the after each cleanup configures Vitest and @testing-library/react to clean up after running every test so that each test can run on a clean slate
 
 </LangOnlyBlock>
+
+adding `globals: true`  adds all vitest imports to every test file so we don't have to import in each file(jest like)
+
 ### Add the following script to your `package.json`
 
 ```json
@@ -145,14 +148,13 @@ eg: `expect(boolean).not.toBe(false){:ts}`<br/>
 
 to create a test file you must use the extension `.spec.(ts/tsx/js/jsx)` or `.test.(ts/tsx/js/jsx)` A spec comes from "specification" where you specify how code should behave, the extension doesn't change anything in how we write the tests it's just a preference. so create a file in the same folder you created the add file called `add.test.js` | `add.test.ts` with the following code
 
-<Editor>
+<TestEditor>
     ```ts showLineNumbers
     import { add } from "./add";
-    import { expect, test } from "vitest";
 
     test("add()", () => {
       expect(add(1, 2)).toBe(3);
     });
     ```
-</Editor>
+</TestEditor>
 congratulations! you just ran your first test successfully.
