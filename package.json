@@ -6,7 +6,7 @@
     "dev:next": "next dev",
     "dev:uno": "unocss '*/**/*.tsx' '*/**/*.mdx' --out-file=globals.css --watch",
     "dev": "concurrently 'yarn dev:next' 'yarn dev:uno'",
-    "build": "unocss '*/**/*.tsx' --out-file=globals.css && next build",
+    "build": "NODE_ENV=production unocss '*/**/*.tsx' --out-file=globals.css && next build",
     "start": "next start",
     "lint": "next lint",
     "postbuild": "next-sitemap",
