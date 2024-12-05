@@ -3,11 +3,11 @@ import "@unocss/reset/tailwind.css";
 import "base.scss";
 import "globals.css";
 import { Analytics } from "../components/Analytics";
-import Layout from "../components/Layout";
 import { GA_TRACKING_ID } from "../lib/constants";
 import { Metadata } from "next";
 import { ViewTransitions } from "next-view-transitions";
 import { IBM_Plex_Sans } from "next/font/google";
+import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
   title: "Jan Karam",
@@ -69,7 +69,8 @@ export default function RootLayout({
           <Suspense fallback={<></>}>
             <Analytics />
           </Suspense>
-          <Layout>{children}</Layout>
+          {children}
+          <Footer />
         </body>
       </html>
     </ViewTransitions>

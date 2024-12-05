@@ -1,7 +1,7 @@
 import { Link } from "next-view-transitions";
 import React from "react";
 import Image from "next/legacy/image";
-import getBlogPosts from "../app/blog/utils/get-blog-posts";
+import getBlogPosts from "blog/utils/get-blog-posts";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 

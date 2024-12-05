@@ -1,0 +1,158 @@
+export const frontMatter = {
+  title: "Getting Started With Unit Testing In JS/TS And React",
+  summary:
+    "Guide to setting up unit testing in your project using Vitest, explaining its advantages over Jest and walking you through creating your first test.",
+  publishedAt: "2023-10-25",
+};
+
+import {
+  MultiLangCodeBlock,
+  LangOnlyBlock
+} from "./LangFactory";
+import { Editor } from './EditorFactory';
+
+
+Unit testing is a software development process in which the smallest testable parts of an application, called units, are individually and independently tested. The goal is to verify that each unit of code meets its design and behaves as expected.
+In simpler terms unit testing is isolating the smallest sets of code and testing them to verify that they behave as expected.
+
+## What do you need to get started?
+
+1.  a testing framework like Vitest or Jest (personally I prefer Vitest).
+2.  a project to test. I provided a repo to get started with [here](https://github.com/JanKaram2020/vitest-tutorial) ( start with main and compare your branch at every step with the "steps" branch) but you can start with any project
+
+## Why Vitest, not Jest?
+
+1.  It's significantly faster than Jest.
+2.  Out-of-box ESM, TypeScript, and JSX support powered by esbuild.
+3.  In watch mode, it's smart and only reruns the related changes, just like HMR for tests!
+4.  If you know Jest you already know Vitest, it provides a Jest-compatible API that allows you to use it as a drop-in replacement in most projects.
+    you only have to change a few things, and you're good to go. check the migration guide [here](https://vitest.dev/guide/migration.html#migrating-from-jest)
+
+## Installing Vitest in your project
+
+<MultiLangCodeBlock language={"shell"}>
+
+```shell
+yarn add -D vitest vite jsdom
+```
+
+```shell
+yarn add -D vitest vite jsdom vite-tsconfig-paths
+```
+
+```shell
+yarn add -D vitest vite jsdom vite-tsconfig-paths @vitejs/plugin-react @testing-library/react @testing-library/jest-dom
+```
+
+</MultiLangCodeBlock>
+## Configuring Vitest
+
+### Make a file in the root of the project called `vitest.config.js` | `vitest.config.ts` with the following code
+
+<MultiLangCodeBlock>
+``` ts showLineNumbers
+import { defineConfig } from 'vitest/config';
+
+export default defineConfig({
+  test: {
+    globals: true,
+  },
+})
+```
+
+```ts showLineNumbers
+import { defineConfig } from "vitest/config";
+import tsconfigPaths from "vite-tsconfig-paths";
+
+export default defineConfig({
+  plugins: [tsconfigPaths()],
+});
+```
+
+```ts showLineNumbers
+import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react";
+import tsconfigPaths from "vite-tsconfig-paths";
+
+export default defineConfig({
+  plugins: [tsconfigPaths(), react()],
+  test: {
+    environment: "jsdom",
+    setupFiles: ["./tests/setupTests.ts"],
+    globals: true
+  },
+});
+```
+
+</MultiLangCodeBlock>
+<LangOnlyBlock lang={"react"}>
+`@vitejs/plugin-react` enables HMR to react in development.
+`vite-tsconfig-paths` makes vite use the paths defined in your tsconfig.
+`environment: 'jsdom'` by default the environment is `node` which means that any code meant for the browser can't run in the test, so we use jsdom which provides a browser-like environment to run the test in it.
+
+<br/>
+    Make file called `tests/setupTests.ts` with the following code
+
+```ts showLineNumbers
+import "@testing-library/jest-dom/vitest";
+import { afterEach } from "vitest";
+import { cleanup } from "@testing-library/react";
+
+afterEach(() => {
+  cleanup();
+});
+```
+
+The `@testing-library/jest-dom/vitest` library provides a set of custom jest/vitest matchers that you can use to extend jest/vitest. These will make your tests more declarative, clear to read, and maintain. Check the docs [here](https://www.npmjs.com/package/@testing-library/jest-dom) to see the added matchers
+
+the after each cleanup configures Vitest and @testing-library/react to clean up after running every test so that each test can run on a clean slate
+
+</LangOnlyBlock>
+### Add the following script to your `package.json`
+
+```json
+"test": "vitest run",
+```
+
+## Writing our first test
+
+let's start with something simple create a file called `tests/add.js` | `tests/add.ts` with the following code
+
+<MultiLangCodeBlock>
+```js showLineNumbers
+export const add = (a, b) => a + b;
+```
+
+```ts showLineNumbers
+export const add = (a: number, b: number) => a + b;
+```
+
+```ts showLineNumbers
+export const add = (a: number, b: number) => a + b;
+```
+
+</MultiLangCodeBlock>
+
+
+to test a unit is to check whether it matches something<br/>
+eg: you expect 1 + 2 = 3\. this is human language<br/>
+in TS/JS you write `expect(1+2).toEqual(3){:ts}`<br/>
+there are a lot of matchers for different types<br/>
+eg: `expect(function).toHaveBeenCalled(){:ts}`<br/>
+eg: `expect(object).toHaveProperty(property){:ts}`<br/>
+eg: `expect(array).toContain(element){:ts}`<br/>
+eg: `expect(boolean).not.toBe(false){:ts}`<br/>
+
+to create a test file you must use the extension `.spec.(ts/tsx/js/jsx)` or `.test.(ts/tsx/js/jsx)` A spec comes from "specification" where you specify how code should behave, the extension doesn't change anything in how we write the tests it's just a preference. so create a file in the same folder you created the add file called `add.test.js` | `add.test.ts` with the following code
+
+<Editor>
+    ```ts showLineNumbers
+    import { add } from "./add";
+    import { expect, test } from "vitest";
+
+    test("add()", () => {
+      expect(add(1, 2)).toBe(3);
+    });
+    ```
+</Editor>
+congratulations! you just ran your first test successfully.
