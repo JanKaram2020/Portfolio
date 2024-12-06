@@ -50,7 +50,7 @@ yarn add -D vitest vite jsdom vite-tsconfig-paths @vitejs/plugin-react @testing-
 ### Make a file in the root of the project called `vitest.config.js` | `vitest.config.ts` with the following code
 
 <MultiLangCodeBlock>
-``` ts showLineNumbers
+```js showLineNumbers
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
@@ -85,7 +85,7 @@ export default defineConfig({
 ```
 
 </MultiLangCodeBlock>
-<LangOnlyBlock lang={"react"}>
+<LangOnlyBlock lang={"React"}>
 `@vitejs/plugin-react` enables HMR to react in development.
 `vite-tsconfig-paths` makes vite use the paths defined in your tsconfig.
 `environment: 'jsdom'` by default the environment is `node` which means that any code meant for the browser can't run in the test, so we use jsdom which provides a browser-like environment to run the test in it.
@@ -146,15 +146,36 @@ eg: `expect(object).toHaveProperty(property){:ts}`<br/>
 eg: `expect(array).toContain(element){:ts}`<br/>
 eg: `expect(boolean).not.toBe(false){:ts}`<br/>
 
-to create a test file you must use the extension `.spec.(ts/tsx/js/jsx)` or `.test.(ts/tsx/js/jsx)` A spec comes from "specification" where you specify how code should behave, the extension doesn't change anything in how we write the tests it's just a preference. so create a file in the same folder you created the add file called `add.test.js` | `add.test.ts` with the following code
+to create a test file you must use the extension `.spec.(ts/tsx/js/jsx)` or `.test.(ts/tsx/js/jsx)` A spec comes from "specification" where you specify how code should behave, the extension doesn't change anything in how we write the tests it's just a preference.
+
+Create a file in the same folder you created the add file called `add.test.js` | `add.test.ts` with the following code
 
 <TestEditor>
-    ```ts showLineNumbers
-    import { add } from "./add";
+    <MultiLangCodeBlock>
+        ```js showLineNumbers
+        import { add } from "./add";
 
-    test("add()", () => {
-      expect(add(1, 2)).toBe(3);
-    });
-    ```
+        test("add()", () => {
+          expect(add(1, 2)).toBe(3);
+        });
+        ```
+
+        ```ts showLineNumbers
+        import { add } from "./add";
+
+        test("add()", () => {
+          expect(add(1, 2)).toBe(3);
+        });
+        ```
+
+        ```ts showLineNumbers
+        import { add } from "./add";
+
+        test("add()", () => {
+          expect(add(1, 2)).toBe(3);
+        });
+        ```
+
+    </MultiLangCodeBlock>
 </TestEditor>
 congratulations! you just ran your first test successfully.

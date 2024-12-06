@@ -2,7 +2,7 @@
 import MultiLangFactory from "blog/components/MultiLangFactory";
 
 const { LangOnlyBlock, MultiLangCodeBlock, useSyncSelectedValue, languages } =
-  MultiLangFactory(["js", "ts", "react"]);
+  MultiLangFactory(["JS", "TS", "React"]);
 
 // must define and export (Limitation in MDX)
 export { LangOnlyBlock, MultiLangCodeBlock, useSyncSelectedValue, languages };

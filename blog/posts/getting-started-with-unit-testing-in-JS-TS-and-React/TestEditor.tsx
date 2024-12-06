@@ -32,7 +32,9 @@ const TestEditor = SuspenseFactory(({ children }: { children: ReactNode }) => {
         theme={isDark ? nightOwl : githubLight}
         files={files}
         options={{
-          activeFile: Object.keys(files).find((f) => f.includes("test")),
+          activeFile:
+            Object.keys(files).find((f) => f.includes("test")) ??
+            Object.keys(files)[0],
           visibleFiles: Object.keys(files),
         }}
       >
@@ -58,4 +60,12 @@ const TestEditor = SuspenseFactory(({ children }: { children: ReactNode }) => {
     </div>
   );
 });
-export default TestEditor;
+
+const TestEditorContainer = SuspenseFactory(
+  ({ children }: { children: ReactNode }) => {
+    const { value } = useSyncSelectedValue();
+    return <TestEditor key={value}>{children}</TestEditor>;
+  },
+);
+
+export default TestEditorContainer;
