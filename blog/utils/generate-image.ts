@@ -46,7 +46,8 @@ export default async function makeImage({
         "og-images",
         `${slug}.png`,
       );
-      const buffer = canvas.toBuffer("image/png");
+      //TODO: fix type issue (remove type masking)
+      const buffer = canvas.toBuffer("image/png") as unknown as string;
       const dirPath = path.join(process.cwd(), "public", "og-images");
       if (!fs.existsSync(dirPath)) {
         fs.mkdirSync(dirPath);
