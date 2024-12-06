@@ -2,8 +2,9 @@
 import { useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { GA_TRACKING_ID } from "../lib/constants";
+import SuspenseFactory from "./SuspenseFactory";
 
-export function Analytics() {
+const Analytics = SuspenseFactory(() => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const pageView = (url: string) => {
@@ -25,4 +26,6 @@ export function Analytics() {
   }, [pathname, searchParams]);
 
   return null;
-}
+});
+
+export default Analytics;

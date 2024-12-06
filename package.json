@@ -6,18 +6,22 @@
     "dev:next": "next dev",
     "dev:uno": "unocss '*/**/*.tsx' '*/**/*.mdx' --out-file=globals.css --watch",
     "dev": "concurrently 'yarn dev:next' 'yarn dev:uno'",
-    "build": "unocss '*/**/*.tsx' --out-file=globals.css && next build",
+    "build": "NODE_ENV=production unocss '*/**/*.tsx' --out-file=globals.css && next build",
     "start": "next start",
     "lint": "next lint",
     "postbuild": "next-sitemap",
     "test": "vitest run",
     "test:watch": "vitest run -w",
-    "test:update": "vitest run -u"
+    "test:update": "vitest run -u",
+    "pre-push": "yarn build"
   },
   "dependencies": {
+    "@codesandbox/sandpack-react": "^2.19.10",
+    "@codesandbox/sandpack-themes": "^2.0.21",
     "@hbsnow/rehype-sectionize": "^1.0.7",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
+    "@monaco-editor/react": "^4.6.0",
     "@next/mdx": "^14.2.3",
     "@radix-ui/react-tabs": "^1.0.4",
     "@unocss/reset": "^0.58.5",
@@ -66,9 +70,9 @@
     "react-test-renderer": "^18.2.0",
     "sass": "^1.77.6",
     "tailwindcss": "^3.3.3",
-    "typescript": "^5.4.5",
+    "typescript": "^5.7.2",
     "unocss": "^0.58.5",
-    "vite": "^5.1.5",
+    "vite": "^5.4.6",
     "vite-tsconfig-paths": "^4.3.1",
     "vitest": "^1.3.1"
   }

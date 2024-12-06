@@ -1,10 +1,9 @@
 import { describe, expect, it, vi } from "vitest";
-import IndexPage from "app/home";
-import ResumePage from "app/resume/page";
-import ProjectPage from "../app/project/[slug]/page";
-import ProjectsData from "../app/project/projects-data";
+import IndexPage from "home";
+import ResumePage from "resume/page";
+import ProjectPage from "../app/(static-navbar)/project/[slug]/page";
+import ProjectsData from "../project/projects-data";
 import { render } from "@testing-library/react";
-import Blog from "../app/blog/[slug]/page";
 
 vi.mock("next-view-transitions", async () => {
   const NextLink = await import("next/link");
