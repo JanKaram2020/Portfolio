@@ -46,7 +46,9 @@ const TestEditor = SuspenseFactory(({ children }: { children: ReactNode }) => {
                 {languages.map((l) => (
                   <button
                     aria-selected={value === l}
-                    className={"hover:text-red-400 aria-selected:text-red-400"}
+                    className={
+                      "dark:bg-[var(--shiki-dark-bg)] bg-[var(--shiki-light-bg)] hover:text-red-400 aria-selected:text-red-400 px-1 py-0.5 rounded"
+                    }
                     onClick={() => onValueChange(l)}
                   >
                     {l}

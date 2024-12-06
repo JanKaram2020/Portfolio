@@ -31,7 +31,7 @@ const PreBLock = (
         <p
           className={"text-sm text-gray-800 dark:text-gray-100"}
           style={{
-            display: "var(--show-lang)",
+            display: "var(--show-lang, block)",
           }}
         >
           {lang.length === 2 ? lang.toUpperCase() : lang}
