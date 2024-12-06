@@ -1,7 +1,8 @@
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
+import { useTransitionRouter } from "next-view-transitions";
 
 const useSyncSelectedValue = <T extends string>(values: Array<T>) => {
-  const router = useRouter();
+  const router = useTransitionRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const value = validateValue(searchParams.get("selected"), values);
@@ -11,18 +12,9 @@ const useSyncSelectedValue = <T extends string>(values: Array<T>) => {
       const newParams = new URLSearchParams(searchParams);
       newParams.set("selected", v);
 
-      if (!document.startViewTransition) {
-        router.replace(`${pathname}?${newParams}`, {
-          scroll: false,
-        });
-        return;
-      }
-
-      document.startViewTransition(() =>
-        router.replace(`${pathname}?${newParams}`, {
-          scroll: false,
-        }),
-      );
+      router.replace(`${pathname}?${newParams}`, {
+        scroll: false,
+      });
     } catch (e) {
       alert(`Error happened while switching to ${v}.`);
     }

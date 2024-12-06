@@ -32,7 +32,7 @@
     "mdx-mermaid": "^2.0.0",
     "mermaid": "^11.4.0",
     "next": "^14.2.18",
-    "next-view-transitions": "^0.1.1",
+    "next-view-transitions": "^0.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.2.0",
