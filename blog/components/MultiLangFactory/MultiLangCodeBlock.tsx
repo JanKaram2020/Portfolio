@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode } from "react";
+import React, { CSSProperties, ReactElement, ReactNode } from "react";
 import * as Tabs from "@radix-ui/react-tabs";
 import { mergeClasses } from "lib/mergeClasses";
 import useSyncSelectedValue from "./useSyncSelectedValue";
@@ -22,15 +22,20 @@ const MultiLangCodeBlock =
       throw new Error("displayValues must be the same length as the blocks");
     }
 
-    const blocks: Array<{ language: string; content: ReactNode }> =
-      children.map((child, index) => {
-        const codeLang = child.props.children.props["data-language"];
-        const language = displayValues ? displayValues[index] : codeLang;
-        return {
-          language,
-          content: child as ReactNode,
-        };
-      });
+    const blocks: Array<{
+      language: string;
+      content: ReactNode;
+      codeLang: string;
+    }> = children.map((child, index) => {
+      const dataLang = child.props.children.props["data-language"];
+      const codeLang = dataLang ? String(dataLang) : "";
+      const language = displayValues ? displayValues[index] : codeLang;
+      return {
+        language,
+        content: child as ReactNode,
+        codeLang,
+      };
+    });
 
     const { value, onValueChange, defaultValue } =
       useSyncSelectedValue(displayValues);
@@ -66,9 +71,20 @@ const MultiLangCodeBlock =
           })}
         </Tabs.List>
 
-        {blocks.map(({ language, content }) => {
+        {blocks.map(({ language, content, codeLang }) => {
           return (
-            <Tabs.Content value={language} key={language}>
+            <Tabs.Content
+              value={language}
+              key={language}
+              style={
+                {
+                  "--show-lang":
+                    language.toLowerCase() === codeLang.toLowerCase()
+                      ? "none"
+                      : "block",
+                } as CSSProperties
+              }
+            >
               {content}
             </Tabs.Content>
           );

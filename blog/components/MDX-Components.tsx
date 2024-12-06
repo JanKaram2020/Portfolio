@@ -1,7 +1,7 @@
 import CopyButton from "./CopyButton";
 import { mergeClasses } from "lib/mergeClasses";
 import { DetailedHTMLProps, HTMLAttributes } from "react";
-import { type MDXComponents } from "mdx/types";
+import type { MDXComponents } from "mdx/types";
 import ListItemColor from "components/ListItemColor";
 
 type Element<T> = DetailedHTMLProps<HTMLAttributes<T>, T>;
@@ -28,7 +28,14 @@ const PreBLock = (
       </div>
       <div className={"p-3"}>{children}</div>
       <div className={"flex justify-end text-sm p-3"}>
-        <p className={"text-sm text-gray-800 dark:text-gray-100"}>{lang}</p>
+        <p
+          className={"text-sm text-gray-800 dark:text-gray-100"}
+          style={{
+            display: "var(--show-lang)",
+          }}
+        >
+          {lang.length === 2 ? lang.toUpperCase() : lang}
+        </p>
       </div>
     </pre>
   );

@@ -7,11 +7,25 @@ const useSyncSelectedValue = <T extends string>(values: Array<T>) => {
   const value = validateValue(searchParams.get("selected"), values);
 
   const onValueChange = (v: T) => {
-    const newParams = new URLSearchParams(searchParams);
-    newParams.set("selected", v);
-    router.replace(`${pathname}?${newParams}`, {
-      scroll: false,
-    });
+    try {
+      const newParams = new URLSearchParams(searchParams);
+      newParams.set("selected", v);
+
+      if (!document.startViewTransition) {
+        router.replace(`${pathname}?${newParams}`, {
+          scroll: false,
+        });
+        return;
+      }
+
+      document.startViewTransition(() =>
+        router.replace(`${pathname}?${newParams}`, {
+          scroll: false,
+        }),
+      );
+    } catch (e) {
+      alert(`Error happened while switching to ${v}.`);
+    }
   };
 
   return {
