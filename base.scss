@@ -168,9 +168,12 @@ figure[data-rehype-pretty-code-figure] :not(div.p-3) > code[data-line-numbers] {
   h5 {
     color: #f1c40f;
   }
-  .admonition-icon svg {
-    stroke: #f1c40f;
-    fill: #f1c40f;
+  .admonition-icon {
+    padding: 12px 8px 12px 8px;
+    svg {
+      stroke: #f1c40f;
+      fill: #f1c40f;
+    }
   }
 }
 
@@ -180,10 +183,11 @@ figure[data-rehype-pretty-code-figure] :not(div.p-3) > code[data-line-numbers] {
   h5 {
     color: #083d77;
   }
-  .admonition-icon svg {
+  .admonition-icon {
+    svg {
     stroke: #083d77;
     fill: #083d77;
-  }
+  }}
 }
 
 #resume-page *::before {

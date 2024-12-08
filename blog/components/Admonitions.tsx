@@ -1,4 +1,5 @@
-import React from "react";
+import React, { ReactNode } from "react";
+import { mergeClasses } from "lib/mergeClasses";
 
 type AdmonitionType =
   | "warning"
@@ -114,14 +115,16 @@ const Admonition = ({
   iconType,
   title,
   children,
+  className,
 }: {
   children: React.ReactNode;
   type: AdmonitionType;
-  title?: string;
+  title?: ReactNode;
   iconType?: "emoji";
+  className?: string;
 }) => {
   return (
-    <div className={`admonition admonition-${type}`}>
+    <div className={mergeClasses(`admonition admonition-${type}`, className)}>
       <div className={"admonition-icon"}>{returnIcon(type, iconType)}</div>
       <div className={"admonition-heading"}>
         <h5>{title || type}</h5>

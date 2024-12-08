@@ -98,6 +98,7 @@ const useTableScroll = (tableOfContent: TableOfContentItem[]) => {
       highlightSetter();
       currentScrollPercentage();
     };
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);

@@ -3,9 +3,9 @@ import { ReactNode } from "react";
 import useResponsive from "hooks/useResponsive";
 
 const DesktopOnlyComponent = ({ children }: { children: ReactNode }) => {
-  const { lg } = useResponsive();
+  const { lg, xl } = useResponsive();
 
-  if (lg) {
+  if (lg || xl) {
     return <>{children}</>;
   }
   return <></>;

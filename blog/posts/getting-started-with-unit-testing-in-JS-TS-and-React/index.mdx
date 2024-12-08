@@ -1,3 +1,4 @@
+import Admonition from "blog/components/Admonitions";
 export const frontMatter = {
   title: "Getting Started With Unit Testing In JS/TS And React",
   summary:
@@ -7,18 +8,27 @@ export const frontMatter = {
 
 import {
   MultiLangCodeBlock,
-  LangOnlyBlock
+  LangOnlyBlock,
+    LangChanger
 } from "./LangComponents";
 import TestEditor from './TestEditor';
 
 
 Unit testing is a software development process in which the smallest testable parts of an application, called units, are individually and independently tested. The goal is to verify that each unit of code meets its design and behaves as expected.
 In simpler terms unit testing is isolating the smallest sets of code and testing them to verify that they behave as expected.
+<Admonition type="note" title={<LangChanger labels={["JS,", "TS", "and React"]} containerClass={"flex flex-row gap-2"}/>} className={"mt-2"}>
 
+<div>This post is available for <LangChanger labels={["JavaScript,", "TypeScript", "and React"]} containerClass={"inline-flex flex-row gap-2"}/></div>
+
+You can choose which one here by clicking on it or change it at code block.
+
+And the code editor at the end is a live editor you can edit it and see the results of your tests in realtime.
+
+</Admonition>
 ## What do you need to get started?
 
 1.  Test runner like Vitest or Jest (personally I prefer Vitest).
-2.  Project to test. I provided a repo to get started with [here](https://github.com/JanKaram2020/vitest-tutorial) ( start with main and compare your branch at every step with the "steps" branch) but you can start with any project
+2.  Project to test. I provided a live code editor at the end of the blog with starter files but you can start with any project.
 
 ## Why Vitest, not Jest?
 
