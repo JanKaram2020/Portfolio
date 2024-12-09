@@ -4,10 +4,15 @@ import Image from "next/legacy/image";
 import getBlogPosts from "blog/utils/get-blog-posts";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
+import { BlogPosts } from "../blog/types";
 
 export default async function NewFooter() {
   let blogs = await getBlogPosts(2);
 
+  return <InnerFooter blogs={blogs} />;
+}
+
+const InnerFooter = ({ blogs }: { blogs: BlogPosts }) => {
   return (
     <footer className="bg-gray-100 text-gray-900 py-12 dark:bg-gray-900 dark:text-white print:hidden">
       <div className="container mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -48,6 +53,7 @@ export default async function NewFooter() {
             <a
               className="flex items-center hover:text-red-400"
               href="https://github.com/JanKaram2020"
+              target="_blank"
             >
               <AiFillGithub className="h-6 w-6 mr-2" />
               <span>GitHub</span>
@@ -55,6 +61,7 @@ export default async function NewFooter() {
             <a
               className="flex items-center hover:text-red-400"
               href="https://www.linkedin.com/in/jankaram2020/"
+              target="_blank"
             >
               <AiFillLinkedin className="h-6 w-6 mr-2" />
               <span>LinkedIn</span>
@@ -62,6 +69,7 @@ export default async function NewFooter() {
             <a
               href="mailto: jankaram2020@gmail.com"
               className="flex items-center hover:text-red-400"
+              target="_blank"
             >
               <MdEmail className="h-6 w-6 mr-2" />
               <span>Jankaram2020@gmail.com</span>
@@ -93,4 +101,4 @@ export default async function NewFooter() {
       </div>
     </footer>
   );
-}
+};
