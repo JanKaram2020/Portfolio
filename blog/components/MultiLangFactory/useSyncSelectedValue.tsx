@@ -20,16 +20,20 @@ const useSyncSelectedValue = <T extends string>(values: Array<T>) => {
     }
   };
 
+  const getHref = (s: T) => `${pathname}?selected=${s}`;
+
   return {
     value,
     onValueChange,
     defaultValue: values[0],
+    getHref,
   };
 };
 
 const validateValue = <T extends string>(v: string | null, values: T[]) => {
+  if (!v) return values[0];
   const elementIndex = values.indexOf(v as T);
-  if (v && elementIndex > -1) {
+  if (elementIndex > -1) {
     return values[elementIndex];
   }
   return values[0];

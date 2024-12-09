@@ -61,6 +61,7 @@ const TestEditorContainer = SuspenseFactory(
     const { value } = useSyncSelectedValue();
     return <TestEditor key={value}>{children}</TestEditor>;
   },
+  true,
 );
 
 export default TestEditorContainer;

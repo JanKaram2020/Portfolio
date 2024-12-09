@@ -1,8 +1,17 @@
 import React, { ReactNode, Suspense } from "react";
 
-const SuspenseFactory = <T extends {}>(Component: (args: T) => ReactNode) => {
+const SuspenseFactory = <T extends {}>(
+  Component: (args: T) => ReactNode,
+  fallbackChildren?: boolean,
+) => {
   return (props: T) => (
-    <Suspense fallback={null}>
+    <Suspense
+      fallback={
+        fallbackChildren && "children" in props
+          ? (props.children as ReactNode)
+          : null
+      }
+    >
       <Component {...props} />
     </Suspense>
   );
