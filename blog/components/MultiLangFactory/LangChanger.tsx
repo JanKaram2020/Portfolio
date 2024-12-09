@@ -8,10 +8,12 @@ const LangChanger =
     containerClass,
     buttonClass,
     labels,
+    variant,
   }: {
     containerClass?: string;
     buttonClass?: string;
     labels?: string[];
+    variant?: "space";
   }) => {
     const { value, getHref } = useSyncSelectedValue(displayValues);
     if (labels && labels.length !== displayValues.length) {
@@ -24,10 +26,13 @@ const LangChanger =
             key={l}
             href={getHref(l)}
             aria-selected={value === l}
-            className={mergeClasses(buttonClass)}
+            className={mergeClasses("group", buttonClass)}
             scroll={false}
           >
             {labels?.[i] ?? l}
+            {variant === "space" ? (
+              <span className={"group-last:hidden"}>&nbsp;</span>
+            ) : null}
           </Link>
         ))}
       </div>
