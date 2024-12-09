@@ -5,8 +5,10 @@ import transformerVariantGroup from "@unocss/transformer-variant-group";
 export default defineConfig({
   content: {
     filesystem: [
-      "./app/blog/**/*.{js,ts,jsx,tsx,mdx}",
-      "./app/blog/*.{js,ts,jsx,tsx,mdx}",
+      "./blog/**/*.{js,ts,jsx,tsx,mdx}",
+      "./home/**/*.{js,ts,jsx,tsx,mdx}",
+      "./project/**/*.{js,ts,jsx,tsx,mdx}",
+      "./resume/**/*.{js,ts,jsx,tsx,mdx}",
       "./app/**/*.{js,ts,jsx,tsx,mdx}",
       "./components/**/*.{js,ts,jsx,tsx,mdx}",
       "./sections/**/*.{js,ts,jsx,tsx,mdx}",
