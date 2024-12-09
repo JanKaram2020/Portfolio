@@ -10,12 +10,12 @@ import { nightOwl, githubLight } from "@codesandbox/sandpack-themes";
 import SuspenseFactory from "components/SuspenseFactory";
 import { useDarkMode } from "hooks/useDarkMode";
 import { buildFiles } from "./build-files";
-import { useSyncSelectedValue, languages } from "./LangComponents";
+import { LangChanger, useSyncSelectedValue } from "./LangComponents";
 
 const TestEditor = SuspenseFactory(({ children }: { children: ReactNode }) => {
   const [isClient, setIsClient] = useState(false);
   const isDark = useDarkMode();
-  const { value, onValueChange } = useSyncSelectedValue();
+  const { value } = useSyncSelectedValue();
   const files = buildFiles[value];
 
   useEffect(() => {
@@ -42,17 +42,12 @@ const TestEditor = SuspenseFactory(({ children }: { children: ReactNode }) => {
           <SandpackCodeEditor showLineNumbers />
           <SandpackTests
             actionsChildren={
-              <div className="flex flex-row gap-2 items-center text-base">
-                {languages.map((l) => (
-                  <button
-                    aria-selected={value === l}
-                    className={"hover:text-red-400 aria-selected:text-red-400"}
-                    onClick={() => onValueChange(l)}
-                  >
-                    {l}
-                  </button>
-                ))}
-              </div>
+              <LangChanger
+                containerClass={"flex flex-row gap-2 items-center text-base"}
+                buttonClass={
+                  "dark:bg-[var(--shiki-dark-bg)] bg-[var(--shiki-light-bg)] hover:text-red-400 aria-selected:text-red-400 px-1 py-0.5 rounded"
+                }
+              />
             }
           />
         </SandpackLayout>
@@ -66,6 +61,7 @@ const TestEditorContainer = SuspenseFactory(
     const { value } = useSyncSelectedValue();
     return <TestEditor key={value}>{children}</TestEditor>;
   },
+  true,
 );
 
 export default TestEditorContainer;

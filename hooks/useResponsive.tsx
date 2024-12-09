@@ -7,7 +7,7 @@ const useResponsive = () => {
     const handleWindowSizeChange = () => {
       setWidthValue(window.innerWidth);
     };
-
+    handleWindowSizeChange();
     window.addEventListener("resize", handleWindowSizeChange);
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
