@@ -7,6 +7,7 @@ const {
   useSyncSelectedValue,
   languages,
   LangChanger,
+  MultiLangTextBlock,
 } = MultiLangFactory(["JS", "TS", "React"]);
 
 // must define and export (Limitation in MDX)
@@ -16,4 +17,5 @@ export {
   useSyncSelectedValue,
   languages,
   LangChanger,
+  MultiLangTextBlock,
 };

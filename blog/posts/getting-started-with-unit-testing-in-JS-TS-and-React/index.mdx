@@ -1,4 +1,12 @@
 import Admonition from "blog/components/Admonitions";
+import {
+  MultiLangCodeBlock,
+  LangOnlyBlock,
+  LangChanger,
+  MultiLangTextBlock,
+} from "./LangComponents";
+import TestEditor from "./TestEditor";
+
 export const frontMatter = {
   title: "Getting Started With Unit Testing In JS/TS And React",
   summary:
@@ -6,19 +14,20 @@ export const frontMatter = {
   publishedAt: "2023-10-25",
 };
 
-import {
-  MultiLangCodeBlock,
-  LangOnlyBlock,
-    LangChanger
-} from "./LangComponents";
-import TestEditor from './TestEditor';
-
-
 Unit testing is a software development process in which the smallest testable parts of an application, called units, are individually and independently tested. The goal is to verify that each unit of code meets its design and behaves as expected.
 In simpler terms unit testing is isolating the smallest sets of code and testing them to verify that they behave as expected.
+
 <Admonition type="note" title={<LangChanger labels={["JS,", "TS", "and React"]} buttonClass={"hover:underline"} containerClass={"flex flex-row"} variant={"space"}  className={"mt-2"}/>}>
 
-<div>This post is available for <LangChanger labels={["JavaScript,", "TypeScript", "and React"]} buttonClass={"hover:underline"} containerClass={"inline-flex flex-row"} variant={"space"} /> </div>
+<div className={"inline-flex flex-row"}>
+  This post is available for&nbsp;
+  <LangChanger
+    labels={["JavaScript,", "TypeScript", "and React"]}
+    buttonClass={"hover:underline"}
+    containerClass={"inline-flex flex-row"}
+    variant={"space"}
+  />
+</div>
 
 You can choose which one here by clicking on it or change it at code block.
 
@@ -57,7 +66,7 @@ yarn add -D vitest vite jsdom vite-tsconfig-paths @vitejs/plugin-react @testing-
 </MultiLangCodeBlock>
 ## Configuring Vitest
 
-### Make a file in the root of the project called `vitest.config.js` | `vitest.config.ts` with the following code
+### Make a file in the root of the project called `vitest.config.js|ts` with the following code
 
 <MultiLangCodeBlock>
 ```js showLineNumbers
@@ -89,7 +98,7 @@ export default defineConfig({
   test: {
     environment: "jsdom",
     setupFiles: ["./tests/setupTests.ts"],
-    globals: true
+    globals: true,
   },
 });
 ```
@@ -100,8 +109,8 @@ export default defineConfig({
 `vite-tsconfig-paths` makes vite use the paths defined in your tsconfig.
 `environment: 'jsdom'` by default the environment is `node` which means that any code meant for the browser can't run in the test, so we use jsdom which provides a browser-like environment to run the test in it.
 
-<br/>
-    Make file called `tests/setupTests.ts` with the following code
+<br />
+Make file called `tests/setupTests.ts` with the following code
 
 ```ts showLineNumbers
 import "@testing-library/jest-dom/vitest";
@@ -119,7 +128,7 @@ the after each cleanup configures Vitest and @testing-library/react to clean up 
 
 </LangOnlyBlock>
 
-adding `globals: true`  adds all vitest imports to every test file so we don't have to import in each file(jest like)
+adding `globals: true` adds all vitest imports to every test file so we don't have to import in each file(jest like)
 
 ### Add the following script to your `package.json`
 
@@ -129,36 +138,37 @@ adding `globals: true`  adds all vitest imports to every test file so we don't h
 
 ## Writing our first test
 
-let's start with something simple create a file called `tests/add.js` | `tests/add.ts` with the following code
+let's start with something simple create a file called <code><MultiLangTextBlock values={[`tests/add.js` ,`tests/add.ts`, `tests/add.ts`]}/></code> with the following code
 
 <MultiLangCodeBlock>
-```js showLineNumbers
+```js
 export const add = (a, b) => a + b;
 ```
 
-```ts showLineNumbers
+```ts
 export const add = (a: number, b: number) => a + b;
 ```
 
-```ts showLineNumbers
+```ts
 export const add = (a: number, b: number) => a + b;
 ```
 
 </MultiLangCodeBlock>
 
-
 to test a unit is to check whether it matches something<br/>
-eg: you expect 1 + 2 = 3\. this is human language<br/>
-in TS/JS you write `expect(1+2).toEqual(3){:ts}`<br/>
-there are a lot of matchers for different types<br/>
-eg: `expect(function).toHaveBeenCalled(){:ts}`<br/>
-eg: `expect(object).toHaveProperty(property){:ts}`<br/>
-eg: `expect(array).toContain(element){:ts}`<br/>
-eg: `expect(boolean).not.toBe(false){:ts}`<br/>
+eg: you expect 1 + 2 to equal 3\. this is human language<br/>
+in <MultiLangTextBlock values={[`JS` ,`TS`, `TS`]}/> you write `expect(1+2).toEqual(3){:ts}`<br/>
+there are a lot of matchers for different types like:
+
+- `expect(function).toHaveBeenCalled(){:ts}`
+- `expect(object).toHaveProperty(property){:ts}`
+- `expect(array).toContain(element){:ts}`
+- `expect(boolean).not.toBe(false){:ts}`
 
 to create a test file you must use the extension `.spec.(ts/tsx/js/jsx)` or `.test.(ts/tsx/js/jsx)` A spec comes from "specification" where you specify how code should behave, the extension doesn't change anything in how we write the tests it's just a preference.
 
-Create a file in the same folder you created the add file called `add.test.js` | `add.test.ts` with the following code
+Create a file in the same folder you created the add file called <code><MultiLangTextBlock values={[`add.test.js` ,`add.test.ts`, `add.test.ts`]}/></code>
+with the following code
 
 <TestEditor>
     <MultiLangCodeBlock>
@@ -187,5 +197,6 @@ Create a file in the same folder you created the add file called `add.test.js` |
         ```
 
     </MultiLangCodeBlock>
+
 </TestEditor>
 congratulations! you just ran your first test successfully.
