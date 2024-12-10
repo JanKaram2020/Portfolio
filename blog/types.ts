@@ -6,6 +6,7 @@ export type FrontMatter = {
   publishedAt: `${number}-${number}-${number}`;
   timeToRead: string;
   draft: boolean;
+  slug?: string;
 };
 
 export type BlogPost = {

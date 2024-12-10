@@ -13,7 +13,7 @@ const innerGetPosts = async () => {
   const mdxFiles = getMdxFilesRecursively(dir);
   const articles = await Promise.all(
     mdxFiles.map(async (f) => {
-      const slug = path
+      const pathSlug = path
         .relative(dir, f)
         .replace(/\\/g, "/")
         .replace(/\.mdx$/, "")
@@ -32,6 +32,8 @@ const innerGetPosts = async () => {
         draft: fileImport.frontMatter.draft ?? false,
         timeToRead,
       } as FrontMatter;
+
+      const slug = frontMatter.slug ?? pathSlug;
 
       if (!Content) {
         throw new Error(`${slug} must have default export`);

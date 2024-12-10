@@ -1,5 +1,7 @@
 "use client";
 import MultiLangFactory from "blog/components/MultiLangFactory";
+//@ts-ignore
+import { frontMatter } from "./index.mdx";
 
 const {
   LangOnlyBlock,
@@ -8,7 +10,7 @@ const {
   languages,
   LangChanger,
   MultiLangTextBlock,
-} = MultiLangFactory(["JS", "TS", "React"]);
+} = MultiLangFactory(frontMatter.slug, ["JS", "TS", "React"]);
 
 // must define and export (Limitation in MDX)
 export {

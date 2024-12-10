@@ -2,14 +2,14 @@ import React, { ReactNode, Suspense } from "react";
 
 const SuspenseFactory = <T extends {}>(
   Component: (args: T) => ReactNode,
-  fallbackChildren?: boolean,
+  fallback?: boolean | ReactNode,
 ) => {
   return (props: T) => (
     <Suspense
       fallback={
-        fallbackChildren && "children" in props
+        typeof fallback === "boolean" && fallback && "children" in props
           ? (props.children as ReactNode)
-          : null
+          : fallback
       }
     >
       <Component {...props} />

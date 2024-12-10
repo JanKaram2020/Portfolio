@@ -1,6 +1,6 @@
 import React, { CSSProperties, ReactNode } from "react";
 import * as Tabs from "@radix-ui/react-tabs";
-import { mergeClasses } from "../../../lib/mergeClasses";
+import { mergeClasses } from "lib/mergeClasses";
 
 const MulitLangTabs = ({
   blocks,

@@ -6,8 +6,12 @@ import MultiLangCodeBlockFactory from "./MultiLangCodeBlock";
 import useSyncSelectedValueFactory from "./useSyncSelectedValue";
 import LangChangerFactory from "./LangChanger";
 
-const MultiLangFactory = <T extends Readonly<string>>(displayValues: T[]) => {
+const MultiLangFactory = <T extends Readonly<string>>(
+  slug: string,
+  displayValues: T[],
+) => {
   const useSyncSelectedValue = () => useSyncSelectedValueFactory(displayValues);
+
   const LangOnlyBlock = SuspenseFactory(
     LangOnlyBlockFactory(displayValues),
     true,
@@ -20,7 +24,7 @@ const MultiLangFactory = <T extends Readonly<string>>(displayValues: T[]) => {
     MultiLangCodeBlockFactory(displayValues),
     true,
   );
-  const LangChanger = SuspenseFactory(LangChangerFactory(displayValues), true);
+  const LangChanger = LangChangerFactory(slug, displayValues);
 
   return {
     LangOnlyBlock,

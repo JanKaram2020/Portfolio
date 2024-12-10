@@ -12,18 +12,21 @@ export const frontMatter = {
   summary:
     "Guide to setting up unit testing in your project using Vitest, explaining its advantages over Jest and walking you through creating your first test.",
   publishedAt: "2023-10-25",
+  slug: "getting-started-with-unit-testing-in-js-ts-and-react",
 };
 
 Unit testing is a software development process in which the smallest testable parts of an application, called units, are individually and independently tested. The goal is to verify that each unit of code meets its design and behaves as expected.
 In simpler terms unit testing is isolating the smallest sets of code and testing them to verify that they behave as expected.
 
-<Admonition type="note" title={<LangChanger labels={["JS,", "TS", "and React"]} buttonClass={"hover:underline"} containerClass={"flex flex-row"} variant={"space"}  className={"mt-2"}/>}>
+<Admonition type="note" title={<LangChanger labels={["JS,", "TS", "and React"]} buttonClass={"group-[:not(:hover)]:aria-selected:underline group-hover:hover:underline"} containerClass={"flex flex-row"} variant={"space"}  className={"mt-2"}/>}>
 
 <div className={"inline-flex flex-row"}>
   This post is available for&nbsp;
   <LangChanger
     labels={["JavaScript,", "TypeScript", "and React"]}
-    buttonClass={"hover:underline"}
+    buttonClass={
+      "group-[:not(:hover)]:aria-selected:underline group-hover:hover:underline"
+    }
     containerClass={"inline-flex flex-row"}
     variant={"space"}
   />
