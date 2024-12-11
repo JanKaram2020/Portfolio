@@ -25,10 +25,15 @@ body {
     "Segoe UI Symbol",
     "Noto Color Emoji" serif;
 }
+
 code,
 code span {
   color: var(--shiki-light);
   background-color: var(--shiki-light-bg);
+}
+:not(img)::selection {
+  color: var(--shiki-dark);
+  background-color: var(--shiki-dark-bg);
 }
 
 body.dark {
@@ -38,6 +43,10 @@ body.dark {
   code span {
     color: var(--shiki-dark);
     background-color: var(--shiki-dark-bg);
+  }
+  :not(img)::selection {
+    color: var(--shiki-light);
+    background-color: var(--shiki-light-bg);
   }
 }
 
