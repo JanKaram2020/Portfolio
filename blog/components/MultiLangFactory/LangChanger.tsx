@@ -1,7 +1,23 @@
 import { mergeClasses } from "lib/mergeClasses";
 import useSyncSelectedValue from "./useSyncSelectedValue";
 import { Link } from "next-view-transitions";
-import { Suspense } from "react";
+import { Suspense, type ComponentPropsWithRef, type ElementType } from "react";
+
+type DistributiveOmit<T, TOmitted extends PropertyKey> = T extends any
+  ? Omit<T, TOmitted>
+  : never;
+
+const AsComponent = <TAs extends ElementType>(
+  props: {
+    as?: TAs;
+  } & DistributiveOmit<
+    ComponentPropsWithRef<ElementType extends TAs ? "div" : TAs>,
+    "as"
+  >,
+) => {
+  const { as: Comp = "div", ...rest } = props;
+  return <Comp {...rest}></Comp>;
+};
 
 type Props = {
   displayValues: string[];
@@ -10,6 +26,7 @@ type Props = {
   buttonClass?: string;
   labels?: string[];
   variant?: "space";
+  as?: ElementType;
 };
 
 const ServerLangChanger = ({
@@ -19,9 +36,10 @@ const ServerLangChanger = ({
   variant,
   displayValues,
   slug,
+  as,
 }: Props) => {
   return (
-    <div className={mergeClasses("group", containerClass)}>
+    <AsComponent as={as} className={mergeClasses("group", containerClass)}>
       {displayValues.map((l, i) => (
         <Link
           key={l}
@@ -33,7 +51,7 @@ const ServerLangChanger = ({
           {variant === "space" ? <span>&nbsp;</span> : null}
         </Link>
       ))}
-    </div>
+    </AsComponent>
   );
 };
 
@@ -44,10 +62,11 @@ const ClientLangChanger = ({
   variant,
   displayValues,
   slug,
+  as,
 }: Props) => {
   const { value } = useSyncSelectedValue(displayValues);
   return (
-    <div className={mergeClasses("group", containerClass)}>
+    <AsComponent as={as} className={mergeClasses("group", containerClass)}>
       {displayValues.map((l, i) => (
         <Link
           key={l}
@@ -60,7 +79,7 @@ const ClientLangChanger = ({
           {variant === "space" ? <span>&nbsp;</span> : null}
         </Link>
       ))}
-    </div>
+    </AsComponent>
   );
 };
 
