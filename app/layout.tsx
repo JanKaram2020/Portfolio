@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Metadata } from "next";
 import { ViewTransitions } from "next-view-transitions";
 import { IBM_Plex_Sans } from "next/font/google";
@@ -42,7 +43,7 @@ const IBMPlexSans = IBM_Plex_Sans({
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <ViewTransitions>

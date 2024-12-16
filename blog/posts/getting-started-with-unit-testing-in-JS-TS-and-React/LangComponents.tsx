@@ -1,6 +1,5 @@
 "use client";
 import MultiLangFactory from "blog/components/MultiLangFactory";
-//@ts-ignore
 import { frontMatter } from "./index.mdx";
 
 const {

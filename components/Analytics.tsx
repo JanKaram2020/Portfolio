@@ -7,22 +7,20 @@ import SuspenseFactory from "./SuspenseFactory";
 const Analytics = SuspenseFactory(() => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const pageView = (url: string) => {
-    // @ts-ignore
-    if (window && window.gtag) {
-      // @ts-ignore
-      window.gtag("config", GA_TRACKING_ID, {
-        page_path: url,
-      });
-    }
-  };
 
   useEffect(() => {
-    const url = `${pathname}?${searchParams}`;
-    const handleRouteChange = (url: string) => {
-      pageView(url);
+    const handleRouteChange = () => {
+      if (window && "gtag" in window && typeof window.gtag === "function") {
+        const paramsString = searchParams.toString();
+        const page_path =
+          paramsString.length > 0 ? `${pathname}?${paramsString}` : pathname;
+        window.gtag("config", GA_TRACKING_ID, {
+          page_path,
+        });
+      }
     };
-    handleRouteChange(url);
+
+    handleRouteChange();
   }, [pathname, searchParams]);
 
   return null;

@@ -1,3 +1,4 @@
+//@ts-nocheck
 /* eslint-disable import/no-extraneous-dependencies */
 import { presetUno, defineConfig } from "unocss";
 import transformerVariantGroup from "@unocss/transformer-variant-group";
@@ -18,10 +19,9 @@ export default defineConfig({
     presetUno({
       dark: "class",
     }),
-  ], // @ts-ignore
+  ],
   transformers: [transformerVariantGroup()],
   extendTheme: (theme) => {
-    // @ts-ignore
     theme.colors.sky[500] = `#008CFF`;
   },
 });

@@ -1,4 +1,4 @@
-// @ts-ignore
+// @ts-nocheck
 import * as parserTypeScript from "prettier/parser-typescript";
 import * as prettier from "prettier/standalone";
 import * as prettierPluginEstree from "prettier/plugins/estree";

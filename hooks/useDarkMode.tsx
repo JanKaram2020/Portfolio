@@ -27,25 +27,22 @@ export const toggleMode = (v?: "light" | "dark", force?: boolean) => {
   if (v === "light" && (isDark || force)) {
     document.body.classList.remove("dark");
     Cookies.set("theme", "light");
-    // @ts-ignore
-    document.body.style.removeProperty("color-scheme");
+    document.body.style.setProperty("color-scheme", "light");
     return;
   }
   if (v === "dark" && (!isDark || force)) {
     document.body.classList.add("dark");
     Cookies.set("theme", "dark");
-    // @ts-ignore
-    document.body.style["color-scheme"] = "dark";
+    document.body.style.setProperty("color-scheme", "dark");
     return;
   }
 
   document.body.classList.toggle("dark");
   const newTheme = isDark ? "light" : "dark";
   if (newTheme === "dark") {
-    // @ts-ignore
-    document.body.style["color-scheme"] = "dark";
+    document.body.style.setProperty("color-scheme", "dark");
   } else {
-    document.body.style.removeProperty("color-scheme");
+    document.body.style.setProperty("color-scheme", "light");
   }
   Cookies.set("theme", newTheme);
 };
