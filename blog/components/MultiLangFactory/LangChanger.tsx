@@ -27,6 +27,7 @@ type Props = {
   labels?: string[];
   variant?: "space";
   as?: ElementType;
+  initialValue?: string;
 };
 
 const ServerLangChanger = ({
@@ -37,6 +38,7 @@ const ServerLangChanger = ({
   displayValues,
   slug,
   as,
+  initialValue,
 }: Props) => {
   return (
     <AsComponent as={as} className={mergeClasses("group", containerClass)}>
@@ -46,6 +48,7 @@ const ServerLangChanger = ({
           href={`/blog/${slug}?selected=${l}`}
           className={mergeClasses("group", buttonClass)}
           scroll={false}
+          aria-selected={initialValue === l}
         >
           {labels?.[i] ?? l}
           {variant === "space" ? <span>&nbsp;</span> : null}
@@ -63,8 +66,9 @@ const ClientLangChanger = ({
   displayValues,
   slug,
   as,
+  initialValue,
 }: Props) => {
-  const { value } = useSyncSelectedValue(displayValues);
+  const { value } = useSyncSelectedValue(displayValues, initialValue);
   return (
     <AsComponent as={as} className={mergeClasses("group", containerClass)}>
       {displayValues.map((l, i) => (
@@ -84,12 +88,12 @@ const ClientLangChanger = ({
 };
 
 const LangChanger =
-  <T extends string>(slug: string, displayValues: T[]) =>
+  <T extends string>(slug: string, displayValues: T[], initialValue?: T) =>
   (props: Omit<Props, "slug" | "displayValues">) => {
     if (props.labels && props.labels.length !== displayValues.length) {
       throw new Error("labels must be the same length as displayValues");
     }
-    const componentProps = { ...props, slug, displayValues };
+    const componentProps = { ...props, slug, displayValues, initialValue };
     return (
       <Suspense fallback={<ServerLangChanger {...componentProps} />}>
         <ClientLangChanger {...componentProps} />

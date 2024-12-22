@@ -9,7 +9,7 @@ const {
   languages,
   LangChanger,
   MultiLangTextBlock,
-} = MultiLangFactory(frontMatter.slug, ["JS", "TS", "React"]);
+} = MultiLangFactory(frontMatter.slug, ["JS", "TS", "React"], "React");
 
 // must define and export (Limitation in MDX)
 export {

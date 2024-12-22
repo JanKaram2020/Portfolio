@@ -9,22 +9,24 @@ import LangChangerFactory from "./LangChanger";
 const MultiLangFactory = <T extends Readonly<string>>(
   slug: string,
   displayValues: T[],
+  initialValue?: T,
 ) => {
-  const useSyncSelectedValue = () => useSyncSelectedValueFactory(displayValues);
+  const useSyncSelectedValue = () =>
+    useSyncSelectedValueFactory(displayValues, initialValue);
 
   const LangOnlyBlock = SuspenseFactory(
-    LangOnlyBlockFactory(displayValues),
+    LangOnlyBlockFactory(displayValues, initialValue),
     true,
   );
   const MultiLangTextBlock = SuspenseFactory(
-    MultiLangTextBlockFactory(displayValues),
+    MultiLangTextBlockFactory(displayValues, initialValue),
     true,
   );
   const MultiLangCodeBlock = SuspenseFactory(
-    MultiLangCodeBlockFactory(displayValues),
+    MultiLangCodeBlockFactory(displayValues, initialValue),
     true,
   );
-  const LangChanger = LangChangerFactory(slug, displayValues);
+  const LangChanger = LangChangerFactory(slug, displayValues, initialValue);
 
   return {
     LangOnlyBlock,

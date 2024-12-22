@@ -1,11 +1,18 @@
 import { usePathname, useSearchParams } from "next/navigation";
 import { useTransitionRouter } from "next-view-transitions";
 
-const useSyncSelectedValue = <T extends string>(values: Array<T>) => {
+const useSyncSelectedValue = <T extends string>(
+  values: Array<T>,
+  initialValue?: T,
+) => {
   const router = useTransitionRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const value = validateValue(searchParams.get("selected"), values);
+  const value = validateValue(
+    searchParams.get("selected"),
+    values,
+    initialValue,
+  );
 
   const onValueChange = (v: T) => {
     try {
@@ -30,13 +37,18 @@ const useSyncSelectedValue = <T extends string>(values: Array<T>) => {
   };
 };
 
-const validateValue = <T extends string>(v: string | null, values: T[]) => {
-  if (!v) return values[0];
+const validateValue = <T extends string>(
+  v: string | null,
+  values: T[],
+  initialValue?: T,
+) => {
+  const defaultValue = initialValue ?? values[0];
+  if (!v) return defaultValue;
   const elementIndex = values.indexOf(v as T);
   if (elementIndex > -1) {
     return values[elementIndex];
   }
-  return values[0];
+  return defaultValue;
 };
 
 export default useSyncSelectedValue;

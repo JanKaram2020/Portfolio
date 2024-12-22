@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import useSyncSelectedValue from "./useSyncSelectedValue";
 
 const MultiLangTextBlock =
-  <T extends string>(displayValues: T[]) =>
+  <T extends string>(displayValues: T[], initialValue?: T) =>
   ({
     children,
     values,
@@ -15,7 +15,7 @@ const MultiLangTextBlock =
       throw new Error("must provide children or values array");
     }
 
-    const { value } = useSyncSelectedValue(displayValues);
+    const { value } = useSyncSelectedValue(displayValues, initialValue);
 
     const valueIndex = displayValues.indexOf(value as T);
 

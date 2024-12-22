@@ -9,7 +9,7 @@ const MultiLangTabs = dynamic(() => import("./MulitLangTabs"), {
 });
 
 const MultiLangCodeBlock =
-  <T extends string>(displayValues: T[]) =>
+  <T extends string>(displayValues: T[], initialValue?: T) =>
   ({
     children,
     className,
@@ -41,8 +41,10 @@ const MultiLangCodeBlock =
       };
     });
 
-    const { value, defaultValue, getHref } =
-      useSyncSelectedValue(displayValues);
+    const { value, defaultValue, getHref } = useSyncSelectedValue(
+      displayValues,
+      initialValue,
+    );
 
     const currentBlock = blocks.find((block) => block.language === value);
 

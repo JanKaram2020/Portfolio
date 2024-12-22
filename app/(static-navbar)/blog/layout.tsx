@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import { BlogPosts } from "blog/components/BlogPosts";
 
-const Layout = async ({ children }: { children: ReactNode }) => {
+const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <div
       className={"leading-relaxed flex flex-row gap-4 mt-6 container mx-auto"}
