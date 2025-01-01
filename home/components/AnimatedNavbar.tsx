@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   motion,
   useMotionValueEvent,
@@ -12,8 +12,10 @@ import Image from "next/legacy/image";
 import ColorModeToggle from "components/ColorModeToggle";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { HiDocumentText } from "react-icons/hi";
+import useResponsive from "hooks/useResponsive";
 
 const AnimatedNavbar = () => {
+  const { lg, xl } = useResponsive();
   const [isHidden, setIsHidden] = useState(false);
   const { scrollY } = useScroll();
   const dimensions = useLogoPosition(true);
@@ -24,7 +26,11 @@ const AnimatedNavbar = () => {
   );
 
   useMotionValueEvent(scrollY, "change", (y) => {
-    setIsHidden(y < 800);
+    if (lg || xl) {
+      setIsHidden(y < 800);
+      return;
+    }
+    setIsHidden(false);
   });
 
   return (
@@ -53,7 +59,7 @@ const AnimatedNavbar = () => {
       >
         <div className="flex items-center justify-center relative gap-2.5">
           <Link
-            href="/public"
+            href="/"
             className={"opacity-0 pointer-events-none"}
             id={"original-link"}
           >
