@@ -4,11 +4,21 @@ import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { HiDocumentText } from "react-icons/hi";
 import React from "react";
 import ColorModeToggle from "components/ColorModeToggle";
+import { mergeClasses } from "lib/mergeClasses";
 
-const StaticNavbar = (): React.ReactElement => (
+const StaticNavbar = ({
+  variant = "default",
+}: {
+  variant?: "default" | "home";
+}): React.ReactElement => (
   <header
     id="header"
-    className="print:hidden bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white mb-10 py-1"
+    className={mergeClasses(
+      "print:hidden bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white mb-10 py-1",
+      {
+        "block lg:hidden": variant === "home",
+      },
+    )}
   >
     <div
       className={
