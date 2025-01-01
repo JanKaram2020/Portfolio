@@ -5,13 +5,11 @@ import SkillsSection from "home/sections/SkillsSection";
 import ContactSection from "home/sections/ContactSection";
 import HelloSection from "./sections/HelloSection";
 import AnimatedNavbar from "home/components/AnimatedNavbar";
-import StaticNavbar from "../app/(static-navbar)/StaticNavbar";
 
 export default function IndexPage(): React.ReactElement {
   return (
     <>
       <AnimatedNavbar />
-      <StaticNavbar variant={"home"} />
       <main
         className="z-0 mx-20px mb-50px min-h-75vh container mx-auto px-4 md:px-8 print:(p-0! m-0! max-w-full!)"
         id={"main"}

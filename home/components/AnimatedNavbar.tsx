@@ -42,7 +42,7 @@ const AnimatedNavbar = () => {
       }}
       transition={{ duration: 0.2 }}
       className={
-        "border-b-[0.2rem] print:hidden hidden lg:flex w-full justify-center pt-3 fixed top-0 z-10 bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white"
+        "border-b-[0.2rem] print:hidden flex w-full justify-center pt-3 fixed top-0 z-10 bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white"
       }
       id="header"
     >
@@ -53,7 +53,7 @@ const AnimatedNavbar = () => {
       >
         <div className="flex items-center justify-center relative gap-2.5">
           <Link
-            href="/"
+            href="/public"
             className={"opacity-0 pointer-events-none"}
             id={"original-link"}
           >
