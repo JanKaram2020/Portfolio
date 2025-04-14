@@ -45,7 +45,6 @@ export const Experiences: JobsArray = [
     points: [
       "Migrating Bupa app from Outsystems to React Native and Expo",
       "Integrate Zoom-SDK in React Native to have video calls in the app",
-      "Add fluid and performant animations using react-native-reanimated",
       "Customize Metro transformer to convert SVGs to components and CSS files to Stylesheet objects to ease the migration of exising sheets",
       "Mentoring team members learning React, React Native and Expo",
     ],
@@ -59,6 +58,7 @@ export const Experiences: JobsArray = [
       "Increased landing page performance by 55% through the use of React Server Components, Server-Side Rendering, and various techniques, resulting in improved SEO",
       "Introduced Unit, Component and Hooks testing with Jest and React-Testing-Library to our DLS, improving code quality and maintainability",
       "Created the TAMM Backend For Frontend using Node and Express with 100% test coverage",
+      "Created Azure pipelines to deploy Nextjs apps",
     ],
   },
   {
@@ -120,6 +120,8 @@ export const Summary1 = `Senior Software Developer with `;
 export const Summary2 = ` of experience in React.js, React Native, NextJs, Node.js, Express, and TypeScript. Passionate about building innovative and performant web and mobile applications.`;
 
 export const Skills = [
+  "Azure Pipelines",
+  "AWS",
   "Zustand",
   "Typescript",
   "Jest",
@@ -139,7 +141,6 @@ export const Skills = [
   "Github",
   "Tailwind CSS",
   "Chakra UI",
-  "Core UI",
   "CSS-in-JS",
   "SCSS",
   "Prisma",
@@ -147,7 +148,6 @@ export const Skills = [
   "Docker",
   "Prototyping with Framer",
   "Figma",
-  "Graphic design & Photo Editing",
   "Agile",
   "Googling!",
 ];
