@@ -1,0 +1,21 @@
+.timeline-item .timeline-item-year:after{
+    width: 50%;
+    height: 2px;
+    content: "";
+    position: absolute;
+    right: 0;
+    background-color: #343a40;
+    z-index: 1;
+}
+.timeline-item:not(:first-child) .timeline-item-year::before{
+    width: 50%;
+    height: 2px;
+    content: "";
+    position: absolute;
+    left: 0;
+    background-color: #343a40;
+    z-index: 1;
+}
+.timeline-item-year span{
+    z-index: 2;
+}

@@ -16,7 +16,6 @@ const formatTime = (startDate: Date, currentDate: Date) => {
   let hours = currentDate.getHours() - startDate.getHours();
   let minutes = currentDate.getMinutes() - startDate.getMinutes();
   let seconds = currentDate.getSeconds() - startDate.getSeconds();
-
   // Adjust for negative values
   if (seconds < 0) {
     seconds += 60;
@@ -44,14 +43,15 @@ const formatTime = (startDate: Date, currentDate: Date) => {
     months += 12;
     years -= 1;
   }
+  let printYears = months >= 6 ? years + 1 : years;
 
   return (
     <>
-      {years}
-      <span className={"hidden print:inline"}>+</span> year
-      {singularOrPlural(years)}
+      <span className={"print:inline hidden"}>
+        {printYears} year{singularOrPlural(years)}
+      </span>
       <span className={"print:hidden"}>
-        , {formatValue(months)} month
+        {years} year{singularOrPlural(years)}, {formatValue(months)} month
         {singularOrPlural(months)}, {formatValue(days)} day
         {singularOrPlural(days)}, {formatValue(hours)} hour
         {singularOrPlural(hours)}, {formatValue(minutes)} minute

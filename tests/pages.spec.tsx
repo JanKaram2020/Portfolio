@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from "vitest";
 import IndexPage from "home";
 import ResumePage from "resume/page";
-import ProjectPage from "../app/(static-navbar)/project/[slug]/page";
+import ProjectPage from "../app/(portfolio)/(static-navbar)/project/[slug]/page";
 import ProjectsData from "../project/projects-data";
 import { render } from "@testing-library/react";
 
