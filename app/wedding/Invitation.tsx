@@ -1,9 +1,8 @@
 import React, { Suspense } from "react";
 import { config } from "./config";
-import { useSearchParams } from "next/navigation";
+import GuestInvite from "./GuestInvite";
 
 const texts = {
-  invitationGreeting: "Dear",
   invitationIntro: "You Are Cordially Invited",
   invitationContent:
     "Our joy will be more complete with your presence in our special day.",
@@ -14,27 +13,7 @@ const texts = {
 const t = (s: string): string => texts[s as keyof typeof texts];
 
 const { venue, weddingDate, weddingTime } = config;
-const GuestInvite = () => {
-  const searchParams = useSearchParams();
 
-  const guest = searchParams.get("name");
-
-  if (guest)
-    return (
-      <div
-        style={{
-          textAlign: "center",
-          maxWidth: 400,
-          margin: "auto",
-          paddingBottom: 20,
-        }}
-      >
-        {t("invitationGreeting")}
-        <p style={{ fontSize: "1.5rem" }}>{guest},</p>
-      </div>
-    );
-  return null;
-};
 const Invitation = () => {
   return (
     <section id="contact" className="contact_area">
