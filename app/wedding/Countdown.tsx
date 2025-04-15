@@ -68,16 +68,14 @@ export function CountdownTimer({ date }: { date: string }) {
 
   return (
     <div className="py-5 text-center">
-      <h2 className="mb-4 title">Counting Down To Our Big Day</h2>
-      <div className="row justify-content-center gap-3 flex-wrap">
+      <h2 className="mb-4 title countdown-title">
+        Counting Down To Our Big Day
+      </h2>
+      <div className="countdown-container">
         {timeUnits.map((unit) => (
           <div
             key={unit.label}
-            className="border cols-6 md:cols-3 border-warning-subtle rounded-4 shadow-sm p-3"
-            style={{
-              width: "120px",
-              backgroundColor: "#fffaf6",
-            }}
+            className="border border-warning-subtle rounded-4 shadow-sm p-3 countdown-cell"
           >
             <div
               className="h3 mb-1 fw-bold text-warning"

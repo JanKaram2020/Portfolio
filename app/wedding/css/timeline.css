@@ -19,3 +19,23 @@
 .timeline-item-year span{
     z-index: 2;
 }
+.countdown-container{
+    display: grid;
+    grid-template-columns: 120px 120px;
+    place-content: center;
+    width: 100%;
+}
+.countdown-title{
+    font-size: 1.8rem;
+}
+@media (min-width:576px){
+    .countdown-container{
+        grid-template-columns: 120px 120px 120px 120px;
+    }
+    .countdown-title{
+        font-size: 2rem;
+    }
+}
+.countdown-container .countdown-cell{
+    background: #fffaf6;
+}
