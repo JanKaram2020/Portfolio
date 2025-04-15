@@ -3,7 +3,6 @@ import "./css/bootstrap.min.css";
 import "./css/default.css";
 import "./css/style.css";
 import "./css/timeline.css";
-import Footer from "./Footer";
 import Hero from "./Hero";
 import EventDetails from "./EventDetails";
 import Invitation from "./Invitation";
@@ -28,7 +27,6 @@ export default function ShowInvite() {
       <Timeline />
       <Invitation />
       <EventDetails />
-      <Footer />
     </body>
   );
 }
