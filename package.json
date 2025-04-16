@@ -38,6 +38,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.2.0",
     "react-intersection-observer": "^8.32.0",
+    "react-medium-image-zoom": "^5.2.14",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-pretty-code": "^0.13.1",
     "rehype-slug": "^6.0.0",

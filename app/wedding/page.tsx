@@ -3,6 +3,7 @@ import "./css/bootstrap.min.css";
 import "./css/default.css";
 import "./css/style.css";
 import "./css/timeline.css";
+import "react-medium-image-zoom/dist/styles.css";
 import Hero from "./Hero";
 import EventDetails from "./EventDetails";
 import Invitation from "./Invitation";
