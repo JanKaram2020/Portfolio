@@ -1,20 +1,10 @@
 import React, { Suspense } from "react";
-import { config } from "./config";
+import { config, configAr } from "./config";
 import GuestInvite from "./GuestInvite";
 
-const texts = {
-  invitationIntro: "You Are Cordially Invited",
-  invitationContent:
-    "Our joy will be more complete with your presence in our special day.",
-  invitationContentTextAlign: "left",
-  invitationOutro: "We are looking forward to seeing you.",
-};
+const Invitation = ({ lang = "en" }: { lang?: "ar" | "en" }) => {
+  const { venue, weddingDate, weddingTime } = lang === "en" ? config : configAr;
 
-const t = (s: string): string => texts[s as keyof typeof texts];
-
-const { venue, weddingDate, weddingTime } = config;
-
-const Invitation = () => {
   return (
     <section id="contact" className="contact_area">
       <div className="container">
@@ -35,40 +25,8 @@ const Invitation = () => {
             <div className="col-lg-9">
               <div className="section_title text-center pb-30">
                 <Suspense fallback={null}>
-                  <GuestInvite />
+                  <GuestInvite lang={lang} />
                 </Suspense>
-                <h3 className="title">{t("invitationIntro")}</h3>
-                <div
-                  style={{
-                    textAlign: "left",
-                    paddingTop: 20,
-                    paddingBottom: 20,
-                    maxWidth: 400,
-                    margin: "auto",
-                  }}
-                >
-                  <p
-                    style={{
-                      fontSize: "1rem",
-                      lineHeight: "inherit",
-                      color: "dimgrey",
-                      textAlign: "left",
-                    }}
-                  >
-                    <i>
-                      {t("invitationContent")}
-                      {t("invitationOutro") &&
-                        !t("invitationOutro").startsWith("[missing") && (
-                          <>
-                            <br />
-                            <br />
-                            {t("invitationOutro")}
-                          </>
-                        )}
-                    </i>
-                  </p>
-                </div>
-
                 <p className="text">
                   <a
                     href={venue.mapUrl}

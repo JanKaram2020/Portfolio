@@ -22,12 +22,30 @@ export const config = {
     mapUrl: "https://maps.app.goo.gl/Q298pDR8yH8HMuXd8",
   },
 };
-
-export const coupleNameStr =
-  config.coupleInfo.coupleNameFormat === "GROOM_FIRST"
-    ? `${config.coupleInfo.groomName} & ${config.coupleInfo.brideName}`
-    : `${config.coupleInfo.brideName} & ${config.coupleInfo.groomName}`;
-
+export const configAr = {
+  weddingDay: "الحد",
+  weddingTime: "الساعة ٦ مساءًا",
+  weddingDate: "٤ مايو ٢٠٢٥",
+  showBuiltWithInfo: false,
+  showQrCode: false,
+  calendarInfo: {
+    timeStartISO: "2025-05-04T18:00:00+02:00",
+    timeEndISO: "2025-05-04T19:00:00+02:00",
+  },
+  coupleInfo: {
+    brideName: "ليليان",
+    groomName: "چان",
+    coupleNameFormat: "GROOM_FIRST",
+  },
+  venue: {
+    name: "كنيسة الملاك ميخائيل",
+    addressLine1: "٤٢ خليل المصري",
+    addressLine2: "مصطفي كامل",
+    city: "الاسكندرية",
+    country: "مصر",
+    mapUrl: "https://maps.app.goo.gl/Q298pDR8yH8HMuXd8",
+  },
+};
 export const coupleName =
   config.coupleInfo.coupleNameFormat === "GROOM_FIRST" ? (
     <>

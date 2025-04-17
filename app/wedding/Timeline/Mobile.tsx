@@ -1,11 +1,43 @@
-import Zoom from "react-medium-image-zoom";
-import Image from "next/image";
 import React from "react";
-import { TimelineEvent } from "./index";
+import { TimelineEvents } from "./index";
+import Image from "next/image";
+import ZoomImage from "./ZoomImage";
+import { a2e } from "lib/lang";
 
-function MobileTimelineItem({ event }: { event: TimelineEvent }) {
+export default function MobileTimeline({
+  events,
+  lang,
+}: {
+  events: TimelineEvents;
+  lang: "ar" | "en";
+}) {
   return (
-    <div className="d-flex mb-5 ps-5">
+    <div className="position-relative mobile-timeline">
+      <div
+        className="bg-dark"
+        style={{
+          width: "2px",
+          marginLeft: "32px",
+          left: lang === "en" ? "8px" : undefined,
+          right: lang === "ar" ? 40 : undefined,
+          top: 0,
+          bottom: 0,
+          zIndex: 0,
+          position: "absolute",
+        }}
+      ></div>
+      <div className={"d-flex flex-column"}>
+        {events.map((event, index) => (
+          <MobileTimelineItem key={index} event={event} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function MobileTimelineItem({ event }: { event: TimelineEvents[number] }) {
+  return (
+    <div className="d-flex flex-row mb-5 ps-5">
       <div
         style={{
           marginInline: "10px",
@@ -19,11 +51,18 @@ function MobileTimelineItem({ event }: { event: TimelineEvent }) {
           {event.year}
         </div>
       </div>
-      <div>
+      <div className={"d-flex flex-column align-items-start"}>
         <h5>{event.title}</h5>
-        <p className="small">{event.description}</p>
-        <div className="d-flex flex-wrap gap-2">
-          {event.loading ? (
+        <p
+          className="small"
+          style={{
+            textAlign: a2e(event.year) === event.year ? "left" : "right",
+          }}
+        >
+          {event.description}
+        </p>
+        <div className="d-flex flex-wrap gap-2 justify-content-end">
+          {"loading" in event ? (
             <div
               className="d-flex flex-column justify-content-center align-items-center"
               style={{
@@ -37,49 +76,28 @@ function MobileTimelineItem({ event }: { event: TimelineEvent }) {
               ></div>
             </div>
           ) : (
-            <Zoom
-              zoomImg={{
-                width: 1500,
-                height: 1500,
-              }}
+            <ZoomImage
+              Zoomed={
+                <Image
+                  src={`/assets/wedding-images/${a2e(event.year)}.png`}
+                  alt={`${event.title}`}
+                  width={1500}
+                  height={1500}
+                  className="img-fluid shadow-sm grayscale"
+                />
+              }
             >
-              <img
-                src={`/assets/wedding-images/${event.year}.png`}
+              <Image
+                src={`/assets/wedding-images/${a2e(event.year)}.png`}
                 alt={`${event.title}`}
                 width={150}
                 height={150}
                 className="img-fluid border shadow-sm grayscale"
               />
-            </Zoom>
+            </ZoomImage>
           )}
         </div>
       </div>
-    </div>
-  );
-}
-
-export default function MobileTimeline({
-  events,
-}: {
-  events: TimelineEvent[];
-}) {
-  return (
-    <div className="position-relative">
-      <div
-        className="position-absolute start-0 top-0 bottom-0 bg-dark"
-        style={{
-          width: "2px",
-          marginLeft: "32px",
-          left: "8px",
-          top: 0,
-          bottom: 0,
-          zIndex: 0,
-        }}
-      ></div>
-
-      {events.map((event, index) => (
-        <MobileTimelineItem key={index} event={event} />
-      ))}
     </div>
   );
 }

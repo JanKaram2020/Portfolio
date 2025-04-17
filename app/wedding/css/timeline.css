@@ -1,41 +1,69 @@
-.timeline-item .timeline-item-year:after{
-    width: 50%;
-    height: 2px;
-    content: "";
-    position: absolute;
-    right: 0;
-    background-color: #343a40;
-    z-index: 1;
+.timeline-item .timeline-item-year:after {
+  width: 50%;
+  height: 2px;
+  content: "";
+  position: absolute;
+  right: 0;
+  background-color: #343a40;
+  z-index: 1;
 }
-.timeline-item:not(:first-child) .timeline-item-year::before{
-    width: 50%;
-    height: 2px;
-    content: "";
-    position: absolute;
-    left: 0;
-    background-color: #343a40;
-    z-index: 1;
+:lang(ar) .timeline-item:first-child .timeline-item-year:after {
+display: none;
 }
-.timeline-item-year span{
-    z-index: 2;
+
+.timeline-item:not(:first-child) .timeline-item-year::before {
+  width: 50%;
+  height: 2px;
+  content: "";
+  position: absolute;
+  left: 0;
+  background-color: #343a40;
+  z-index: 1;
 }
-.countdown-container{
-    display: grid;
-    grid-template-columns: 120px 120px;
-    place-content: center;
-    width: 100%;
+:lang(ar) .timeline-item .timeline-item-year::before {
+  width: 50%;
+  height: 2px;
+  content: "";
+  position: absolute;
+  left: 0;
+  background-color: #343a40;
+  z-index: 1;
 }
-.countdown-title{
-    font-size: 1.8rem;
+.timeline-item-year span {
+  z-index: 2;
 }
-@media (min-width:576px){
-    .countdown-container{
-        grid-template-columns: 120px 120px 120px 120px;
-    }
-    .countdown-title{
-        font-size: 2rem;
-    }
+.countdown-container {
+  display: grid;
+  grid-template-columns: 120px 120px;
+  place-content: center;
+  width: 100%;
 }
-.countdown-container .countdown-cell{
-    background: #fffaf6;
+.countdown-title {
+  font-size: 1.8rem;
+}
+@media (min-width: 576px) {
+  .countdown-container {
+    grid-template-columns: 120px 120px 120px 120px;
+  }
+  .countdown-title {
+    font-size: 2rem;
+  }
+}
+.countdown-container .countdown-cell {
+  background: #fffaf6;
+}
+.mobile-timeline {
+  display: flex;
+  flex-direction: row;
+}
+.desktop-timeline {
+  display: none;
+}
+@media (min-width: 576px) {
+  .mobile-timeline {
+    display: none;
+  }
+  .desktop-timeline {
+    display: block;
+  }
 }

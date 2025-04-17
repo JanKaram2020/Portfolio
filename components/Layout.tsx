@@ -3,14 +3,16 @@ import { ViewTransitions } from "next-view-transitions";
 import { GA_TRACKING_ID } from "../lib/constants";
 import Analytics from "components/Analytics";
 
-export default function RootLayout({
+export default function CommonLayout({
   children,
-}: Readonly<{
+  lang = "en",
+}: {
   children: ReactNode;
-}>) {
+  lang: "ar" | "en";
+}) {
   return (
     <ViewTransitions>
-      <html lang="en">
+      <html lang={lang} dir={lang === "en" ? "ltr" : "rtl"}>
         <head>
           <script
             async

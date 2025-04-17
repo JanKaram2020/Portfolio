@@ -1,13 +1,15 @@
 import React from "react";
-import { config, coupleName } from "./config";
+import { config, configAr, coupleName } from "./config";
 import { CountdownTimer } from "./Countdown";
 
-const EventDetails = () => {
-  const { venue, weddingDay, weddingDate, weddingTime } = config;
+const EventDetails = ({ lang = "en" }: { lang?: "ar" | "en" }) => {
+  const { venue, weddingDay, weddingDate, weddingTime } =
+    lang === "en" ? config : configAr;
+
   const weddingDateBrief = `${weddingDay}, ${weddingDate}`;
   return (
     <section id="coming_soon" className="coming_soon_area pt-20 pb-70">
-      <CountdownTimer date={config.calendarInfo.timeStartISO} />
+      <CountdownTimer date={config.calendarInfo.timeStartISO} lang={lang} />
       <div className="coming_soon_shape_1" style={{ zIndex: 1 }}>
         <img src="/assets/images/shape-1.png" alt="shape" />
       </div>
@@ -23,14 +25,31 @@ const EventDetails = () => {
                 animationDuration: "1.3s",
                 animationDelay: "0.2s",
                 animationName: "fadeIn",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
               }}
             >
-              <h3 className="title">Event Date:</h3>
-              <p>{weddingDateBrief}</p>
+              <h3
+                className="title"
+                style={{
+                  textAlign: lang === "ar" ? "right" : "left",
+                }}
+              >
+                {lang === "en" ? "Event Date:" : "التاريخ"}
+              </h3>
+              <p
+                style={{
+                  textAlign: lang === "ar" ? "right" : "left",
+                }}
+              >
+                {weddingDateBrief}
+              </p>
               <div
                 style={{
                   paddingTop: "0.2rem",
                   paddingBottom: "0.2rem",
+                  textAlign: lang === "ar" ? "right" : "left",
                 }}
               >
                 {weddingTime}
@@ -100,7 +119,7 @@ const EventDetails = () => {
               marginBottom: "0",
             }}
           >
-            With love from
+            {lang === "en" ? "With love from" : "بكل الحب من"}
           </h4>
           <div
             className="footer_title"

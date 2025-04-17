@@ -1,0 +1,8 @@
+:lang(ar) * {
+    /* Your styles here */
+    direction: rtl;
+}
+:lang(en) * {
+    /* Your styles here */
+    direction: ltr;
+}

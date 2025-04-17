@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { e2a } from "lib/lang";
 
 interface TimeLeft {
   days: number;
@@ -9,7 +10,13 @@ interface TimeLeft {
   seconds: number;
 }
 
-export function CountdownTimer({ date }: { date: string }) {
+export function CountdownTimer({
+  date,
+  lang = "en",
+}: {
+  date: string;
+  lang?: "en" | "ar";
+}) {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
     hours: 0,
@@ -49,18 +56,34 @@ export function CountdownTimer({ date }: { date: string }) {
   }, [date]);
 
   const timeUnits = [
-    { label: "Days", value: timeLeft.days },
-    { label: "Hours", value: timeLeft.hours },
-    { label: "Minutes", value: timeLeft.minutes },
-    { label: "Seconds", value: timeLeft.seconds },
+    {
+      label: lang === "en" ? "Days" : "يوم",
+      value: lang === "en" ? timeLeft.days : e2a(`${timeLeft.days}`),
+    },
+    {
+      label: lang === "en" ? "Hours" : "ساعة",
+      value: lang === "en" ? timeLeft.hours : e2a(`${timeLeft.hours}`),
+    },
+    {
+      label: lang === "en" ? "Minutes" : "دقيقة",
+      value: lang === "en" ? timeLeft.minutes : e2a(`${timeLeft.minutes}`),
+    },
+    {
+      label: lang === "en" ? "Seconds" : "ثانية",
+      value: lang === "en" ? timeLeft.seconds : e2a(`${timeLeft.seconds}`),
+    },
   ];
 
-  if (isExpired) {
+  if (!isExpired) {
     return (
       <div className="text-center py-5">
-        <h3 className="fs-2 text-warning-emphasis">The Big Day Is Here!</h3>
+        <h3 className="fs-2 text-warning-emphasis">
+          {lang === "en" ? "The Big Day Is Here!" : "فرحنا انهاردة !"}
+        </h3>
         <p className="text-muted mt-2">
-          We're celebrating our special day today!
+          {lang === "en"
+            ? "We're celebrating our special day today!"
+            : "مستنيينك !"}
         </p>
       </div>
     );
@@ -69,7 +92,7 @@ export function CountdownTimer({ date }: { date: string }) {
   return (
     <div className="py-5 text-center">
       <h2 className="mb-4 title countdown-title">
-        Counting Down To Our Big Day
+        {lang === "en" ? "Counting Down To Our Big Day" : "عد تنازلي لفرحنا"}
       </h2>
       <div className="countdown-container">
         {timeUnits.map((unit) => (
@@ -81,7 +104,7 @@ export function CountdownTimer({ date }: { date: string }) {
               className="h3 mb-1 fw-bold text-warning"
               style={{ fontFamily: "Georgia, serif" }}
             >
-              {unit.value.toString().padStart(2, "0")}
+              {unit.value.toString().padStart(2, lang === "en" ? "0" : "٠")}
             </div>
             <div className="small text-muted text-uppercase">{unit.label}</div>
           </div>

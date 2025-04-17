@@ -1,14 +1,9 @@
-import "./css/animate.css";
-import "./css/bootstrap.min.css";
-import "./css/default.css";
-import "./css/style.css";
-import "./css/timeline.css";
-import "react-medium-image-zoom/dist/styles.css";
 import Hero from "./Hero";
 import EventDetails from "./EventDetails";
 import Invitation from "./Invitation";
 import Timeline from "./Timeline";
 import { Metadata } from "next";
+import CommonLayout from "components/Layout";
 
 export const metadata: Metadata = {
   title: "Jan & Lilyanne's Wedding",
@@ -23,11 +18,13 @@ export const metadata: Metadata = {
 
 export default function ShowInvite() {
   return (
-    <body>
-      <Hero />
-      <Timeline />
-      <Invitation />
-      <EventDetails />
-    </body>
+    <CommonLayout lang={"en"}>
+      <body>
+        <Hero />
+        <Timeline />
+        <Invitation />
+        <EventDetails />
+      </body>
+    </CommonLayout>
   );
 }

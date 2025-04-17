@@ -1,12 +1,87 @@
-import Zoom from "react-medium-image-zoom";
-import React from "react";
-import { TimelineEvent } from "./index";
+import { TimelineEvents } from "./index";
+import Image from "next/image";
+import ZoomImage from "./ZoomImage";
+import { a2e } from "lib/lang";
 
-export const DesktopTimelineItem = ({
+export const DesktopYearItem = ({
+  event,
+}: {
+  event: TimelineEvents[number];
+}) => {
+  return (
+    <div className="col position-relative timeline-item">
+      {event.position === "top" && (
+        <div
+          className="position-absolute translate-middle-y bg-dark"
+          style={{
+            width: "2px",
+            height: "50px",
+            top: 0,
+            left: "50%",
+            transform: "translateY(-50%)",
+          }}
+        ></div>
+      )}
+      <div
+        className={`bg-dark text-white rounded-circle d-flex align-items-center justify-content-center mx-auto timeline-item-year`}
+        style={{ width: 64, height: 64 }}
+      >
+        <span>{event.year}</span>
+      </div>
+      {event.position === "bottom" && (
+        <div
+          className="position-absolute bottom-0 start-50 translate-middle-y bg-dark"
+          style={{
+            width: "2px",
+            height: "50px",
+            bottom: 0,
+            left: "50%",
+            transform: "translateY(50%)",
+          }}
+        ></div>
+      )}
+    </div>
+  );
+};
+export default function DesktopTimeline({
+  events,
+}: {
+  events: TimelineEvents;
+}) {
+  if (events.length === 0) return null;
+
+  return (
+    <div className="position-relative desktop-timeline">
+      <div className="row justify-content-between mb-4">
+        {events.map((event) => (
+          <DesktopTimelineItem event={event} variant={"top"} key={event.year} />
+        ))}
+      </div>
+
+      <div className="row align-items-center text-center mb-4 timeline-container">
+        {events.map((event, i) => (
+          <DesktopYearItem event={event} key={event.year} />
+        ))}
+      </div>
+
+      <div className="row justify-content-between mt-4">
+        {events.map((event) => (
+          <DesktopTimelineItem
+            event={event}
+            key={event.year}
+            variant={"bottom"}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+const DesktopTimelineItem = ({
   event,
   variant,
 }: {
-  event: TimelineEvent;
+  event: TimelineEvents[number];
   variant: "top" | "bottom";
 }) => {
   if (event.position !== variant)
@@ -65,7 +140,7 @@ export const DesktopTimelineItem = ({
           marginBottom: event.position === "bottom" ? 0 : "10px",
         }}
       >
-        {event.loading ? (
+        {"loading" in event ? (
           <div
             className="d-flex flex-column justify-content-center align-items-center"
             style={{
@@ -79,88 +154,27 @@ export const DesktopTimelineItem = ({
             ></div>
           </div>
         ) : (
-          <Zoom
-            zoomImg={{
-              width: 1500,
-              height: 1500,
-            }}
+          <ZoomImage
+            Zoomed={
+              <Image
+                src={`/assets/wedding-images/${a2e(event.year)}.png`}
+                alt={`${event.title}`}
+                width={1500}
+                height={1500}
+                className="img-fluid shadow-sm grayscale"
+              />
+            }
           >
-            <img
-              src={`/assets/wedding-images/${event.year}.png`}
+            <Image
+              src={`/assets/wedding-images/${a2e(event.year)}.png`}
               alt={`${event.title}`}
               width={150}
               height={150}
               className="img-fluid border shadow-sm grayscale"
             />
-          </Zoom>
+          </ZoomImage>
         )}
       </div>
     </div>
   );
 };
-
-export const DesktopYearItem = ({ event }: { event: TimelineEvent }) => {
-  return (
-    <div className="col position-relative timeline-item">
-      {event.position === "top" && (
-        <div
-          className="position-absolute translate-middle-y bg-dark"
-          style={{
-            width: "2px",
-            height: "50px",
-            top: 0,
-            left: "50%",
-            transform: "translateY(-50%)",
-          }}
-        ></div>
-      )}
-      <div
-        className={`bg-dark text-white rounded-circle d-flex align-items-center justify-content-center mx-auto timeline-item-year`}
-        style={{ width: 64, height: 64 }}
-      >
-        <span>{event.year}</span>
-      </div>
-      {event.position === "bottom" && (
-        <div
-          className="position-absolute bottom-0 start-50 translate-middle-y bg-dark"
-          style={{
-            width: "2px",
-            height: "50px",
-            bottom: 0,
-            left: "50%",
-            transform: "translateY(50%)",
-          }}
-        ></div>
-      )}
-    </div>
-  );
-};
-export default function DesktopTimeline({
-  events,
-}: {
-  events: TimelineEvent[];
-}) {
-  if (events.length === 0) return null;
-
-  return (
-    <div className="position-relative">
-      <div className="row justify-content-between mb-4">
-        {events.map((event, i) => (
-          <DesktopTimelineItem event={event} variant={"top"} key={event.year} />
-        ))}
-      </div>
-
-      <div className="row align-items-center text-center mb-4 timeline-container">
-        {events.map((event, i) => (
-          <DesktopYearItem event={event} key={event.year} />
-        ))}
-      </div>
-
-      <div className="row justify-content-between mt-4">
-        {events.map((event, i) => (
-          <DesktopTimelineItem event={event} variant={"bottom"} />
-        ))}
-      </div>
-    </div>
-  );
-}

@@ -1,8 +1,9 @@
 import React from "react";
-import { config, coupleName } from "./config";
+import { config, configAr, coupleName } from "./config";
+import Locale from "./useLocale";
 
-const Hero = () => {
-  const { venue } = config;
+const Hero = ({ lang = "en" }: { lang?: "ar" | "en" }) => {
+  const { venue } = lang === "en" ? config : configAr;
 
   return (
     <section className="header_area">
@@ -31,7 +32,7 @@ const Hero = () => {
                         className="slider_sub_title"
                         data-animation="fadeInUp"
                         data-delay="0.2s"
-                        style={{ animationDelay: "0.2s" }}
+                        style={{ animationDelay: "0.2s", textAlign: "center" }}
                       >
                         WE ARE GETTING MARRIED
                       </h5>
@@ -39,7 +40,7 @@ const Hero = () => {
                         className="slider_title"
                         data-animation="fadeInUp"
                         data-delay="0.7s"
-                        style={{ animationDelay: "0.7s" }}
+                        style={{ animationDelay: "0.7s", textAlign: "center" }}
                       >
                         {coupleName}
                       </h2>
@@ -48,8 +49,18 @@ const Hero = () => {
                         data-animation="fadeInUp"
                         data-delay="1s"
                         style={{ animationDelay: "1s" }}
+                        dir={lang === "en" ? "rtl" : "ltr"}
                       >
-                        {venue.name}, {venue.city}, {venue.country}.
+                        {lang === "en" ? (
+                          <>
+                            {venue.name}, {venue.city}, {venue.country}.
+                          </>
+                        ) : (
+                          <>
+                            {venue.name} ، {venue.city}
+                          </>
+                        )}
+                        <Locale />
                       </span>
                     </div>
                   </div>

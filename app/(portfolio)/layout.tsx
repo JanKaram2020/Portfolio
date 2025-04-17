@@ -5,6 +5,7 @@ import "base.scss";
 import "globals.css";
 import Footer from "components/Footer";
 import { IBM_Plex_Sans } from "next/font/google";
+import CommonLayout from "components/Layout";
 
 export const metadata: Metadata = {
   title: "Jan Karam",
@@ -43,9 +44,11 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <body className={`dark ${IBMPlexSans.variable}`}>
-      {children}
-      <Footer />
-    </body>
+    <CommonLayout lang={"en"}>
+      <body className={`dark ${IBMPlexSans.variable}`}>
+        {children}
+        <Footer />
+      </body>
+    </CommonLayout>
   );
 }
