@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { config, configAr, coupleName } from "./config";
 import Locale from "./useLocale";
 
@@ -60,7 +60,9 @@ const Hero = ({ lang = "en" }: { lang?: "ar" | "en" }) => {
                             {venue.name} ، {venue.city}
                           </>
                         )}
-                        <Locale />
+                        <Suspense fallback={null}>
+                          <Locale />
+                        </Suspense>
                       </span>
                     </div>
                   </div>
