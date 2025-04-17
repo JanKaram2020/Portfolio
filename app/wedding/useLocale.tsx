@@ -1,15 +1,16 @@
 "use client";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 
 const useLocale = () => {
   const pathname = usePathname();
 
-  return pathname.includes("/ar");
+  return { isArabic: pathname.includes("/ar"), pathname };
 };
 
 export const Locale = () => {
-  const isArabic = useLocale();
+  const { isArabic } = useLocale();
+  const searchParams = useSearchParams();
   return (
     <div>
       {isArabic ? (
@@ -27,7 +28,12 @@ export const Locale = () => {
               fontFamily: "niconne,cursive",
               textDecoration: "underline",
             }}
-            href={"/wedding"}
+            href={
+              "/wedding" +
+              (searchParams.toString().length > 0
+                ? `?${searchParams.toString()}`
+                : "")
+            }
           >
             Here
           </Link>
@@ -44,7 +50,12 @@ export const Locale = () => {
           الدعوة متوفرة{" "}
           <Link
             className={"hover-underline-black"}
-            href="/wedding/ar"
+            href={
+              "/wedding/ar" +
+              (searchParams.toString().length > 0
+                ? `?${searchParams.toString()}`
+                : "")
+            }
             style={{
               color: "white",
               textDecoration: "underline",
