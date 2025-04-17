@@ -67,3 +67,6 @@ display: none;
     display: block;
   }
 }
+.generator-form *{
+  text-align: right;
+}
