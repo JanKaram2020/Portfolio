@@ -74,7 +74,7 @@ export function CountdownTimer({
     },
   ];
 
-  if (!isExpired) {
+  if (isExpired) {
     return (
       <div className="text-center py-5">
         <h3 className="fs-2 text-warning-emphasis">
