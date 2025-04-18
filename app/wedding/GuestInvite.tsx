@@ -5,10 +5,12 @@ import React, { CSSProperties } from "react";
 const GuestInvite = ({ lang }: { lang: "ar" | "en" }) => {
   const searchParams = useSearchParams();
   const isArabic = lang === "ar";
-  const guest = searchParams.get("name");
   const isFemale = searchParams.get("gender") === "female";
+  const arName = searchParams.get("arName");
+  const enName = searchParams.get("name");
+  const guest = isArabic && arName ? arName : enName;
   const t = (s: keyof typeof EnglishDic): string =>
-    lang === "en"
+    !isArabic
       ? EnglishDic[s]
       : isFemale
         ? ArabicDicFemale[s]
@@ -57,7 +59,7 @@ const GuestInvite = ({ lang }: { lang: "ar" | "en" }) => {
           }}
         >
           <i>
-            {lang === "en" ? (
+            {!isArabic ? (
               <>
                 {t("invitationContent")} &nbsp;
                 <br />

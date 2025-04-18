@@ -1,19 +1,21 @@
 "use client";
 import React, { CSSProperties, useState } from "react";
-import CommonLayout from "../../../components/Layout";
+import CommonLayout from "components/Layout";
 
 const GenderForm = () => {
   const [name, setName] = useState("");
+  const [arName, setArName] = useState("");
   const [gender, setGender] = useState<"male" | "female">("male");
   const [language, setLanguage] = useState<"English" | "عربي">("English");
 
   const handleCopy = () => {
-    if (name.length < 2) {
-      alert("Please enter valid name");
+    if (name.length < 2 && arName.length > 2) {
+      alert("اكتب اسم صحيح في العربي او الانجليزي");
       return;
     }
     const queryParams = new URLSearchParams();
     queryParams.set("name", name);
+    queryParams.set("arName", arName);
     queryParams.set("gender", gender);
     const url = `https://www.jankaram.com/wedding${language === "عربي" ? "/ar" : ""}?${queryParams.toString()}`;
     navigator.clipboard
@@ -27,16 +29,13 @@ const GenderForm = () => {
     position: "relative",
   };
   const handleShare = () => {
-    if (name.length < 2) {
-      alert("Please enter valid name");
-      return;
-    }
-    if (name.length < 2) {
-      alert("Please enter valid name");
+    if (name.length < 2 && arName.length > 2) {
+      alert("اكتب اسم صحيح في العربي او الانجليزي");
       return;
     }
     const queryParams = new URLSearchParams();
     queryParams.set("name", name);
+    queryParams.set("arName", arName);
     queryParams.set("gender", gender);
     const url = `https://www.jankaram.com/wedding${language === "عربي" ? "/ar" : ""}?${queryParams.toString()}`;
     if (navigator.share) {
@@ -68,7 +67,7 @@ const GenderForm = () => {
               {/* Name Field */}
               <div className="mb-3">
                 <label htmlFor="nameInput" className="form-label">
-                  الاسم:
+                  الاسم الانجليزي:
                 </label>
                 <input
                   type="text"
@@ -76,10 +75,22 @@ const GenderForm = () => {
                   id="nameInput"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder="أدخل اسمك"
+                  placeholder="أدخل الاسم بالانجليزي"
                 />
               </div>
-
+              <div className="mb-3">
+                <label htmlFor="arNameInput" className="form-label">
+                  الاسم العربي:
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="arNameInput"
+                  value={arName}
+                  onChange={(e) => setArName(e.target.value)}
+                  placeholder="أدخل الاسم بالعربي"
+                />
+              </div>
               {/* Gender Field */}
               <div className="mb-3">
                 <label className="form-label">الجنس:</label>
@@ -114,7 +125,6 @@ const GenderForm = () => {
                   </label>
                 </div>
               </div>
-
               {/* Language Field */}
               <div className="mb-3">
                 <label className="form-label">اللغة:</label>
@@ -149,7 +159,6 @@ const GenderForm = () => {
                   </label>
                 </div>
               </div>
-
               {/* Buttons */}
               <div
                 className="d-flex gap-2"
