@@ -10,7 +10,8 @@ export const metadata: Metadata = {
   description: "انت مدعو لفرح چان و ليليان فرحتنا هتكمل بوجودك. مستنيينك",
   openGraph: {
     title: "فرح چان و ليليان",
-    images: "https://www.jankaram.com/assets/wedding-images/2024.png",
+    images:
+      "https://www.jankaram.com/_next/image?url=%2Fassets%2Fwedding-images%2F2024.png&w=3840&q=75",
     url: "https://www.jankaram.com/wedding/ar",
   },
 };
@@ -18,12 +19,10 @@ export const metadata: Metadata = {
 export default function ShowInvite() {
   return (
     <CommonLayout lang={"ar"}>
-      <body>
-        <Hero lang={"ar"} />
-        <Timeline lang={"ar"} />
-        <Invitation lang={"ar"} />
-        <EventDetails lang={"ar"} />
-      </body>
+      <Hero lang={"ar"} />
+      <Timeline lang={"ar"} />
+      <Invitation lang={"ar"} />
+      <EventDetails lang={"ar"} />
     </CommonLayout>
   );
 }

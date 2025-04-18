@@ -52,139 +52,137 @@ const GenderForm = () => {
 
   return (
     <CommonLayout lang={"ar"}>
-      <body>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "wrap",
-            gap: "10px",
-          }}
-        >
-          <div className="container mt-5 text-end generator-form" dir="rtl">
-            <h3 className="mb-4">صانع الدعوة</h3>
-            <form>
-              {/* Name Field */}
-              <div className="mb-3">
-                <label htmlFor="nameInput" className="form-label">
-                  الاسم الانجليزي:
-                </label>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+          gap: "10px",
+        }}
+      >
+        <div className="container mt-5 text-end generator-form" dir="rtl">
+          <h3 className="mb-4">صانع الدعوة</h3>
+          <form>
+            {/* Name Field */}
+            <div className="mb-3">
+              <label htmlFor="nameInput" className="form-label">
+                الاسم الانجليزي:
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="nameInput"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="أدخل الاسم بالانجليزي"
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="arNameInput" className="form-label">
+                الاسم العربي:
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="arNameInput"
+                value={arName}
+                onChange={(e) => setArName(e.target.value)}
+                placeholder="أدخل الاسم بالعربي"
+              />
+            </div>
+            {/* Gender Field */}
+            <div className="mb-3">
+              <label className="form-label">الجنس:</label>
+              <div className="form-check">
                 <input
-                  type="text"
-                  className="form-control"
-                  id="nameInput"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="أدخل الاسم بالانجليزي"
-                />
-              </div>
-              <div className="mb-3">
-                <label htmlFor="arNameInput" className="form-label">
-                  الاسم العربي:
+                  style={radioStyle}
+                  className="form-check-input"
+                  type="radio"
+                  name="gender"
+                  id="male"
+                  value="male"
+                  checked={gender === "male"}
+                  onChange={() => setGender("male")}
+                ></input>
+                <label className="form-check-label" htmlFor="male">
+                  ذكر
                 </label>
+              </div>
+              <div className="form-check">
                 <input
-                  type="text"
-                  className="form-control"
-                  id="arNameInput"
-                  value={arName}
-                  onChange={(e) => setArName(e.target.value)}
-                  placeholder="أدخل الاسم بالعربي"
+                  style={radioStyle}
+                  className="form-check-input"
+                  type="radio"
+                  name="gender"
+                  id="female"
+                  value="female"
+                  checked={gender === "female"}
+                  onChange={() => setGender("female")}
                 />
+                <label className="form-check-label" htmlFor="female">
+                  أنثى
+                </label>
               </div>
-              {/* Gender Field */}
-              <div className="mb-3">
-                <label className="form-label">الجنس:</label>
-                <div className="form-check">
-                  <input
-                    style={radioStyle}
-                    className="form-check-input"
-                    type="radio"
-                    name="gender"
-                    id="male"
-                    value="male"
-                    checked={gender === "male"}
-                    onChange={() => setGender("male")}
-                  ></input>
-                  <label className="form-check-label" htmlFor="male">
-                    ذكر
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    style={radioStyle}
-                    className="form-check-input"
-                    type="radio"
-                    name="gender"
-                    id="female"
-                    value="female"
-                    checked={gender === "female"}
-                    onChange={() => setGender("female")}
-                  />
-                  <label className="form-check-label" htmlFor="female">
-                    أنثى
-                  </label>
-                </div>
+            </div>
+            {/* Language Field */}
+            <div className="mb-3">
+              <label className="form-label">اللغة:</label>
+              <div className="form-check">
+                <input
+                  style={radioStyle}
+                  className="form-check-input"
+                  type="radio"
+                  name="language"
+                  id="arabic"
+                  value="عربي"
+                  checked={language === "عربي"}
+                  onChange={() => setLanguage("عربي")}
+                />
+                <label className="form-check-label" htmlFor="arabic">
+                  عربي
+                </label>
               </div>
-              {/* Language Field */}
-              <div className="mb-3">
-                <label className="form-label">اللغة:</label>
-                <div className="form-check">
-                  <input
-                    style={radioStyle}
-                    className="form-check-input"
-                    type="radio"
-                    name="language"
-                    id="arabic"
-                    value="عربي"
-                    checked={language === "عربي"}
-                    onChange={() => setLanguage("عربي")}
-                  />
-                  <label className="form-check-label" htmlFor="arabic">
-                    عربي
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    style={radioStyle}
-                    className="form-check-input"
-                    type="radio"
-                    name="language"
-                    id="english"
-                    value="English"
-                    checked={language === "English"}
-                    onChange={() => setLanguage("English")}
-                  />
-                  <label className="form-check-label" htmlFor="english">
-                    English
-                  </label>
-                </div>
+              <div className="form-check">
+                <input
+                  style={radioStyle}
+                  className="form-check-input"
+                  type="radio"
+                  name="language"
+                  id="english"
+                  value="English"
+                  checked={language === "English"}
+                  onChange={() => setLanguage("English")}
+                />
+                <label className="form-check-label" htmlFor="english">
+                  English
+                </label>
               </div>
-              {/* Buttons */}
-              <div
-                className="d-flex gap-2"
-                style={{
-                  gap: 2,
-                }}
+            </div>
+            {/* Buttons */}
+            <div
+              className="d-flex gap-2"
+              style={{
+                gap: 2,
+              }}
+            >
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={handleCopy}
               >
-                <button
-                  type="button"
-                  className="btn btn-primary"
-                  onClick={handleCopy}
-                >
-                  نسخ إلى الحافظة
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-secondary"
-                  onClick={handleShare}
-                >
-                  مشاركة
-                </button>
-              </div>
-            </form>
-          </div>
+                نسخ إلى الحافظة
+              </button>
+              <button
+                type="button"
+                className="btn btn-secondary"
+                onClick={handleShare}
+              >
+                مشاركة
+              </button>
+            </div>
+          </form>
         </div>
-      </body>
+      </div>
     </CommonLayout>
   );
 };

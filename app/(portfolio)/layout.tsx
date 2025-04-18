@@ -44,11 +44,14 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <CommonLayout lang={"en"}>
-      <body className={`dark ${IBMPlexSans.variable}`}>
-        {children}
-        <Footer />
-      </body>
+    <CommonLayout
+      lang={"en"}
+      bodyProps={{
+        className: `dark ${IBMPlexSans.variable}`,
+      }}
+    >
+      {children}
+      <Footer />
     </CommonLayout>
   );
 }

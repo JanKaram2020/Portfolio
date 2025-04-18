@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { DetailedHTMLProps, HTMLAttributes, ReactNode } from "react";
 import { ViewTransitions } from "next-view-transitions";
 import { GA_TRACKING_ID } from "../lib/constants";
 import Analytics from "components/Analytics";
@@ -6,9 +6,14 @@ import Analytics from "components/Analytics";
 export default function CommonLayout({
   children,
   lang = "en",
+  bodyProps,
 }: {
   children: ReactNode;
   lang: "ar" | "en";
+  bodyProps?: DetailedHTMLProps<
+    HTMLAttributes<HTMLBodyElement>,
+    HTMLBodyElement
+  >;
 }) {
   return (
     <ViewTransitions>
@@ -31,10 +36,10 @@ export default function CommonLayout({
             }}
           />
         </head>
-        <>
+        <body {...bodyProps}>
           <Analytics />
           {children}
-        </>
+        </body>
       </html>
     </ViewTransitions>
   );
