@@ -5,8 +5,8 @@ export const config = {
   showBuiltWithInfo: false,
   showQrCode: false,
   calendarInfo: {
-    timeStartISO: "2025-05-04T18:00:00+02:00",
-    timeEndISO: "2025-05-04T19:00:00+02:00",
+    timeStartISO: "2025-05-04T18:00:00+03:00",
+    timeEndISO: "2025-05-04T19:00:00+03:00",
   },
   coupleInfo: {
     brideName: "Lilyanne",
