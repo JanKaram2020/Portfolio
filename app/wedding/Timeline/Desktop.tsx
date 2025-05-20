@@ -59,7 +59,7 @@ export default function DesktopTimeline({
       </div>
 
       <div className="row align-items-center text-center mb-4 timeline-container">
-        {events.map((event, i) => (
+        {events.map((event) => (
           <DesktopYearItem event={event} key={event.year} />
         ))}
       </div>

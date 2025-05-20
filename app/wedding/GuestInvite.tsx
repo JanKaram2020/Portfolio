@@ -80,21 +80,21 @@ const GuestInvite = ({ lang }: { lang: "ar" | "en" }) => {
 export default GuestInvite;
 
 const EnglishDic = {
-  invitationIntro: "You Are Cordially Invited",
-  invitationContent:
-    "Our joy will be more complete with your presence in our special day.",
+  invitationIntro: "Thank you for coming",
+  invitationContent: "Our joy was complete with your presence.",
   invitationContentTextAlign: "left",
-  invitationOutro: "We are looking forward to seeing you.",
+  invitationOutro:
+    "We are looking forward to seeing you in your special day(s).",
 } as const;
 const ArabicDicFemale = {
-  invitationIntro: "نتشرف بدعوتِك لحضور الاكليل",
-  invitationContent: "فرحتنا هتكمل بوجودِك",
+  invitationIntro: "شرفتينا و نورتينا بوجودك",
+  invitationContent: "فرحتنا كملت بوجودِك",
   invitationContentTextAlign: "center",
-  invitationOutro: "هنستناكي",
+  invitationOutro: "شكرًا ليكي",
 } as const;
 const ArabicDicMale = {
-  invitationIntro: "نتشرف بدعوتك لحضور الاكليل",
-  invitationContent: "فرحتنا هتكمل بوجودك",
+  invitationIntro: "شرفتنا و نورتنا بوجودك",
+  invitationContent: "فرحتنا كملت بوجودك",
   invitationContentTextAlign: "center",
-  invitationOutro: "هنستناك",
+  invitationOutro: "شكرًا ليك",
 } as const;

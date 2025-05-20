@@ -34,7 +34,7 @@ const Hero = ({ lang = "en" }: { lang?: "ar" | "en" }) => {
                         data-delay="0.2s"
                         style={{ animationDelay: "0.2s", textAlign: "center" }}
                       >
-                        WE ARE GETTING MARRIED
+                        WE GOT MARRIED
                       </h5>
                       <h2
                         className="slider_title"

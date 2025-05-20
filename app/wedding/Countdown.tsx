@@ -75,18 +75,7 @@ export function CountdownTimer({
   ];
 
   if (isExpired) {
-    return (
-      <div className="text-center py-5">
-        <h3 className="fs-2 text-warning-emphasis">
-          {lang === "en" ? "The Big Day Is Here!" : "فرحنا انهاردة !"}
-        </h3>
-        <p className="text-muted mt-2">
-          {lang === "en"
-            ? "We're celebrating our special day today!"
-            : "مستنيينك !"}
-        </p>
-      </div>
-    );
+    return null;
   }
 
   return (

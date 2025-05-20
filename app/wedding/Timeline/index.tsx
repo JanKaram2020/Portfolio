@@ -10,16 +10,7 @@ export type TimelineEvent = {
   imageRatio: number;
 };
 
-export type TimelineEvents = [
-  ...TimelineEvent[],
-  {
-    year: string;
-    title: string;
-    description: string;
-    position?: "top" | "bottom";
-    loading: true;
-  },
-];
+export type TimelineEvents = Array<TimelineEvent>;
 
 export default function CoupleTimeline({
   lang = "en",
@@ -27,7 +18,6 @@ export default function CoupleTimeline({
   lang?: "en" | "ar";
 }) {
   const events = lang === "en" ? EnglishEvents : ArabicEvents;
-
   return (
     <div
       className="coming_soon_area pt-20 pb-70"
@@ -111,9 +101,9 @@ const EnglishEvents: TimelineEvents = [
     year: "2025",
     title: "Getting Married",
     description:
-      "The day we’ve been dreaming of is finally close. A celebration of love, promises, and the beginning of our forever together.",
+      "We celebrated our love, made promises, and our forever together began.",
     position: "top",
-    loading: true,
+    imageRatio: 1488 / 1884,
   },
 ];
 
@@ -171,9 +161,9 @@ const ArabicEvents: TimelineEvents = [
   },
   {
     year: "٢٠٢٥",
-    title: "فرحنا",
-    description: "انه يقترب. مستنينكم",
+    title: "اتجوزنا",
+    description: "بقيت زوجي (آل) عزیز چان و بقت زوجتي ليليان",
     position: "top",
-    loading: true,
+    imageRatio: 1488 / 1884,
   },
 ];
