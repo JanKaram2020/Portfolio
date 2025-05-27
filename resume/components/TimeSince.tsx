@@ -48,7 +48,7 @@ const formatTime = (startDate: Date, currentDate: Date) => {
   return (
     <>
       <span className={"print:inline hidden"}>
-        {printYears} year{singularOrPlural(years)}
+        {printYears} year{singularOrPlural(printYears)}
       </span>
       <span className={"print:hidden"}>
         {years} year{singularOrPlural(years)}, {formatValue(months)} month
