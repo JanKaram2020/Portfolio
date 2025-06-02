@@ -1,24 +1,25 @@
 export const frontMatter = {
-  title: 'Typesafe functions with dynamic parameter types',
-  summary:'Achieving type safety in functions with dynamic parameters in TypeScript using discriminated unions and generics.',
-  publishedAt: '2024-02-29',
+  title: "Typesafe functions with dynamic parameter types",
+  summary:
+    "Achieving type safety in functions with dynamic parameters in TypeScript using discriminated unions and generics.",
+  publishedAt: "2024-02-29",
 };
 
 Imagine a function signIn that takes two parameters and returns nothing, for example:
 
 ```ts showLineNumbers
 const signIn = (provider, values): void => {
- // do something
-}
+  // do something
+};
 ```
 
-*   `provider{:ts}`: A string representing the authentication method (for example, "credentials" or "phone")
-*   `values{:ts}`: An object containing relevant information for the chosen provider
+- `provider{:ts}`: A string representing the authentication method (for example, "credentials" or "phone")
+- `values{:ts}`: An object containing relevant information for the chosen provider
 
 We want to ensure that values align with the chosen provider. For example:
 
-*   If `provider{:ts}` is "credentials", `values{:ts}` should have `email{:ts}` (string) and `password{:ts}` (string).
-*   If `provider{:ts}` is "phone", `values{:ts}` should have `mobile{:ts}` (number) and `otp{:ts}` (number)
+- If `provider{:ts}` is "credentials", `values{:ts}` should have `email{:ts}` (string) and `password{:ts}` (string).
+- If `provider{:ts}` is "phone", `values{:ts}` should have `mobile{:ts}` (number) and `otp{:ts}` (number)
 
 ## Let's Try Union
 
@@ -27,7 +28,7 @@ We might initially write:
 ```ts showLineNumbers
 const signIn = (
   provider: "credentials" | "phone",
-  values: { email: string; password: string } | { mobile: number; otp: number }
+  values: { email: string; password: string } | { mobile: number; otp: number },
 ): void => {
   // do something
 };
@@ -36,9 +37,9 @@ const signIn = (
 This approach has a significant limitation: **It doesn't prevent mismatched values**. You can pass `phone{:ts}` values to the `credentials{:ts}` provider or vice versa, without TypeScript raising any errors like this:
 
 ```ts showLineNumbers
-signIn("credentials",{phone:978987, otp:8888})
+signIn("credentials", { phone: 978987, otp: 8888 });
 
-signIn("phone",{email:"jghaly@shory.com", password:"password"})
+signIn("phone", { email: "email@example.com", password: "password" });
 ```
 
 ## Better Union: Discriminated Union
@@ -79,24 +80,25 @@ This defines `SignInTypes{:ts}` as key-value pairs where the key is the provider
 ```ts showLineNumbers{6}
 type SignInFunction = <T extends keyof SignInTypes>(
   type: T,
-  values: SignInTypes[T]
+  values: SignInTypes[T],
 ) => void;
 ```
 
 This defines a generic function type SignInFunction. It takes two parameters:
 
-*   `type{:ts}`: A generic type parameter `T{:ts}` that extends the `keyof SignInTypes{:ts}` (ensuring it's one of the provider types).
-*   `values{:ts}`: The second parameter leverages `SignInTypes{:ts}` and the type of provider `T{:ts}` to get the type of the values. This ensures values match the structure expected for the chosen provider.
+- `type{:ts}`: A generic type parameter `T{:ts}` that extends the `keyof SignInTypes{:ts}` (ensuring it's one of the provider types).
+- `values{:ts}`: The second parameter leverages `SignInTypes{:ts}` and the type of provider `T{:ts}` to get the type of the values. This ensures values match the structure expected for the chosen provider.
 
 ### 3\. Use the type
 
 ```ts showLineNumbers{11}
-const signIn:SignInFunction = (type, values) => {
-// do something
-}
+const signIn: SignInFunction = (type, values) => {
+  // do something
+};
 ```
 
 Now it's working perfectly without changing the function signature.
+
 <br/>
 Here is the final code
 ```ts showLineNumbers
@@ -106,15 +108,17 @@ type SignInTypes = {
 };
 
 type SignInFunction = <T extends keyof SignInTypes>(
-  type: T,
-  values: SignInTypes[T]
+type: T,
+values: SignInTypes[T]
 ) => void;
 
 const signIn:SignInFunction = (type, values) => {
 // do something
 }
+
 ```
 We can override the third-party package types, but that's a topic for another post.
 
 ## Conclusion
 By leveraging generics and TypeScript’s powerful type system, we’ve successfully ensured the type safety of our `signIn{:ts}` function without altering the function’s signature.
+```
