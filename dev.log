@@ -1,0 +1,62 @@
+yarn run v1.22.22
+$ concurrently 'yarn dev:next' 'yarn dev:uno'
+[1] $ unocss '*/**/*.tsx' '*/**/*.mdx' --minify --out-file=globals.css --watch
+[0] $ next dev
+[0]   ▲ Next.js 14.2.35
+[0]   - Local:        http://localhost:3000
+[0]
+[0]  ✓ Starting...
+[1] unocss v0.58.9
+[1] ◐ UnoCSS in watch mode...
+[1] ℹ Watching for changes in */**/*.tsx, */**/*.mdx
+[0]    automatically enabled Fast Refresh for 1 custom loader
+[0]  ✓ Ready in 5.9s
+[0]  ○ Compiling / ...
+[0] Browserslist: caniuse-lite is outdated. Please run:
+[0]   npx update-browserslist-db@latest
+[0]   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[0]  ✓ Compiled / in 17.8s (1455 modules)
+[0] Skipping OG image generation for getting-started-with-unit-testing-in-js-ts-and-react: Getting Started With Unit Testing In JS/TS And React
+[0] Skipping OG image generation for testing-react-components-and-hooks: Testing React hooks and Components
+[0] Skipping OG image generation for typesafe-functions: Typesafe functions with dynamic parameter types
+[0] Skipping OG image generation for typescript-utilities: Typescript type utilities
+[0]  GET / 200 in 18786ms
+[0]  GET / 200 in 60ms
+[0]  ○ Compiling /blog ...
+[0]  ✓ Compiled /blog in 2.7s (1422 modules)
+[0] Skipping OG image generation for getting-started-with-unit-testing-in-js-ts-and-react: Getting Started With Unit Testing In JS/TS And React
+[0] Skipping OG image generation for testing-react-components-and-hooks: Testing React hooks and Components
+[0] Skipping OG image generation for typesafe-functions: Typesafe functions with dynamic parameter types
+[0] Skipping OG image generation for typescript-utilities: Typescript type utilities
+[0] Skipping OG image generation for getting-started-with-unit-testing-in-js-ts-and-react: Getting Started With Unit Testing In JS/TS And React
+[0] Skipping OG image generation for testing-react-components-and-hooks: Testing React hooks and Components
+[0] Skipping OG image generation for typesafe-functions: Typesafe functions with dynamic parameter types
+[0] Skipping OG image generation for typescript-utilities: Typescript type utilities
+[0] Skipping OG image generation for getting-started-with-unit-testing-in-js-ts-and-react: Getting Started With Unit Testing In JS/TS And React
+[0] Skipping OG image generation for testing-react-components-and-hooks: Testing React hooks and Components
+[0] Skipping OG image generation for typesafe-functions: Typesafe functions with dynamic parameter types
+[0] Skipping OG image generation for typescript-utilities: Typescript type utilities
+[0]  ○ Compiling /blog/[slug] ...
+[0]  ✓ Compiled /blog/[slug] in 1004ms (1437 modules)
+[0] Skipping OG image generation for getting-started-with-unit-testing-in-js-ts-and-react: Getting Started With Unit Testing In JS/TS And React
+[0] Skipping OG image generation for testing-react-components-and-hooks: Testing React hooks and Components
+[0] Skipping OG image generation for typesafe-functions: Typesafe functions with dynamic parameter types
+[0] Skipping OG image generation for typescript-utilities: Typescript type utilities
+[0] Skipping OG image generation for getting-started-with-unit-testing-in-js-ts-and-react: Getting Started With Unit Testing In JS/TS And React
+[0] Skipping OG image generation for testing-react-components-and-hooks: Testing React hooks and Components
+[0] Skipping OG image generation for typesafe-functions: Typesafe functions with dynamic parameter types
+[0] Skipping OG image generation for typescript-utilities: Typescript type utilities
+[0] Skipping OG image generation for getting-started-with-unit-testing-in-js-ts-and-react: Getting Started With Unit Testing In JS/TS And React
+[0] Skipping OG image generation for testing-react-components-and-hooks: Testing React hooks and Components
+[0] Skipping OG image generation for typesafe-functions: Typesafe functions with dynamic parameter types
+[0] Skipping OG image generation for typescript-utilities: Typescript type utilities
+[0]  GET / 200 in 385ms
+[0] Skipping OG image generation for getting-started-with-unit-testing-in-js-ts-and-react: Getting Started With Unit Testing In JS/TS And React
+[0] Skipping OG image generation for testing-react-components-and-hooks: Testing React hooks and Components
+[0] Skipping OG image generation for typesafe-functions: Typesafe functions with dynamic parameter types
+[0] Skipping OG image generation for typescript-utilities: Typescript type utilities
+[0]  ✓ Compiled in 2.1s (757 modules)
+[0]  ✓ Compiled in 1457ms (757 modules)
+[0]  ✓ Compiled in 519ms (757 modules)
+[0]  ✓ Compiled in 1499ms (1452 modules)
+[0]  ✓ Compiled in 952ms (1452 modules)

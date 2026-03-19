@@ -5,30 +5,816 @@ exports[`home page > should the home page match the snapshot 1`] = `
   "asFragment": [Function],
   "baseElement": <body>
     <div>
+      <header
+        class="border-b-[0.2rem] print:hidden flex w-full justify-center pt-3 fixed top-0 z-10 bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white"
+        id="header"
+      >
+        <div
+          class="container mx-auto px-4 md:px-8 flex items-center justify-between gap-2.5"
+        >
+          <div
+            class="flex items-center justify-center relative gap-2.5"
+          >
+            <a
+              class="opacity-0 pointer-events-none"
+              href="/"
+              id="original-link"
+            >
+              <figure
+                class="dark:(invert hover:invert) hover:(rotate-[-10deg]) active:(scale-80 rotate-[-15deg])"
+              >
+                <span
+                  class="hidden"
+                >
+                   website's home page
+                </span>
+                <span
+                  style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                >
+                  <span
+                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  >
+                    <img
+                      alt=""
+                      aria-hidden="true"
+                      src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27100%27%20height=%2750%27/%3e"
+                      style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    />
+                  </span>
+                  <img
+                    alt="Jan Karam logo"
+                    data-nimg="intrinsic"
+                    decoding="async"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                  />
+                  <noscript />
+                </span>
+              </figure>
+            </a>
+            <div
+              class="fixed"
+              style="left: 10%;"
+            >
+              <a
+                class="hover:(text-red-400 rotate-[5deg]) active:(rotate-[10deg] scale-80) transition duration-100 ease-in-out"
+                href="/blog"
+                rel="noopener"
+                title="blog"
+              >
+                Blog
+              </a>
+            </div>
+          </div>
+          <div
+            class="flex gap-2.5"
+          >
+            <button
+              aria-label="Activate Dark mode"
+              class="grid justify-center content-center w-fit active:scale-80"
+              title="Activate Dark mode"
+            >
+              <div
+                class="text-black"
+                color="black"
+                style="grid-area: 1 / 1 / 2 / 2; opacity: 0; transform: translateY(30px) rotate(90deg) translateZ(0);"
+              >
+                <svg
+                  fill="currentColor"
+                  height="30"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="30"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.8216 2.23796C9.29417 3.38265 9 4.65697 9 6C9 10.9706 13.0294 15 18 15C19.343 15 20.6174 14.7058 21.762 14.1784C20.7678 18.6537 16.7747 22 12 22C6.47715 22 2 17.5228 2 12C2 7.22532 5.3463 3.23221 9.8216 2.23796ZM18.1642 2.29104L19 2.5V3.5L18.1642 3.70896C17.4476 3.8881 16.8881 4.4476 16.709 5.16417L16.5 6H15.5L15.291 5.16417C15.1119 4.4476 14.5524 3.8881 13.8358 3.70896L13 3.5V2.5L13.8358 2.29104C14.5524 2.1119 15.1119 1.5524 15.291 0.835829L15.5 0H16.5L16.709 0.835829C16.8881 1.5524 17.4476 2.1119 18.1642 2.29104ZM23.1642 7.29104L24 7.5V8.5L23.1642 8.70896C22.4476 8.8881 21.8881 9.4476 21.709 10.1642L21.5 11H20.5L20.291 10.1642C20.1119 9.4476 19.5524 8.8881 18.8358 8.70896L18 8.5V7.5L18.8358 7.29104C19.5524 7.1119 20.1119 6.5524 20.291 5.83583L20.5 5H21.5L21.709 5.83583C21.8881 6.5524 22.4476 7.1119 23.1642 7.29104Z"
+                  />
+                </svg>
+              </div>
+            </button>
+            <a
+              class="hover:(text-red-400 rotate-[5deg]) active:(rotate-[10deg] scale-80) transition duration-100 ease-in-out"
+              href="https://www.linkedin.com/in/jankaram2020/"
+              rel="noopener"
+              target="_blank"
+              title="linkedin profile"
+            >
+              <span
+                class="hidden"
+              >
+                 Jan Karam's Linkedin profile
+              </span>
+              <svg
+                fill="currentColor"
+                height="40"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 1024 1024"
+                width="40"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM349.3 793.7H230.6V411.9h118.7v381.8zm-59.3-434a68.8 68.8 0 1 1 68.8-68.8c-.1 38-30.9 68.8-68.8 68.8zm503.7 434H675.1V608c0-44.3-.8-101.2-61.7-101.2-61.7 0-71.2 48.2-71.2 98v188.9H423.7V411.9h113.8v52.2h1.6c15.8-30 54.5-61.7 112.3-61.7 120.2 0 142.3 79.1 142.3 181.9v209.4z"
+                />
+              </svg>
+            </a>
+            <a
+              class="hover:(text-red-400 rotate-[10deg]) active:(rotate-[15deg] scale-80) transition duration-100 ease-in-out"
+              href="https://github.com/JanKaram2020"
+              rel="noopener"
+              target="_blank"
+              title="github profile"
+            >
+              <span
+                class="hidden"
+              >
+                 Jan Karam's Github profile
+              </span>
+              <svg
+                fill="currentColor"
+                height="40"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 1024 1024"
+                width="40"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"
+                />
+              </svg>
+            </a>
+            <a
+              class="hover:(text-red-400 rotate-[15deg]) active:(rotate-[20deg] scale-80) transition duration-100 ease-in-out"
+              href="/resume"
+              title="resume"
+            >
+              <span
+                class="hidden"
+              >
+                 Jan Karam's Resume
+              </span>
+              <svg
+                aria-hidden="true"
+                fill="currentColor"
+                height="40"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 20 20"
+                width="40"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </header>
+      <main
+        class="z-0 mx-20px mb-50px min-h-75vh container mx-auto px-4 md:px-8 print:(p-0! m-0! max-w-full!)"
+        id="main"
+      >
+        <div
+          class="h-screen p-30px gap-80px md:gap-40px lg:gap-30px xl:gap-10px flex flex-col justify-center items-center"
+        >
+          <h1
+            class="text-red-400 text-5xl"
+            style="opacity: 0; transform: none;"
+          >
+            Hello, I'm
+          </h1>
+          <div
+            class="fixed z-10"
+            style="width: 80%; top: 400px; left: 10%;"
+          >
+            <svg
+              class="stroke-gray-800 dark:stroke-gray-200"
+              fill="none"
+              stroke-miterlimit="10"
+              stroke-width="5"
+              viewBox="0 0 790.7 241.5"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M.9 2.5c69.9 27.8 151.8 13.3 225 0-48 8.8 51 204.7-59.6 225.6C127 235.5-3.1 198.4 27 145.8c41.4-72.3 178.5 15.2 228.8-5.3 64.9-26.4-16.8-63.3-21-9.3-4.1 52.7 40.7 13.1 45-5.1-13.7 57.6 46.6-2.1 39.3-19.4-2.6 16.2-7.3 45.2 1 50.2 1.2.7 2.8.2 3.5-1 .1-.1.1-.2.2-.3 6.2-15.7 23.1-45.9 36.9-56.6 1-.8 2.5-.6 3.3.4.2.3.4.7.5 1.1 19.5 145.3 81.5-13.7 83.4-98 0 0 2 197-31 231 0 0 33-152 131-199 0 0-106 84-95 139 0 19 90-40.6 90-58 0-20-60.6-20-45 29.1 1.7 5.6 5.9 10.2 11.3 12.4 13.6 5.8 38.9 8.6 33.7-52.5 0 0 7.1 55 18.1 56s24.9-54 18.9-60-16 19-13 23 42-4 46-14-13 49-4 50 71-44 71-44-19-32-42 0c0 0-21.4 34.1 21.2 42.3 9 1.7 17.8-4.2 19.5-13.2.1-.7.2-1.5.3-2.2l2.1-38.8s2 55 8 56 27-53 27-53 6 38 2 53 17-66 25-57 9 56 4 57 20-59 25-57 17 56 12 57"
+                pathLength="1"
+                stroke-dasharray="0px 1px"
+                stroke-dashoffset="0px"
+              />
+            </svg>
+          </div>
+          <span
+            class="hidden"
+          >
+            <h1>
+              Jan Karam
+            </h1>
+          </span>
+        </div>
+        <div
+          class="grid grid-cols-1 lg:grid-cols-3 content-center items-center my-[6vw]"
+          id="aboutMe"
+        >
+          <p
+            class="min-w-[320px] max-w-[60ch] ml-2 mr-4 text-xl"
+          >
+            I'm a passionate introvert who loves building web apps and sites.
+            <br />
+            My first experience with web development was when I was 12, but it didn't last long:
+            <br />
+            I was always fascinated by websites and wanted to make my own so I searched the internet on how to make websites and found 
+            <a
+              class="text-red-400"
+              href="https://www.ahlamontada.com/"
+              rel="noopener"
+              target="_blank"
+            >
+              ahlamontada.com
+            </a>
+             then I made my first website after this I forgot about it.
+            <br />
+             Years later I searched about the website and found it at 
+            <a
+              class="text-red-400"
+              href="https://jan12.rigala.net/"
+              rel="noopener"
+              target="_blank"
+            >
+              https://jan12.rigala.net/
+            </a>
+              (if you're a recruiter please don't visit it :D )
+          </p>
+          <div
+            class="hidden lg:flex min-w-[320px] items-center justify-center"
+          >
+            <div
+              style="opacity: 0; transform: scale(0) translateZ(0);"
+            >
+              <figure
+                class="drop-shadow-[0px_0px_12px_#F56565]"
+              >
+                <img
+                  alt="Jan Karam smiling"
+                  class="rounded-full dark:brightness-80"
+                  data-nimg="1"
+                  decoding="async"
+                  height="340"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fjancropped.jpg&w=750&q=75"
+                  srcset="/_next/image?url=%2Fjancropped.jpg&w=384&q=75 1x, /_next/image?url=%2Fjancropped.jpg&w=750&q=75 2x"
+                  style="color: transparent;"
+                  width="340"
+                />
+              </figure>
+            </div>
+          </div>
+          <p
+            class="min-w-[320px] max-w-[60ch] ml-2 mr-4 text-xl mt-6 lg:mt-0"
+          >
+            then I took a web development course at my college in my second year and fell in love with it over again. since then, I’ve been honing my skills and learning Javascript and front-end development. I recently took web development specialization from the University of Michigan and took the open-source track at ITI summer internship.
+            <br />
+            I’m seeking a full-time role where I can help a company achieve its goals.
+          </p>
+        </div>
+        <h2
+          class="text-4xl font-bold relative mt-10vh after:(content-empty absolute bottom-0 block h-2px scale-x-0 bg-red-400 transform duration-250 ease-in-out w-32 lg:w-40) hover:after:scale-x-100"
+          id="skills"
+        >
+          My Skills
+        </h2>
+        <div
+          class="grid pt text-2xl grid-cols-1 md:grid-cols-3 justify-evenly items-center"
+        >
+          <ul
+            class="list-none"
+          >
+            <li
+              class="before:(content-['•'] text-red-400 mr-10px)"
+            >
+              Typescript
+            </li>
+            <li
+              class="before:(content-['•'] text-red-400 mr-10px)"
+            >
+              Javascript
+            </li>
+            <li
+              class="before:(content-['•'] text-red-400 mr-10px)"
+            >
+              React.js
+            </li>
+            <li
+              class="before:(content-['•'] text-red-400 mr-10px)"
+            >
+              Next js & Gatsby js
+            </li>
+            <li
+              class="before:(content-['•'] text-red-400 mr-10px)"
+            >
+              HTML & CSS
+            </li>
+          </ul>
+          <ul
+            class="list-none"
+          >
+            <li
+              class="before:(content-['•'] text-red-400 mr-10px)"
+            >
+              Git & Github
+            </li>
+            <li
+              class="before:(content-['•'] text-red-400 mr-10px)"
+            >
+              SCSS
+            </li>
+            <li
+              class="before:(content-['•'] text-red-400 mr-10px)"
+            >
+              Bootstrap
+            </li>
+            <li
+              class="before:(content-['•'] text-red-400 mr-10px)"
+            >
+              Styled-Components
+            </li>
+            <li
+              class="before:(content-['•'] text-red-400 mr-10px)"
+            >
+              Chakra-Ui
+            </li>
+          </ul>
+          <ul
+            class="list-none"
+          >
+            <li
+              class="before:(content-['•'] text-red-400 mr-10px)"
+            >
+              Ui design
+            </li>
+            <li
+              class="before:(content-['•'] text-red-400 mr-10px)"
+            >
+              Photoshop
+            </li>
+            <li
+              class="before:(content-['•'] text-red-400 mr-10px)"
+            >
+              Prototyping
+            </li>
+            <li
+              class="before:(content-['•'] text-red-400 mr-10px)"
+            >
+              Graphic design
+            </li>
+            <li
+              class="before:(content-['•'] text-red-400 mr-10px)"
+            >
+              Googling :D
+            </li>
+          </ul>
+        </div>
+        <h2
+          class="text-4xl font-bold relative mt-10vh after:(content-empty absolute bottom-0 block h-2px scale-x-0 bg-red-400 transform duration-250 ease-in-out w-100 lg:w-120) hover:after:scale-x-100"
+          id="projects"
+        >
+          What I've been working on
+        </h2>
+        <p
+          class="text-2xl pt"
+        >
+          I like to stay busy and constantly learn new technologies and use them in a project.
+          <br />
+           Take a look at some of the projects I made.
+        </p>
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 space-y-10 p-8 gap-[200px] justify-center content-center"
+        >
+          <div
+            class="flex flex-col items-center content-center gap-10px max-w-800px mt-4"
+            style="opacity: 0; transform: translateX(-200px) translateZ(0);"
+          >
+            <figure>
+              <span
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              >
+                <span
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27900%27%20height=%27380%27/%3e"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  />
+                </span>
+                <img
+                  alt="Lilyanne Hany's blog screenshot"
+                  class="rounded-20px dark:brightness-80"
+                  data-nimg="intrinsic"
+                  decoding="async"
+                  id="/lilyanneMockup.png"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
+                />
+                <noscript />
+              </span>
+            </figure>
+            <h2
+              class="text-2xl"
+            >
+
+              Writing by Lilyanne
+            </h2>
+            <p
+              class="text-gray-500"
+            >
+              A responsive PWA multi language blog built with Gatsby Js, Theme UI and Sanity CMS
+            </p>
+            <a
+              class="text-xl relative hover:decoration-none after:(content-empty absolute block w-28 h-2px bg-red-400)"
+              href="project/writing-by-lilyanne"
+            >
+              View Project
+            </a>
+          </div>
+          <div
+            class="flex flex-col items-center content-center gap-10px max-w-800px mt-4"
+            style="opacity: 0; transform: translateX(-200px) translateZ(0);"
+          >
+            <figure>
+              <span
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              >
+                <span
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27900%27%20height=%27380%27/%3e"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  />
+                </span>
+                <img
+                  alt="test table screenshot"
+                  class="rounded-20px dark:brightness-80"
+                  data-nimg="intrinsic"
+                  decoding="async"
+                  id="/test-table.PNG"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
+                />
+                <noscript />
+              </span>
+            </figure>
+            <h2
+              class="text-2xl"
+            >
+
+              Test table
+            </h2>
+            <p
+              class="text-gray-500"
+            >
+              A website to get your test table by course codes or names built with Nextjs, Nextjs's api routes, puppeteer and Mantine
+            </p>
+            <a
+              class="text-xl relative hover:decoration-none after:(content-empty absolute block w-28 h-2px bg-red-400)"
+              href="project/test-table"
+            >
+              View Project
+            </a>
+          </div>
+          <div
+            class="flex flex-col items-center content-center gap-10px max-w-800px mt-4"
+            style="opacity: 0; transform: translateX(-200px) translateZ(0);"
+          >
+            <figure>
+              <span
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              >
+                <span
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27900%27%20height=%27380%27/%3e"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  />
+                </span>
+                <img
+                  alt="Would you rather website screenshot"
+                  class="rounded-20px dark:brightness-80"
+                  data-nimg="intrinsic"
+                  decoding="async"
+                  id="/wouldYouRatherMockup.png"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
+                />
+                <noscript />
+              </span>
+            </figure>
+            <h2
+              class="text-2xl"
+            >
+
+              Would you rather
+            </h2>
+            <p
+              class="text-gray-500"
+            >
+              Would you rather game built with Reactjs , Redux and Redux-toolkit
+            </p>
+            <a
+              class="text-xl relative hover:decoration-none after:(content-empty absolute block w-28 h-2px bg-red-400)"
+              href="project/would-you-rather"
+            >
+              View Project
+            </a>
+          </div>
+          <div
+            class="flex flex-col items-center content-center gap-10px max-w-800px mt-4"
+            style="opacity: 0; transform: translateX(-200px) translateZ(0);"
+          >
+            <figure>
+              <span
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              >
+                <span
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27900%27%20height=%27380%27/%3e"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  />
+                </span>
+                <img
+                  alt="Page website screenshot"
+                  class="rounded-20px dark:brightness-80"
+                  data-nimg="intrinsic"
+                  decoding="async"
+                  id="/eargasmMockup.png"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
+                />
+                <noscript />
+              </span>
+            </figure>
+            <h2
+              class="text-2xl"
+            >
+
+              Eargasm
+            </h2>
+            <p
+              class="text-gray-500"
+            >
+              A responsive music website built with React Js, Bootstrap and JSON file as a database
+            </p>
+            <a
+              class="text-xl relative hover:decoration-none after:(content-empty absolute block w-28 h-2px bg-red-400)"
+              href="project/eargasm"
+            >
+              View Project
+            </a>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-5vh mx-1vw"
+        >
+          <h2
+            class="text-4xl font-bold relative mt-10vh after:(content-empty absolute bottom-0 block h-2px scale-x-0 bg-red-400 transform duration-250 ease-in-out w-80% lg:w-34%) hover:after:scale-x-100"
+          >
+            Let's Build Something Together
+          </h2>
+          <p
+            class="text-xl pt"
+          >
+            Feel free to reach out if you're looking for a developer, have a question, or just want to connect
+          </p>
+          <a
+            href="mailto: jankaram2020@gmail.com"
+          >
+            jankaram2020@gmail.com
+          </a>
+        </div>
+      </main>
+    </div>
+  </body>,
+  "container": <div>
+    <header
+      class="border-b-[0.2rem] print:hidden flex w-full justify-center pt-3 fixed top-0 z-10 bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white"
+      id="header"
+    >
+      <div
+        class="container mx-auto px-4 md:px-8 flex items-center justify-between gap-2.5"
+      >
+        <div
+          class="flex items-center justify-center relative gap-2.5"
+        >
+          <a
+            class="opacity-0 pointer-events-none"
+            href="/"
+            id="original-link"
+          >
+            <figure
+              class="dark:(invert hover:invert) hover:(rotate-[-10deg]) active:(scale-80 rotate-[-15deg])"
+            >
+              <span
+                class="hidden"
+              >
+                 website's home page
+              </span>
+              <span
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              >
+                <span
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27100%27%20height=%2750%27/%3e"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  />
+                </span>
+                <img
+                  alt="Jan Karam logo"
+                  data-nimg="intrinsic"
+                  decoding="async"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                />
+                <noscript />
+              </span>
+            </figure>
+          </a>
+          <div
+            class="fixed"
+            style="left: 10%;"
+          >
+            <a
+              class="hover:(text-red-400 rotate-[5deg]) active:(rotate-[10deg] scale-80) transition duration-100 ease-in-out"
+              href="/blog"
+              rel="noopener"
+              title="blog"
+            >
+              Blog
+            </a>
+          </div>
+        </div>
+        <div
+          class="flex gap-2.5"
+        >
+          <button
+            aria-label="Activate Dark mode"
+            class="grid justify-center content-center w-fit active:scale-80"
+            title="Activate Dark mode"
+          >
+            <div
+              class="text-black"
+              color="black"
+              style="grid-area: 1 / 1 / 2 / 2; opacity: 0; transform: translateY(30px) rotate(90deg) translateZ(0);"
+            >
+              <svg
+                fill="currentColor"
+                height="30"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="30"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.8216 2.23796C9.29417 3.38265 9 4.65697 9 6C9 10.9706 13.0294 15 18 15C19.343 15 20.6174 14.7058 21.762 14.1784C20.7678 18.6537 16.7747 22 12 22C6.47715 22 2 17.5228 2 12C2 7.22532 5.3463 3.23221 9.8216 2.23796ZM18.1642 2.29104L19 2.5V3.5L18.1642 3.70896C17.4476 3.8881 16.8881 4.4476 16.709 5.16417L16.5 6H15.5L15.291 5.16417C15.1119 4.4476 14.5524 3.8881 13.8358 3.70896L13 3.5V2.5L13.8358 2.29104C14.5524 2.1119 15.1119 1.5524 15.291 0.835829L15.5 0H16.5L16.709 0.835829C16.8881 1.5524 17.4476 2.1119 18.1642 2.29104ZM23.1642 7.29104L24 7.5V8.5L23.1642 8.70896C22.4476 8.8881 21.8881 9.4476 21.709 10.1642L21.5 11H20.5L20.291 10.1642C20.1119 9.4476 19.5524 8.8881 18.8358 8.70896L18 8.5V7.5L18.8358 7.29104C19.5524 7.1119 20.1119 6.5524 20.291 5.83583L20.5 5H21.5L21.709 5.83583C21.8881 6.5524 22.4476 7.1119 23.1642 7.29104Z"
+                />
+              </svg>
+            </div>
+          </button>
+          <a
+            class="hover:(text-red-400 rotate-[5deg]) active:(rotate-[10deg] scale-80) transition duration-100 ease-in-out"
+            href="https://www.linkedin.com/in/jankaram2020/"
+            rel="noopener"
+            target="_blank"
+            title="linkedin profile"
+          >
+            <span
+              class="hidden"
+            >
+               Jan Karam's Linkedin profile
+            </span>
+            <svg
+              fill="currentColor"
+              height="40"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 1024 1024"
+              width="40"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM349.3 793.7H230.6V411.9h118.7v381.8zm-59.3-434a68.8 68.8 0 1 1 68.8-68.8c-.1 38-30.9 68.8-68.8 68.8zm503.7 434H675.1V608c0-44.3-.8-101.2-61.7-101.2-61.7 0-71.2 48.2-71.2 98v188.9H423.7V411.9h113.8v52.2h1.6c15.8-30 54.5-61.7 112.3-61.7 120.2 0 142.3 79.1 142.3 181.9v209.4z"
+              />
+            </svg>
+          </a>
+          <a
+            class="hover:(text-red-400 rotate-[10deg]) active:(rotate-[15deg] scale-80) transition duration-100 ease-in-out"
+            href="https://github.com/JanKaram2020"
+            rel="noopener"
+            target="_blank"
+            title="github profile"
+          >
+            <span
+              class="hidden"
+            >
+               Jan Karam's Github profile
+            </span>
+            <svg
+              fill="currentColor"
+              height="40"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 1024 1024"
+              width="40"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"
+              />
+            </svg>
+          </a>
+          <a
+            class="hover:(text-red-400 rotate-[15deg]) active:(rotate-[20deg] scale-80) transition duration-100 ease-in-out"
+            href="/resume"
+            title="resume"
+          >
+            <span
+              class="hidden"
+            >
+               Jan Karam's Resume
+            </span>
+            <svg
+              aria-hidden="true"
+              fill="currentColor"
+              height="40"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 20 20"
+              width="40"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main
+      class="z-0 mx-20px mb-50px min-h-75vh container mx-auto px-4 md:px-8 print:(p-0! m-0! max-w-full!)"
+      id="main"
+    >
       <div
         class="h-screen p-30px gap-80px md:gap-40px lg:gap-30px xl:gap-10px flex flex-col justify-center items-center"
       >
         <h1
           class="text-red-400 text-5xl"
-          style="opacity: 0; transform: translateY(100px) translateZ(0);"
+          style="opacity: 0; transform: none;"
         >
           Hello, I'm
         </h1>
-        <svg
-          class="stroke-gray-800 dark:stroke-gray-200"
-          fill="none"
-          stroke-miterlimit="10"
-          stroke-width="5"
-          viewBox="0 0 790.7 241.5"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          class="fixed z-10"
+          style="width: 80%; top: 400px; left: 10%;"
         >
-          <path
-            d="M.9 2.5c69.9 27.8 151.8 13.3 225 0-48 8.8 51 204.7-59.6 225.6C127 235.5-3.1 198.4 27 145.8c41.4-72.3 178.5 15.2 228.8-5.3 64.9-26.4-16.8-63.3-21-9.3-4.1 52.7 40.7 13.1 45-5.1-13.7 57.6 46.6-2.1 39.3-19.4-2.6 16.2-7.3 45.2 1 50.2 1.2.7 2.8.2 3.5-1 .1-.1.1-.2.2-.3 6.2-15.7 23.1-45.9 36.9-56.6 1-.8 2.5-.6 3.3.4.2.3.4.7.5 1.1 19.5 145.3 81.5-13.7 83.4-98 0 0 2 197-31 231 0 0 33-152 131-199 0 0-106 84-95 139 0 19 90-40.6 90-58 0-20-60.6-20-45 29.1 1.7 5.6 5.9 10.2 11.3 12.4 13.6 5.8 38.9 8.6 33.7-52.5 0 0 7.1 55 18.1 56s24.9-54 18.9-60-16 19-13 23 42-4 46-14-13 49-4 50 71-44 71-44-19-32-42 0c0 0-21.4 34.1 21.2 42.3 9 1.7 17.8-4.2 19.5-13.2.1-.7.2-1.5.3-2.2l2.1-38.8s2 55 8 56 27-53 27-53 6 38 2 53 17-66 25-57 9 56 4 57 20-59 25-57 17 56 12 57"
-            pathLength="1"
-            stroke-dasharray="0px 1px"
-            stroke-dashoffset="0px"
-          />
-        </svg>
+          <svg
+            class="stroke-gray-800 dark:stroke-gray-200"
+            fill="none"
+            stroke-miterlimit="10"
+            stroke-width="5"
+            viewBox="0 0 790.7 241.5"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M.9 2.5c69.9 27.8 151.8 13.3 225 0-48 8.8 51 204.7-59.6 225.6C127 235.5-3.1 198.4 27 145.8c41.4-72.3 178.5 15.2 228.8-5.3 64.9-26.4-16.8-63.3-21-9.3-4.1 52.7 40.7 13.1 45-5.1-13.7 57.6 46.6-2.1 39.3-19.4-2.6 16.2-7.3 45.2 1 50.2 1.2.7 2.8.2 3.5-1 .1-.1.1-.2.2-.3 6.2-15.7 23.1-45.9 36.9-56.6 1-.8 2.5-.6 3.3.4.2.3.4.7.5 1.1 19.5 145.3 81.5-13.7 83.4-98 0 0 2 197-31 231 0 0 33-152 131-199 0 0-106 84-95 139 0 19 90-40.6 90-58 0-20-60.6-20-45 29.1 1.7 5.6 5.9 10.2 11.3 12.4 13.6 5.8 38.9 8.6 33.7-52.5 0 0 7.1 55 18.1 56s24.9-54 18.9-60-16 19-13 23 42-4 46-14-13 49-4 50 71-44 71-44-19-32-42 0c0 0-21.4 34.1 21.2 42.3 9 1.7 17.8-4.2 19.5-13.2.1-.7.2-1.5.3-2.2l2.1-38.8s2 55 8 56 27-53 27-53 6 38 2 53 17-66 25-57 9 56 4 57 20-59 25-57 17 56 12 57"
+              pathLength="1"
+              stroke-dasharray="0px 1px"
+              stroke-dashoffset="0px"
+            />
+          </svg>
+        </div>
         <span
           class="hidden"
         >
@@ -79,29 +865,18 @@ exports[`home page > should the home page match the snapshot 1`] = `
             <figure
               class="drop-shadow-[0px_0px_12px_#F56565]"
             >
-              <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
-              >
-                <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
-                >
-                  <img
-                    alt=""
-                    aria-hidden="true"
-                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27340%27%20height=%27340%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
-                  />
-                </span>
-                <img
-                  alt="Jan Karam smiling"
-                  class="rounded-full dark:brightness-80"
-                  data-nimg="intrinsic"
-                  decoding="async"
-                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-                />
-                <noscript />
-              </span>
+              <img
+                alt="Jan Karam smiling"
+                class="rounded-full dark:brightness-80"
+                data-nimg="1"
+                decoding="async"
+                height="340"
+                loading="lazy"
+                src="/_next/image?url=%2Fjancropped.jpg&w=750&q=75"
+                srcset="/_next/image?url=%2Fjancropped.jpg&w=384&q=75 1x, /_next/image?url=%2Fjancropped.jpg&w=750&q=75 2x"
+                style="color: transparent;"
+                width="340"
+              />
             </figure>
           </div>
         </div>
@@ -232,16 +1007,16 @@ exports[`home page > should the home page match the snapshot 1`] = `
         >
           <figure>
             <span
-              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
             >
               <span
-                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
               >
                 <img
                   alt=""
                   aria-hidden="true"
                   src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27900%27%20height=%27380%27/%3e"
-                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                 />
               </span>
               <img
@@ -251,7 +1026,7 @@ exports[`home page > should the home page match the snapshot 1`] = `
                 decoding="async"
                 id="/lilyanneMockup.png"
                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
               />
               <noscript />
             </span>
@@ -280,16 +1055,16 @@ exports[`home page > should the home page match the snapshot 1`] = `
         >
           <figure>
             <span
-              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
             >
               <span
-                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
               >
                 <img
                   alt=""
                   aria-hidden="true"
                   src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27900%27%20height=%27380%27/%3e"
-                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                 />
               </span>
               <img
@@ -299,7 +1074,7 @@ exports[`home page > should the home page match the snapshot 1`] = `
                 decoding="async"
                 id="/test-table.PNG"
                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
               />
               <noscript />
             </span>
@@ -328,16 +1103,16 @@ exports[`home page > should the home page match the snapshot 1`] = `
         >
           <figure>
             <span
-              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
             >
               <span
-                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
               >
                 <img
                   alt=""
                   aria-hidden="true"
                   src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27900%27%20height=%27380%27/%3e"
-                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                 />
               </span>
               <img
@@ -347,7 +1122,7 @@ exports[`home page > should the home page match the snapshot 1`] = `
                 decoding="async"
                 id="/wouldYouRatherMockup.png"
                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
               />
               <noscript />
             </span>
@@ -376,16 +1151,16 @@ exports[`home page > should the home page match the snapshot 1`] = `
         >
           <figure>
             <span
-              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
             >
               <span
-                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
               >
                 <img
                   alt=""
                   aria-hidden="true"
                   src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27900%27%20height=%27380%27/%3e"
-                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                 />
               </span>
               <img
@@ -395,7 +1170,7 @@ exports[`home page > should the home page match the snapshot 1`] = `
                 decoding="async"
                 id="/eargasmMockup.png"
                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
               />
               <noscript />
             </span>
@@ -438,442 +1213,7 @@ exports[`home page > should the home page match the snapshot 1`] = `
           jankaram2020@gmail.com
         </a>
       </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="h-screen p-30px gap-80px md:gap-40px lg:gap-30px xl:gap-10px flex flex-col justify-center items-center"
-    >
-      <h1
-        class="text-red-400 text-5xl"
-        style="opacity: 0; transform: translateY(100px) translateZ(0);"
-      >
-        Hello, I'm
-      </h1>
-      <svg
-        class="stroke-gray-800 dark:stroke-gray-200"
-        fill="none"
-        stroke-miterlimit="10"
-        stroke-width="5"
-        viewBox="0 0 790.7 241.5"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M.9 2.5c69.9 27.8 151.8 13.3 225 0-48 8.8 51 204.7-59.6 225.6C127 235.5-3.1 198.4 27 145.8c41.4-72.3 178.5 15.2 228.8-5.3 64.9-26.4-16.8-63.3-21-9.3-4.1 52.7 40.7 13.1 45-5.1-13.7 57.6 46.6-2.1 39.3-19.4-2.6 16.2-7.3 45.2 1 50.2 1.2.7 2.8.2 3.5-1 .1-.1.1-.2.2-.3 6.2-15.7 23.1-45.9 36.9-56.6 1-.8 2.5-.6 3.3.4.2.3.4.7.5 1.1 19.5 145.3 81.5-13.7 83.4-98 0 0 2 197-31 231 0 0 33-152 131-199 0 0-106 84-95 139 0 19 90-40.6 90-58 0-20-60.6-20-45 29.1 1.7 5.6 5.9 10.2 11.3 12.4 13.6 5.8 38.9 8.6 33.7-52.5 0 0 7.1 55 18.1 56s24.9-54 18.9-60-16 19-13 23 42-4 46-14-13 49-4 50 71-44 71-44-19-32-42 0c0 0-21.4 34.1 21.2 42.3 9 1.7 17.8-4.2 19.5-13.2.1-.7.2-1.5.3-2.2l2.1-38.8s2 55 8 56 27-53 27-53 6 38 2 53 17-66 25-57 9 56 4 57 20-59 25-57 17 56 12 57"
-          pathLength="1"
-          stroke-dasharray="0px 1px"
-          stroke-dashoffset="0px"
-        />
-      </svg>
-      <span
-        class="hidden"
-      >
-        <h1>
-          Jan Karam
-        </h1>
-      </span>
-    </div>
-    <div
-      class="grid grid-cols-1 lg:grid-cols-3 content-center items-center my-[6vw]"
-      id="aboutMe"
-    >
-      <p
-        class="min-w-[320px] max-w-[60ch] ml-2 mr-4 text-xl"
-      >
-        I'm a passionate introvert who loves building web apps and sites. 
-        <br />
-        My first experience with web development was when I was 12, but it didn't last long: 
-        <br />
-        I was always fascinated by websites and wanted to make my own so I searched the internet on how to make websites and found 
-        <a
-          class="text-red-400"
-          href="https://www.ahlamontada.com/"
-          rel="noopener"
-          target="_blank"
-        >
-          ahlamontada.com
-        </a>
-         then I made my first website after this I forgot about it.
-        <br />
-         Years later I searched about the website and found it at 
-        <a
-          class="text-red-400"
-          href="https://jan12.rigala.net/"
-          rel="noopener"
-          target="_blank"
-        >
-          https://jan12.rigala.net/
-        </a>
-          (if you're a recruiter please don't visit it :D )
-      </p>
-      <div
-        class="hidden lg:flex min-w-[320px] items-center justify-center"
-      >
-        <div
-          style="opacity: 0; transform: scale(0) translateZ(0);"
-        >
-          <figure
-            class="drop-shadow-[0px_0px_12px_#F56565]"
-          >
-            <span
-              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
-            >
-              <span
-                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
-              >
-                <img
-                  alt=""
-                  aria-hidden="true"
-                  src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27340%27%20height=%27340%27/%3e"
-                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
-                />
-              </span>
-              <img
-                alt="Jan Karam smiling"
-                class="rounded-full dark:brightness-80"
-                data-nimg="intrinsic"
-                decoding="async"
-                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-              />
-              <noscript />
-            </span>
-          </figure>
-        </div>
-      </div>
-      <p
-        class="min-w-[320px] max-w-[60ch] ml-2 mr-4 text-xl mt-6 lg:mt-0"
-      >
-        then I took a web development course at my college in my second year and fell in love with it over again. since then, I’ve been honing my skills and learning Javascript and front-end development. I recently took web development specialization from the University of Michigan and took the open-source track at ITI summer internship.
-        <br />
-        I’m seeking a full-time role where I can help a company achieve its goals.
-      </p>
-    </div>
-    <h2
-      class="text-4xl font-bold relative mt-10vh after:(content-empty absolute bottom-0 block h-2px scale-x-0 bg-red-400 transform duration-250 ease-in-out w-32 lg:w-40) hover:after:scale-x-100"
-      id="skills"
-    >
-      My Skills
-    </h2>
-    <div
-      class="grid pt text-2xl grid-cols-1 md:grid-cols-3 justify-evenly items-center"
-    >
-      <ul
-        class="list-none"
-      >
-        <li
-          class="before:(content-['•'] text-red-400 mr-10px)"
-        >
-          Typescript
-        </li>
-        <li
-          class="before:(content-['•'] text-red-400 mr-10px)"
-        >
-          Javascript
-        </li>
-        <li
-          class="before:(content-['•'] text-red-400 mr-10px)"
-        >
-          React.js
-        </li>
-        <li
-          class="before:(content-['•'] text-red-400 mr-10px)"
-        >
-          Next js & Gatsby js
-        </li>
-        <li
-          class="before:(content-['•'] text-red-400 mr-10px)"
-        >
-          HTML & CSS
-        </li>
-      </ul>
-      <ul
-        class="list-none"
-      >
-        <li
-          class="before:(content-['•'] text-red-400 mr-10px)"
-        >
-          Git & Github
-        </li>
-        <li
-          class="before:(content-['•'] text-red-400 mr-10px)"
-        >
-          SCSS
-        </li>
-        <li
-          class="before:(content-['•'] text-red-400 mr-10px)"
-        >
-          Bootstrap
-        </li>
-        <li
-          class="before:(content-['•'] text-red-400 mr-10px)"
-        >
-          Styled-Components
-        </li>
-        <li
-          class="before:(content-['•'] text-red-400 mr-10px)"
-        >
-          Chakra-Ui
-        </li>
-      </ul>
-      <ul
-        class="list-none"
-      >
-        <li
-          class="before:(content-['•'] text-red-400 mr-10px)"
-        >
-          Ui design
-        </li>
-        <li
-          class="before:(content-['•'] text-red-400 mr-10px)"
-        >
-          Photoshop
-        </li>
-        <li
-          class="before:(content-['•'] text-red-400 mr-10px)"
-        >
-          Prototyping
-        </li>
-        <li
-          class="before:(content-['•'] text-red-400 mr-10px)"
-        >
-          Graphic design
-        </li>
-        <li
-          class="before:(content-['•'] text-red-400 mr-10px)"
-        >
-          Googling :D
-        </li>
-      </ul>
-    </div>
-    <h2
-      class="text-4xl font-bold relative mt-10vh after:(content-empty absolute bottom-0 block h-2px scale-x-0 bg-red-400 transform duration-250 ease-in-out w-100 lg:w-120) hover:after:scale-x-100"
-      id="projects"
-    >
-      What I've been working on
-    </h2>
-    <p
-      class="text-2xl pt"
-    >
-      I like to stay busy and constantly learn new technologies and use them in a project.
-      <br />
-       Take a look at some of the projects I made.
-    </p>
-    <div
-      class="grid grid-cols-1 lg:grid-cols-2 space-y-10 p-8 gap-[200px] justify-center content-center"
-    >
-      <div
-        class="flex flex-col items-center content-center gap-10px max-w-800px mt-4"
-        style="opacity: 0; transform: translateX(-200px) translateZ(0);"
-      >
-        <figure>
-          <span
-            style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
-          >
-            <span
-              style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
-            >
-              <img
-                alt=""
-                aria-hidden="true"
-                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27900%27%20height=%27380%27/%3e"
-                style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
-              />
-            </span>
-            <img
-              alt="Lilyanne Hany's blog screenshot"
-              class="rounded-20px dark:brightness-80"
-              data-nimg="intrinsic"
-              decoding="async"
-              id="/lilyanneMockup.png"
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
-            />
-            <noscript />
-          </span>
-        </figure>
-        <h2
-          class="text-2xl"
-        >
-           
-          Writing by Lilyanne
-        </h2>
-        <p
-          class="text-gray-500"
-        >
-          A responsive PWA multi language blog built with Gatsby Js, Theme UI and Sanity CMS
-        </p>
-        <a
-          class="text-xl relative hover:decoration-none after:(content-empty absolute block w-28 h-2px bg-red-400)"
-          href="project/writing-by-lilyanne"
-        >
-          View Project
-        </a>
-      </div>
-      <div
-        class="flex flex-col items-center content-center gap-10px max-w-800px mt-4"
-        style="opacity: 0; transform: translateX(-200px) translateZ(0);"
-      >
-        <figure>
-          <span
-            style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
-          >
-            <span
-              style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
-            >
-              <img
-                alt=""
-                aria-hidden="true"
-                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27900%27%20height=%27380%27/%3e"
-                style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
-              />
-            </span>
-            <img
-              alt="test table screenshot"
-              class="rounded-20px dark:brightness-80"
-              data-nimg="intrinsic"
-              decoding="async"
-              id="/test-table.PNG"
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
-            />
-            <noscript />
-          </span>
-        </figure>
-        <h2
-          class="text-2xl"
-        >
-           
-          Test table
-        </h2>
-        <p
-          class="text-gray-500"
-        >
-          A website to get your test table by course codes or names built with Nextjs, Nextjs's api routes, puppeteer and Mantine
-        </p>
-        <a
-          class="text-xl relative hover:decoration-none after:(content-empty absolute block w-28 h-2px bg-red-400)"
-          href="project/test-table"
-        >
-          View Project
-        </a>
-      </div>
-      <div
-        class="flex flex-col items-center content-center gap-10px max-w-800px mt-4"
-        style="opacity: 0; transform: translateX(-200px) translateZ(0);"
-      >
-        <figure>
-          <span
-            style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
-          >
-            <span
-              style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
-            >
-              <img
-                alt=""
-                aria-hidden="true"
-                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27900%27%20height=%27380%27/%3e"
-                style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
-              />
-            </span>
-            <img
-              alt="Would you rather website screenshot"
-              class="rounded-20px dark:brightness-80"
-              data-nimg="intrinsic"
-              decoding="async"
-              id="/wouldYouRatherMockup.png"
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
-            />
-            <noscript />
-          </span>
-        </figure>
-        <h2
-          class="text-2xl"
-        >
-           
-          Would you rather
-        </h2>
-        <p
-          class="text-gray-500"
-        >
-          Would you rather game built with Reactjs , Redux and Redux-toolkit
-        </p>
-        <a
-          class="text-xl relative hover:decoration-none after:(content-empty absolute block w-28 h-2px bg-red-400)"
-          href="project/would-you-rather"
-        >
-          View Project
-        </a>
-      </div>
-      <div
-        class="flex flex-col items-center content-center gap-10px max-w-800px mt-4"
-        style="opacity: 0; transform: translateX(-200px) translateZ(0);"
-      >
-        <figure>
-          <span
-            style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
-          >
-            <span
-              style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
-            >
-              <img
-                alt=""
-                aria-hidden="true"
-                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27900%27%20height=%27380%27/%3e"
-                style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
-              />
-            </span>
-            <img
-              alt="Page website screenshot"
-              class="rounded-20px dark:brightness-80"
-              data-nimg="intrinsic"
-              decoding="async"
-              id="/eargasmMockup.png"
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
-            />
-            <noscript />
-          </span>
-        </figure>
-        <h2
-          class="text-2xl"
-        >
-           
-          Eargasm
-        </h2>
-        <p
-          class="text-gray-500"
-        >
-          A responsive music website built with React Js, Bootstrap and JSON file as a database
-        </p>
-        <a
-          class="text-xl relative hover:decoration-none after:(content-empty absolute block w-28 h-2px bg-red-400)"
-          href="project/eargasm"
-        >
-          View Project
-        </a>
-      </div>
-    </div>
-    <div
-      class="flex flex-col gap-5vh mx-1vw"
-    >
-      <h2
-        class="text-4xl font-bold relative mt-10vh after:(content-empty absolute bottom-0 block h-2px scale-x-0 bg-red-400 transform duration-250 ease-in-out w-80% lg:w-34%) hover:after:scale-x-100"
-      >
-        Let's Build Something Together
-      </h2>
-      <p
-        class="text-xl pt"
-      >
-        Feel free to reach out if you're looking for a developer, have a question, or just want to connect
-      </p>
-      <a
-        href="mailto: jankaram2020@gmail.com"
-      >
-        jankaram2020@gmail.com
-      </a>
-    </div>
+    </main>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
@@ -1112,16 +1452,16 @@ exports[`project pages > should eargasm page match snapshot 1`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -1129,7 +1469,7 @@ exports[`project pages > should eargasm page match snapshot 1`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -1140,16 +1480,16 @@ exports[`project pages > should eargasm page match snapshot 1`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -1157,7 +1497,7 @@ exports[`project pages > should eargasm page match snapshot 1`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -1168,16 +1508,16 @@ exports[`project pages > should eargasm page match snapshot 1`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -1185,7 +1525,7 @@ exports[`project pages > should eargasm page match snapshot 1`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -1196,16 +1536,16 @@ exports[`project pages > should eargasm page match snapshot 1`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -1213,7 +1553,7 @@ exports[`project pages > should eargasm page match snapshot 1`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -1416,16 +1756,16 @@ exports[`project pages > should eargasm page match snapshot 1`] = `
             rel="noopener"
           >
             <span
-              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
             >
               <span
-                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
               >
                 <img
                   alt=""
                   aria-hidden="true"
                   src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                 />
               </span>
               <img
@@ -1433,7 +1773,7 @@ exports[`project pages > should eargasm page match snapshot 1`] = `
                 data-nimg="intrinsic"
                 decoding="async"
                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
               />
               <noscript />
             </span>
@@ -1444,16 +1784,16 @@ exports[`project pages > should eargasm page match snapshot 1`] = `
             rel="noopener"
           >
             <span
-              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
             >
               <span
-                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
               >
                 <img
                   alt=""
                   aria-hidden="true"
                   src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                 />
               </span>
               <img
@@ -1461,7 +1801,7 @@ exports[`project pages > should eargasm page match snapshot 1`] = `
                 data-nimg="intrinsic"
                 decoding="async"
                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
               />
               <noscript />
             </span>
@@ -1472,16 +1812,16 @@ exports[`project pages > should eargasm page match snapshot 1`] = `
             rel="noopener"
           >
             <span
-              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
             >
               <span
-                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
               >
                 <img
                   alt=""
                   aria-hidden="true"
                   src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                 />
               </span>
               <img
@@ -1489,7 +1829,7 @@ exports[`project pages > should eargasm page match snapshot 1`] = `
                 data-nimg="intrinsic"
                 decoding="async"
                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
               />
               <noscript />
             </span>
@@ -1500,16 +1840,16 @@ exports[`project pages > should eargasm page match snapshot 1`] = `
             rel="noopener"
           >
             <span
-              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
             >
               <span
-                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
               >
                 <img
                   alt=""
                   aria-hidden="true"
                   src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                 />
               </span>
               <img
@@ -1517,7 +1857,7 @@ exports[`project pages > should eargasm page match snapshot 1`] = `
                 data-nimg="intrinsic"
                 decoding="async"
                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
               />
               <noscript />
             </span>
@@ -1777,16 +2117,16 @@ exports[`project pages > should eargasm page match snapshot 2`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -1794,7 +2134,7 @@ exports[`project pages > should eargasm page match snapshot 2`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -1805,16 +2145,16 @@ exports[`project pages > should eargasm page match snapshot 2`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -1822,7 +2162,7 @@ exports[`project pages > should eargasm page match snapshot 2`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -1833,16 +2173,16 @@ exports[`project pages > should eargasm page match snapshot 2`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -1850,7 +2190,7 @@ exports[`project pages > should eargasm page match snapshot 2`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -1861,16 +2201,16 @@ exports[`project pages > should eargasm page match snapshot 2`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -1878,7 +2218,7 @@ exports[`project pages > should eargasm page match snapshot 2`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -2044,16 +2384,16 @@ exports[`project pages > should eargasm page match snapshot 2`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -2061,7 +2401,7 @@ exports[`project pages > should eargasm page match snapshot 2`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -2072,16 +2412,16 @@ exports[`project pages > should eargasm page match snapshot 2`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -2089,7 +2429,7 @@ exports[`project pages > should eargasm page match snapshot 2`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -2100,16 +2440,16 @@ exports[`project pages > should eargasm page match snapshot 2`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -2117,7 +2457,7 @@ exports[`project pages > should eargasm page match snapshot 2`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -2297,16 +2637,16 @@ exports[`project pages > should eargasm page match snapshot 2`] = `
             rel="noopener"
           >
             <span
-              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
             >
               <span
-                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
               >
                 <img
                   alt=""
                   aria-hidden="true"
                   src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                 />
               </span>
               <img
@@ -2314,7 +2654,7 @@ exports[`project pages > should eargasm page match snapshot 2`] = `
                 data-nimg="intrinsic"
                 decoding="async"
                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
               />
               <noscript />
             </span>
@@ -2325,16 +2665,16 @@ exports[`project pages > should eargasm page match snapshot 2`] = `
             rel="noopener"
           >
             <span
-              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
             >
               <span
-                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
               >
                 <img
                   alt=""
                   aria-hidden="true"
                   src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                 />
               </span>
               <img
@@ -2342,7 +2682,7 @@ exports[`project pages > should eargasm page match snapshot 2`] = `
                 data-nimg="intrinsic"
                 decoding="async"
                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
               />
               <noscript />
             </span>
@@ -2353,16 +2693,16 @@ exports[`project pages > should eargasm page match snapshot 2`] = `
             rel="noopener"
           >
             <span
-              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
             >
               <span
-                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
               >
                 <img
                   alt=""
                   aria-hidden="true"
                   src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                 />
               </span>
               <img
@@ -2370,7 +2710,7 @@ exports[`project pages > should eargasm page match snapshot 2`] = `
                 data-nimg="intrinsic"
                 decoding="async"
                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
               />
               <noscript />
             </span>
@@ -2643,16 +2983,16 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -2660,7 +3000,7 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -2671,16 +3011,16 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -2688,7 +3028,7 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -2699,16 +3039,16 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -2716,7 +3056,7 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -2727,16 +3067,16 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -2744,7 +3084,7 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -2910,16 +3250,16 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -2927,7 +3267,7 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -2938,16 +3278,16 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -2955,7 +3295,7 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -2966,16 +3306,16 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -2983,7 +3323,7 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -3162,16 +3502,16 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -3179,7 +3519,7 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -3190,16 +3530,16 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -3207,7 +3547,7 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -3218,16 +3558,16 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -3235,7 +3575,7 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -3420,16 +3760,16 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
             rel="noopener"
           >
             <span
-              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
             >
               <span
-                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
               >
                 <img
                   alt=""
                   aria-hidden="true"
                   src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                 />
               </span>
               <img
@@ -3437,7 +3777,7 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
                 data-nimg="intrinsic"
                 decoding="async"
                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
               />
               <noscript />
             </span>
@@ -3448,16 +3788,16 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
             rel="noopener"
           >
             <span
-              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
             >
               <span
-                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
               >
                 <img
                   alt=""
                   aria-hidden="true"
                   src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                 />
               </span>
               <img
@@ -3465,7 +3805,7 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
                 data-nimg="intrinsic"
                 decoding="async"
                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
               />
               <noscript />
             </span>
@@ -3476,16 +3816,16 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
             rel="noopener"
           >
             <span
-              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
             >
               <span
-                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
               >
                 <img
                   alt=""
                   aria-hidden="true"
                   src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                 />
               </span>
               <img
@@ -3493,7 +3833,7 @@ exports[`project pages > should eargasm page match snapshot 3`] = `
                 data-nimg="intrinsic"
                 decoding="async"
                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
               />
               <noscript />
             </span>
@@ -3771,16 +4111,16 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -3788,7 +4128,7 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -3799,16 +4139,16 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -3816,7 +4156,7 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -3827,16 +4167,16 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -3844,7 +4184,7 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -3855,16 +4195,16 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -3872,7 +4212,7 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -4038,16 +4378,16 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -4055,7 +4395,7 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -4066,16 +4406,16 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -4083,7 +4423,7 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -4094,16 +4434,16 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -4111,7 +4451,7 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -4290,16 +4630,16 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -4307,7 +4647,7 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -4318,16 +4658,16 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -4335,7 +4675,7 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -4346,16 +4686,16 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -4363,7 +4703,7 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -4547,16 +4887,16 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -4564,7 +4904,7 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -4575,16 +4915,16 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
               rel="noopener"
             >
               <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
               >
                 <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                  style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                    style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                   />
                 </span>
                 <img
@@ -4592,7 +4932,7 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
                   data-nimg="intrinsic"
                   decoding="async"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                 />
                 <noscript />
               </span>
@@ -4772,16 +5112,16 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
             rel="noopener"
           >
             <span
-              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
             >
               <span
-                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
               >
                 <img
                   alt=""
                   aria-hidden="true"
                   src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                 />
               </span>
               <img
@@ -4789,7 +5129,7 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
                 data-nimg="intrinsic"
                 decoding="async"
                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
               />
               <noscript />
             </span>
@@ -4800,16 +5140,16 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
             rel="noopener"
           >
             <span
-              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
             >
               <span
-                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
               >
                 <img
                   alt=""
                   aria-hidden="true"
                   src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27190%27%20height=%2772.5%27/%3e"
-                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
                 />
               </span>
               <img
@@ -4817,7 +5157,7 @@ exports[`project pages > should eargasm page match snapshot 4`] = `
                 data-nimg="intrinsic"
                 decoding="async"
                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; border: medium; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
               />
               <noscript />
             </span>
@@ -4917,8 +5257,8 @@ exports[`resume page > should the resume page match the snapshot 1`] = `
       >
         <a
           class="text-2xl hover:underline inline-flex appearance-none items-center justify-center relative whitespace-nowrap align-baseline outline-none outline-offset-2 w-auto leading-normal rounded-md font-bold transition-all duration-100 h-auto min-w-10 text-sky-500 text-center p-0"
-          download="Jan_Ghaly_Resume.pdf"
-          href="/Jan_Ghaly_Resume.pdf"
+          download="Resume_Jan_Ghaly.pdf"
+          href="/Resume_Jan_Ghaly.pdf"
         >
           Download Resume
         </a>
@@ -5095,7 +5435,7 @@ exports[`resume page > should the resume page match the snapshot 1`] = `
                     <h4
                       class="text-lg print:text-base capitalize"
                     >
-                      Senior Frontend & React Native developer
+                      Senior React Native developer
                     </h4>
                     <h5
                       class="text-sm leading-none font-bold text-sky-500"
@@ -5173,13 +5513,7 @@ exports[`resume page > should the resume page match the snapshot 1`] = `
                         class="m-0 p-0 before:(content-['•'] text-2xl dark:text-gray-300 text-gray-700 m-0 p-0 leading-none)"
                       >
                          
-                        Add fluid and performant animations using react-native-reanimated
-                      </li>
-                      <li
-                        class="m-0 p-0 before:(content-['•'] text-2xl dark:text-gray-300 text-gray-700 m-0 p-0 leading-none)"
-                      >
-                         
-                        Customize Metro transformer to transform SVGs to react components and CSS files to Stylesheet objects to ease the migration of exising CSS sheets
+                        Customize Metro transformer to convert SVGs to components and CSS files to Stylesheet objects to ease the migration of exising sheets
                       </li>
                       <li
                         class="m-0 p-0 before:(content-['•'] text-2xl dark:text-gray-300 text-gray-700 m-0 p-0 leading-none)"
@@ -5264,7 +5598,7 @@ exports[`resume page > should the resume page match the snapshot 1`] = `
                         class="m-0 p-0 before:(content-['•'] text-2xl dark:text-gray-300 text-gray-700 m-0 p-0 leading-none)"
                       >
                          
-                        Improved Landing page performance by 55% by using React Server Components and Server Side Rendering which increased SEO
+                        Increased landing page performance by 55% through the use of React Server Components, Server-Side Rendering, and various techniques, resulting in improved SEO
                       </li>
                       <li
                         class="m-0 p-0 before:(content-['•'] text-2xl dark:text-gray-300 text-gray-700 m-0 p-0 leading-none)"
@@ -5277,6 +5611,12 @@ exports[`resume page > should the resume page match the snapshot 1`] = `
                       >
                          
                         Created the TAMM Backend For Frontend using Node and Express with 100% test coverage
+                      </li>
+                      <li
+                        class="m-0 p-0 before:(content-['•'] text-2xl dark:text-gray-300 text-gray-700 m-0 p-0 leading-none)"
+                      >
+                         
+                        Created Azure pipelines to deploy Nextjs apps
                       </li>
                     </ol>
                     <hr
@@ -5803,7 +6143,64 @@ exports[`resume page > should the resume page match the snapshot 1`] = `
                   <p
                     class="text-sm print:tracking-tighter print:leading-none"
                   >
-                    Senior Software Developer with 4+ years of experience in React.js, React Native, NextJs, Node.js, Express, and TypeScript. Passionate about building innovative and performant web and mobile applications.
+                    Senior Software Developer with
+
+                    <span
+                      class="print:inline hidden"
+                    >
+                      5
+                       year
+                      s
+                    </span>
+                    <span
+                      class="print:hidden"
+                    >
+                      4
+                       year
+                      s
+                      ,
+                      <span
+                        class="inline-block min-w-[2ch]"
+                      >
+                        07
+                      </span>
+                       month
+                      s
+                      ,
+                      <span
+                        class="inline-block min-w-[2ch]"
+                      >
+                        18
+                      </span>
+                       day
+                      s
+                      ,
+                      <span
+                        class="inline-block min-w-[2ch]"
+                      >
+                        08
+                      </span>
+                       hour
+                      s
+                      ,
+                      <span
+                        class="inline-block min-w-[2ch]"
+                      >
+                        19
+                      </span>
+                       minute
+                      s
+                      ,
+                      <span
+                        class="inline-block min-w-[2ch]"
+                      >
+                        59
+                      </span>
+                       second
+                      s
+                    </span>
+
+                     of experience in React.js, React Native, NextJs, Node.js, Express, and TypeScript. Passionate about building innovative and performant web and mobile applications.
                   </p>
                 </section>
               </div>
@@ -5821,6 +6218,16 @@ exports[`resume page > should the resume page match the snapshot 1`] = `
                 <ul
                   class="text-sm flex flex-row gap-2 flex-wrap"
                 >
+                  <li
+                    class="font-bold border-b-2 capitalize"
+                  >
+                    Azure Pipelines
+                  </li>
+                  <li
+                    class="font-bold border-b-2 capitalize"
+                  >
+                    AWS
+                  </li>
                   <li
                     class="font-bold border-b-2 capitalize"
                   >
@@ -5919,11 +6326,6 @@ exports[`resume page > should the resume page match the snapshot 1`] = `
                   <li
                     class="font-bold border-b-2 capitalize"
                   >
-                    Core UI
-                  </li>
-                  <li
-                    class="font-bold border-b-2 capitalize"
-                  >
                     CSS-in-JS
                   </li>
                   <li
@@ -5955,11 +6357,6 @@ exports[`resume page > should the resume page match the snapshot 1`] = `
                     class="font-bold border-b-2 capitalize"
                   >
                     Figma
-                  </li>
-                  <li
-                    class="font-bold border-b-2 capitalize"
-                  >
-                    Graphic design & Photo Editing
                   </li>
                   <li
                     class="font-bold border-b-2 capitalize"
@@ -6200,8 +6597,8 @@ exports[`resume page > should the resume page match the snapshot 1`] = `
     >
       <a
         class="text-2xl hover:underline inline-flex appearance-none items-center justify-center relative whitespace-nowrap align-baseline outline-none outline-offset-2 w-auto leading-normal rounded-md font-bold transition-all duration-100 h-auto min-w-10 text-sky-500 text-center p-0"
-        download="Jan_Ghaly_Resume.pdf"
-        href="/Jan_Ghaly_Resume.pdf"
+        download="Resume_Jan_Ghaly.pdf"
+        href="/Resume_Jan_Ghaly.pdf"
       >
         Download Resume
       </a>
@@ -6378,7 +6775,7 @@ exports[`resume page > should the resume page match the snapshot 1`] = `
                   <h4
                     class="text-lg print:text-base capitalize"
                   >
-                    Senior Frontend & React Native developer
+                    Senior React Native developer
                   </h4>
                   <h5
                     class="text-sm leading-none font-bold text-sky-500"
@@ -6456,13 +6853,7 @@ exports[`resume page > should the resume page match the snapshot 1`] = `
                       class="m-0 p-0 before:(content-['•'] text-2xl dark:text-gray-300 text-gray-700 m-0 p-0 leading-none)"
                     >
                        
-                      Add fluid and performant animations using react-native-reanimated
-                    </li>
-                    <li
-                      class="m-0 p-0 before:(content-['•'] text-2xl dark:text-gray-300 text-gray-700 m-0 p-0 leading-none)"
-                    >
-                       
-                      Customize Metro transformer to transform SVGs to react components and CSS files to Stylesheet objects to ease the migration of exising CSS sheets
+                      Customize Metro transformer to convert SVGs to components and CSS files to Stylesheet objects to ease the migration of exising sheets
                     </li>
                     <li
                       class="m-0 p-0 before:(content-['•'] text-2xl dark:text-gray-300 text-gray-700 m-0 p-0 leading-none)"
@@ -6547,7 +6938,7 @@ exports[`resume page > should the resume page match the snapshot 1`] = `
                       class="m-0 p-0 before:(content-['•'] text-2xl dark:text-gray-300 text-gray-700 m-0 p-0 leading-none)"
                     >
                        
-                      Improved Landing page performance by 55% by using React Server Components and Server Side Rendering which increased SEO
+                      Increased landing page performance by 55% through the use of React Server Components, Server-Side Rendering, and various techniques, resulting in improved SEO
                     </li>
                     <li
                       class="m-0 p-0 before:(content-['•'] text-2xl dark:text-gray-300 text-gray-700 m-0 p-0 leading-none)"
@@ -6560,6 +6951,12 @@ exports[`resume page > should the resume page match the snapshot 1`] = `
                     >
                        
                       Created the TAMM Backend For Frontend using Node and Express with 100% test coverage
+                    </li>
+                    <li
+                      class="m-0 p-0 before:(content-['•'] text-2xl dark:text-gray-300 text-gray-700 m-0 p-0 leading-none)"
+                    >
+                       
+                      Created Azure pipelines to deploy Nextjs apps
                     </li>
                   </ol>
                   <hr
@@ -7086,7 +7483,64 @@ exports[`resume page > should the resume page match the snapshot 1`] = `
                 <p
                   class="text-sm print:tracking-tighter print:leading-none"
                 >
-                  Senior Software Developer with 4+ years of experience in React.js, React Native, NextJs, Node.js, Express, and TypeScript. Passionate about building innovative and performant web and mobile applications.
+                  Senior Software Developer with
+
+                  <span
+                    class="print:inline hidden"
+                  >
+                    5
+                     year
+                    s
+                  </span>
+                  <span
+                    class="print:hidden"
+                  >
+                    4
+                     year
+                    s
+                    ,
+                    <span
+                      class="inline-block min-w-[2ch]"
+                    >
+                      07
+                    </span>
+                     month
+                    s
+                    ,
+                    <span
+                      class="inline-block min-w-[2ch]"
+                    >
+                      18
+                    </span>
+                     day
+                    s
+                    ,
+                    <span
+                      class="inline-block min-w-[2ch]"
+                    >
+                      08
+                    </span>
+                     hour
+                    s
+                    ,
+                    <span
+                      class="inline-block min-w-[2ch]"
+                    >
+                      19
+                    </span>
+                     minute
+                    s
+                    ,
+                    <span
+                      class="inline-block min-w-[2ch]"
+                    >
+                      59
+                    </span>
+                     second
+                    s
+                  </span>
+
+                   of experience in React.js, React Native, NextJs, Node.js, Express, and TypeScript. Passionate about building innovative and performant web and mobile applications.
                 </p>
               </section>
             </div>
@@ -7104,6 +7558,16 @@ exports[`resume page > should the resume page match the snapshot 1`] = `
               <ul
                 class="text-sm flex flex-row gap-2 flex-wrap"
               >
+                <li
+                  class="font-bold border-b-2 capitalize"
+                >
+                  Azure Pipelines
+                </li>
+                <li
+                  class="font-bold border-b-2 capitalize"
+                >
+                  AWS
+                </li>
                 <li
                   class="font-bold border-b-2 capitalize"
                 >
@@ -7202,11 +7666,6 @@ exports[`resume page > should the resume page match the snapshot 1`] = `
                 <li
                   class="font-bold border-b-2 capitalize"
                 >
-                  Core UI
-                </li>
-                <li
-                  class="font-bold border-b-2 capitalize"
-                >
                   CSS-in-JS
                 </li>
                 <li
@@ -7238,11 +7697,6 @@ exports[`resume page > should the resume page match the snapshot 1`] = `
                   class="font-bold border-b-2 capitalize"
                 >
                   Figma
-                </li>
-                <li
-                  class="font-bold border-b-2 capitalize"
-                >
-                  Graphic design & Photo Editing
                 </li>
                 <li
                   class="font-bold border-b-2 capitalize"
