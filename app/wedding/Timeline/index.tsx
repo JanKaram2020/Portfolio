@@ -20,22 +20,21 @@ export default function CoupleTimeline({
   const events = lang === "en" ? EnglishEvents : ArabicEvents;
   return (
     <div
-      className="coming_soon_area pt-20 pb-70"
-      dir={lang === "en" ? "rtl" : "ltr"}
+      className="coming_soon_area py-20 bg-stone-50 overflow-hidden"
+      dir={lang === "en" ? "ltr" : "rtl"}
     >
-      <div className="coming_soon_shape_1" style={{ zIndex: 1 }}>
-        <img src="/assets/images/shape-1.png" alt="shape" />
-      </div>
-      <div className="text-center mb-5">
-        <h1 className="display-4 fst-italic">
-          {lang === "en" ? "Our Story" : "قصتنا"}
-        </h1>
-      </div>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16 animate__animated animate__fadeIn">
+          <h2 className="text-5xl md:text-6xl font-cursive text-amber-600 mb-4">
+            {lang === "en" ? "Our Journey" : "رحلتنا"}
+          </h2>
+          <div className="h-1 w-24 bg-amber-200 mx-auto rounded-full" />
+        </div>
 
-      <MobileTimeline events={events} lang={lang} />
-      <DesktopTimeline events={events} />
-      <div className="coming_soon_shape_2" style={{ zIndex: 1 }}>
-        <img src="/assets/images/shape-2.png" alt="shape" />
+        <div className="relative">
+          <MobileTimeline events={events} lang={lang} />
+          <DesktopTimeline events={events} />
+        </div>
       </div>
     </div>
   );

@@ -6,47 +6,47 @@ const Invitation = ({ lang = "en" }: { lang?: "ar" | "en" }) => {
   const { venue, weddingDate, weddingTime } = lang === "en" ? config : configAr;
 
   return (
-    <section id="contact" className="contact_area">
-      <div className="container">
+    <section id="invitation" className="contact_area bg-white py-16">
+      <div className="container mx-auto px-4">
         <div
-          className="contact_wrapper wow fadeInUpBig"
-          data-wow-duration="1.3s"
-          data-wow-delay="0.4s"
+          className="contact_wrapper max-w-4xl mx-auto rounded-2xl shadow-xl overflow-hidden animate__animated animate__fadeInUp"
           style={{
-            paddingBottom: 30,
-            boxShadow: "none",
-            visibility: "visible",
-            animationDuration: "1.3s",
-            animationDelay: "0.4s",
-            animationName: "fadeInUp",
+            backgroundColor: "#fff",
+            border: "1px solid rgba(213, 154, 87, 0.2)",
           }}
         >
-          <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <div className="section_title text-center pb-30">
-                <Suspense fallback={null}>
-                  <GuestInvite lang={lang} />
-                </Suspense>
-                <p className="text">
+          <div className="p-8 md:p-12">
+            <div className="section_title text-center">
+              <Suspense fallback={null}>
+                <GuestInvite lang={lang} />
+              </Suspense>
+
+              <div className="mt-12 pt-8 border-t border-gray-100 flex flex-col items-center gap-6">
+                <div className="text-center">
                   <a
                     href={venue.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-2xl md:text-3xl text-dark hover:text-amber-700 transition-colors mb-4"
                     style={{
-                      borderBottom: "0.2rem solid",
-                      marginBottom: 10,
+                      fontFamily: "Niconne, cursive",
+                      borderBottom: "2px solid #d59a57",
                     }}
                   >
-                    <b>{venue.name}</b>
+                    {venue.name}
                   </a>
-                  <br />
-                  {`${venue.addressLine1}, ${venue.addressLine2}`}
-                  <br />
-                  {`${venue.city}, ${venue.country}.`}
-                </p>
-                <p className="text" style={{ marginTop: 10 }}>
-                  <b>
-                    {weddingDate} - {weddingTime}
-                  </b>
-                </p>
+                  <p className="text-gray-600 text-lg leading-relaxed mt-2">
+                    {venue.addressLine1}, {venue.addressLine2}
+                    <br />
+                    {venue.city}, {venue.country}
+                  </p>
+                </div>
+
+                <div className="bg-amber-50 px-8 py-4 rounded-full border border-amber-100">
+                  <p className="text-amber-900 font-semibold tracking-wide text-lg">
+                    {weddingDate} • {weddingTime}
+                  </p>
+                </div>
               </div>
             </div>
           </div>

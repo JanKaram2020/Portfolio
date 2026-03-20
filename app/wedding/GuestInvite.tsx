@@ -80,21 +80,21 @@ const GuestInvite = ({ lang }: { lang: "ar" | "en" }) => {
 export default GuestInvite;
 
 const EnglishDic = {
-  invitationIntro: "Thank you for coming",
-  invitationContent: "Our joy was complete with your presence.",
+  invitationIntro: "Thank You for Being Part of Our Story",
+  invitationContent: "Our wedding was made truly special because of your presence. We are so grateful to have friends and family like you.",
   invitationContentTextAlign: "left",
   invitationOutro:
-    "We are looking forward to seeing you in your special day(s).",
+    "Cherishing every moment we shared.",
 } as const;
 const ArabicDicFemale = {
-  invitationIntro: "شرفتينا و نورتينا بوجودك",
-  invitationContent: "فرحتنا كملت بوجودِك",
+  invitationIntro: "شكرًا لكونك جزءًا من قصتنا",
+  invitationContent: "كان يوم فرحنا مميزًا حقًا بوجودِك. نحن ممتنون جدًا لوجود صديقة وعائلة مثلك.",
   invitationContentTextAlign: "center",
-  invitationOutro: "شكرًا ليكي",
+  invitationOutro: "نعتز بكل لحظة شاركناها.",
 } as const;
 const ArabicDicMale = {
-  invitationIntro: "شرفتنا و نورتنا بوجودك",
-  invitationContent: "فرحتنا كملت بوجودك",
+  invitationIntro: "شكرًا لكونك جزءًا من قصتنا",
+  invitationContent: "كان يوم فرحنا مميزًا حقًا بوجودك. نحن ممتنون جدًا لوجود صديق وعائلة مثلك.",
   invitationContentTextAlign: "center",
-  invitationOutro: "شكرًا ليك",
+  invitationOutro: "نعتز بكل لحظة شاركناها.",
 } as const;

@@ -9,36 +9,18 @@ export const DesktopYearItem = ({
   event: TimelineEvents[number];
 }) => {
   return (
-    <div className="col position-relative timeline-item">
+    <div className="col relative flex flex-col items-center">
       {event.position === "top" && (
-        <div
-          className="position-absolute translate-middle-y bg-dark"
-          style={{
-            width: "2px",
-            height: "50px",
-            top: 0,
-            left: "50%",
-            transform: "translateY(-50%)",
-          }}
-        ></div>
+        <div className="w-0.5 h-16 bg-amber-200 absolute top-0 -translate-y-full" />
       )}
       <div
-        className={`bg-dark text-white rounded-circle d-flex align-items-center justify-content-center mx-auto timeline-item-year`}
-        style={{ width: 64, height: 64 }}
+        className="w-16 h-16 bg-amber-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg z-10 transition-transform hover:scale-110"
+        style={{ fontFamily: "Poppins, sans-serif" }}
       >
         <span>{event.year}</span>
       </div>
       {event.position === "bottom" && (
-        <div
-          className="position-absolute bottom-0 start-50 translate-middle-y bg-dark"
-          style={{
-            width: "2px",
-            height: "50px",
-            bottom: 0,
-            left: "50%",
-            transform: "translateY(50%)",
-          }}
-        ></div>
+        <div className="w-0.5 h-16 bg-amber-200 absolute bottom-0 translate-y-full" />
       )}
     </div>
   );
@@ -51,26 +33,24 @@ export default function DesktopTimeline({
   if (events.length === 0) return null;
 
   return (
-    <div className="position-relative desktop-timeline">
-      <div className="row justify-content-between mb-4">
+    <div className="hidden lg:block relative py-12">
+      <div className="absolute top-1/2 left-0 w-full h-0.5 bg-amber-100 -translate-y-1/2" />
+
+      <div className="flex justify-between items-end mb-16 relative z-10">
         {events.map((event) => (
-          <DesktopTimelineItem event={event} variant={"top"} key={event.year} />
+          <DesktopTimelineItem event={event} variant="top" key={event.year} />
         ))}
       </div>
 
-      <div className="row align-items-center text-center mb-4 timeline-container">
+      <div className="flex justify-between items-center relative z-20">
         {events.map((event) => (
           <DesktopYearItem event={event} key={event.year} />
         ))}
       </div>
 
-      <div className="row justify-content-between mt-4">
+      <div className="flex justify-between items-start mt-16 relative z-10">
         {events.map((event) => (
-          <DesktopTimelineItem
-            event={event}
-            key={event.year}
-            variant={"bottom"}
-          />
+          <DesktopTimelineItem event={event} variant="bottom" key={event.year} />
         ))}
       </div>
     </div>
@@ -84,97 +64,50 @@ const DesktopTimelineItem = ({
   event: TimelineEvents[number];
   variant: "top" | "bottom";
 }) => {
-  if (event.position !== variant)
-    return (
-      <div
-        className={
-          event.position === "bottom"
-            ? "col text-center"
-            : "col d-flex flex-col text-center"
-        }
-        style={
-          event.position === "bottom"
-            ? {}
-            : {
-                flexDirection: "column",
-                justifyContent: "flex-end",
-              }
-        }
-      />
-    );
+  if (event.position !== variant) return <div className="col" />;
+
   return (
     <div
-      className={
-        event.position === "bottom"
-          ? "col text-center"
-          : "col d-flex flex-col text-center"
-      }
-      style={
-        event.position === "bottom"
-          ? {}
-          : {
-              flexDirection: "column",
-              justifyContent: "flex-end",
-            }
-      }
+      className={`col flex flex-col items-center gap-4 text-center animate__animated ${
+        variant === "top" ? "animate__fadeInDown" : "animate__fadeInUp"
+      }`}
     >
-      <h5
-        style={{
-          order: event.position === "bottom" ? 1 : 2,
-        }}
-      >
-        {event.title}
-      </h5>
-      <p
-        className="small"
-        style={{
-          order: event.position === "bottom" ? 3 : 3,
-        }}
-      >
-        {event.description}
-      </p>
-      <div
-        className="d-flex flex-wrap justify-content-center gap-2"
-        style={{
-          order: event.position === "bottom" ? 2 : 1,
-          marginBottom: event.position === "bottom" ? 0 : "10px",
-        }}
-      >
-        {"loading" in event ? (
-          <div
-            className="d-flex flex-column justify-content-center align-items-center"
-            style={{
-              height: "180px",
-            }}
-          >
-            <div
-              className="spinner-border text-dark animate__animated animate__fadeInUp"
-              role="status"
-              style={{ width: "6rem", height: "6rem" }}
-            ></div>
-          </div>
-        ) : (
+      {variant === "bottom" && (
+        <h5 className="text-xl font-cursive text-dark">{event.title}</h5>
+      )}
+
+      <div className="relative group">
+        <div className="absolute -inset-1 bg-gradient-to-r from-amber-200 to-amber-100 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
+        <div className="relative">
           <ZoomImage
             Zoomed={
               <Image
                 src={`/assets/wedding-images/${a2e(event.year)}.png`}
                 alt={`${event.title}`}
-                width={1500}
-                height={1500}
-                className="img-fluid shadow-sm grayscale"
+                width={1200}
+                height={1200}
+                className="rounded-xl shadow-lg"
               />
             }
           >
             <Image
               src={`/assets/wedding-images/${a2e(event.year)}.png`}
               alt={`${event.title}`}
-              width={150}
-              height={150}
-              className="img-fluid border shadow-sm grayscale"
+              width={200}
+              height={200}
+              className="rounded-xl shadow-md border-4 border-white object-cover transition-transform group-hover:scale-105"
             />
           </ZoomImage>
-        )}
+        </div>
       </div>
+
+      {variant === "top" && (
+        <h5 className="text-xl font-cursive text-dark">{event.title}</h5>
+      )}
+
+      <p className="text-sm text-gray-500 leading-relaxed max-w-[200px]">
+        {event.description}
+      </p>
     </div>
   );
 };

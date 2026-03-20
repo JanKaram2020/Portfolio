@@ -12,90 +12,70 @@ export default function MobileTimeline({
   lang: "ar" | "en";
 }) {
   return (
-    <div className="position-relative mobile-timeline">
+    <div className="lg:hidden relative">
       <div
-        className="bg-dark"
+        className="absolute left-8 top-0 bottom-0 w-0.5 bg-amber-100"
         style={{
-          width: "2px",
-          marginLeft: "32px",
-          left: lang === "en" ? "8px" : undefined,
-          right: lang === "ar" ? 40 : undefined,
-          top: 0,
-          bottom: 0,
-          zIndex: 0,
-          position: "absolute",
+          left: lang === "en" ? "32px" : "auto",
+          right: lang === "ar" ? "32px" : "auto",
         }}
-      ></div>
-      <div className={"d-flex flex-column"}>
+      />
+      <div className="flex flex-col gap-12">
         {events.map((event, index) => (
-          <MobileTimelineItem key={index} event={event} />
+          <MobileTimelineItem key={index} event={event} lang={lang} />
         ))}
       </div>
     </div>
   );
 }
 
-function MobileTimelineItem({ event }: { event: TimelineEvents[number] }) {
+function MobileTimelineItem({
+  event,
+  lang,
+}: {
+  event: TimelineEvents[number];
+  lang: "ar" | "en";
+}) {
+  const isEn = lang === "en";
   return (
-    <div className="d-flex flex-row mb-5 ps-5">
+    <div
+      className={`flex items-start gap-6 relative z-10 animate__animated animate__fadeInUp ${
+        isEn ? "flex-row" : "flex-row-reverse"
+      }`}
+    >
       <div
-        style={{
-          marginInline: "10px",
-          zIndex: 1,
-        }}
+        className="flex-shrink-0 w-16 h-16 bg-amber-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg"
+        style={{ fontFamily: "Poppins, sans-serif" }}
       >
-        <div
-          className="bg-dark text-white rounded-circle d-flex align-items-center justify-content-center"
-          style={{ width: 64, height: 64 }}
-        >
-          {event.year}
-        </div>
+        {event.year}
       </div>
-      <div className={"d-flex flex-column align-items-start"}>
-        <h5>{event.title}</h5>
-        <p
-          className="small"
-          style={{
-            textAlign: a2e(event.year) === event.year ? "left" : "right",
-          }}
-        >
-          {event.description}
-        </p>
-        <div className="d-flex flex-wrap gap-2 justify-content-end">
-          {"loading" in event ? (
-            <div
-              className="d-flex flex-column justify-content-center align-items-center"
-              style={{
-                height: "180px",
-              }}
-            >
-              <div
-                className="spinner-border text-dark animate__animated animate__fadeInUp"
-                role="status"
-                style={{ width: "6rem", height: "6rem" }}
-              ></div>
-            </div>
-          ) : (
-            <ZoomImage
-              Zoomed={
-                <Image
-                  src={`/assets/wedding-images/${a2e(event.year)}.png`}
-                  alt={`${event.title}`}
-                  width={1500}
-                  height={1500}
-                  className="img-fluid shadow-sm grayscale"
-                />
-              }
-            >
+      <div
+        className={`flex flex-col gap-3 ${
+          isEn ? "items-start text-left" : "items-end text-right"
+        }`}
+      >
+        <h5 className="text-2xl font-cursive text-dark">{event.title}</h5>
+        <p className="text-gray-600 leading-relaxed">{event.description}</p>
+        <div className="relative group w-full max-w-[250px]">
+          <ZoomImage
+            Zoomed={
               <Image
                 src={`/assets/wedding-images/${a2e(event.year)}.png`}
                 alt={`${event.title}`}
-                width={150}
-                height={150}
-                className="img-fluid border shadow-sm grayscale"
+                width={1200}
+                height={1200}
+                className="rounded-xl shadow-lg"
               />
-            </ZoomImage>
-          )}
+            }
+          >
+            <Image
+              src={`/assets/wedding-images/${a2e(event.year)}.png`}
+              alt={`${event.title}`}
+              width={250}
+              height={250}
+              className="rounded-xl shadow-md border-4 border-white object-cover"
+            />
+          </ZoomImage>
         </div>
       </div>
     </div>

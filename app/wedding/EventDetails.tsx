@@ -1,6 +1,6 @@
 import React from "react";
 import { config, configAr, coupleName } from "./config";
-import { CountdownTimer } from "./Countdown";
+import Image from "next/image";
 
 const EventDetails = ({ lang = "en" }: { lang?: "ar" | "en" }) => {
   const { venue, weddingDay, weddingDate, weddingTime } =
@@ -8,128 +8,90 @@ const EventDetails = ({ lang = "en" }: { lang?: "ar" | "en" }) => {
 
   const weddingDateBrief = `${weddingDay}, ${weddingDate}`;
   return (
-    <section id="coming_soon" className="coming_soon_area pt-20 pb-70">
-      <CountdownTimer date={config.calendarInfo.timeStartISO} lang={lang} />
-      <div className="coming_soon_shape_1" style={{ zIndex: 1 }}>
-        <img src="/assets/images/shape-1.png" alt="shape" />
-      </div>
-      <div className="container">
-        <div className="row align-items-center">
-          <div className="col-lg-4">
+    <section
+      id="location"
+      className="coming_soon_area py-20 relative bg-amber-50/30"
+    >
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+          <div className="w-full lg:w-1/3 animate__animated animate__fadeInLeft">
             <div
-              className="section_title pt-50 wow fadeIn"
-              data-wow-duration="1.3s"
-              data-wow-delay="0.2s"
-              style={{
-                visibility: "visible",
-                animationDuration: "1.3s",
-                animationDelay: "0.2s",
-                animationName: "fadeIn",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-              }}
+              className="section_title flex flex-col items-start gap-4"
+              dir={lang === "en" ? "ltr" : "rtl"}
             >
-              <h3
-                className="title"
-                style={{
-                  textAlign: lang === "ar" ? "right" : "left",
-                }}
-              >
-                {lang === "en" ? "Event Date:" : "التاريخ"}
+              <h3 className="text-4xl text-amber-600 font-cursive italic">
+                {lang === "en" ? "The Celebration" : "الاحتفال"}
               </h3>
-              <p
-                style={{
-                  textAlign: lang === "ar" ? "right" : "left",
-                }}
-              >
-                {weddingDateBrief}
-              </p>
-              <div
-                style={{
-                  paddingTop: "0.2rem",
-                  paddingBottom: "0.2rem",
-                  textAlign: lang === "ar" ? "right" : "left",
-                }}
-              >
-                {weddingTime}
+              <div className="flex flex-col gap-1 text-xl text-gray-700 font-medium">
+                <p>{weddingDateBrief}</p>
+                <p>{weddingTime}</p>
               </div>
-              <img src="/assets/images/section_shape.png" alt="Shape" />
+              <Image
+                width={120}
+                height={20}
+                src="/assets/images/section_shape.png"
+                alt="Decoration"
+                className="opacity-50"
+              />
             </div>
           </div>
-          <div className="col-lg-8">
-            <div
-              className="wow fadeIn"
-              data-wow-duration="1.3s"
-              data-wow-delay="0.6s"
-              style={{
-                visibility: "visible",
-                animationDuration: "1.3s",
-                animationDelay: "0.6s",
-                animationName: "fadeIn",
-              }}
-            >
-              <div className="coming_soon_count d-flex justify-content-end pt-20">
-                <div
-                  style={{
-                    marginRight: 20,
-                    width: 360,
-                    height: 138,
-                    backgroundColor: "transparent",
-                  }}
-                  className="single_count d-flex align-items-center justify-content-center mt-30"
-                >
-                  <div
-                    className="count_content"
-                    style={{ zIndex: 1, paddingTop: 20 }}
-                  >
-                    <a href={venue.mapUrl}>
-                      <img
-                        style={{ borderRadius: 5 }}
-                        src="/assets/images/img.png"
-                        alt="oval hotel map"
-                      />
-                    </a>
-                    <a
-                      href={venue.mapUrl}
-                      style={{
-                        maxWidth: "75vw",
-                        overflowX: "hidden",
-                        textOverflow: "ellipsis",
-                        marginTop: 10,
-                      }}
-                    >
-                      {venue.mapUrl}
-                    </a>
-                  </div>
-                </div>
-              </div>
+
+          <div className="w-full lg:w-2/3 animate__animated animate__fadeInRight">
+            <div className="bg-white p-6 rounded-3xl shadow-lg border border-amber-100 flex flex-col items-center gap-6">
+              <a
+                href={venue.mapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative block overflow-hidden rounded-2xl w-full"
+              >
+                <Image
+                  width={800}
+                  height={300}
+                  src="/assets/images/img.png"
+                  alt="Venue location map"
+                  className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-amber-900/10 group-hover:bg-transparent transition-colors duration-300" />
+              </a>
+              <a
+                href={venue.mapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-amber-700 hover:text-amber-900 font-medium break-all text-center px-4"
+              >
+                {venue.mapUrl}
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-24 text-center animate__animated animate__fadeInUp">
+          <div className="inline-block relative">
+            <span className="block text-xl text-gray-500 mb-2 font-cursive">
+              {lang === "en" ? "With love from" : "بكل الحب من"}
+            </span>
+            <div className="text-5xl md:text-6xl text-dark hover:scale-105 transition-transform cursor-default">
+              {coupleName}
             </div>
           </div>
         </div>
       </div>
-      <div className="coming_soon_shape_2">
-        <img src="/assets/images/shape-2.png" alt="shape" />
+
+      <div className="absolute bottom-0 left-0 -z-1 opacity-20 transform -translate-y-8">
+        <Image
+          width={200}
+          height={200}
+          src="/assets/images/shape-1.png"
+          alt="Decorative shape"
+        />
       </div>
-      <div className="container">
-        <div className="footer_widget pt-50 pb-10 text-center">
-          <h4
-            className={"title"}
-            style={{
-              marginBottom: "0",
-            }}
-          >
-            {lang === "en" ? "With love from" : "بكل الحب من"}
-          </h4>
-          <div
-            className="footer_title"
-            style={{
-              marginTop: 1,
-            }}
-          >
-            <h3 className="title">{coupleName}</h3>
-          </div>
-        </div>
+      <div className="absolute top-0 right-0 -z-1 opacity-20 transform translate-y-8">
+        <Image
+          width={200}
+          height={200}
+          src="/assets/images/shape-2.png"
+          alt="Decorative shape"
+        />
       </div>
     </section>
   );
