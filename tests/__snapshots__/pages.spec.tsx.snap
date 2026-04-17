@@ -77,7 +77,7 @@ exports[`home page > should the home page match the snapshot 1`] = `
               <div
                 class="text-black"
                 color="black"
-                style="grid-area: 1 / 1 / 2 / 2; opacity: 0; transform: translateY(30px) rotate(90deg) translateZ(0);"
+                style="grid-area: 1 / 1 / 2 / 2; opacity: 0; transform: translateY(30px) rotate(90deg);"
               >
                 <svg
                   fill="currentColor"
@@ -224,9 +224,9 @@ exports[`home page > should the home page match the snapshot 1`] = `
           <p
             class="min-w-[320px] max-w-[60ch] ml-2 mr-4 text-xl"
           >
-            I'm a passionate introvert who loves building web apps and sites.
+            I'm a passionate introvert who loves building web apps and sites. 
             <br />
-            My first experience with web development was when I was 12, but it didn't last long:
+            My first experience with web development was when I was 12, but it didn't last long: 
             <br />
             I was always fascinated by websites and wanted to make my own so I searched the internet on how to make websites and found 
             <a
@@ -254,7 +254,7 @@ exports[`home page > should the home page match the snapshot 1`] = `
             class="hidden lg:flex min-w-[320px] items-center justify-center"
           >
             <div
-              style="opacity: 0; transform: scale(0) translateZ(0);"
+              style="opacity: 0; transform: scale(0);"
             >
               <figure
                 class="drop-shadow-[0px_0px_12px_#F56565]"
@@ -397,7 +397,7 @@ exports[`home page > should the home page match the snapshot 1`] = `
         >
           <div
             class="flex flex-col items-center content-center gap-10px max-w-800px mt-4"
-            style="opacity: 0; transform: translateX(-200px) translateZ(0);"
+            style="opacity: 0; transform: translateX(-200px);"
           >
             <figure>
               <span
@@ -428,7 +428,7 @@ exports[`home page > should the home page match the snapshot 1`] = `
             <h2
               class="text-2xl"
             >
-
+               
               Writing by Lilyanne
             </h2>
             <p
@@ -445,7 +445,7 @@ exports[`home page > should the home page match the snapshot 1`] = `
           </div>
           <div
             class="flex flex-col items-center content-center gap-10px max-w-800px mt-4"
-            style="opacity: 0; transform: translateX(-200px) translateZ(0);"
+            style="opacity: 0; transform: translateX(-200px);"
           >
             <figure>
               <span
@@ -476,7 +476,7 @@ exports[`home page > should the home page match the snapshot 1`] = `
             <h2
               class="text-2xl"
             >
-
+               
               Test table
             </h2>
             <p
@@ -493,7 +493,7 @@ exports[`home page > should the home page match the snapshot 1`] = `
           </div>
           <div
             class="flex flex-col items-center content-center gap-10px max-w-800px mt-4"
-            style="opacity: 0; transform: translateX(-200px) translateZ(0);"
+            style="opacity: 0; transform: translateX(-200px);"
           >
             <figure>
               <span
@@ -524,7 +524,7 @@ exports[`home page > should the home page match the snapshot 1`] = `
             <h2
               class="text-2xl"
             >
-
+               
               Would you rather
             </h2>
             <p
@@ -541,7 +541,7 @@ exports[`home page > should the home page match the snapshot 1`] = `
           </div>
           <div
             class="flex flex-col items-center content-center gap-10px max-w-800px mt-4"
-            style="opacity: 0; transform: translateX(-200px) translateZ(0);"
+            style="opacity: 0; transform: translateX(-200px);"
           >
             <figure>
               <span
@@ -572,7 +572,7 @@ exports[`home page > should the home page match the snapshot 1`] = `
             <h2
               class="text-2xl"
             >
-
+               
               Eargasm
             </h2>
             <p
@@ -683,7 +683,7 @@ exports[`home page > should the home page match the snapshot 1`] = `
             <div
               class="text-black"
               color="black"
-              style="grid-area: 1 / 1 / 2 / 2; opacity: 0; transform: translateY(30px) rotate(90deg) translateZ(0);"
+              style="grid-area: 1 / 1 / 2 / 2; opacity: 0; transform: translateY(30px) rotate(90deg);"
             >
               <svg
                 fill="currentColor"
@@ -860,7 +860,7 @@ exports[`home page > should the home page match the snapshot 1`] = `
           class="hidden lg:flex min-w-[320px] items-center justify-center"
         >
           <div
-            style="opacity: 0; transform: scale(0) translateZ(0);"
+            style="opacity: 0; transform: scale(0);"
           >
             <figure
               class="drop-shadow-[0px_0px_12px_#F56565]"
@@ -1003,7 +1003,7 @@ exports[`home page > should the home page match the snapshot 1`] = `
       >
         <div
           class="flex flex-col items-center content-center gap-10px max-w-800px mt-4"
-          style="opacity: 0; transform: translateX(-200px) translateZ(0);"
+          style="opacity: 0; transform: translateX(-200px);"
         >
           <figure>
             <span
@@ -1051,7 +1051,7 @@ exports[`home page > should the home page match the snapshot 1`] = `
         </div>
         <div
           class="flex flex-col items-center content-center gap-10px max-w-800px mt-4"
-          style="opacity: 0; transform: translateX(-200px) translateZ(0);"
+          style="opacity: 0; transform: translateX(-200px);"
         >
           <figure>
             <span
@@ -1099,7 +1099,7 @@ exports[`home page > should the home page match the snapshot 1`] = `
         </div>
         <div
           class="flex flex-col items-center content-center gap-10px max-w-800px mt-4"
-          style="opacity: 0; transform: translateX(-200px) translateZ(0);"
+          style="opacity: 0; transform: translateX(-200px);"
         >
           <figure>
             <span
@@ -1147,7 +1147,7 @@ exports[`home page > should the home page match the snapshot 1`] = `
         </div>
         <div
           class="flex flex-col items-center content-center gap-10px max-w-800px mt-4"
-          style="opacity: 0; transform: translateX(-200px) translateZ(0);"
+          style="opacity: 0; transform: translateX(-200px);"
         >
           <figure>
             <span
@@ -6143,8 +6143,8 @@ exports[`resume page > should the resume page match the snapshot 1`] = `
                   <p
                     class="text-sm print:tracking-tighter print:leading-none"
                   >
-                    Senior Software Developer with
-
+                    Senior Software Developer with 
+                     
                     <span
                       class="print:inline hidden"
                     >
@@ -6158,48 +6158,48 @@ exports[`resume page > should the resume page match the snapshot 1`] = `
                       4
                        year
                       s
-                      ,
-                      <span
-                        class="inline-block min-w-[2ch]"
-                      >
-                        07
-                      </span>
-                       month
-                      s
-                      ,
-                      <span
-                        class="inline-block min-w-[2ch]"
-                      >
-                        18
-                      </span>
-                       day
-                      s
-                      ,
+                      , 
                       <span
                         class="inline-block min-w-[2ch]"
                       >
                         08
                       </span>
-                       hour
+                       month
                       s
-                      ,
+                      , 
                       <span
                         class="inline-block min-w-[2ch]"
                       >
-                        19
+                        16
+                      </span>
+                       day
+                      s
+                      , 
+                      <span
+                        class="inline-block min-w-[2ch]"
+                      >
+                        05
+                      </span>
+                       hour
+                      s
+                      , 
+                      <span
+                        class="inline-block min-w-[2ch]"
+                      >
+                        00
                       </span>
                        minute
                       s
-                      ,
+                      , 
                       <span
                         class="inline-block min-w-[2ch]"
                       >
-                        59
+                        00
                       </span>
                        second
                       s
                     </span>
-
+                     
                      of experience in React.js, React Native, NextJs, Node.js, Express, and TypeScript. Passionate about building innovative and performant web and mobile applications.
                   </p>
                 </section>
@@ -7483,8 +7483,8 @@ exports[`resume page > should the resume page match the snapshot 1`] = `
                 <p
                   class="text-sm print:tracking-tighter print:leading-none"
                 >
-                  Senior Software Developer with
-
+                  Senior Software Developer with 
+                   
                   <span
                     class="print:inline hidden"
                   >
@@ -7498,48 +7498,48 @@ exports[`resume page > should the resume page match the snapshot 1`] = `
                     4
                      year
                     s
-                    ,
-                    <span
-                      class="inline-block min-w-[2ch]"
-                    >
-                      07
-                    </span>
-                     month
-                    s
-                    ,
-                    <span
-                      class="inline-block min-w-[2ch]"
-                    >
-                      18
-                    </span>
-                     day
-                    s
-                    ,
+                    , 
                     <span
                       class="inline-block min-w-[2ch]"
                     >
                       08
                     </span>
-                     hour
+                     month
                     s
-                    ,
+                    , 
                     <span
                       class="inline-block min-w-[2ch]"
                     >
-                      19
+                      16
+                    </span>
+                     day
+                    s
+                    , 
+                    <span
+                      class="inline-block min-w-[2ch]"
+                    >
+                      05
+                    </span>
+                     hour
+                    s
+                    , 
+                    <span
+                      class="inline-block min-w-[2ch]"
+                    >
+                      00
                     </span>
                      minute
                     s
-                    ,
+                    , 
                     <span
                       class="inline-block min-w-[2ch]"
                     >
-                      59
+                      00
                     </span>
                      second
                     s
                   </span>
-
+                   
                    of experience in React.js, React Native, NextJs, Node.js, Express, and TypeScript. Passionate about building innovative and performant web and mobile applications.
                 </p>
               </section>
