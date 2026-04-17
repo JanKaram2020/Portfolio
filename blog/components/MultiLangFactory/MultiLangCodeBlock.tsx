@@ -8,6 +8,32 @@ const MultiLangTabs = dynamic(() => import("./MulitLangTabs"), {
   loading: () => <p>Loading...</p>,
 });
 
+function dataLanguageFromPreBlock(child: ReactElement): string {
+  if (!React.isValidElement(child)) return "";
+  const inner = (child.props as { children?: ReactNode }).children;
+  if (
+    React.isValidElement(inner) &&
+    inner.props &&
+    "data-language" in (inner.props as object)
+  ) {
+    return String(
+      (inner.props as Record<string, unknown>)["data-language"] ?? "",
+    );
+  }
+  const fromArray = React.Children.toArray(inner).find(
+    (n) =>
+      React.isValidElement(n) &&
+      n.props &&
+      "data-language" in (n.props as object),
+  );
+  if (React.isValidElement(fromArray) && fromArray.props) {
+    return String(
+      (fromArray.props as Record<string, unknown>)["data-language"] ?? "",
+    );
+  }
+  return "";
+}
+
 const MultiLangCodeBlock =
   <T extends string>(displayValues: T[], initialValue?: T) =>
   ({
@@ -32,8 +58,7 @@ const MultiLangCodeBlock =
       content: ReactNode;
       codeLang: string;
     }> = children.map((child, index) => {
-      const dataLang = child.props.children.props["data-language"];
-      const codeLang = dataLang ? String(dataLang) : "";
+      const codeLang = dataLanguageFromPreBlock(child);
       return {
         language: displayValues[index],
         content: child as ReactNode,

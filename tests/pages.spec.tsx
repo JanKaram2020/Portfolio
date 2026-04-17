@@ -30,8 +30,14 @@ describe("home page", () => {
 
 describe("resume page", () => {
   it(`should the resume page match the snapshot`, async () => {
-    const page = render(await ResumePage());
-    expect(page).toMatchSnapshot();
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date("2026-04-17T12:00:00.000Z"));
+    try {
+      const page = render(await ResumePage());
+      expect(page).toMatchSnapshot();
+    } finally {
+      vi.useRealTimers();
+    }
   });
 });
 
@@ -39,7 +45,9 @@ describe.concurrent("project pages", () => {
   Object.keys(ProjectsData).map((k) => {
     const key = k as keyof typeof ProjectsData;
     it(`should ${key} page match snapshot`, async () => {
-      const page = render(await ProjectPage({ params: { slug: key } }));
+      const page = render(
+        await ProjectPage({ params: Promise.resolve({ slug: key }) }),
+      );
       expect(page).toMatchSnapshot();
     });
   });

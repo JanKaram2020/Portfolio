@@ -7,10 +7,11 @@ import ProjectPageComponent from "project/components/ProjectPage";
 import React from "react";
 import { notFound } from "next/navigation";
 
-type PageProps = { params: { slug: string } };
+type PageProps = { params: Promise<{ slug: string }> };
 
-export default function ProjectPage({ params }: PageProps) {
-  const project = ProjectsData[params.slug as ProjectsKeys];
+export default async function ProjectPage({ params }: PageProps) {
+  const { slug } = await params;
+  const project = ProjectsData[slug as ProjectsKeys];
   if (!project) {
     notFound();
   }
@@ -23,8 +24,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export const generateMetadata = ({ params }: PageProps): Metadata => {
-  const project = ProjectsData[params.slug as ProjectsKeys];
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const project = ProjectsData[slug as ProjectsKeys];
   if (!project) {
     notFound();
   }
